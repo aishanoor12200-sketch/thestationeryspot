@@ -1,90 +1,100 @@
-
 <!DOCTYPE html>
 <html>
 <head>
   <title>The Stationery Spot</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
 
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #d98c9f;
-      color: white;
+      padding: 0;
+      background-color: #d88994;
       text-align: center;
+      font-family: Arial, sans-serif;
+      color: black;
     }
 
-    .container {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
+    .logo {
+      margin-top: 60px;
     }
 
-    .circle {
-      border: 3px solid white;
-      border-radius: 50%;
-      width: 260px;
-      height: 260px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+    .logo img {
+      width: 220px;
     }
 
-    .btn {
-      display: inline-block;
-      margin: 10px;
-      padding: 12px 25px;
-      border-radius: 25px;
+    .line {
+      margin: 40px auto;
+      width: 60%;
+      border-top: 1px solid white;
+    }
+
+    .text {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      margin-bottom: 30px;
+    }
+
+    .social {
+      margin: 15px;
+      font-size: 20px;
+    }
+
+    .social img {
+      width: 28px;
+      vertical-align: middle;
+      margin-right: 10px;
+    }
+
+    a {
       text-decoration: none;
-      font-weight: bold;
-      transition: 0.3s;
+      color: black;
     }
 
-    .whatsapp {
-      background: #25D366;
-      color: white;
+    a:hover {
+      opacity: 0.7;
     }
-
-    .instagram {
-      background: #E1306C;
-      color: white;
-    }
-
-    .btn:hover {
-      opacity: 0.8;
-    }
-
   </style>
 </head>
 
 <body>
 
-  <div class="container">
+  <!-- LOGO -->
+  <div class="logo">
+    <img src="logo.jpeg" alt="logo">
+  </div>
 
-    <div class="circle">
-      <h2 style="margin:0;">The Stationery</h2>
-      <h1 style="margin:0;">Spot</h1>
-    </div>
+  <!-- LINE -->
+  <div class="line"></div>
 
-    <p style="margin-top:40px; font-size:18px;">
-      Website Coming Soon To Place Order You Can Visit our Socials
-    </p>
+  <!-- TEXT -->
+  <div class="text">
+    Website Coming Soon To Place Order You Can Visit our Socials
+  </div>
 
-    <div style="margin-top:20px;">
-      
-      <a href="https://wa.me/923271576380" target="_blank" class="btn whatsapp">
-        💬 WhatsApp Us
-      </a>
+  <!-- WHATSAPP -->
+  <div class="social">
+    <a href="https://wa.me/923271576380" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
+      03271576380
+    </a>
+  </div>
 
-      <a href="https://instagram.com/thestationeryspot.pk" target="_blank" class="btn instagram">
-        📷 Instagram
-      </a>
+  <!-- INSTAGRAM -->
+  <div class="social">
+    <a href="https://instagram.com/thestationeryspot.pk" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png">
+      thestationeryspot.pk
+    </a>
+  </div>
 
-    </div>
-
+  <!-- FACEBOOK -->
+  <div class="social">
+    <a href="https://facebook.com/" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png">
+      The Stationery Spot
+    </a>
   </div>
 
 </body>
