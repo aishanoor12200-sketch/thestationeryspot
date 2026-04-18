@@ -5,68 +5,145 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Stationery Spot</title>
 
-<!-- SAME FONT -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Pacifico&display=swap" rel="stylesheet">
 
 <style>
 body {
     margin: 0;
-    padding: 0;
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background: #fff;
     text-align: center;
 }
 
-/* Container */
-.container {
-    padding: 20px;
+/* NAVBAR */
+.nav {
+    padding: 15px;
+    font-weight: bold;
+    font-size: 18px;
 }
 
-/* Welcome Text */
+/* HERO */
+.hero {
+    padding: 60px 20px;
+}
+
 .welcome {
-    font-family: 'Poppins', sans-serif;
     font-size: 30px;
-    letter-spacing: 6px;
-    color: black;
-    margin-bottom: 15px;
+    letter-spacing: 5px;
 }
 
-/* SAME BUBBLE STYLE */
 .title {
     font-family: 'Pacifico', cursive;
-    font-size: 55px;
+    font-size: 50px;
     color: #ff9ecb;
-
-    /* bubble + glow effect */
-    text-shadow: 
-        0 0 8px #ffd6e8,
-        0 0 16px #ffc0db,
-        0 0 25px #ffb3d9,
-        2px 2px 0px #ff7fb0;
+    margin-top: 10px;
 }
 
-/* Decorative line */
-.line {
-    margin-top: 25px;
-    height: 3px;
-    width: 60%;
-    background: black;
-    margin-left: auto;
-    margin-right: auto;
+/* PRODUCTS */
+.products {
+    padding: 40px 20px;
+}
+
+.products h2 {
+    margin-bottom: 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    border: 1px solid #eee;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.price {
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.btn {
+    display: inline-block;
+    padding: 8px 15px;
+    background: #ff9ecb;
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    margin-top: 5px;
+}
+
+/* FOOTER */
+.footer {
+    margin-top: 40px;
+    padding: 20px;
+    background: #f8f8f8;
 }
 </style>
-
 </head>
 
 <body>
 
-<div class="container">
+<!-- NAV -->
+<div class="nav">The Stationery Spot</div>
+
+<!-- HERO -->
+<div class="hero">
     <div class="welcome">WELCOME TO</div>
     <div class="title">The Stationery Spot</div>
-    <div class="line"></div>
+</div>
+
+<!-- PRODUCTS -->
+<div class="products">
+    <h2>Our Products</h2>
+
+    <div class="grid">
+
+        <!-- PRODUCT 1 -->
+        <div class="card">
+            <img src="https://via.placeholder.com/150">
+            <div>Notebook</div>
+            <div class="price">Rs. 350</div>
+            <a class="btn" href="https://wa.me/923271576380?text=I want to order Notebook">Order</a>
+        </div>
+
+        <!-- PRODUCT 2 -->
+        <div class="card">
+            <img src="https://via.placeholder.com/150">
+            <div>Highlighters</div>
+            <div class="price">Rs. 250</div>
+            <a class="btn" href="https://wa.me/923271576380?text=I want to order Highlighters">Order</a>
+        </div>
+
+        <!-- PRODUCT 3 -->
+        <div class="card">
+            <img src="https://via.placeholder.com/150">
+            <div>Pens Set</div>
+            <div class="price">Rs. 200</div>
+            <a class="btn" href="https://wa.me/923271576380?text=I want to order Pens Set">Order</a>
+        </div>
+
+    </div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+    <p>Contact us on WhatsApp</p>
+    <a class="btn" href="https://wa.me/923271576380">Chat Now</a>
+
+    <p style="margin-top:10px;">
+        Instagram: 
+        <a href="https://instagram.com/thestationeryspot.pk" target="_blank">
+            @thestationeryspot.pk
+        </a>
+    </p>
 </div>
 
 </body>
