@@ -124,14 +124,14 @@
         <div class="products">
 
             <div class="card">
-                <img src="diary1.jpg.jpeg">
+                <img src="diary1.jpg.jpeg" onclick="openImage(this.src)">
                 <p>Cute Floral Diary</p>
                 <p class="price">Rs.450</p>
                 <button class="btn">Order</button>
             </div>
 
             <div class="card">
-                <img src="diary2.jpg.jpeg">
+                <img src="diary1.jpg.jpeg" onclick="openImage(this.src)">
                 <p>Pink Aesthetic Diary</p>
                 <p class="price">Rs.450</p>
                 <button class="btn">Order</button>
@@ -145,14 +145,14 @@
   <div class="products">
 
     <div class="card">
-      <img src="1776362161509.png">
+      <img src="diary1.jpg.jpeg" onclick="openImage(this.src)">
       <p>Cute Glass Sipper</p>
       <p class="price">Rs.650</p>
       <button class="btn">Order</button>
     </div>
 
     <div class="card">
-      <img src="sipper2.jpg">
+      <img src="diary1.jpg.jpeg" onclick="openImage(this.src)">
       <p>Aesthetic Sipper</p>
       <p class="price">Rs.900</p>
       <button class="btn">Order</button>
@@ -166,7 +166,7 @@
   <div class="products">
 
     <div class="card">
-      <img src="1776512603250.png">
+      <img src="diary1.jpg.jpeg" onclick="openImage(this.src)">
       <p>Cute erassors</p>
       <p class="price">Rs.200</p>
       <button class="btn">Order</button>
@@ -182,6 +182,20 @@
 
         </div>
     </div>
+<!-- Image Popup -->
+<div id="imagePopup" class="popup" onclick="closeImage()">
+  <img id="popupImg">
+</div>
 
+<script>
+function openImage(src) {
+  document.getElementById("imagePopup").style.display = "flex";
+  document.getElementById("popupImg").src = src;
+}
+
+function closeImage() {
+  document.getElementById("imagePopup").style.display = "none";
+}
+</script>
 </body>
 </html>
