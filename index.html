@@ -1,31 +1,51 @@
+
 <!DOCTYPE html>
 <html>
 <head>
     <title>The Stationery Spot</title>
 
+    <!-- Google Font for cute text -->
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
     <style>
         body {
             margin: 0;
             font-family: Arial;
-            background-color: #fff;
             text-align: center;
+            background-color: white;
         }
 
-        /* LOGO */
+        /* Top small text */
+        .top-text {
+            font-size: 16px;
+            margin-top: 15px;
+            color: black;
+        }
+
+        /* Logo */
         .logo img {
             width: 120px;
-            margin-top: 20px;
+            margin: 15px 0;
         }
 
-        /* TITLE */
-        .title {
-            font-size: 40px;
-            color: #ff7aa2;
-            font-family: cursive;
+        /* Welcome text */
+        .welcome {
+            font-size: 30px;
+            font-family: 'Times New Roman', serif;
+            color: black;
             margin: 10px 0;
         }
 
-        /* CATEGORY */
+        /* Cute pink heading */
+        .main-title {
+            font-family: 'Pacifico', cursive;
+            font-size: 40px;
+            color: #ff7aa2;
+            text-shadow: 0 0 10px #ffc0cb;
+            margin-bottom: 20px;
+        }
+
+        /* Category */
         .category {
             margin-top: 40px;
         }
@@ -36,7 +56,7 @@
             padding-bottom: 5px;
         }
 
-        /* PRODUCTS GRID */
+        /* Products */
         .products {
             display: flex;
             justify-content: center;
@@ -61,7 +81,6 @@
 
         .price {
             font-weight: bold;
-            margin: 5px 0;
         }
 
         .btn {
@@ -78,17 +97,27 @@
 
 <body>
 
-    <!-- LOGO -->
+    <!-- Small top text -->
+    <div class="top-text">
+        The Stationery Spot
+    </div>
+
+    <!-- Logo -->
     <div class="logo">
         <img src="logo.jpeg">
     </div>
 
-    <!-- TITLE -->
-    <div class="title">
+    <!-- Welcome -->
+    <div class="welcome">
+        Welcome to
+    </div>
+
+    <!-- Cute Title -->
+    <div class="main-title">
         The Stationery Spot
     </div>
 
-    <!-- DIARIES -->
+    <!-- Diaries -->
     <div class="category">
         <h2>🌸 Diaries</h2>
 
@@ -105,29 +134,6 @@
                 <img src="diary2.jpg.jpeg">
                 <p>Pink Aesthetic Diary</p>
                 <p class="price">Rs.600</p>
-                <button class="btn">Order</button>
-            </div>
-
-        </div>
-    </div>
-
-    <!-- PENS -->
-    <div class="category">
-        <h2>✏️ Pens</h2>
-
-        <div class="products">
-
-            <div class="card">
-                <img src="diary1.jpg.jpeg">
-                <p>Gel Pen Set</p>
-                <p class="price">Rs.300</p>
-                <button class="btn">Order</button>
-            </div>
-
-            <div class="card">
-                <img src="diary2.jpg.jpeg">
-                <p>Colorful Pens</p>
-                <p class="price">Rs.400</p>
                 <button class="btn">Order</button>
             </div>
 
