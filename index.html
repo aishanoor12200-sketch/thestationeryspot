@@ -11,139 +11,127 @@
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    background: #fff;
+    background: white;
     text-align: center;
 }
 
-/* NAVBAR */
-.nav {
-    padding: 15px;
-    font-weight: bold;
-    font-size: 18px;
-}
-
-/* HERO */
-.hero {
-    padding: 60px 20px;
-}
-
-.welcome {
-    font-size: 30px;
-    letter-spacing: 5px;
-}
-
+/* TITLE */
 .title {
     font-family: 'Pacifico', cursive;
     font-size: 50px;
     color: #ff9ecb;
-    margin-top: 10px;
+    margin-top: 30px;
 }
 
-/* PRODUCTS */
-.products {
-    padding: 40px 20px;
+/* CATEGORY HEADING */
+.category {
+    font-size: 26px;
+    margin: 30px 0 10px;
+    border-bottom: 2px solid black;
+    display: inline-block;
 }
 
-.products h2 {
-    margin-bottom: 20px;
-}
-
+/* GRID */
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 15px;
+    padding: 15px;
 }
 
+/* CARD */
 .card {
-    border: 1px solid #eee;
-    padding: 10px;
+    background: #f8f8f8;
     border-radius: 10px;
+    overflow: hidden;
+    padding-bottom: 10px;
 }
 
 .card img {
     width: 100%;
-    border-radius: 10px;
+    height: 180px;
+    object-fit: cover;
+}
+
+.name {
+    font-size: 14px;
+    padding: 5px;
 }
 
 .price {
     font-weight: bold;
-    margin: 5px 0;
 }
 
 .btn {
-    display: inline-block;
-    padding: 8px 15px;
-    background: #ff9ecb;
+    background: black;
     color: white;
+    padding: 5px 10px;
+    border-radius: 15px;
     text-decoration: none;
-    border-radius: 20px;
-    margin-top: 5px;
-}
-
-/* FOOTER */
-.footer {
-    margin-top: 40px;
-    padding: 20px;
-    background: #f8f8f8;
+    font-size: 12px;
 }
 </style>
 </head>
 
 <body>
 
-<!-- NAV -->
-<div class="nav">The Stationery Spot</div>
+<div class="title">The Stationery Spot</div>
 
-<!-- HERO -->
-<div class="hero">
-    <div class="welcome">WELCOME TO</div>
-    <div class="title">The Stationery Spot</div>
-</div>
+<!-- 🌸 DIARIES -->
+<div class="category">🌸 Diaries</div>
 
-<!-- PRODUCTS -->
-<div class="products">
-    <h2>Our Products</h2>
+<div class="grid">
+    <div class="card">
+        <img src="diary1.jpg">
+        <div class="name">Cute Floral Diary</div>
+        <div class="price">Rs.500</div>
+        <a class="btn" href="https://wa.me/923271576380?text=I want Floral Diary">Order</a>
+    </div>
 
-    <div class="grid">
-
-        <!-- PRODUCT 1 -->
-        <div class="card">
-            <img src="https://via.placeholder.com/150">
-            <div>Notebook</div>
-            <div class="price">Rs. 350</div>
-            <a class="btn" href="https://wa.me/923271576380?text=I want to order Notebook">Order</a>
-        </div>
-
-        <!-- PRODUCT 2 -->
-        <div class="card">
-            <img src="https://via.placeholder.com/150">
-            <div>Highlighters</div>
-            <div class="price">Rs. 250</div>
-            <a class="btn" href="https://wa.me/923271576380?text=I want to order Highlighters">Order</a>
-        </div>
-
-        <!-- PRODUCT 3 -->
-        <div class="card">
-            <img src="https://via.placeholder.com/150">
-            <div>Pens Set</div>
-            <div class="price">Rs. 200</div>
-            <a class="btn" href="https://wa.me/923271576380?text=I want to order Pens Set">Order</a>
-        </div>
-
+    <div class="card">
+        <img src="diary2.jpg">
+        <div class="name">Pink Aesthetic Diary</div>
+        <div class="price">Rs.600</div>
+        <a class="btn" href="https://wa.me/923271576380?text=I want Pink Diary">Order</a>
     </div>
 </div>
 
-<!-- FOOTER -->
-<div class="footer">
-    <p>Contact us on WhatsApp</p>
-    <a class="btn" href="https://wa.me/923271576380">Chat Now</a>
+<!-- ✏️ PENS -->
+<div class="category">✏️ Pens</div>
 
-    <p style="margin-top:10px;">
-        Instagram: 
-        <a href="https://instagram.com/thestationeryspot.pk" target="_blank">
-            @thestationeryspot.pk
-        </a>
-    </p>
+<div class="grid">
+    <div class="card">
+        <img src="pen1.jpg">
+        <div class="name">Gel Pens Set</div>
+        <div class="price">Rs.300</div>
+        <a class="btn" href="https://wa.me/923271576380?text=I want Gel Pens">Order</a>
+    </div>
+
+    <div class="card">
+        <img src="pen2.jpg">
+        <div class="name">Pastel Pens</div>
+        <div class="price">Rs.350</div>
+        <a class="btn" href="https://wa.me/923271576380?text=I want Pastel Pens">Order</a>
+    </div>
+</div>
+
+<!-- 🎀 OTHER ITEMS -->
+<div class="category">🎀 Accessories</div>
+
+<div class="grid">
+    <div class="card">
+        <img src="item1.jpg">
+        <div class="name">Sticker Pack</div>
+        <div class="price">Rs.200</div>
+        <a class="btn" href="https://wa.me/923271576380?text=I want Stickers">Order</a>
+    </div>
+
+    <div class="card">
+        <img src="item2.jpg">
+        <div class="name">Keychain</div>
+        <div class="price">Rs.250</div>
+        <a class="btn" href="https://wa.me/923271576380?text=I want Keychain">Order</a>
+    </div>
 </div>
 
 </body>
