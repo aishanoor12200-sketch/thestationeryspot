@@ -3,69 +3,65 @@
 <head>
     <title>The Stationery Spot</title>
 
-    <!-- Google Font for cute text -->
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 
     <style>
         body {
             margin: 0;
             font-family: Arial;
-            text-align: center;
-            background-color: white;
+            background: white;
         }
 
-        /* Top small text */
-        .top-text {
-            font-size: 16px;
-            margin-top: 15px;
+        /* NAVBAR */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .nav-logo img {
+            width: 80px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            margin: 0 10px;
             color: black;
+            font-weight: 500;
         }
 
-        /* Logo */
-        .logo img {
-            width: 120px;
-            margin: 15px 0;
+        .nav-links a:hover {
+            color: #ff7aa2;
         }
 
-        /* Welcome text */
-        .welcome {
-            font-size: 30px;
-            font-family: 'Times New Roman', serif;
-            color: black;
-            margin: 10px 0;
-        }
-
-        /* Cute pink heading */
+        /* TITLE */
         .main-title {
+            text-align: center;
             font-family: 'Pacifico', cursive;
             font-size: 40px;
             color: #ff7aa2;
-            text-shadow: 0 0 10px #ffc0cb;
-            margin-bottom: 20px;
+            margin-top: 20px;
         }
 
-        /* Category */
+        /* PRODUCTS */
         .category {
             margin-top: 40px;
+            text-align: center;
         }
 
-        .category h2 {
-            border-bottom: 2px solid black;
-            display: inline-block;
-            padding-bottom: 5px;
-        }
-
-        /* Products */
         .products {
             display: flex;
             justify-content: center;
-            gap: 20px;
             flex-wrap: wrap;
+            gap: 20px;
             margin: 20px;
         }
 
         .card {
-            width: 250px;
+            width: 220px;
             border-radius: 15px;
             box-shadow: 0 4px 10px rgba(0,0,0,0.1);
             padding: 10px;
@@ -73,7 +69,7 @@
 
         .card img {
             width: 100%;
-            height: 200px;
+            height: 180px;
             object-fit: cover;
             border-radius: 10px;
         }
@@ -83,137 +79,232 @@
         }
 
         .btn {
-            background: black;
+            background: #ff7aa2;
             color: white;
             border: none;
             padding: 8px 15px;
             border-radius: 20px;
             cursor: pointer;
         }
+
+        /* POPUP */
         .popup {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.8);
-  justify-content: center;
-  align-items: center;
-}
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            justify-content: center;
+            align-items: center;
+        }
 
-.popup img {
-  max-width: 90%;
-  max-height: 90%;
-  border-radius: 10px;
-}
-
+        .popup img {
+            max-width: 90%;
+            max-height: 90%;
+        }
     </style>
 </head>
 
 <body>
 
-    <!-- Small top text -->
-    <div class="top-text">
-        The Stationery Spot
-    </div>
-
-    <!-- Logo -->
-    <div class="logo">
+<!-- NAVBAR -->
+<div class="navbar">
+    <div class="nav-logo">
         <img src="logo.jpeg">
     </div>
 
-    <!-- Welcome -->
-    <div class="welcome">
-        Welcome to
-    </div>
-
-    <!-- Cute Title -->
-    <div class="main-title">
-        The Stationery Spot
-    </div>
-
-    <!-- Diaries -->
-    <div class="category">
-        <h2>🌸 Diaries</h2>
-
-        <div class="products">
-
-            <div class="card">
-                <img src="diary1.jpg.jpeg" onclick="openImage(this.src)">
-                <p>Cute Floral Diary</p>
-                <p class="price">Rs.450</p>
-                <button class="btn">Order</button>
-            </div>
-
-            <div class="card">
-                <img src="diary2.jpg.jpeg" onclick="openImage(this.src)">
-                <p>Pink Aesthetic Diary</p>
-                <p class="price">Rs.450</p>
-                <button class="btn">Order</button>
-            </div> <!-- products close -->
-</div> <!-- category close -->
-
-<!-- Glass Sipper -->
-<div class="category">
-  <h2>🌸 Glass Sipper</h2>
-
-  <div class="products">
-
-    <div class="card">
-      <img src="1776362161509.png"
-     onclick="openImage(this.src)">
-      <p>Cute Glass Sipper</p>
-      <p class="price">Rs.650</p>
-      <button class="btn">Order</button>
-    </div>
-
-    <div class="card">
-      <img src="diary1.jpg.jpeg" onclick="openImage(this.src)">
-      <p>Aesthetic Sipper</p>
-      <p class="price">Rs.900</p>
-      <button class="btn">Order</button>
-         </div> <!-- products close -->
-</div> <!-- category close -->
-
-<!-- Erassor -->
-<div class="category">
-  <h2>🌸 Erassor</h2>
-
-  <div class="products">
-
-    <div class="card">
-      <img src="1776512603250.png"
-    onclick="openImage(this.src)">
-      <p>Cute erassors</p>
-      <p class="price">Rs.200</p>
-      <button class="btn">Order</button>
-    </div>
-    </div>
-
-  </div>
-</div>
-        
-
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="deals.html">Deals</a>
+        <a href="contact.html">Contact</a>
+        <a href="#">Refund Policy</a>
+        <a href="#">Shipping Policy</a>
     </div>
 </div>
 
+<div class="main-title">The Stationery Spot 💖</div>
+
+<!-- DIARIES -->
+<div class="category">
+    <h2>📓 Diaries</h2>
+    <div class="products">
+
+        <div class="card">
+            <img src="diary1.jpg.jpeg" onclick="openImage(this.src)">
+            <p>Cute Floral Diary</p>
+            <p class="price">Rs.450</p>
+            <button class="btn">Order</button>
         </div>
+
+        <div class="card">
+            <img src="diary2.jpg.jpeg" onclick="openImage(this.src)">
+            <p>Pink Aesthetic Diary</p>
+            <p class="price">Rs.450</p>
+            <button class="btn">Order</button>
+        </div>
+
     </div>
-<!-- Image Popup -->
-<div id="imagePopup" class="popup" onclick="closeImage()">
-  <img id="popupImg">
+</div>
+
+<!-- SIPPERS -->
+<div class="category">
+    <h2>🥤 Sippers</h2>
+    <div class="products">
+
+        <div class="card">
+            <img src="1776362161509.png" onclick="openImage(this.src)">
+            <p>Cute Glass Sipper</p>
+            <p class="price">Rs.650</p>
+            <button class="btn">Order</button>
+        </div>
+
+    </div>
+</div>
+
+<!-- ERASERS -->
+<div class="category">
+    <h2>🧽 Erasers</h2>
+    <div class="products">
+
+        <div class="card">
+            <img src="1776512603250.png" onclick="openImage(this.src)">
+            <p>Cute Erasers</p>
+            <p class="price">Rs.200</p>
+            <button class="btn">Order</button>
+        </div>
+
+    </div>
+</div>
+
+<!-- COLOUR PENCIL -->
+<div class="category">
+    <h2>🎨 Colour Pencil</h2>
+    <div class="products">
+
+        <div class="card">
+            <img src="1775850786226.png" onclick="openImage(this.src)">
+            <p>Colour Pencil Set</p>
+            <p class="price">Rs.300</p>
+            <button class="btn">Order</button>
+        </div>
+
+    </div>
+</div>
+
+<!-- MULTICOLOUR PEN -->
+<div class="category">
+    <h2>🖊️ Multicolour Pens</h2>
+    <div class="products">
+
+        <div class="card">
+            <img src="1775851463764.png" onclick="openImage(this.src)">
+            <p>Multicolour Pen</p>
+            <p class="price">Rs.150</p>
+            <button class="btn">Order</button>
+        </div>
+
+        <div class="card">
+            <img src="1775851994899.png" onclick="openImage(this.src)">
+            <p>Multicolour Pen</p>
+            <p class="price">Rs.180</p>
+            <button class="btn">Order</button>
+        </div>
+
+    </div>
+</div>
+
+<!-- POINTER -->
+<div class="category">
+    <h2>📍 Pointer</h2>
+    <div class="products">
+
+        <div class="card">
+            <img src="1775851553321.png" onclick="openImage(this.src)">
+            <p>Pointer</p>
+            <p class="price">Rs.60</p>
+            <button class="btn">Order</button>
+        </div>
+
+    </div>
+</div>
+
+<!-- HIGHLIGHTER -->
+<div class="category">
+    <h2>✨ Highlighter</h2>
+    <div class="products">
+
+        <div class="card">
+            <img src="1775852199989.png" onclick="openImage(this.src)">
+            <p>Highlighter</p>
+            <p class="price">Rs.100</p>
+            <button class="btn">Order</button>
+        </div>
+
+    </div>
+</div>
+
+<!-- SHARPENER -->
+<div class="category">
+    <h2>🔪 Sharpener</h2>
+    <div class="products">
+
+        <div class="card">
+            <img src="1775895864296.png" onclick="openImage(this.src)">
+            <p>Kids Sharpener</p>
+            <p class="price">Rs.150</p>
+            <button class="btn">Order</button>
+        </div>
+
+    </div>
+</div>
+
+<!-- PENCIL -->
+<div class="category">
+    <h2>✏️ Pencil</h2>
+    <div class="products">
+
+        <div class="card">
+            <img src="1775896010130.png" onclick="openImage(this.src)">
+            <p>Kids Pencil</p>
+            <p class="price">Rs.70</p>
+            <button class="btn">Order</button>
+        </div>
+
+    </div>
+</div>
+
+<!-- INK PEN (🔥 ADD KAR DIYA) -->
+<div class="category">
+    <h2>🖋️ Ink Pen</h2>
+    <div class="products">
+
+        <div class="card">
+            <img src="1775896158680.png" onclick="openImage(this.src)">
+            <p>Ink Pen</p>
+            <p class="price">Rs.300</p>
+            <button class="btn">Order</button>
+        </div>
+
+    </div>
+</div>
+
+<!-- POPUP -->
+<div id="popup" class="popup" onclick="closeImage()">
+    <img id="popupImg">
 </div>
 
 <script>
 function openImage(src) {
-  document.getElementById("imagePopup").style.display = "flex";
-  document.getElementById("popupImg").src = src;
+    document.getElementById("popup").style.display = "flex";
+    document.getElementById("popupImg").src = src;
 }
 
 function closeImage() {
-  document.getElementById("imagePopup").style.display = "none";
+    document.getElementById("popup").style.display = "none";
 }
 </script>
+
 </body>
 </html>
