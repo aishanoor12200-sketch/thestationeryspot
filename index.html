@@ -87,17 +87,25 @@
             cursor: pointer;
         }
 
-        /* POPUP */
-        .popup {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.8);
+    .popup {
+         display: none;
+         position: fixed;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         background: rgba(0,0,0,0.8);
+         justify-content: center;
+         align-items: center;
+}
 
-</div>
+.popup img {
+    max-width: 90%;
+}
+</style>
+</head>
+
+<body>
 
 <!-- POPUP -->
 <div id="imagePopup" class="popup" onclick="closeImage()">
@@ -115,8 +123,7 @@ function closeImage() {
 }
 </script>
 
-</body>
-        <div id="contact" style="margin-top:60px; padding:30px; background:#fff0f5;">
+<div id="contact" style="margin-top:60px; padding:30px; background:#fff0f5;">
 
     <h2 style="color:#ff7aa2;">Contact Us 💖</h2>
 
@@ -128,14 +135,14 @@ function closeImage() {
             <button class="btn">WhatsApp</button>
         </a>
 
-        <a href="https://instagram.com/thestationeryspot.pk" target="_blank">
+        <a href="https://instagram.com/stationeryspot.pk" target="_blank">
             <button class="btn">Instagram</button>
         </a>
 
-        <a href="https://facebook.com/yourpage" target="_blank">
+        <a href="https://facebook.com/The Stationery Spot" target="_blank">
             <button class="btn">Facebook</button>
         </a>
 
     </div>
-
+</body>
 </html>
