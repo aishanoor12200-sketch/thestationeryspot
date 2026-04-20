@@ -46,10 +46,48 @@
             margin-top: 20px;
         }
 
+        /* HERO BOX */
+        .hero-box {
+            margin: 30px;
+            padding: 40px 20px;
+            background: #fff0f5;
+            border-radius: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .hero-text {
+            text-align: center;
+            flex: 1;
+        }
+
+        .hero-text h1 {
+            font-family: 'Times New Roman', serif;
+            font-size: 30px;
+            color: black;
+        }
+
+        .hero-text h2 {
+            font-family: 'Pacifico', cursive;
+            font-size: 35px;
+            color: #ff7aa2;
+        }
+
+        .hero-img {
+            width: 80px;
+        }
+
         /* PRODUCTS */
         .category {
             margin-top: 40px;
             text-align: center;
+        }
+
+        .category h2 {
+            border-bottom: 2px solid black;
+            display: inline-block;
+            padding-bottom: 5px;
         }
 
         .products {
@@ -103,6 +141,7 @@
         .popup img {
             max-width: 90%;
             max-height: 90%;
+            border-radius: 10px;
         }
     </style>
 </head>
@@ -111,6 +150,7 @@
 
 <!-- NAVBAR -->
 <div class="navbar">
+
     <div class="nav-logo">
         <img src="logo.jpeg">
     </div>
@@ -122,189 +162,107 @@
         <a href="#">Refund Policy</a>
         <a href="#">Shipping Policy</a>
     </div>
+
 </div>
 
-<div class="main-title">The Stationery Spot 💖</div>
-
-<!-- DIARIES -->
-<div class="category">
-    <h2>📓 Diaries</h2>
-    <div class="products">
-
-        <div class="card">
-            <img src="diary1.jpg.jpeg" onclick="openImage(this.src)">
-            <p>Cute Floral Diary</p>
-            <p class="price">Rs.450</p>
-            <button class="btn">Order</button>
-        </div>
-
-        <div class="card">
-            <img src="diary2.jpg.jpeg" onclick="openImage(this.src)">
-            <p>Pink Aesthetic Diary</p>
-            <p class="price">Rs.450</p>
-            <button class="btn">Order</button>
-        </div>
-
-    </div>
+<!-- TITLE -->
+<div class="main-title">
+    The Stationery Spot
 </div>
 
-<!-- SIPPERS -->
-<div class="category">
-    <h2>🥤 Sippers</h2>
-    <div class="products">
+<!-- ✅ HERO BOX ADDED -->
+<div class="hero-box">
 
-        <div class="card">
-            <img src="1776362161509.png" onclick="openImage(this.src)">
-            <p>Cute Glass Sipper</p>
-            <p class="price">Rs.650</p>
-            <button class="btn">Order</button>
-        </div>
+    <img src="left.png" class="hero-img">
 
+    <div class="hero-text">
+        <h1>Welcome to</h1>
+        <h2>The Stationery Spot</h2>
     </div>
+
+    <img src="right.png" class="hero-img">
+
 </div>
 
-<!-- ERASERS -->
+<!-- Diaries -->
 <div class="category">
-    <h2>🧽 Erasers</h2>
-    <div class="products">
+<h2>🌸 Diaries</h2>
+<div class="products">
 
-        <div class="card">
-            <img src="1776512603250.png" onclick="openImage(this.src)">
-            <p>Cute Erasers</p>
-            <p class="price">Rs.200</p>
-            <button class="btn">Order</button>
-        </div>
-
-    </div>
+<div class="card">
+<img src="diary1.jpg.jpeg" onclick="openImage(this.src)">
+<p>Cute Floral Diary</p>
+<p class="price">Rs.450</p>
+<button class="btn">Order</button>
 </div>
 
-<!-- COLOUR PENCIL -->
-<div class="category">
-    <h2>🎨 Colour Pencil</h2>
-    <div class="products">
-
-        <div class="card">
-            <img src="1775850786226.png" onclick="openImage(this.src)">
-            <p>Colour Pencil Set</p>
-            <p class="price">Rs.300</p>
-            <button class="btn">Order</button>
-        </div>
-
-    </div>
+<div class="card">
+<img src="diary2.jpg.jpeg" onclick="openImage(this.src)">
+<p>Pink Aesthetic Diary</p>
+<p class="price">Rs.450</p>
+<button class="btn">Order</button>
 </div>
 
-<!-- MULTICOLOUR PEN -->
-<div class="category">
-    <h2>🖊️ Multicolour Pens</h2>
-    <div class="products">
-
-        <div class="card">
-            <img src="1775851463764.png" onclick="openImage(this.src)">
-            <p>Multicolour Pen</p>
-            <p class="price">Rs.150</p>
-            <button class="btn">Order</button>
-        </div>
-
-        <div class="card">
-            <img src="1775851994899.png" onclick="openImage(this.src)">
-            <p>Multicolour Pen</p>
-            <p class="price">Rs.180</p>
-            <button class="btn">Order</button>
-        </div>
-
-    </div>
+</div>
 </div>
 
-<!-- POINTER -->
+<!-- Glass Sipper -->
 <div class="category">
-    <h2>📍 Pointer</h2>
-    <div class="products">
+<h2>🌸 Glass Sipper</h2>
+<div class="products">
 
-        <div class="card">
-            <img src="1775851553321.png" onclick="openImage(this.src)">
-            <p>Pointer</p>
-            <p class="price">Rs.60</p>
-            <button class="btn">Order</button>
-        </div>
-
-    </div>
+<div class="card">
+<img src="1776362161509.png" onclick="openImage(this.src)">
+<p>Cute Glass Sipper</p>
+<p class="price">Rs.650</p>
+<button class="btn">Order</button>
 </div>
 
-<!-- HIGHLIGHTER -->
-<div class="category">
-    <h2>✨ Highlighter</h2>
-    <div class="products">
-
-        <div class="card">
-            <img src="1775852199989.png" onclick="openImage(this.src)">
-            <p>Highlighter</p>
-            <p class="price">Rs.100</p>
-            <button class="btn">Order</button>
-        </div>
-
-    </div>
+</div>
 </div>
 
-<!-- SHARPENER -->
+<!-- Multicolour pen -->
 <div class="category">
-    <h2>🔪 Sharpener</h2>
-    <div class="products">
+<h2>🌸 Multicolour pen</h2>
+<div class="products">
 
-        <div class="card">
-            <img src="1775895864296.png" onclick="openImage(this.src)">
-            <p>Kids Sharpener</p>
-            <p class="price">Rs.150</p>
-            <button class="btn">Order</button>
-        </div>
-
-    </div>
+<div class="card">
+<img src="1775851463764.png" onclick="openImage(this.src)">
+<p>Multicolour pen</p>
+<p class="price">Rs.150</p>
+<button class="btn">Order</button>
 </div>
 
-<!-- PENCIL -->
-<div class="category">
-    <h2>✏️ Pencil</h2>
-    <div class="products">
-
-        <div class="card">
-            <img src="1775896010130.png" onclick="openImage(this.src)">
-            <p>Kids Pencil</p>
-            <p class="price">Rs.70</p>
-            <button class="btn">Order</button>
-        </div>
-
-    </div>
+<div class="card">
+<img src="1775851994899.png" onclick="openImage(this.src)">
+<p>Multicolour pen</p>
+<p class="price">Rs.180</p>
+<button class="btn">Order</button>
 </div>
 
-<!-- INK PEN (🔥 ADD KAR DIYA) -->
+</div>
+</div>
+
+<!-- Ink pen -->
 <div class="category">
-    <h2>🖋️ Ink Pen</h2>
-    <div class="products">
+<h2>🌸 Ink pen</h2>
+<div class="products">
 
-        <div class="card">
-            <img src="1775896158680.png" onclick="openImage(this.src)">
-            <p>Ink Pen</p>
-            <p class="price">Rs.300</p>
-            <button class="btn">Order</button>
-        </div>
+<div class="card">
+<img src="1775896158680.png" onclick="openImage(this.src)">
+<p>Ink pen</p>
+<p class="price">Rs.300</p>
+<button class="btn">Order</button>
+</div>
 
-    </div>
+</div>
 </div>
 
 <!-- POPUP -->
-<div id="popup" class="popup" onclick="closeImage()">
-    <img id="popupImg">
+<div id="imagePopup" class="popup" onclick="closeImage()">
+<img id="popupImg">
 </div>
 
 <script>
 function openImage(src) {
-    document.getElementById("popup").style.display = "flex";
-    document.getElementById("popupImg").src = src;
-}
-
-function closeImage() {
-    document.getElementById("popup").style.display = "none";
-}
-</script>
-
-</body>
-</html>
+document.getElementById("imagePopup").style.display = "flex
