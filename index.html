@@ -3,65 +3,69 @@
 <head>
     <title>The Stationery Spot</title>
 
+    <!-- Google Font for cute text -->
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 
     <style>
         body {
             margin: 0;
             font-family: Arial;
-            background: white;
-        }
-
-        /* NAVBAR */
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 30px;
-            background: white;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-        }
-
-        .nav-logo img {
-            width: 80px;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            margin: 0 10px;
-            color: black;
-            font-weight: 500;
-        }
-
-        .nav-links a:hover {
-            color: #ff7aa2;
-        }
-
-        /* TITLE */
-        .main-title {
             text-align: center;
+            background-color: white;
+        }
+
+        /* Top small text */
+        .top-text {
+            font-size: 16px;
+            margin-top: 15px;
+            color: black;
+        }
+
+        /* Logo */
+        .logo img {
+            width: 120px;
+            margin: 15px 0;
+        }
+
+        /* Welcome text */
+        .welcome {
+            font-size: 30px;
+            font-family: 'Times New Roman', serif;
+            color: black;
+            margin: 10px 0;
+        }
+
+        /* Cute pink heading */
+        .main-title {
             font-family: 'Pacifico', cursive;
             font-size: 40px;
             color: #ff7aa2;
-            margin-top: 20px;
+            text-shadow: 0 0 10px #ffc0cb;
+            margin-bottom: 20px;
         }
 
-        /* PRODUCTS */
+        /* Category */
         .category {
             margin-top: 40px;
-            text-align: center;
         }
 
+        .category h2 {
+            border-bottom: 2px solid black;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        /* Products */
         .products {
             display: flex;
             justify-content: center;
-            flex-wrap: wrap;
             gap: 20px;
+            flex-wrap: wrap;
             margin: 20px;
         }
 
         .card {
-            width: 220px;
+            width: 250px;
             border-radius: 15px;
             box-shadow: 0 4px 10px rgba(0,0,0,0.1);
             padding: 10px;
@@ -69,7 +73,7 @@
 
         .card img {
             width: 100%;
-            height: 180px;
+            height: 200px;
             object-fit: cover;
             border-radius: 10px;
         }
@@ -79,70 +83,137 @@
         }
 
         .btn {
-            background: #ff7aa2;
+            background: black;
             color: white;
             border: none;
             padding: 8px 15px;
             border-radius: 20px;
             cursor: pointer;
         }
-
-    .popup {
-         display: none;
-         position: fixed;
-         top: 0;
-         left: 0;
-         width: 100%;
-         height: 100%;
-         background: rgba(0,0,0,0.8);
-         justify-content: center;
-         align-items: center;
+        .popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
 }
 
 .popup img {
-    max-width: 90%;
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
 }
-</style>
+
+    </style>
 </head>
 
 <body>
 
-<!-- POPUP -->
+    <!-- Small top text -->
+    <div class="top-text">
+        The Stationery Spot
+    </div>
+
+    <!-- Logo -->
+    <div class="logo">
+        <img src="logo.jpeg">
+    </div>
+
+    <!-- Welcome -->
+    <div class="welcome">
+        Welcome to
+    </div>
+
+    <!-- Cute Title -->
+    <div class="main-title">
+        The Stationery Spot
+    </div>
+
+    <!-- Diaries -->
+    <div class="category">
+        <h2>🌸 Diaries</h2>
+
+        <div class="products">
+
+            <div class="card">
+                <img src="diary1.jpg.jpeg" onclick="openImage(this.src)">
+                <p>Cute Floral Diary</p>
+                <p class="price">Rs.450</p>
+                <button class="btn">Order</button>
+            </div>
+
+            <div class="card">
+                <img src="diary2.jpg.jpeg" onclick="openImage(this.src)">
+                <p>Pink Aesthetic Diary</p>
+                <p class="price">Rs.450</p>
+                <button class="btn">Order</button>
+            </div> <!-- products close -->
+</div> <!-- category close -->
+
+<!-- Glass Sipper -->
+<div class="category">
+  <h2>🌸 Glass Sipper</h2>
+
+  <div class="products">
+
+    <div class="card">
+      <img src="1776362161509.png"
+     onclick="openImage(this.src)">
+      <p>Cute Glass Sipper</p>
+      <p class="price">Rs.650</p>
+      <button class="btn">Order</button>
+    </div>
+
+    <div class="card">
+      <img src="diary1.jpg.jpeg" onclick="openImage(this.src)">
+      <p>Aesthetic Sipper</p>
+      <p class="price">Rs.900</p>
+      <button class="btn">Order</button>
+         </div> <!-- products close -->
+</div> <!-- category close -->
+
+<!-- Erassor -->
+<div class="category">
+  <h2>🌸 Erassor</h2>
+
+  <div class="products">
+
+    <div class="card">
+      <img src="1776512603250.png"
+    onclick="openImage(this.src)">
+      <p>Cute erassors</p>
+      <p class="price">Rs.200</p>
+      <button class="btn">Order</button>
+    </div>
+    </div>
+
+  </div>
+</div>
+        
+
+    </div>
+</div>
+
+        </div>
+    </div>
+<!-- Image Popup -->
 <div id="imagePopup" class="popup" onclick="closeImage()">
-    <img id="popupImg">
+  <img id="popupImg">
 </div>
 
 <script>
 function openImage(src) {
-    document.getElementById("imagePopup").style.display = "flex";
-    document.getElementById("popupImg").src = src;
+  document.getElementById("imagePopup").style.display = "flex";
+  document.getElementById("popupImg").src = src;
 }
 
 function closeImage() {
-    document.getElementById("imagePopup").style.display = "none";
+  document.getElementById("imagePopup").style.display = "none";
 }
 </script>
-
-<div id="contact" style="margin-top:60px; padding:30px; background:#fff0f5;">
-
-    <h2 style="color:#ff7aa2;">Contact Us 💖</h2>
-
-    <p style="font-size:18px;">📞 03271576380</p>
-
-    <div style="margin-top:20px;">
-
-        <a href="https://wa.me/923271576380" target="_blank">
-            <button class="btn">WhatsApp</button>
-        </a>
-
-        <a href="https://instagram.com/stationeryspot.pk" target="_blank">
-            <button class="btn">Instagram</button>
-        </a>
-
-        <a href="https://facebook.com/The Stationery Spot" target="_blank">
-            <button class="btn">Facebook</button>
-        </a>
-
-    </div>
 </body>
 </html>
