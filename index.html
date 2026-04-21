@@ -41,6 +41,7 @@ body {
 .right-menu {
     display: flex;
     align-items: center;
+    margin-right:40px;
 }
 
 /* SEARCH */
@@ -158,7 +159,9 @@ body {
     </div>
 
     <div class="right-menu">
-        <input type="text" id="searchInput" class="search" placeholder="Search..." onkeyup="searchItems()">
+        <input type="text" id="searchInput"
+        class="search" placeholder="Search..." 
+        onkeyup="searchItems()">
     </div>
 </div>
 
@@ -442,6 +445,20 @@ function openImage(src) {
 
 function closeImage() {
     document.getElementById("imagePopup").style.display = "none";
+}
+function searchItems() {
+    let input = document.getElementById("searchInput").value.toLowerCase();
+    let cards = document.querySelectorAll(".card");
+
+    cards.forEach(card => {
+        let text = card.innerText.toLowerCase();
+
+        if (text.includes(input)) {
+            card.style.display = "inline-block";
+        } else {
+            card.style.display = "none";
+        }
+    });
 }
 </script>
     </body>
