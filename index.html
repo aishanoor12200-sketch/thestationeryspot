@@ -2,6 +2,10 @@
 <html>
 <head>
 
+<meta name="viewport"
+content="width=device-width, 
+initial-scale=1.0">
+
 <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 
 <style>
@@ -503,12 +507,18 @@ function searchItems() {
     resultsBox.style.display = "block";
 
     cards.forEach(card => {
-        let text = card.innerText.toLowerCase();
+        let text = card.querySelector("p").innerText.toLowerCase();
 
         if (text.includes(input)) {
             let item = document.createElement("div");
-            item.innerText = card.innerText;
-            resultsBox.appendChild(item);
+            item.innerText = card.querySelector("p").innerText;
+
+           item.onclick = function() {
+               card.scrollIntoView({ behavior: "smooth" });
+               resultsBox.style.display = "none";
+};
+
+resultsBox.appendChild(item);
         }
     });
 }
