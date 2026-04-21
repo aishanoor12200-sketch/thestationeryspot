@@ -54,6 +54,33 @@ body {
     width: 120px;
 }
 
+.search-box {
+    position: relative;
+}
+
+.search-results {
+    position: absolute;
+    top: 30px;
+    right: 0;
+    width: 220px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    display: none;
+    padding: 10px;
+    z-index: 1000;
+}
+
+.search-results div {
+    padding: 5px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.search-results div:hover {
+    background: #ffe4ec;
+}
+
 /* HERO */
 .hero-outer {
     width: 80%;
@@ -63,8 +90,17 @@ body {
     background: linear-gradient(135deg, #ffd6e0, #ffffff);
 }
 
+/* ✅ UPDATED HERO INNER */
 .hero-inner {
-    background: white;
+    background: linear-gradient(-45deg, 
+        #fbc2eb,
+        #a6c1ee,
+        #d4fc79,
+        #c2e9fb
+    );
+    background-size: 400% 400%;
+    animation: gradientMove 10s ease infinite;
+
     border-radius: 20px;
     padding: 30px 15px;
     text-align: center;
@@ -79,6 +115,13 @@ body {
 .hero-inner p {
     color: #666;
     font-size: 13px;
+}
+
+/* ✅ ANIMATION ADDED */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 /* BUTTON (used everywhere) */
@@ -158,10 +201,14 @@ body {
         <a href="#">Refund Policy</a>
     </div>
 
-    <div class="right-menu">
+   <div class="right-menu">
+    <div class="search-box">
         <input type="text" id="searchInput"
-        class="search" placeholder="Search..." 
-        onkeyup="searchItems()">
+class="search" placeholder="Search..." 
+onkeyup="searchItems()">
+
+        <div id="searchResults"
+class="search-results"></div>
     </div>
 </div>
 
@@ -179,7 +226,7 @@ body {
 
     </div>
 </div>
-    
+     
 <!-- Diaries -->
 <div class="category">
 <h2>🌸 Diaries</h2>
@@ -449,14 +496,24 @@ function closeImage() {
 function searchItems() {
     let input = document.getElementById("searchInput").value.toLowerCase();
     let cards = document.querySelectorAll(".card");
+    let resultsBox = document.getElementById("searchResults");
+
+    resultsBox.innerHTML = "";
+
+    if (input === "") {
+        resultsBox.style.display = "none";
+        return;
+    }
+
+    resultsBox.style.display = "block";
 
     cards.forEach(card => {
         let text = card.innerText.toLowerCase();
 
         if (text.includes(input)) {
-            card.style.display = "inline-block";
-        } else {
-            card.style.display = "none";
+            let item = document.createElement("div");
+            item.innerText = card.innerText;
+            resultsBox.appendChild(item);
         }
     });
 }
