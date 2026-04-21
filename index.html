@@ -1,127 +1,141 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>The Stationery Spot</title>
 
-    <!-- Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial;
-            background: white;
-        }
+<style>
 
-        /* NAVBAR (same as your old) */
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 30px;
-        }
+body {
+    margin: 0;
+    font-family: Arial;
+    background: white;
+}
 
-        .nav-links a {
-            margin: 0 10px;
-            text-decoration: none;
-            color: black;
-            font-size: 14px;
-        }
+/* 🔝 TOP BAR */
+.top-bar {
+    width: 100%;
+    background: #ff8fb1;
+    padding: 8px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-        /* HERO BOX (NEW DESIGN) */
-        .hero-box {
-            width: 80%;
-            margin: 30px auto;
-            padding: 40px 20px;
-            text-align: center;
-            border-radius: 25px;
-            background: linear-gradient(135deg, #ffe4ec, #ffffff);
-            box-shadow: 0 10px 30px rgba(255, 182, 193, 0.3);
-        }
+.left-menu a {
+    color: white;
+    text-decoration: none;
+    margin-right: 12px;
+    font-size: 13px;
+}
 
-        /* LOGO */
-        .logo {
-            width: 75px;
-            height: 75px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 10px;
-        }
+/* RIGHT SIDE (ONLY SEARCH + SAVE) */
+.right-menu {
+    display: flex;
+    align-items: center;
+}
 
-        .hero-box h2 {
-            font-size: 16px;
-            color: #555;
-        }
+.search {
+    padding: 5px 10px;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    margin-right: 8px;
+}
 
-        .hero-box h1 {
-            font-size: 34px;
-            color: #ff6f91;
-            font-family: 'Pacifico', cursive;
-            margin: 10px 0;
-        }
+.small-btn {
+    background: white;
+    color: #ff6f91;
+    border-radius: 15px;
+    padding: 5px 10px;
+    font-size: 12px;
+    text-decoration: none;
+}
 
-        /* BUTTONS */
-        .buttons {
-            margin-top: 20px;
-        }
+/* 💗 HERO OUTER (exact layered look) */
+.hero-outer {
+    width: 90%;
+    margin: 40px auto;
+    padding: 15px;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #ffd6e0, #ffeef3);
+}
 
-        .btn {
-            text-decoration: none;
-            padding: 10px 20px;
-            margin: 5px;
-            border-radius: 20px;
-            background: #ff8fb1;
-            color: white;
-            font-size: 14px;
-            display: inline-block;
-        }
+/* INNER WHITE BOX */
+.hero-inner {
+    background: white;
+    border-radius: 25px;
+    padding: 50px 20px;
+    text-align: center;
+}
 
-        .btn:hover {
-            background: #ff6f91;
-        }
+/* MAIN HEADING */
+.hero-inner h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 40px;
+    color: #ff6f91;
+    margin-bottom: 10px;
+}
 
-        /* PRODUCTS AREA (empty - you will add) */
-        .products {
-            padding: 20px;
-        }
+/* SUBTEXT */
+.hero-inner p {
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
 
-    </style>
+/* CONTACT LINKS (vertical) */
+.contact a {
+    display: block;
+    margin: 6px 0;
+    text-decoration: none;
+    color: #ff6f91;
+    font-size: 14px;
+}
+
+</style>
+
 </head>
 
-<!-- BASIC SECURITY -->
-<body oncontextmenu="return false;">
+<body>
 
-    <!-- NAVBAR (UNCHANGED) -->
-    <div class="navbar">
-        <div>LOGO</div>
+<!-- 🔝 TOP BAR -->
+<div class="top-bar">
 
-        <div class="nav-links">
-            <a href="#">Home</a>
-            <a href="#">Deals</a>
-            <a href="#">Contact</a>
-            <a href="#">Refund Policy</a>
-            <a href="#">Shipping Policy</a>
-        </div>
+    <div class="left-menu">
+        <a href="#">Home</a>
+        <a href="#">Deals</a>
+        <a href="#">Contact</a>
+        <a href="#">Shipping</a>
+        <a href="#">Refund Policy</a>
     </div>
 
-    <!-- 🔥 HERO BOX (NEW ADDED) -->
-    <div class="hero-box">
+    <div class="right-menu">
+        <input type="text" class="search" placeholder="Search...">
+        <a href="#" class="small-btn">Save</a>
+    </div>
 
-        <!-- YOUR LOGO -->
-        <img src="images/logo.png" class="logo">
+</div>
 
-        <h2>Welcome to</h2>
-        <h1>The Stationery Spot</h1>
+<!-- 💗 HERO BOX -->
+<div class="hero-outer">
+    <div class="hero-inner">
 
-        <!-- SOCIAL BUTTONS -->
-        <div class="buttons">
-            <a href="#" class="btn">Instagram</a>
-            <a href="#" class="btn">WhatsApp</a>
-            <a href="#" class="btn">Facebook</a>
+        <h1>Welcome to The Stationery Spot</h1>
+
+        <p>Your go-to place for cute & aesthetic stationery 💗</p>
+
+        <div class="contact">
+            <a href="#">WhatsApp</a>
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
         </div>
 
     </div>
+</div>
 
+</body>
+</html>
 
 <!-- Diaries -->
 <div class="category">
