@@ -9,14 +9,23 @@
 body {
     margin: 0;
     font-family: Arial;
-    background: white;
+    background: linear-gradient(135deg, #ffe4ec, #ffffff);
+}
+
+/* 🔝 TOP TEXT (NEW LINE) */
+.top-heading {
+    text-align: center;
+    font-family: 'Pacifico', cursive;
+    font-size: 26px;
+    color: #ff6f91;
+    margin-top: 15px;
 }
 
 /* 🔝 TOP BAR */
 .top-bar {
     width: 100%;
     background: #ff8fb1;
-    padding: 8px 15px;
+    padding: 6px 12px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -25,72 +34,73 @@ body {
 .left-menu a {
     color: white;
     text-decoration: none;
-    margin-right: 12px;
-    font-size: 13px;
+    margin-right: 10px;
+    font-size: 12px;
 }
 
-/* RIGHT SIDE (ONLY SEARCH + SAVE) */
+/* RIGHT SIDE */
 .right-menu {
     display: flex;
     align-items: center;
 }
 
+/* SMALL SEARCH */
 .search {
-    padding: 5px 10px;
-    border-radius: 15px;
+    padding: 4px 8px;
+    border-radius: 12px;
     border: none;
     outline: none;
-    margin-right: 8px;
+    margin-right: 6px;
+    font-size: 12px;
+    width: 120px;
 }
 
 .small-btn {
     background: white;
     color: #ff6f91;
-    border-radius: 15px;
-    padding: 5px 10px;
-    font-size: 12px;
+    border-radius: 12px;
+    padding: 4px 8px;
+    font-size: 11px;
     text-decoration: none;
 }
 
-/* 💗 HERO OUTER (exact layered look) */
+/* 💗 HERO BOX (SMALLER) */
 .hero-outer {
-    width: 90%;
-    margin: 40px auto;
-    padding: 15px;
-    border-radius: 30px;
-    background: linear-gradient(135deg, #ffd6e0, #ffeef3);
+    width: 80%;
+    margin: 30px auto;
+    padding: 10px;
+    border-radius: 25px;
+    background: linear-gradient(135deg, #ffd6e0, #ffffff);
 }
 
-/* INNER WHITE BOX */
 .hero-inner {
     background: white;
-    border-radius: 25px;
-    padding: 50px 20px;
+    border-radius: 20px;
+    padding: 30px 15px;
     text-align: center;
 }
 
-/* MAIN HEADING */
+/* TEXT BLACK */
 .hero-inner h1 {
     font-family: 'Pacifico', cursive;
-    font-size: 40px;
-    color: #ff6f91;
+    font-size: 30px;
+    color: black;
     margin-bottom: 10px;
 }
 
-/* SUBTEXT */
 .hero-inner p {
-    color: #777;
-    font-size: 14px;
-    margin-bottom: 20px;
+    color: #666;
+    font-size: 13px;
+    margin-bottom: 15px;
 }
 
-/* CONTACT LINKS (vertical) */
+/* CONTACT */
 .contact a {
     display: block;
-    margin: 6px 0;
+    margin: 5px 0;
     text-decoration: none;
     color: #ff6f91;
-    font-size: 14px;
+    font-size: 13px;
 }
 
 </style>
@@ -98,6 +108,11 @@ body {
 </head>
 
 <body>
+
+<!-- 🔥 TOP MAIN HEADING -->
+<div class="top-heading">
+    The Stationery Spot
+</div>
 
 <!-- 🔝 TOP BAR -->
 <div class="top-bar">
@@ -136,7 +151,6 @@ body {
 
 </body>
 </html>
-
 <!-- Diaries -->
 <div class="category">
 <h2>🌸 Diaries</h2>
