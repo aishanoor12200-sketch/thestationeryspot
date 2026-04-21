@@ -25,7 +25,7 @@ body {
 .top-bar {
     width: 100%;
     background: #ff8fb1;
-    padding: 6px 12px;
+    padding: 3px 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -137,9 +137,10 @@ body {
 }
 
 .popup img {
-    max-width: 80%;
+    max-width: 60%;
+    max-height: 70vh;
+    border-radius: 10px;
 }
-
 </style>
 </head>
 
@@ -157,7 +158,7 @@ body {
     </div>
 
     <div class="right-menu">
-        <input type="text" class="search" placeholder="Search...">
+        <input type="text" id="searchInput" class="search" placeholder="Search..." onkeyup="searchItems()">
     </div>
 </div>
 
