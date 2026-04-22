@@ -104,13 +104,13 @@ body {
 
 .hero-inner h1 {
     font-family: 'Pacifico', cursive;
-    font-size: 30px;
+    font-size: 40px;
     color: black;
 }
 
 .hero-inner p {
     color: #666;
-    font-size: 13px;
+    font-size: 16px;
 }
 
 /* ✅ ANIMATION ADDED */
@@ -148,6 +148,27 @@ body {
     flex-wrap: wrap;
 }
 
+.qty-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px 0;
+}
+
+.qty-box button {
+  padding: 4px 10px;
+  border: none;
+  background: #ff8fb1;
+  color: white;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.qty-box span {
+  margin: 0 10px;
+  font-size: 14px;
+}
 .card {
     width: 150px;
     margin: 10px;
@@ -233,16 +254,23 @@ class="search-results"></div>
 
 <div class="card">
 <img src="diary1.jpg.jpeg" onclick="openImage(this.src)">
-<p>Cute Floral Diary</p>
+<p class="name">Cute Floral Diary</p>
 <p class="price">Rs.450</p>
-<button class="btn">Order</button>
+
+<div class="qty-box">
+  <button onclick="decrease(this)">-</button>
+  <span class="qty">1</span>
+  <button onclick="increase(this)">+</button>
+</div>
+
+<button class="btn" onclick="orderNow(this, 'DR01')">Order</button>
 </div>
 
 <div class="card">
 <img src="diary2.jpg.jpeg" onclick="openImage(this.src)"> 
 <p>Pink Aesthetic Diary</p>
 <p class="price">Rs.450</p>
-<button class="btn">Order</button>
+<a href="https://wa.me/923271576380?text=I want to order Cute Floral Diary" class="btn">Order</a>
 </div>
 
 <div class="card">
@@ -571,6 +599,31 @@ function searchItems() {
 resultsBox.appendChild(item);
         }
     });
+}
+    function increase(btn) {
+  let qty = btn.parentElement.querySelector(".qty");
+  qty.innerText = parseInt(qty.innerText) + 1;
+}
+
+function decrease(btn) {
+  let qty = btn.parentElement.querySelector(".qty");
+  let value = parseInt(qty.innerText);
+  if (value > 1) {
+    qty.innerText = value - 1;
+  }
+}
+
+function orderNow(btn, code) {
+  let card = btn.parentElement;
+
+  let name = card.querySelector(".name").innerText;
+  let qty = card.querySelector(".qty").innerText;
+
+  let message = "I want to order:\n" + name + " (" + code + ") - " + qty + " pcs";
+
+  let url = "https://wa.me/923271576380?text=" + encodeURIComponent(message);
+
+  window.open(url);
 }
 </script>
     </body>
