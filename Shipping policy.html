@@ -13,6 +13,7 @@
       background: #fff;
       margin: 0;
       padding: 0;
+      color: black;
     }
 
     .container {
@@ -26,7 +27,6 @@
       color: #ff8fb1;
       font-family: 'Playball', cursive;
       font-size: 36px;
-      letter-spacing: 1px;
     }
 
     .box {
@@ -36,55 +36,55 @@
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
 
+    p {
+      line-height: 1.6;
+      margin-bottom: 10px;
+    }
+
     .charge {
       font-weight: bold;
-      color: black;
-      font-size: 16px;
       display: block;
       margin-bottom: 5px;
     }
 
-    p {
-      line-height: 1.6;
-      color: #090000;
+    /* FOOTER */
+    .footer {
+      background: #fff;
+      color: #000;
+      padding: 40px 20px;
+      border-top: 1px solid #ddd;
+      margin-top: 40px;
+    }
+
+    .footer-container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .footer-left, .footer-right {
+      width: 45%;
+    }
+
+    .footer h3 {
+      color: #000;
       margin-bottom: 10px;
     }
-    .footer {
-  background: #fff; /* white background */
-  color: #000; /* black text */
-  padding: 40px 20px;
-  border-top: 1px solid #ddd;
-}
 
-.footer-container {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  max-width: 1000px;
-  margin: auto;
-}
+    .footer p {
+      color: #000;
+      font-size: 14px;
+    }
 
-.footer-left, .footer-right {
-  width: 45%;
-}
-
-.footer h3 {
-  color: #ff8fb1;
-}
-
-
-.footer p {
-  color: #000;
-  font-size: 14px;                             
-}
-
-.footer-bottom {
-  text-align: center;
-  margin-top: 20px;
-  font-size: 13px;
-  border-top: 1px solid #ddd;
-  padding-top: 10px;
-}
+    .footer-bottom {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 13px;
+      border-top: 1px solid #ddd;
+      padding-top: 10px;
+    }
   </style>
 </head>
 
@@ -119,24 +119,29 @@
 
     </div>
   </div>
+
+  <!-- FOOTER -->
   <div class="footer">
-  <div class="footer-container">
+    <div class="footer-container">
 
-    <div class="footer-left">
-      <h3>Contact Information</h3>
-      <p>Phone number: +92271576380</p>
+      <div class="footer-left">
+        <h3>Contact Information</h3>
+        <p>Phone number: +923271576380</p>
+        <p>Email: thestationeryspot.pk@gmail.com</p>
+      </div>
+
+      <div class="footer-right">
+        <h3>Follow Us</h3>
+        <p>Instagram: thestationeryspot.pk</p>
+        <p>Facebook: The Stationery Spot</p>
+      </div>
+
     </div>
 
-    <div class="footer-right">
-      <h3>Subscribe to our YouTube Channel</h3>
-      <p>Search</p>
+    <div class="footer-bottom">
+      <p>© 2026 The Stationery Spot • Privacy Policy • Refund Policy • Shipping Policy</p>
     </div>
-
   </div>
 
-  <div class="footer-bottom">
-    <p>© 2026, Your Brand • Privacy policy • Refund policy • Shipping policy • Contact information • Terms of service</p>
-  </div>
-</div>
 </body>
 </html>
