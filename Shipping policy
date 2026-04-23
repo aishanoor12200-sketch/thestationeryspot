@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shipping Policy</title>
+
+  <style>
+    body {
+      font-family: Arial;
+      background: #fff;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #ff8fb1; /* tumhari pink theme */
+    }
+
+    p {
+      line-height: 1.6;
+      color: #444;
+    }
+
+    .box {
+      background: #fff0f5;
+      padding: 20px;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>Shipping Policy</h1>
+
+    <div class="box">
+
+      <p>Thank you for shopping with us 💖</p>
+
+      <p>We aim to deliver your order as quickly and safely as possible.</p>
+
+      <p><b>Delivery Time:</b><br>
+      Orders are delivered within 3–5 working days.</p>
+
+      <p><b>Shipping Charges:</b><br>
+      Shipping charges may vary depending on your location.</p>
+
+      <p><b>Order Processing:</b><br>
+      Orders are processed within 24 hours after confirmation.</p>
+
+      <p><b>Delay Notice:</b><br>
+      In case of any delay, our team will contact you.</p>
+
+      <p>If you have any questions, feel free to contact us on WhatsApp 💬</p>
+
+    </div>
+  </div>
+
+</body>
+</html>
