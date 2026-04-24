@@ -40,6 +40,50 @@ body {
   font-size: 16px;
 }
 
+
+.right-menu {
+    display: flex;
+    align-items: center;
+    margin-right:40px;
+}
+
+/* SEARCH */
+.search {
+    padding: 4px 8px;
+    border-radius: 12px;
+    border: none;
+    outline: none;
+    font-size: 12px;
+    width: 120px;
+}
+
+.search-box {
+    position: relative;
+}
+
+.search-results {
+    position: absolute;
+    top: 30px;
+    right: 0;
+    width: 220px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    display: none;
+    padding: 10px;
+    z-index: 1000;
+}
+
+.search-results div {
+    padding: 5px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.search-results div:hover {
+    background: #ffe4ec;
+}
+
 /* HERO */
 .hero-outer {
     width: 80%;
@@ -130,6 +174,20 @@ body {
     border-radius: 12px;
     cursor: pointer;
     box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.floating-order {
+    position: fixed;
+    right: 20px;
+    bottom: 80px;
+    display: none;
+    z-index: 9999;
+    animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+    from { transform: translateX(100px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
 }
 
 </style>
