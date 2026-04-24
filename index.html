@@ -481,6 +481,17 @@ resultsBox.appendChild(item);
         }
     });
 }
+
+function showOrderBox() {
+    let box = document.getElementById("orderBox");
+
+    box.style.display = "block";
+
+    // 3 seconds baad hide
+    setTimeout(() => {
+        box.style.display = "none";
+    }, 3000);
+}
 let cart = [];
 
 function addToCart(btn, code) {
@@ -496,6 +507,7 @@ function addToCart(btn, code) {
     });
 
     alert("Added: " + name);
+    showOrderBox();
 }
 
 function sendWhatsAppOrder() {
@@ -526,7 +538,7 @@ function decrease(btn){
   let q = btn.parentElement.querySelector(".qty");
   if(q.innerText>1) q.innerText--;
 }
-
+    
 </script>
 
 </body>
