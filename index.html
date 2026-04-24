@@ -264,7 +264,7 @@ class="search-results"></div>
   <button onclick="increase(this)">+</button>
 </div>
 
-<button class="btn" onclick="orderNow(this, 'DR01')">Order</button>
+<button class="btn" onclick="addToCart(this, 'DR01')">Add to Cart</button>
 </div>
 
 <div class="card">
@@ -278,7 +278,7 @@ class="search-results"></div>
   <button onclick="increase(this)">+</button>
 </div>
 
-<button class="btn" onclick="orderNow(this, 'DR01')">Order</button>
+<button class="btn" onclick="addToCart(this, 'DR02')">Add to Cart</button>
 </div>
 
 <div class="card">
@@ -292,20 +292,7 @@ class="search-results"></div>
   <button onclick="increase(this)">+</button>
 </div>
 
-<button class="btn" onclick="orderNow(this, 'DR03')">Order</button>
-</div>
-<div class="card">
-<img src="diary1.jpg.jpeg" onclick="openImage(this.src)">
-<p class="name">Cute Floral Diary</p>
-<p class="price">Rs.450</p>
-
-<div class="qty-box">
-  <button onclick="decrease(this)">-</button>
-  <span class="qty">1</span>
-  <button onclick="increase(this)">+</button>
-</div>
-
-<button class="btn" onclick="orderNow(this, 'DR01')">Order</button>
+<button class="btn" onclick="addToCart(this, 'DR03')">Add to Cart</button>
 </div>
 
 <div class="card">
@@ -319,7 +306,21 @@ class="search-results"></div>
   <button onclick="increase(this)">+</button>
 </div>
 
-<button class="btn" onclick="orderNow(this, 'DR01')">Order</button>
+<button class="btn" onclick="addToCart(this, 'DR04')">Add to Cart</button>
+</div>s
+
+<div class="card">
+<img src="diary1.jpg.jpeg" onclick="openImage(this.src)">
+<p class="name">Cute Floral Diary</p>
+<p class="price">Rs.450</p>
+
+<div class="qty-box">
+  <button onclick="decrease(this)">-</button>
+  <span class="qty">1</span>
+  <button onclick="increase(this)">+</button>
+</div>
+
+<button class="btn" onclick="addToCart(this, 'DR05')">Add to Cart</button>
 </div>
 
 <div class="card">
@@ -333,7 +334,7 @@ class="search-results"></div>
   <button onclick="increase(this)">+</button>
 </div>
 
-<button class="btn" onclick="orderNow(this, 'DR01')">Order</button>
+<button class="btn" onclick="addToCart(this, 'DR06')">Add to Cart</button>
 </div>
 
 <div class="card">
@@ -347,7 +348,7 @@ class="search-results"></div>
   <button onclick="increase(this)">+</button>
 </div>
 
-<button class="btn" onclick="orderNow(this, 'DR01')">Order</button>
+<button class="btn" onclick="addToCart(this, 'DR07')">Add to Cart</button>
 </div>
 
 
@@ -671,8 +672,11 @@ onclick="openImage(this.src)">
   <button onclick="increase(this)">+</button>
 </div>
 
-<button class="btn" onclick="orderNow(this, 'OR01')">Order</button>
+<button class="btn" onclick="addToCart(this, 'DR01')">Add to Cart</button>
 </div> 
+
+<button class="btn" onclick="sendWhatsAppOrder()">Order on WhatsApp</button>
+
 <!-- POPUP -->
 <div id="imagePopup" class="popup" onclick="closeImage()">
 <img id="popupImg">
