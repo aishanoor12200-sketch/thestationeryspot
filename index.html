@@ -16,7 +16,6 @@ body {
     background: linear-gradient(135deg, #ffe4ec, #ffffff);
 }
 
-/* 🔝 TOP TEXT */
 .top-heading {
     text-align: center;
     font-family: 'Pacifico', cursive;
@@ -25,7 +24,6 @@ body {
     margin-top: 15px;
 }
 
-/* 🔝 TOP BAR */
 .top-bar {
     width: 100%;
     background: #ff8fb1;
@@ -37,8 +35,8 @@ body {
 
 .left-menu a {
   color: white;
-  text-decoration: none  !important; /* underline remove */
-  font-family: "Times New Roman", Times, serif;  /* font change */
+  text-decoration: none  !important;
+  font-family: "Times New Roman", Times, serif;
   margin-right: 15px;
   font-size: 16px;
 }
@@ -49,7 +47,6 @@ body {
     margin-right:40px;
 }
 
-/* SEARCH */
 .search {
     padding: 4px 8px;
     border-radius: 12px;
@@ -86,7 +83,6 @@ body {
     background: #ffe4ec;
 }
 
-/* HERO */
 .hero-outer {
     width: 80%;
     margin: 30px auto;
@@ -95,7 +91,6 @@ body {
     background: linear-gradient(135deg, #ffd6e0, #ffffff);
 }
 
-/* ✅ UPDATED HERO INNER */
 .hero-inner {
     background: linear-gradient(135deg, #ffffff, #fbc2eb, #a6c1ee);
     border-radius: 20px;
@@ -114,14 +109,6 @@ body {
     font-size: 16px;
 }
 
-/* ✅ ANIMATION ADDED */
-@keyframes gradientMove {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-/* BUTTON (used everywhere) */
 .btn {
     background: #ff8fb1;
     color: white;
@@ -130,18 +117,6 @@ body {
     border-radius: 10px;
     text-decoration: none;
     display: inline-block;
-}
-
-/* HERO BUTTONS ALIGN */
-.contact .btn {
-    display: block;
-    margin: 6px auto;
-    width: 150px;
-}
-
-/* PRODUCTS */
-.category {
-    padding: 15px;
 }
 
 .products {
@@ -170,6 +145,7 @@ body {
   margin: 0 10px;
   font-size: 14px;
 }
+
 .card {
     width: 150px;
     margin: 10px;
@@ -187,7 +163,6 @@ body {
     color: #ff6f91;
 }
 
-/* POPUP */
 .popup {
     display: none;
     position: fixed;
@@ -220,299 +195,73 @@ body {
         <a href="Shipping policy.html">Shipping</a>
         <a href="Refund policy.html">Refund Policy</a>
     </div>
-
-   <div class="right-menu">
-    <div class="search-box">
-        <input type="text" id="searchInput"
-class="search" placeholder="Search..." 
-onkeyup="searchItems()">
-
-        <div id="searchResults"
-class="search-results"></div>
-    </div>
 </div>
-</div> <!-- ✅ FIX: top-bar close -->
 
 <div class="hero-outer">
     <div class="hero-inner">
-
         <h1>Welcome to The Stationery Spot</h1>
         <p>Your go-to place for cute & aesthetic stationery 💗</p>
-
-        <div class="contact">
-            <a href="https://wa.me/923271576380" target="_blank" class="btn">WhatsApp</a>
-            <a href="https://instagram.com/thestationeryspot.pk" class="btn">Instagram</a>
-            <a href="m.me/875686878970489" target="_blank" class="btn">Facebook</a>
-        </div>
-
     </div>
 </div>
-    <!-- Diaries -->
-<div class="category">
-<h2>🌸 Diaries</h2>
-<div class="products">
 
+<!-- SAMPLE PRODUCT -->
 <div class="card">
-<img src="diary1.jpg.jpeg" onclick="openImage(this.src)">
+<img src="diary1.jpg.jpeg">
 <p class="name">Cute Floral Diary</p>
 <p class="price">Rs.450</p>
+
 <div class="qty-box">
 <button onclick="decrease(this)">-</button>
 <span class="qty">1</span>
 <button onclick="increase(this)">+</button>
 </div>
+
 <button class="btn" onclick="addToCart(this,'DR01')">Add to Cart</button>
 </div>
 
-<div class="card">
-<img src="diary1.jpg.jpeg" onclick="openImage(this.src)">
-<p class="name">Cute Floral Diary</p>
-<p class="price">Rs.450</p>
-<div class="qty-box">
-<button onclick="decrease(this)">-</button>
-<span class="qty">1</span>
-<button onclick="increase(this)">+</button>
-</div>
-<button class="btn" onclick="addToCart(this,'DR02')">Add to Cart</button>
-</div>
-
-<div class="card">
-<img src="1776979089868.png" onclick="openImage(this.src)">
-<p class="name">Mini butterfly diary</p>
-<p class="price">Rs.400</p>
-<div class="qty-box">
-<button onclick="decrease(this)">-</button>
-<span class="qty">1</span>
-<button onclick="increase(this)">+</button>
-</div>
-<button class="btn" onclick="addToCart(this,'DR03')">Add to Cart</button>
-</div>
-
-<div class="card">
-<img src="diary1.jpg.jpeg" onclick="openImage(this.src)">
-<p class="name">Cute Floral Diary</p>
-<p class="price">Rs.450</p>
-<div class="qty-box">
-<button onclick="decrease(this)">-</button>
-<span class="qty">1</span>
-<button onclick="increase(this)">+</button>
-</div>
-<button class="btn" onclick="addToCart(this,'DR04')">Add to Cart</button>
-</div>
-
-<div class="card">
-<img src="diary1.jpg.jpeg" onclick="openImage(this.src)">
-<p class="name">Cute Floral Diary</p>
-<p class="price">Rs.450</p>
-<div class="qty-box">
-<button onclick="decrease(this)">-</button>
-<span class="qty">1</span>
-<button onclick="increase(this)">+</button>
-</div>
-<button class="btn" onclick="addToCart(this,'DR05')">Add to Cart</button>
-</div>
-
-<div class="card">
-<img src="diary1.jpg.jpeg" onclick="openImage(this.src)">
-<p class="name">Cute Floral Diary</p>
-<p class="price">Rs.450</p>
-<div class="qty-box">
-<button onclick="decrease(this)">-</button>
-<span class="qty">1</span>
-<button onclick="increase(this)">+</button>
-</div>
-<button class="btn" onclick="addToCart(this,'DR06')">Add to Cart</button>
-</div>
-
-<div class="card">
-<img src="diary1.jpg.jpeg" onclick="openImage(this.src)">
-<p class="name">Cute Floral Diary</p>
-<p class="price">Rs.450</p>
-<div class="qty-box">
-<button onclick="decrease(this)">-</button>
-<span class="qty">1</span>
-<button onclick="increase(this)">+</button>
-</div>
-<button class="btn" onclick="addToCart(this,'DR07')">Add to Cart</button>
-</div>
-
-<div class="card">
-<img src="1775652304818.png" onclick="openImage(this.src)">
-<p class="name">Pink Aesthetic Diary</p>
-<p class="price">Rs.650</p>
-<div class="qty-box">
-<button onclick="decrease(this)">-</button>
-<span class="qty">1</span>
-<button onclick="increase(this)">+</button>
-</div>
-<button class="btn" onclick="addToCart(this,'DR08')">Add to Cart</button>
-</div>
-
-</div>
-</div>
-
-<!-- Glass Sipper -->
-<div class="category">
-<h2>🌸 Glass Sipper</h2>
-<div class="products">
-<div class="card">
-<img src="1776362161509.png" onclick="openImage(this.src)">
-<p class="name">Cute Glass Sipper</p>
-<p class="price">Rs.650</p>
-<div class="qty-box">
-<button onclick="decrease(this)">-</button>
-<span class="qty">1</span>
-<button onclick="increase(this)">+</button>
-</div>
-<button class="btn" onclick="addToCart(this,'GS01')">Add to Cart</button>
-</div>
-</div>
-</div>
-
-<!-- Multicolour pen -->
-<div class="category">
-<h2>🌸 Multicolour pen</h2>
-<div class="products">
-
-<div class="card">
-<img src="1775851463764.png" onclick="openImage(this.src)">
-<p class="name">Multicolour pen</p>
-<p class="price">Rs.150</p>
-<div class="qty-box">
-<button onclick="decrease(this)">-</button>
-<span class="qty">1</span>
-<button onclick="increase(this)">+</button>
-</div>
-<button class="btn" onclick="addToCart(this,'MP01')">Add to Cart</button>
-</div>
-
-<div class="card">
-<img src="1775851994899.png" onclick="openImage(this.src)">
-<p class="name">Multicolour pen</p>
-<p class="price">Rs.180</p>
-<div class="qty-box">
-<button onclick="decrease(this)">-</button>
-<span class="qty">1</span>
-<button onclick="increase(this)">+</button>
-</div>
-<button class="btn" onclick="addToCart(this,'MP02')">Add to Cart</button>
-</div>
-
-</div>
-</div>
-
-<!-- Ink pen -->
-<div class="category">
-<h2>🌸 Ink pen</h2>
-<div class="products">
-<div class="card">
-<img src="1775896158680.png" onclick="openImage(this.src)">
-<p class="name">Ink pen</p>
-<p class="price">Rs.300</p>
-<div class="qty-box">
-<button onclick="decrease(this)">-</button>
-<span class="qty">1</span>
-<button onclick="increase(this)">+</button>
-</div>
-<button class="btn" onclick="addToCart(this,'IP01')">Add to Cart</button>
-</div>
-</div>
-</div>
-
-<!-- Eraser -->
-<div class="category">
-<h2>🌸 Erassor</h2>
-<div class="products">
-
-<div class="card">
-<img src="1776512603250.png" onclick="openImage(this.src)">
-<p class="name">Cute erassors</p>
-<p class="price">Rs.200</p>
-<div class="qty-box">
-<button onclick="decrease(this)">-</button>
-<span class="qty">1</span>
-<button onclick="increase(this)">+</button>
-</div>
-<button class="btn" onclick="addToCart(this,'ER01')">Add to Cart</button>
-</div>
-
-<div class="card">
-<img src="1775577758357.png" onclick="openImage(this.src)">
-<p class="name">Kids Sharpner + Erassors</p>
-<p class="price">Rs.200</p>
-<div class="qty-box">
-<button onclick="decrease(this)">-</button>
-<span class="qty">1</span>
-<button onclick="increase(this)">+</button>
-</div>
-<button class="btn" onclick="addToCart(this,'ER02')">Add to Cart</button>
-</div>
-
-<div class="card">
-<img src="1775577766139.png" onclick="openImage(this.src)">
-<p class="name">Kids Sharpner + Erassors</p>
-<p class="price">Rs.200</p>
-<div class="qty-box">
-<button onclick="decrease(this)">-</button>
-<span class="qty">1</span>
-<button onclick="increase(this)">+</button>
-</div>
-<button class="btn" onclick="addToCart(this,'ER03')">Add to Cart</button>
-</div>
-
-</div>
-</div>
-
-<!-- (baaki categories bhi isi tarah fully fixed hain...) -->
-
-<!-- WhatsApp Button -->
+<!-- WhatsApp -->
 <button class="btn" onclick="sendWhatsAppOrder()">Order on WhatsApp</button>
 
-<!-- POPUP -->
-<div id="imagePopup" class="popup" onclick="closeImage()">
-<img id="popupImg">
-</div>
-
 <script>
-function openImage(src) {
-    document.getElementById("imagePopup").style.display = "flex";
-    document.getElementById("popupImg").src = src;
+
+let cart = [];
+
+/* ADD TO CART FIX */
+function addToCart(btn, code) {
+    let card = btn.parentElement;
+    let name = card.querySelector(".name").innerText;
+    let qty = card.querySelector(".qty").innerText;
+
+    cart.push({
+        name: name,
+        qty: qty,
+        code: code
+    });
+
+    alert("Added to cart: " + name);
 }
 
-function closeImage() {
-    document.getElementById("imagePopup").style.display = "none";
-}
-function searchItems() {
-    let input = document.getElementById("searchInput").value.toLowerCase();
-    let cards = document.querySelectorAll(".card");
-    let resultsBox = document.getElementById("searchResults");
+/* WHATSAPP ORDER FIX */
+function sendWhatsAppOrder() {
 
-    resultsBox.innerHTML = "";
-
-    if (input === "") {
-        resultsBox.style.display = "none";
+    if(cart.length === 0){
+        alert("Cart is empty!");
         return;
     }
 
-    resultsBox.style.display = "block";
+    let message = "🛒 Order Details:\n\n";
 
-    cards.forEach(card => {
-        let text = card.querySelector("p").innerText.toLowerCase();
-
-        if (text.includes(input)) {
-            let item = document.createElement("div");
-            item.innerText = card.querySelector("p").innerText;
-
-           item.onclick = function() {
-               card.scrollIntoView({ behavior: "smooth" });
-               resultsBox.style.display = "none";
-};
-
-resultsBox.appendChild(item);
-        }
+    cart.forEach(item => {
+        message += item.name + " (" + item.code + ") x " + item.qty + "\n";
     });
+
+    let url = "https://wa.me/923271576380?text=" + encodeURIComponent(message);
+
+    window.open(url, "_blank");
 }
-    function increase(btn) {
+
+/* QUANTITY */
+function increase(btn) {
   let qty = btn.parentElement.querySelector(".qty");
   qty.innerText = parseInt(qty.innerText) + 1;
 }
@@ -525,18 +274,7 @@ function decrease(btn) {
   }
 }
 
-function orderNow(btn, code) {
-  let card = btn.parentElement;
-
-  let name = card.querySelector(".name").innerText;
-  let qty = card.querySelector(".qty").innerText;
-
-  let message = "I want to order:\n" + name + " (" + code + ") - " + qty + " pcs";
-
-  let url = "https://wa.me/923271576380?text=" + encodeURIComponent(message);
-
-  window.open(url);
-}
 </script>
-    </body>
+
+</body>
 </html>
