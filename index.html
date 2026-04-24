@@ -2,9 +2,7 @@
 <html>
 <head>
 
-<meta name="viewport"
-content="width=device-width, 
-initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 
@@ -16,6 +14,7 @@ body {
     background: linear-gradient(135deg, #ffe4ec, #ffffff);
 }
 
+/* TOP */
 .top-heading {
     text-align: center;
     font-family: 'Pacifico', cursive;
@@ -35,54 +34,13 @@ body {
 
 .left-menu a {
   color: white;
-  text-decoration: none  !important;
-  font-family: "Times New Roman", Times, serif;
+  text-decoration: none;
+  font-family: "Times New Roman";
   margin-right: 15px;
   font-size: 16px;
 }
 
-.right-menu {
-    display: flex;
-    align-items: center;
-    margin-right:40px;
-}
-
-.search {
-    padding: 4px 8px;
-    border-radius: 12px;
-    border: none;
-    outline: none;
-    font-size: 12px;
-    width: 120px;
-}
-
-.search-box {
-    position: relative;
-}
-
-.search-results {
-    position: absolute;
-    top: 30px;
-    right: 0;
-    width: 220px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    display: none;
-    padding: 10px;
-    z-index: 1000;
-}
-
-.search-results div {
-    padding: 5px;
-    font-size: 12px;
-    cursor: pointer;
-}
-
-.search-results div:hover {
-    background: #ffe4ec;
-}
-
+/* HERO */
 .hero-outer {
     width: 80%;
     margin: 30px auto;
@@ -101,12 +59,6 @@ body {
 .hero-inner h1 {
     font-family: 'Pacifico', cursive;
     font-size: 40px;
-    color: black;
-}
-
-.hero-inner p {
-    color: #666;
-    font-size: 16px;
 }
 
 .btn {
@@ -119,31 +71,14 @@ body {
     display: inline-block;
 }
 
+/* PRODUCTS */
+.category {
+    padding: 15px;
+}
+
 .products {
     display: flex;
     flex-wrap: wrap;
-}
-
-.qty-box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 5px 0;
-}
-
-.qty-box button {
-  padding: 4px 10px;
-  border: none;
-  background: #ff8fb1;
-  color: white;
-  font-size: 16px;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-.qty-box span {
-  margin: 0 10px;
-  font-size: 14px;
 }
 
 .card {
@@ -163,24 +98,42 @@ body {
     color: #ff6f91;
 }
 
-.popup {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.7);
-    justify-content: center;
-    align-items: center;
+.qty-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.popup img {
-    max-width: 60%;
-    max-height: 70vh;
-    border-radius: 10px;
+.qty-box button {
+  background: #ff8fb1;
+  color: white;
+  border: none;
+  padding: 4px 10px;
 }
+
+.qty-box span {
+  margin: 0 10px;
+}
+
+/* ORDER BOX */
+.order-box {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 15px;
+}
+
+.order-btn {
+    background: white;
+    border: 2px solid #ff8fb1;
+    padding: 10px 15px;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
 </style>
+
 </head>
 
 <body>
@@ -197,113 +150,222 @@ body {
     </div>
 </div>
 
+<!-- HERO (RESTORED) -->
 <div class="hero-outer">
-    <div class="hero-inner">
-        <h1>Welcome to The Stationery Spot</h1>
-        <p>Your go-to place for cute & aesthetic stationery 💗</p>
-    </div>
+<div class="hero-inner">
+
+<h1>Welcome to The Stationery Spot</h1>
+<p>Your go-to place for cute stationery 💗</p>
+
+<div class="contact">
+<a href="https://wa.me/923271576380" class="btn">WhatsApp</a>
+<a href="https://instagram.com/thestationeryspot.pk" class="btn">Instagram</a>
+<a href="m.me/875686878970489" class="btn">Facebook</a>
 </div>
 
-<!-- SAMPLE PRODUCT -->
+</div>
+</div>
+
+<!-- DIARIES -->
+<div class="category"><h2>🌸 Diaries</h2>
+<div class="products">
+
 <div class="card">
 <img src="diary1.jpg.jpeg">
 <p class="name">Cute Floral Diary</p>
 <p class="price">Rs.450</p>
-
 <div class="qty-box">
 <button onclick="decrease(this)">-</button>
 <span class="qty">1</span>
 <button onclick="increase(this)">+</button>
 </div>
-
 <button class="btn" onclick="addToCart(this,'DR01')">Add to Cart</button>
 </div>
 
-<!-- WhatsApp -->
-<div style="width:100%; display:flex; justify-content:flex-end; padding:15px;">
-  <button onclick="sendWhatsAppOrder()" style="
-      background: transparent;
-      border: none;
-      cursor: pointer;
-  ">
-    <!-- WhatsApp Icon (simple SVG) -->
-    <svg width="40" height="40" viewBox="0 0 32 32">
-      <path fill="#25D366" d="M19.11 17.53c-.27-.14-1.6-.79-1.85-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.06-.16.18-.32.2-.59.07-.27-.14-1.14-.42-2.17-1.34-.8-.71-1.34-1.59-1.5-1.86-.16-.27-.02-.42.12-.56.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.84-2.02-.22-.53-.45-.46-.61-.47h-.52c-.18 0-.48.07-.73.34-.25.27-.95.93-.95 2.27 0 1.34.98 2.64 1.12 2.82.14.18 1.93 2.95 4.68 4.14.65.28 1.16.45 1.56.58.66.21 1.26.18 1.73.11.53-.08 1.6-.65 1.83-1.28.23-.63.23-1.17.16-1.28-.07-.11-.25-.18-.52-.32z"/>
-      <path fill="#25D366" d="M26.67 5.33C23.9 2.56 20.22 1 16.33 1 8.83 1 2.72 7.11 2.72 14.61c0 2.39.62 4.73 1.79 6.8L2 31l9.8-2.57c2.01 1.1 4.28 1.68 6.56 1.68 7.5 0 13.61-6.11 13.61-13.61 0-3.89-1.56-7.57-4.3-10.17z"/>
-    </svg>
-  </button>
+<div class="card">
+<img src="1776979089868.png">
+<p class="name">Mini Butterfly Diary</p>
+<p class="price">Rs.400</p>
+<div class="qty-box">
+<button onclick="decrease(this)">-</button>
+<span class="qty">1</span>
+<button onclick="increase(this)">+</button>
+</div>
+<button class="btn" onclick="addToCart(this,'DR03')">Add to Cart</button>
+</div>
+
+<div class="card">
+<img src="1775652304818.png">
+<p class="name">Pink Aesthetic Diary</p>
+<p class="price">Rs.650</p>
+<div class="qty-box">
+<button onclick="decrease(this)">-</button>
+<span class="qty">1</span>
+<button onclick="increase(this)">+</button>
+</div>
+<button class="btn" onclick="addToCart(this,'DR08')">Add to Cart</button>
+</div>
+
+</div>
+</div>
+
+<!-- GLASS SIPPER -->
+<div class="category">
+<h2>🌸 Glass Sipper</h2>
+<div class="products">
+
+<div class="card">
+<img src="1776362161509.png">
+<p class="name">Cute Glass Sipper</p>
+<p class="price">Rs.650</p>
+<div class="qty-box">
+<button onclick="decrease(this)">-</button>
+<span class="qty">1</span>
+<button onclick="increase(this)">+</button>
+</div>
+<button class="btn" onclick="addToCart(this,'GS01')">Add to Cart</button>
+</div>
+
+</div>
+</div>
+
+<!-- MULTICOLOUR PEN -->
+<div class="category">
+<h2>🌸 Multicolour Pen</h2>
+<div class="products">
+
+<div class="card">
+<img src="1775851463764.png">
+<p class="name">Multicolour Pen</p>
+<p class="price">Rs.150</p>
+<div class="qty-box">
+<button onclick="decrease(this)">-</button>
+<span class="qty">1</span>
+<button onclick="increase(this)">+</button>
+</div>
+<button class="btn" onclick="addToCart(this,'MP01')">Add to Cart</button>
+</div>
+
+<div class="card">
+<img src="1775851994899.png">
+<p class="name">Multicolour Pen</p>
+<p class="price">Rs.180</p>
+<div class="qty-box">
+<button onclick="decrease(this)">-</button>
+<span class="qty">1</span>
+<button onclick="increase(this)">+</button>
+</div>
+<button class="btn" onclick="addToCart(this,'MP02')">Add to Cart</button>
+</div>
+
+</div>
+</div>
+
+<!-- INK PEN -->
+<div class="category">
+<h2>🌸 Ink Pen</h2>
+<div class="products">
+
+<div class="card">
+<img src="1775896158680.png">
+<p class="name">Ink Pen</p>
+<p class="price">Rs.300</p>
+<div class="qty-box">
+<button onclick="decrease(this)">-</button>
+<span class="qty">1</span>
+<button onclick="increase(this)">+</button>
+</div>
+<button class="btn" onclick="addToCart(this,'IP01')">Add to Cart</button>
+</div>
+
+</div>
+</div>
+
+<!-- ERASERS -->
+<div class="category">
+<h2>🌸 Erasers</h2>
+<div class="products">
+
+<div class="card">
+<img src="1776512603250.png">
+<p class="name">Cute Erasers</p>
+<p class="price">Rs.200</p>
+<div class="qty-box">
+<button onclick="decrease(this)">-</button>
+<span class="qty">1</span>
+<button onclick="increase(this)">+</button>
+</div>
+<button class="btn" onclick="addToCart(this,'ER01')">Add to Cart</button>
+</div>
+
+<div class="card">
+<img src="1775577758357.png">
+<p class="name">Sharpner + Erasers</p>
+<p class="price">Rs.200</p>
+<div class="qty-box">
+<button onclick="decrease(this)">-</button>
+<span class="qty">1</span>
+<button onclick="increase(this)">+</button>
+</div>
+<button class="btn" onclick="addToCart(this,'ER02')">Add to Cart</button>
+</div>
+
+</div>
+</div>
+
+<!-- ORDER BOX -->
+<div class="order-box">
+<button class="order-btn" onclick="sendWhatsAppOrder()">
+🛒 Place Order on WhatsApp
+</button>
 </div>
 
 <script>
 
 let cart = [];
 
-/* ADD TO CART + TOTAL FIX */
 function addToCart(btn, code) {
+
     let card = btn.parentElement;
-
     let name = card.querySelector(".name").innerText;
-    let priceText = card.querySelector(".price").innerText;
-
-    // price extract (Rs.450 → 450)
-    let price = parseInt(priceText.replace(/[^0-9]/g, ""));
-
+    let price = parseInt(card.querySelector(".price").innerText.replace(/[^0-9]/g,''));
     let qty = parseInt(card.querySelector(".qty").innerText);
 
-    let totalItemPrice = price * qty;
-
     cart.push({
-        name: name,
-        qty: qty,
-        code: code,
-        price: price,
-        total: totalItemPrice
+        name, code, qty,
+        total: price * qty
     });
 
-    alert("Added: " + name + "\nTotal: Rs." + totalItemPrice);
+    alert("Added: " + name);
 }
 
-
-/* WHATSAPP ORDER WITH TOTAL */
 function sendWhatsAppOrder() {
 
     if(cart.length === 0){
-        alert("Cart is empty!");
+        alert("Cart empty!");
         return;
     }
 
-    let grandTotal = 0;
-    let message = "🛒 ORDER DETAILS:\n\n";
+    let msg = "🛒 ORDER:\n\n";
+    let total = 0;
 
-    cart.forEach(item => {
-        message += item.name +
-        " (" + item.code + ") x " +
-        item.qty +
-        " = Rs." + item.total + "\n";
-
-        grandTotal += item.total;
+    cart.forEach(i=>{
+        msg += i.name+" ("+i.code+") x "+i.qty+" = Rs."+i.total+"\n";
+        total += i.total;
     });
 
-    message += "\n💰 GRAND TOTAL: Rs." + grandTotal;
+    msg += "\n💰 TOTAL: Rs."+total;
 
-    let url = "https://wa.me/923271576380?text=" + encodeURIComponent(message);
-
-    window.open(url, "_blank");
+    window.open("https://wa.me/923271576380?text="+encodeURIComponent(msg));
 }
 
-
-/* QUANTITY */
-function increase(btn) {
-  let qty = btn.parentElement.querySelector(".qty");
-  qty.innerText = parseInt(qty.innerText) + 1;
+function increase(btn){
+  btn.parentElement.querySelector(".qty").innerText++;
 }
 
-function decrease(btn) {
-  let qty = btn.parentElement.querySelector(".qty");
-  let value = parseInt(qty.innerText);
-  if (value > 1) {
-    qty.innerText = value - 1;
-  }
+function decrease(btn){
+  let q = btn.parentElement.querySelector(".qty");
+  if(q.innerText>1) q.innerText--;
 }
 
 </script>
