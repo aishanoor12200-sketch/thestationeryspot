@@ -437,8 +437,50 @@ class="search-results"></div>
 </button>
 </div>
 
+<!-- POPUP -->
+<div id="imagePopup" class="popup" onclick="closeImage()">
+<img id="popupImg">
+</div>
 <script>
 
+function openImage(src) {
+    document.getElementById("imagePopup").style.display = "flex";
+    document.getElementById("popupImg").src = src;
+}
+
+function closeImage() {
+    document.getElementById("imagePopup").style.display = "none";
+}
+function searchItems() {
+    let input = document.getElementById("searchInput").value.toLowerCase();
+    let cards = document.querySelectorAll(".card");
+    let resultsBox = document.getElementById("searchResults");
+
+    resultsBox.innerHTML = "";
+
+    if (input === "") {
+        resultsBox.style.display = "none";
+        return;
+    }
+
+    resultsBox.style.display = "block";
+
+    cards.forEach(card => {
+        let text = card.querySelector("p").innerText.toLowerCase();
+
+        if (text.includes(input)) {
+            let item = document.createElement("div");
+            item.innerText = card.querySelector("p").innerText;
+
+           item.onclick = function() {
+               card.scrollIntoView({ behavior: "smooth" });
+               resultsBox.style.display = "none";
+};
+
+resultsBox.appendChild(item);
+        }
+    });
+}
 let cart = [];
 
 function addToCart(btn, code) {
