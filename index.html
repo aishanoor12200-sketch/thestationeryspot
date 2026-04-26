@@ -456,11 +456,11 @@ function searchItems() {
     resultsBox.style.display = "block";
 
     cards.forEach(card => {
-        let text = card.querySelector("p").innerText.toLowerCase();
+        let text = card.querySelector(".name").innerText.toLowerCase();
 
         if (text.includes(input)) {
             let item = document.createElement("div");
-            item.innerText = card.querySelector("p").innerText;
+            item.innerText = card.querySelector("name").innerText;
 
            item.onclick = function() {
                card.scrollIntoView({ behavior: "smooth" });
@@ -484,8 +484,7 @@ function addToCart(btn, code) {
 
     cart.push({ name, code, qty, total: price * qty });
 
-    document.getElementById("floatingBtn").style.display = "block";
-
+    showOrderBox(btn);
     alert("Added: " + name);
 }
 
@@ -527,6 +526,16 @@ function closeImage(){
   document.getElementById("popup").style.display="none";
 }
 
+function showOrderBox(btn) {
+
+    let floatBtn = document.getElementById("floatingBtn");
+
+    floatBtn.style.display = "block";
+
+    setTimeout(() => {
+        floatBtn.style.display = "none";
+    }, 3000);
+}
 </script>
 
 </body>
