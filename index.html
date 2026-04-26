@@ -1,12 +1,12 @@
-<!DOCTYPE html>
-<html>
-<head>
+<!DOCTYPE html> 
+<html> 
+<head>  
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">  
 
-<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">  
 
-<style>
+<style>  
 
 body {
     margin: 0;
@@ -39,7 +39,6 @@ body {
   margin-right: 15px;
   font-size: 16px;
 }
-
 
 .right-menu {
     display: flex;
@@ -110,7 +109,6 @@ body {
     font-size: 16px;
 }
 
-/* ✅ ANIMATION ADDED */
 @keyframes gradientMove {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
@@ -175,6 +173,7 @@ body {
   margin: 0 10px;
   font-size: 14px;
 }
+
 .add-btn {
   width: 100%;
   padding: 8px;
@@ -183,26 +182,13 @@ body {
   color: white;
   border-radius: 8px;
   margin-top: 8px;
-
   opacity: 0;
   transform: translateY(10px);
   transition: 0.3s;
 }
-/* hidden button */
-.add-btn {
-  width: 100%;
-  padding: 8px;
-  border: none;
-  background: black;
-  color: white;
-  border-radius: 8px;
-  margin-top: 8px;
-  transition: 0.3s;
-}
 
-/* show on hover */
 .card:hover .add-btn {
-  background :#333;
+  background:#333;
   opacity: 1;
   transform: translateY(0);
 }
@@ -215,6 +201,7 @@ body {
     z-index: 9999;
     animation: slideIn 0.3s ease;
 }
+
 .floating-order .btn {
     background: #ff6f91;
     color: white;
@@ -225,7 +212,7 @@ body {
     box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     cursor: pointer;
 }
-/* POPUP */
+
 .popup {
     display: none;
     position: fixed;
@@ -243,10 +230,12 @@ body {
     max-height: 70vh;
     border-radius: 10px;
 }
+
 @keyframes slideIn {
     from { transform: translateX(100px); opacity: 0; }
     to { transform: translateX(0); opacity: 1; }
 }
+
 .img-box {
   position: relative;
 }
@@ -262,8 +251,8 @@ body {
   font-size: 14px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.2);
 }
-    
-/* 📱 MOBILE FIX */
+
+/* MOBILE */
 @media (max-width: 600px) {
 
 .hero-outer {
@@ -297,217 +286,18 @@ body {
     width: 45%;
     margin: 8px;
 }
+
 .add-btn {
   opacity: 1;
   transform: none;
   display: block;
 }
 
-</style>
+}
+</style>  
+</head>  
 
-</head>
-
-<body>
-
-<div class="top-heading">The Stationery Spot</div>
-
-<div class="top-bar">
-    <div class="left-menu">
-        <a href="#">Home</a>
-        <a href="deals.html">Deals</a>
-        <a href="contact.html">Contact</a>
-        <a href="Shipping policy.html">Shipping</a>
-        <a href="Refund policy.html">Refund Policy</a>
-    </div>
-
-
-   <div class="right-menu">
-    <div class="search-box">
-        <input type="text" id="searchInput"
-class="search" placeholder="Search..." 
-onkeyup="searchItems()">
-
-        <div id="searchResults"
-class="search-results"></div>
-    </div>
-</div>
-</div> <!-- ✅ FIX: top-bar close-->
-
-<!-- HERO (RESTORED) -->
-<div class="hero-outer">
-<div class="hero-inner">
-
-<h1>Welcome to The Stationery Spot</h1>
-<p>Your go-to place for cute stationery 💗</p>
-
-<div class="contact">
-<a href="https://wa.me/923271576380" class="btn">WhatsApp</a>
-<a href="https://instagram.com/thestationeryspot.pk" class="btn">Instagram</a>
-<a href="m.me/875686878970489" class="btn">Facebook</a>
-</div>
-
-</div>
-</div>
-
-<!-- DIARIES -->
-<div class="category">
-  <h2>🌸 Diaries</h2>
-
-  <div class="products">
-
-    <!-- CARD1 -->
-    <div class="card">
-      <div class="img-box">
-        <img src="diary1.jpg.jpeg" onclick="openImage(this.src)">
-
-        <div class="floating-icon" onclick="addToCart(this,'DR01')">
-          🛒
-        </div>
-      </div>
-
-      <p class="name">Cute Floral Diary</p>
-      <p class="price">Rs.450</p>
-
-      <div class="qty-box">
-        <button onclick="decrease(this)">-</button>
-        <span class="qty">1</span>
-        <button onclick="increase(this)">+</button>
-      </div>
-
-      <button class="add-btn" onclick="addToCart(this,'DR01')">
-        Add to Cart
-      </button>
-  </div>
-
-    <!-- CARD2 -->
-    <div class="card">
-      <div class="img-box">
-        <img src="diary2.jpg.jpeg" onclick="openImage(this.src)">
-
-        <div class="floating-icon" onclick="addToCart(this,'DR02')">
-          🛒
-        </div>
-      </div>
-
-      <p class="name">Cute Floral Diary</p>
-      <p class="price">Rs.450</p>
-
-      <div class="qty-box">
-        <button onclick="decrease(this)">-</button>
-        <span class="qty">1</span>
-        <button onclick="increase(this)">+</button>
-      </div>
-
-      <button class="add-btn" onclick="addToCart(this,'DR02')">
-        Add to Cart
-      </button>
-</div>
-
-<!-- CARD3 -->
-    <div class="card">
-      <div class="img-box">
-        <img src="1776979089868.png" onclick="openImage(this.src)">
-
-        <div class="floating-icon" onclick="addToCart(this,'DR01')">
-          🛒
-        </div>
-      </div>
-
-      <p class="name">Mini Butterfly Diary</p>
-      <p class="price">Rs.400</p>
-
-      <div class="qty-box">
-        <button onclick="decrease(this)">-</button>
-        <span class="qty">1</span>
-        <button onclick="increase(this)">+</button>
-      </div>
-
-      <button class="add-btn" onclick="addToCart(this,'DR03')">
-        Add to Cart
-      </button>
-  </div>
-
-<!-- CARD4 -->
-    <div class="card">
-      <div class="img-box">
-        <img src="1774936848130.png" onclick="openImage(this.src)">
-
-        <div class="floating-icon" onclick="addToCart(this,'WB01')">
-          🛒
-        </div>
-      </div>
-
-      <p class="name">Kids Water Bottle</p>
-      <p class="price">Rs.200</p>
-
-      <div class="qty-box">
-        <button onclick="decrease(this)">-</button>
-        <span class="qty">1</span>
-        <button onclick="increase(this)">+</button>
-      </div>
-
-      <button class="add-btn" onclick="addToCart(this,'DR01')">
-        Add to Cart
-      </button>
-  </div>
-
-<!-- CARD1 -->
-    <div class="card">
-      <div class="img-box">
-        <img src="1775047213379.png" onclick="openImage(this.src)">
-
-        <div class="floating-icon" onclick="addToCart(this,'OR01')">
-          🛒
-        </div>
-      </div>
-
-      <p class="name">Desk Organizer</p>
-      <p class="price">Rs.600</p>
-
-      <div class="qty-box">
-        <button onclick="decrease(this)">-</button>
-        <span class="qty">1</span>
-        <button onclick="increase(this)">+</button>
-      </div>
-
-      <button class="add-btn" onclick="addToCart(this,'DR01')">
-        Add to Cart
-      </button>
-  </div>
-
- 
-<div class="card 3">
- <div class ="img-box">
-  <img src="1776979089868.png" onclick = "openimage(this.src)">
-
-   <div class="floating-icon" onclick="addToCart(this,'DR03')">
-          🛒
-        </div>
-      </div>
-    
-<p class="name">Mini Butterfly Diary</p>
-<p class="price">Rs.400</p>
-<div class="qty-box">
-<button onclick="decrease(this)">-</button>
-<span class="qty">1</span>
-<button onclick="increase(this)">+</button>
-</div>
-<button class="addbtn" onclick="addToCart(this,'DR03')"> 
-    Add to Cart</button>
-  </div>
-
-</div>
-    
-<!-- POPUP -->
-<div id="imagePopup" class="popup" onclick="closeImage()">
-<img id="popupImg">
-</div>
-
-<div class="floating-order" id="floatingBtn">
-    <button class="btn" onclick="sendWhatsAppOrder()">
-        🛒 Done Your Order
-    </button>
-</div>
+<body>  
 
 <script>
 
@@ -530,82 +320,22 @@ function searchItems() {
 
         if (text.includes(input)) {
             let item = document.createElement("div");
-            item.innerText = card.querySelector("name").innerText;
+            item.innerText = card.querySelector(".name").innerText;
 
-           item.onclick = function() {
-               card.scrollIntoView({ behavior: "smooth" });
-               resultsBox.style.display = "none";
-};
+            item.onclick = function() {
+                card.scrollIntoView({ behavior: "smooth" });
+                resultsBox.style.display = "none";
+            };
 
-resultsBox.appendChild(item);
+            resultsBox.appendChild(item);
         }
     });
 }
 
-let cart = [];
-
-function addToCart(btn, code) {
-
-    let card = btn.closest(".card");
-
-    let name = card.querySelector(".name").innerText;
-    let price = parseInt(card.querySelector(".price").innerText.replace(/[^0-9]/g,''));
-    let qty = parseInt(card.querySelector(".qty").innerText);
-
-    cart.push({ name, code, qty, total: price * qty });
-
-    showOrderBox(btn);
-    alert("Added: " + name);
-}
-
-function sendWhatsAppOrder() {
-
-    if(cart.length === 0){
-        alert("Cart empty!");
-        return;
-    }
-
-    let msg = "🛒 ORDER:\n\n";
-    let total = 0;
-
-    cart.forEach(i=>{
-        msg += i.name+" x "+i.qty+" = Rs."+i.total+"\n";
-        total += i.total;
-    });
-
-    msg += "\nTOTAL: Rs."+total;
-
-    window.open("https://wa.me/923271576380?text="+encodeURIComponent(msg));
-}
-
-function increase(btn){
-  btn.parentElement.querySelector(".qty").innerText++;
-}
-
-function decrease(btn){
-  let q = btn.parentElement.querySelector(".qty");
-  if(q.innerText > 1) q.innerText--;
-}
-
-function openImage(src){
-  document.getElementById("imagePopup").style.display="flex";
-  document.getElementById("popupImg").src = src;
-}
-
 function closeImage(){
-  document.getElementById("imagepopup").style.display="none";
+  document.getElementById("imagePopup").style.display="none";
 }
 
-function showOrderBox(btn) {
-
-    let floatBtn = document.getElementById("floatingBtn");
-
-    floatBtn.style.display = "block";
-
-    setTimeout(() => {
-        floatBtn.style.display = "none";
-    }, 10000);
-}
 </script>
 
 </body>
