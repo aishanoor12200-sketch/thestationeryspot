@@ -40,6 +40,7 @@ body {
   font-size: 16px;
 }
 
+
 .right-menu {
     display: flex;
     align-items: center;
@@ -79,6 +80,11 @@ body {
     cursor: pointer;
 }
 
+.search-results div:hover {
+    background: #ffe4ec;
+}
+
+/* HERO */
 .hero-outer {
     width: 80%;
     margin: 30px auto;
@@ -88,13 +94,37 @@ body {
 }
 
 .hero-inner {
-    text-align: center;
+    background: linear-gradient(135deg, #ffffff, #fbc2eb, #a6c1ee);
+    border-radius: 20px;
     padding: 30px 15px;
+    text-align: center;
 }
 
 .hero-inner h1 {
     font-family: 'Pacifico', cursive;
     font-size: 40px;
+}
+
+.hero-inner p {
+    color: #666;
+    font-size: 16px;
+}
+
+/* ✅ ANIMATION ADDED */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.btn {
+    background: #ff8fb1;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    display: inline-block;
 }
 
 /* PRODUCTS */
@@ -128,16 +158,23 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 5px 0;
 }
 
 .qty-box button {
-  background: #ff8fb1;
-  border: none;
-  color: white;
   padding: 4px 10px;
+  border: none;
+  background: #ff8fb1;
+  color: white;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
 }
 
-/* ADD BUTTON FIX */
+.qty-box span {
+  margin: 0 10px;
+  font-size: 14px;
+}* ADD BUTTON FIX */
 .add-btn {
   width: 100%;
   padding: 8px;
@@ -160,24 +197,19 @@ body {
     border-radius: 10px;
     cursor: pointer;
 }
-
-/* FLOATING */
 .floating-order {
     position: fixed;
-    right: 15px;
-    bottom: 70px;
+    right: 20px;
+    bottom: 80px;
     display: none;
     z-index: 9999;
+    animation: slideIn 0.3s ease;
 }
-
 .floating-order .btn {
-    background: #ff8fb1;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 20px;
+    border-radius: 50%;
+    padding: 12px;
+    font-size: 18px;
 }
-
 /* POPUP */
 .popup {
     display: none;
@@ -192,7 +224,92 @@ body {
 }
 
 .popup img {
-    max-width: 70%;
+    max-width: 60%;
+    max-height: 70vh;
+    border-radius: 10px;
+}
+@keyframes slideIn {
+    from { transform: translateX(100px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+/* 📱 MOBILE FIX */
+@media (max-width: 600px) {
+
+.hero-outer {
+    width: 95%;
+    margin: 15px auto;
+}
+
+.hero-inner {
+    padding: 20px 10px;
+}
+
+.hero-inner h1 {
+    font-size: 28px;
+}
+
+.hero-inner p {
+    font-size: 14px;
+}
+
+.contact .btn {
+    display: block;
+    margin: 5px auto;
+    width: 120px;
+}
+
+.products {
+    justify-content: center;
+}
+
+.card {
+    width: 45%;
+    margin: 8px;
+}
+
+.img-box {
+  position: relative;
+}
+
+.floating-icon {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: white;
+  padding: 6px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 14px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* hidden button */
+.add-btn {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  background: black;
+  color: white;
+  border-radius: 8px;
+  margin-top: 8px;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: 0.3s;
+}
+
+/* show on hover */
+.card:hover .add-btn {
+  opacity: 1;
+  transform: translateY(0);
+}
+.floating-order .btn {
+    border-radius: 20px;
+    padding: 10px 15px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
 }
 
 </style>
@@ -208,59 +325,161 @@ body {
         <a href="#">Home</a>
         <a href="deals.html">Deals</a>
         <a href="contact.html">Contact</a>
+        <a href="Shipping policy.html">Shipping</a>
+        <a href="Refund policy.html">Refund Policy</a>
     </div>
 
-    <div class="right-menu">
-        <input type="text" id="searchInput" class="search" placeholder="Search..." onkeyup="searchItems()">
+
+   <div class="right-menu">
+    <div class="search-box">
+        <input type="text" id="searchInput"
+class="search" placeholder="Search..." 
+onkeyup="searchItems()">
+
+        <div id="searchResults"
+class="search-results"></div>
     </div>
 </div>
+</div> <!-- ✅ FIX: top-bar close-->
 
-<!-- HERO -->
+<!-- HERO (RESTORED) -->
 <div class="hero-outer">
 <div class="hero-inner">
-<h1>Welcome</h1>
+
+<h1>Welcome to The Stationery Spot</h1>
+<p>Your go-to place for cute stationery 💗</p>
+
+<div class="contact">
+<a href="https://wa.me/923271576380" class="btn">WhatsApp</a>
+<a href="https://instagram.com/thestationeryspot.pk" class="btn">Instagram</a>
+<a href="m.me/875686878970489" class="btn">Facebook</a>
+</div>
+
 </div>
 </div>
 
-<!-- PRODUCTS -->
+<!-- DIARIES -->
 <div class="category">
-<h2>Diaries</h2>
+  <h2>🌸 Diaries</h2>
 
-<div class="products">
+  <div class="products">
 
-<!-- CARD 1 -->
-<div class="card">
-    <img src="diary1.jpg.jpeg" onclick="openImage(this.src)">
-    <p class="name">Floral Diary</p>
-    <p class="price">Rs.450</p>
+    <!-- CARD 1 -->
+    <div class="card">
+      <div class="img-box">
+        <img src="diary1.jpg.jpeg" onclick="openImage(this.src)">
 
-    <div class="qty-box">
+        <div class="floating-icon" onclick="addToCart(this,'DR01')">
+          🛒
+        </div>
+      </div>
+
+      <p class="name">Cute Floral Diary</p>
+      <p class="price">Rs.450</p>
+
+      <div class="qty-box">
         <button onclick="decrease(this)">-</button>
         <span class="qty">1</span>
         <button onclick="increase(this)">+</button>
-    </div>
+      </div>
 
-    <button class="add-btn" onclick="addToCart(this,'DR01')">Add to Cart</button>
+      <button class="add-btn" onclick="addToCart(this,'DR01')">
+        Add to Cart
+      </button>
+  </div>
 
-    <div class="order-inline">
-        <button class="order-btn" onclick="sendWhatsAppOrder()">Place Order</button>
-    </div>
+    <!-- CARD 2 -->
+    <div class="card">
+      <div class="img-box">
+        <img src="diary2.jpg.jpeg" onclick="openImage(this.src)">
+
+        <div class="floating-icon" onclick="addToCart(this,'DR02')">
+          🛒
+        </div>
+      </div>
+
+      <p class="name">Cute Floral Diary</p>
+      <p class="price">Rs.450</p>
+
+      <div class="qty-box">
+        <button onclick="decrease(this)">-</button>
+        <span class="qty">1</span>
+        <button onclick="increase(this)">+</button>
+      </div>
+
+      <button class="add-btn" onclick="addToCart(this,'DR02')">
+        Add to Cart
+      </button>
+
+      </div>
+      
+<div class="card 3">
+ <div class ="img-box">
+  <img src="1776979089868.png" onclick = "openimage(this.src)">
+
+   <div class="floating-icon" onclick="addToCart(this,'DR03')">
+          🛒
+        </div>
+      </div>
+    
+<p class="name">Mini Butterfly Diary</p>
+<p class="price">Rs.400</p>
+<div class="qty-box">
+<button onclick="decrease(this)">-</button>
+<span class="qty">1</span>
+<button onclick="increase(this)">+</button>
 </div>
+<button class="addbtn" onclick="addToCart(this,'DR03')"> 
+    Add to Cart</button>
+  </div>
+</div>  
 
 </div>
 </div>
-
+    
 <!-- POPUP -->
-<div class="popup" id="popup" onclick="closeImage()">
-    <img id="popupImg">
+<div id="imagePopup" class="popup" onclick="closeImage()">
+<img id="popupImg">
 </div>
 
-<!-- FLOATING BUTTON -->
 <div class="floating-order" id="floatingBtn">
-    <button class="btn" onclick="sendWhatsAppOrder()">🛒 Done Your Order</button>
+    <button class="btn" onclick="sendWhatsAppOrder()">
+        🛒 Done Your Order
+    </button>
 </div>
 
 <script>
+
+function searchItems() {
+    let input = document.getElementById("searchInput").value.toLowerCase();
+    let cards = document.querySelectorAll(".card");
+    let resultsBox = document.getElementById("searchResults");
+
+    resultsBox.innerHTML = "";
+
+    if (input === "") {
+        resultsBox.style.display = "none";
+        return;
+    }
+
+    resultsBox.style.display = "block";
+
+    cards.forEach(card => {
+        let text = card.querySelector("p").innerText.toLowerCase();
+
+        if (text.includes(input)) {
+            let item = document.createElement("div");
+            item.innerText = card.querySelector("p").innerText;
+
+           item.onclick = function() {
+               card.scrollIntoView({ behavior: "smooth" });
+               resultsBox.style.display = "none";
+};
+
+resultsBox.appendChild(item);
+        }
+    });
+}
 
 let cart = [];
 
@@ -316,8 +535,6 @@ function openImage(src){
 function closeImage(){
   document.getElementById("popup").style.display="none";
 }
-
-function searchItems(){}
 
 </script>
 
