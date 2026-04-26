@@ -690,10 +690,20 @@ function addToCart(btn, code) {
     let card = btn.closest(".card");
 
     let name = card.querySelector(".name").innerText;
-    let price = parseInt(card.querySelector(".price").innerText.replace(/[^0-9]/g,''));
-    let qty = parseInt(card.querySelector(".qty").innerText);
 
-    cart.push({ name, code, qty, total: price * qty });
+    let priceText = card.querySelector(".price").innerText;
+    let price = Number(priceText.replace(/[^0-9]/g, ""));
+
+    let qty = Number(card.querySelector(".qty").innerText);
+
+    let itemTotal = price * qty;
+
+    cart.push({
+        name: name,
+        code: code,
+        qty: qty,
+        total: itemTotal
+    });
 
     showOrderBox(btn);
     alert("Added: " + name);
@@ -707,16 +717,16 @@ function sendWhatsAppOrder() {
     }
 
     let msg = "🛒 ORDER:\n\n";
-    let total = 0;
+let total = 0;
 
-    cart.forEach(i=>{
-        msg += i.name+" ("+i.code+") x "+i.qty+" = Rs."+i.total+"\n";
-    });
+cart.forEach(i=>{
+    msg += i.name+" ("+i.code+") x "+i.qty+" = Rs."+i.total+"\n";
+    total += i.total; // 🔥 THIS LINE FIX
+});
 
-    msg += "\nTOTAL: Rs."+total;
+msg += "\nTOTAL: Rs."+total;
 
-    window.open("https://wa.me/923271576380?text="+encodeURIComponent(msg));
-}
+window.open("https://wa.me/923271576380?text=" + encodeURIComponent(msg));
 
 function increase(btn){
   btn.parentElement.querySelector(".qty").innerText++;
