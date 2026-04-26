@@ -710,8 +710,7 @@ function sendWhatsAppOrder() {
     let total = 0;
 
     cart.forEach(i=>{
-        msg += i.name+" x "+i.qty+" = Rs."+i.total+"\n";
-        total += i.total;
+        msg += i.name+" ("+i.code+") x "+i.qty+" = Rs."+i.total+"\n";
     });
 
     msg += "\nTOTAL: Rs."+total;
