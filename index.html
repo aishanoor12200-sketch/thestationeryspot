@@ -410,7 +410,6 @@ class="search-results"></div>
       </button>
 
       </div>
-    </div>
 
     <!-- CARD 2 -->
     <div class="card">
@@ -438,9 +437,9 @@ class="search-results"></div>
       </div>
     </div>
       
-<div class="card 3">
+<div class="card3">
  <div class ="img-box">
-  <img src="1776979089868.png"> oneclick = "openimage(this.src)">
+  <img src="1776979089868.png" onclick = "openimage(this.src)">
 
    <div class="floating-icon" onclick="addToCart(this,'DR03')">
           🛒
@@ -454,7 +453,7 @@ class="search-results"></div>
 <span class="qty">1</span>
 <button onclick="increase(this)">+</button>
 </div>
-<button class="addbtn" onclick="addToCart(this,'DR03')">Add to Cart</button>
+<button class="add-btn" onclick="addToCart(this,'DR03')">Add to Cart</button>
 <div class="order-inline">
     <button class="order-btn" onclick="sendWhatsAppOrder()">
         Place Order
@@ -462,9 +461,9 @@ class="search-results"></div>
 </div>
 </div>
       
-<div class="card 4">
+<div class="card4">
  <div class ="img-box">
-  <img src="1775652304818.png"> oneclick = "openimage(this.src)">
+  <img src="1775652304818.png" onclick = "openimage(this.src)">
 
    <div class="floating-icon" onclick="addToCart(this,'DR08')">
           🛒
@@ -687,7 +686,7 @@ resultsBox.appendChild(item);
 
 function showOrderBox(btn) {
 
-    let card = btn.parentElement;
+    let card = btn.closest(".card");
 
     // 👉 card wala button show
     let inlineBtn = card.querySelector(".order-inline");
