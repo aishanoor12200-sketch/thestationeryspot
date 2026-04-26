@@ -40,7 +40,6 @@ body {
   font-size: 16px;
 }
 
-
 .right-menu {
     display: flex;
     align-items: center;
@@ -80,11 +79,6 @@ body {
     cursor: pointer;
 }
 
-.search-results div:hover {
-    background: #ffe4ec;
-}
-
-/* HERO */
 .hero-outer {
     width: 80%;
     margin: 30px auto;
@@ -94,37 +88,13 @@ body {
 }
 
 .hero-inner {
-    background: linear-gradient(135deg, #ffffff, #fbc2eb, #a6c1ee);
-    border-radius: 20px;
-    padding: 30px 15px;
     text-align: center;
+    padding: 30px 15px;
 }
 
 .hero-inner h1 {
     font-family: 'Pacifico', cursive;
     font-size: 40px;
-}
-
-.hero-inner p {
-    color: #666;
-    font-size: 16px;
-}
-
-/* ✅ ANIMATION ADDED */
-@keyframes gradientMove {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-.btn {
-    background: #ff8fb1;
-    color: white;
-    border: none;
-    padding: 6px 10px;
-    border-radius: 10px;
-    text-decoration: none;
-    display: inline-block;
 }
 
 /* PRODUCTS */
@@ -158,52 +128,54 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 5px 0;
 }
 
 .qty-box button {
-  padding: 4px 10px;
-  border: none;
   background: #ff8fb1;
+  border: none;
   color: white;
-  font-size: 16px;
-  border-radius: 6px;
-  cursor: pointer;
+  padding: 4px 10px;
 }
 
-.qty-box span {
-  margin: 0 10px;
-  font-size: 14px;
+/* ADD BUTTON FIX */
+.add-btn {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  background: black;
+  color: white;
+  border-radius: 8px;
+  margin-top: 8px;
 }
-/* ORDER BOX 
-.order-box {
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    padding: 15px;
+
+/* ORDER BUTTON */
+.order-inline {
+    margin-top: 5px;
 }
 
 .order-btn {
     background: white;
     border: 2px solid #ff8fb1;
-    padding: 10px 15px;
-    border-radius: 12px;
+    padding: 6px 10px;
+    border-radius: 10px;
     cursor: pointer;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-}*/
-
-.floating-order {
-    position: fixed;
-    right: 20px;
-    bottom: 80px;
-    display: none;
-    z-index: 9999;
-    animation: slideIn 0.3s ease;
 }
 
-@keyframes slideIn {
-    from { transform: translateX(100px); opacity: 0; }
-    to { transform: translateX(0); opacity: 1; }
+/* FLOATING */
+.floating-order {
+    position: fixed;
+    right: 15px;
+    bottom: 70px;
+    display: none;
+    z-index: 9999;
+}
+
+.floating-order .btn {
+    background: #ff8fb1;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 20px;
 }
 
 /* POPUP */
@@ -220,118 +192,7 @@ body {
 }
 
 .popup img {
-    max-width: 60%;
-    max-height: 70vh;
-    border-radius: 10px;
-}
-
-/* 📱 MOBILE FIX */
-@media (max-width: 600px) {
-
-.hero-outer {
-    width: 95%;
-    margin: 15px auto;
-}
-
-.hero-inner {
-    padding: 20px 10px;
-}
-
-.hero-inner h1 {
-    font-size: 28px;
-}
-
-.hero-inner p {
-    font-size: 14px;
-}
-
-.contact .btn {
-    display: block;
-    margin: 5px auto;
-    width: 120px;
-}
-
-.products {
-    justify-content: center;
-}
-
-.card {
-    width: 45%;
-    margin: 8px;
-}
-
-}
-
-.floating-order {
-    position: fixed;
-    right: 15px;
-    bottom: 70px;
-    display: none;
-    z-index: 9999;
-}
-
-.floating-order .btn {
-    border-radius: 50%;
-    padding: 12px;
-    font-size: 18px;
-}
-
-.order-inline {
-    display: block;
-    text-align: right;
-    margin-top: 5px;
-}
-
-.order-btn {
-    background: white;
-    border: 2px solid #ff8fb1;
-    padding: 6px 10px;
-    border-radius: 10px;
-    cursor: pointer;
-}
-
-.img-box {
-  position: relative;
-}
-
-.floating-icon {
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  background: white;
-  padding: 6px;
-  border-radius: 50%;
-  cursor: pointer;
-  font-size: 14px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-}
-
-/* hidden button */
-.add-btn {
-  width: 100%;
-  padding: 8px;
-  border: none;
-  background: black;
-  color: white;
-  border-radius: 8px;
-  margin-top: 8px;
-  opacity: 0;
-  transform: translateY(10px);
-  transition: 0.3s;
-}
-
-/* show on hover */
-.card:hover .add-btn {
-  opacity: 1;
-  transform: translateY(0);
-}
-.floating-order .btn {
-    border-radius: 20px;
-    padding: 10px 15px;
-    font-size: 14px;
-    display: flex;
-    align-items: center;
-    gap: 6px;
+    max-width: 70%;
 }
 
 </style>
@@ -347,376 +208,75 @@ body {
         <a href="#">Home</a>
         <a href="deals.html">Deals</a>
         <a href="contact.html">Contact</a>
-        <a href="Shipping policy.html">Shipping</a>
-        <a href="Refund policy.html">Refund Policy</a>
     </div>
 
-
-   <div class="right-menu">
-    <div class="search-box">
-        <input type="text" id="searchInput"
-class="search" placeholder="Search..." 
-onkeyup="searchItems()">
-
-        <div id="searchResults"
-class="search-results"></div>
+    <div class="right-menu">
+        <input type="text" id="searchInput" class="search" placeholder="Search..." onkeyup="searchItems()">
     </div>
 </div>
-</div> <!-- ✅ FIX: top-bar close-->
 
-<!-- HERO (RESTORED) -->
+<!-- HERO -->
 <div class="hero-outer">
 <div class="hero-inner">
-
-<h1>Welcome to The Stationery Spot</h1>
-<p>Your go-to place for cute stationery 💗</p>
-
-<div class="contact">
-<a href="https://wa.me/923271576380" class="btn">WhatsApp</a>
-<a href="https://instagram.com/thestationeryspot.pk" class="btn">Instagram</a>
-<a href="m.me/875686878970489" class="btn">Facebook</a>
-</div>
-
+<h1>Welcome</h1>
 </div>
 </div>
 
-<!-- DIARIES -->
+<!-- PRODUCTS -->
 <div class="category">
-  <h2>🌸 Diaries</h2>
+<h2>Diaries</h2>
 
-  <div class="products">
+<div class="products">
 
-    <!-- CARD 1 -->
-    <div class="card">
-      <div class="img-box">
-        <img src="diary1.jpg.jpeg" onclick="openImage(this.src)">
+<!-- CARD 1 -->
+<div class="card">
+    <img src="diary1.jpg.jpeg" onclick="openImage(this.src)">
+    <p class="name">Floral Diary</p>
+    <p class="price">Rs.450</p>
 
-        <div class="floating-icon" onclick="addToCart(this,'DR01')">
-          🛒
-        </div>
-      </div>
-
-      <p class="name">Cute Floral Diary</p>
-      <p class="price">Rs.450</p>
-
-      <div class="qty-box">
+    <div class="qty-box">
         <button onclick="decrease(this)">-</button>
         <span class="qty">1</span>
         <button onclick="increase(this)">+</button>
-      </div>
-
-      <button class="add-btn" onclick="addToCart(this,'DR01')">
-        Add to Cart
-      </button>
-
-      </div>
-
-    <!-- CARD 2 -->
-    <div class="card">
-      <div class="img-box">
-        <img src="diary2.jpg.jpeg" onclick="openImage(this.src)">
-
-        <div class="floating-icon" onclick="addToCart(this,'DR02')">
-          🛒
-        </div>
-      </div>
-
-      <p class="name">Cute Floral Diary</p>
-      <p class="price">Rs.450</p>
-
-      <div class="qty-box">
-        <button onclick="decrease(this)">-</button>
-        <span class="qty">1</span>
-        <button onclick="increase(this)">+</button>
-      </div>
-
-      <button class="add-btn" onclick="addToCart(this,'DR02')">
-        Add to Cart
-      </button>
-
-      </div>
     </div>
-      
-<div class="card3">
- <div class ="img-box">
-  <img src="1776979089868.png" onclick = "openimage(this.src)">
 
-   <div class="floating-icon" onclick="addToCart(this,'DR03')">
-          🛒
-        </div>
-      </div>
-    
-<p class="name">Mini Butterfly Diary</p>
-<p class="price">Rs.400</p>
-<div class="qty-box">
-<button onclick="decrease(this)">-</button>
-<span class="qty">1</span>
-<button onclick="increase(this)">+</button>
-</div>
-<button class="add-btn" onclick="addToCart(this,'DR03')">Add to Cart</button>
-<div class="order-inline">
-    <button class="order-btn" onclick="sendWhatsAppOrder()">
-        Place Order
-    </button>
-</div>
-</div>
-      
-<div class="card4">
- <div class ="img-box">
-  <img src="1775652304818.png" onclick = "openimage(this.src)">
+    <button class="add-btn" onclick="addToCart(this,'DR01')">Add to Cart</button>
 
-   <div class="floating-icon" onclick="addToCart(this,'DR08')">
-          🛒
-        </div>
-      </div>
-<p class="name">Pink Aesthetic Diary</p>
-<p class="price">Rs.650</p>
-<div class="qty-box">
-<button onclick="decrease(this)">-</button>
-<span class="qty">1</span>
-<button onclick="increase(this)">+</button>
-</div>
-<button class="btn" onclick="addToCart(this,'DR08')">Add to Cart</button>
-</div>
-<div class="order-inline">
-    <button class="order-btn" onclick="sendWhatsAppOrder()">
-        Place Order
-    </button>
-</div>
-</div>
-</div>
+    <div class="order-inline">
+        <button class="order-btn" onclick="sendWhatsAppOrder()">Place Order</button>
+    </div>
 </div>
 
-<!-- GLASS SIPPER -->
-<div class="category">
-<h2>🌸 Glass Sipper</h2>
-<div class="products">
-
-<div class="card 1">
- <div class ="img-box">
-  <img src="1776362161509.png"> oneclick = "openimage(this.src)">
-
-   <div class="floating-icon" onclick="addToCart(this,'GS01')">
-          🛒
-        </div>
-      </div>
-<p class="name">Cute Glass Sipper</p>
-<p class="price">Rs.650</p>
-<div class="qty-box">
-<button onclick="decrease(this)">-</button>
-<span class="qty">1</span>
-<button onclick="increase(this)">+</button>
-</div>
-<button class="btn" onclick="addToCart(this,'GS01')">Add to Cart</button>
-</div>
-<div class="order-inline">
-    <button class="order-btn" onclick="sendWhatsAppOrder()">
-        Place Order
-    </button>
-</div>
-</div>
-</div>
-</div>
-
-<!-- MULTICOLOUR PEN -->
-<div class="category">
-<h2>🌸 Multicolour Pen</h2>
-<div class="products">
-
-<div class="card 1">
- <div class ="img-box">
-  <img src="1775851463764.png">
-oneclick = "openimage(this.src)">
-<p class="name">Multicolour Pen</p>
-<p class="price">Rs.150</p>
-<div class="qty-box">
-<button onclick="decrease(this)">-</button>
-<span class="qty">1</span>
-<button onclick="increase(this)">+</button>
-</div>
-<button class="btn" onclick="addToCart(this,'MP01')">Add to Cart</button>
-</div>
-<div class="order-inline">
-    <button class="order-btn" onclick="sendWhatsAppOrder()">
-        Place Order
-    </button>
-</div>
-<div class="card 2">
- <div class ="img-box">
-  <img src="1775851994899.png">
-oneclick = "openimage(this.src)">
-<p class="name">Multicolour Pen</p>
-<p class="price">Rs.180</p>
-<div class="qty-box">
-<button onclick="decrease(this)">-</button>
-<span class="qty">1</span>
-<button onclick="increase(this)">+</button>
-</div>
-<button class="btn" onclick="addToCart(this,'MP02')">Add to Cart</button>
-</div>
-<div class="order-inline">
-    <button class="order-btn" onclick="sendWhatsAppOrder()">
-        Place Order
-    </button>
-</div>
-</div>
-</div>
-
-<!-- INK PEN -->
-<div class="category">
-<h2>🌸 Ink Pen</h2>
-<div class="products">
-
-<div class="card 1">
- <div class ="img-box">
-  <img src="1775896158680.png">
-oneclick = "openimage(this.src)">
-<p class="name">Ink Pen</p>
-<p class="price">Rs.300</p>
-<div class="qty-box">
-<button onclick="decrease(this)">-</button>
-<span class="qty">1</span>
-<button onclick="increase(this)">+</button>
-</div>
-<button class="btn" onclick="addToCart(this,'IP01')">Add to Cart</button>
-</div>
-<div class="order-inline">
-    <button class="order-btn" onclick="sendWhatsAppOrder()">
-        Place Order
-    </button>
-</div>
-</div>
-</div>
-
-<!-- ERASERS -->
-<div class="category">
-<h2>🌸 Erasers</h2>
-<div class="products">
-
-<div class="card 1">
- <div class ="img-box">
-  <img src="1776512603250.png">
-oneclick = "openimage(this.src)">
-<p class="name">Cute Erasers</p>
-<p class="price">Rs.200</p>
-<div class="qty-box">
-<button onclick="decrease(this)">-</button>
-<span class="qty">1</span>
-<button onclick="increase(this)">+</button>
-</div>
-<button class="btn" onclick="addToCart(this,'ER01')">Add to Cart</button>
-</div>
-<div class="order-inline">
-    <button class="order-btn" onclick="sendWhatsAppOrder()">
-        Place Order
-    </button>
-</div>
-<div class="card 2">
- <div class ="img-box">
-  <img src="1775577758357.png">
-oneclick = "openimage(this.src)">
-<p class="name">Sharpner + Erasers</p>
-<p class="price">Rs.200</p>
-<div class="qty-box">
-<button onclick="decrease(this)">-</button>
-<span class="qty">1</span>
-<button onclick="increase(this)">+</button>
-</div>
-<button class="btn" onclick="addToCart(this,'ER02')">Add to Cart</button>
-</div>
-<div class="order-inline">
-    <button class="order-btn" onclick="sendWhatsAppOrder()">
-        Place Order
-    </button>
-</div>
 </div>
 </div>
 
 <!-- POPUP -->
-<div id="imagePopup" class="popup" onclick="closeImage()">
-<img id="popupImg">
+<div class="popup" id="popup" onclick="closeImage()">
+    <img id="popupImg">
 </div>
 
+<!-- FLOATING BUTTON -->
 <div class="floating-order" id="floatingBtn">
-    <button class="btn" onclick="sendWhatsAppOrder()">
-        🛒 Done Your Order
-    </button>
+    <button class="btn" onclick="sendWhatsAppOrder()">🛒 Done Your Order</button>
 </div>
 
 <script>
 
-function openImage(src) {
-    document.getElementById("imagePopup").style.display = "flex";
-    document.getElementById("popupImg").src = src;
-}
-
-function closeImage() {
-    document.getElementById("imagePopup").style.display = "none";
-}
-function searchItems() {
-    let input = document.getElementById("searchInput").value.toLowerCase();
-    let cards = document.querySelectorAll(".card");
-    let resultsBox = document.getElementById("searchResults");
-
-    resultsBox.innerHTML = "";
-
-    if (input === "") {
-        resultsBox.style.display = "none";
-        return;
-    }
-
-    resultsBox.style.display = "block";
-
-    cards.forEach(card => {
-        let text = card.querySelector("p").innerText.toLowerCase();
-
-        if (text.includes(input)) {
-            let item = document.createElement("div");
-            item.innerText = card.querySelector("p").innerText;
-
-           item.onclick = function() {
-               card.scrollIntoView({ behavior: "smooth" });
-               resultsBox.style.display = "none";
-};
-
-resultsBox.appendChild(item);
-        }
-    });
-}
-
-function showOrderBox(btn) {
-
-    let card = btn.closest(".card");
-
-    // 👉 card wala button show
-    let inlineBtn = card.querySelector(".order-inline");
-    inlineBtn.style.display = "block";
-
-    // 👉 floating button show
-    let floatBtn = document.getElementById("floatingBtn");
-    floatBtn.style.display = "block";
-
-    // 👉 3 sec baad card button hide
-    setTimeout(() => {
-        inlineBtn.style.display = "none";
-    }, 3000);
-}
 let cart = [];
 
 function addToCart(btn, code) {
 
-    let card = btn.parentElement;
+    let card = btn.closest(".card");
+
     let name = card.querySelector(".name").innerText;
     let price = parseInt(card.querySelector(".price").innerText.replace(/[^0-9]/g,''));
     let qty = parseInt(card.querySelector(".qty").innerText);
 
-    cart.push({
-        name, code, qty,
-        total: price * qty
-    });
+    cart.push({ name, code, qty, total: price * qty });
+
+    document.getElementById("floatingBtn").style.display = "block";
 
     alert("Added: " + name);
-    showOrderBox(btn);
 }
 
 function sendWhatsAppOrder() {
@@ -730,11 +290,11 @@ function sendWhatsAppOrder() {
     let total = 0;
 
     cart.forEach(i=>{
-        msg += i.name+" ("+i.code+") x "+i.qty+" = Rs."+i.total+"\n";
+        msg += i.name+" x "+i.qty+" = Rs."+i.total+"\n";
         total += i.total;
     });
 
-    msg += "\n💰 TOTAL: Rs."+total;
+    msg += "\nTOTAL: Rs."+total;
 
     window.open("https://wa.me/923271576380?text="+encodeURIComponent(msg));
 }
@@ -745,9 +305,20 @@ function increase(btn){
 
 function decrease(btn){
   let q = btn.parentElement.querySelector(".qty");
-  if(q.innerText>1) q.innerText--;
+  if(q.innerText > 1) q.innerText--;
 }
-    
+
+function openImage(src){
+  document.getElementById("popup").style.display="flex";
+  document.getElementById("popupImg").src = src;
+}
+
+function closeImage(){
+  document.getElementById("popup").style.display="none";
+}
+
+function searchItems(){}
+
 </script>
 
 </body>
