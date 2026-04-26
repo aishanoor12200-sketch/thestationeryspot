@@ -261,6 +261,34 @@ body {
 }
 
 }
+
+.floating-order {
+    position: fixed;
+    right: 15px;
+    bottom: 70px;
+    display: none;
+    z-index: 9999;
+}
+
+.floating-order .btn {
+    border-radius: 50%;
+    padding: 12px;
+    font-size: 18px;
+}
+
+.order-inline {
+    display: none;
+    text-align: right;
+    margin-top: 5px;
+}
+
+.order-btn {
+    background: white;
+    border: 2px solid #ff8fb1;
+    padding: 6px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
     
 </style>
 
@@ -324,6 +352,12 @@ class="search-results"></div>
 <button class="btn" onclick="addToCart(this,'DR01')">Add to Cart</button>
 </div>
 
+<div class="order-inline">
+    <button class="order-btn" onclick="sendWhatsAppOrder()">
+        Place Order
+    </button>
+</div>
+
 <div class="card">
 <img src="diary2.jpg.jpeg">
 <p class="name">Cute Floral Diary</p>
@@ -334,6 +368,12 @@ class="search-results"></div>
 <button onclick="increase(this)">+</button>
 </div>
 <button class="btn" onclick="addToCart(this,'DR01')">Add to Cart</button>
+</div>
+
+<div class="order-inline">
+    <button class="order-btn" onclick="sendWhatsAppOrder()">
+        Place Order
+    </button>
 </div>
 
 <div class="card">
@@ -348,6 +388,12 @@ class="search-results"></div>
 <button class="btn" onclick="addToCart(this,'DR03')">Add to Cart</button>
 </div>
 
+<div class="order-inline">
+    <button class="order-btn" onclick="sendWhatsAppOrder()">
+        Place Order
+    </button>
+</div>
+
 <div class="card">
 <img src="1775652304818.png">
 <p class="name">Pink Aesthetic Diary</p>
@@ -359,7 +405,11 @@ class="search-results"></div>
 </div>
 <button class="btn" onclick="addToCart(this,'DR08')">Add to Cart</button>
 </div>
-
+<div class="order-inline">
+    <button class="order-btn" onclick="sendWhatsAppOrder()">
+        Place Order
+    </button>
+</div>
 </div>
 </div>
 
@@ -379,7 +429,11 @@ class="search-results"></div>
 </div>
 <button class="btn" onclick="addToCart(this,'GS01')">Add to Cart</button>
 </div>
-
+<div class="order-inline">
+    <button class="order-btn" onclick="sendWhatsAppOrder()">
+        Place Order
+    </button>
+</div>
 </div>
 </div>
 
@@ -399,7 +453,11 @@ class="search-results"></div>
 </div>
 <button class="btn" onclick="addToCart(this,'MP01')">Add to Cart</button>
 </div>
-
+<div class="order-inline">
+    <button class="order-btn" onclick="sendWhatsAppOrder()">
+        Place Order
+    </button>
+</div>
 <div class="card">
 <img src="1775851994899.png">
 <p class="name">Multicolour Pen</p>
@@ -411,7 +469,11 @@ class="search-results"></div>
 </div>
 <button class="btn" onclick="addToCart(this,'MP02')">Add to Cart</button>
 </div>
-
+<div class="order-inline">
+    <button class="order-btn" onclick="sendWhatsAppOrder()">
+        Place Order
+    </button>
+</div>
 </div>
 </div>
 
@@ -431,7 +493,11 @@ class="search-results"></div>
 </div>
 <button class="btn" onclick="addToCart(this,'IP01')">Add to Cart</button>
 </div>
-
+<div class="order-inline">
+    <button class="order-btn" onclick="sendWhatsAppOrder()">
+        Place Order
+    </button>
+</div>
 </div>
 </div>
 
@@ -451,7 +517,11 @@ class="search-results"></div>
 </div>
 <button class="btn" onclick="addToCart(this,'ER01')">Add to Cart</button>
 </div>
-
+<div class="order-inline">
+    <button class="order-btn" onclick="sendWhatsAppOrder()">
+        Place Order
+    </button>
+</div>
 <div class="card">
 <img src="1775577758357.png">
 <p class="name">Sharpner + Erasers</p>
@@ -463,7 +533,11 @@ class="search-results"></div>
 </div>
 <button class="btn" onclick="addToCart(this,'ER02')">Add to Cart</button>
 </div>
-
+<div class="order-inline">
+    <button class="order-btn" onclick="sendWhatsAppOrder()">
+        Place Order
+    </button>
+</div>
 </div>
 </div>
 
@@ -478,6 +552,13 @@ class="search-results"></div>
 <div id="imagePopup" class="popup" onclick="closeImage()">
 <img id="popupImg">
 </div>
+
+<div class="floating-order" id="floatingBtn">
+    <button class="btn" onclick="sendWhatsAppOrder()">
+        🛒
+    </button>
+</div>
+
 <script>
 
 function openImage(src) {
@@ -519,14 +600,21 @@ resultsBox.appendChild(item);
     });
 }
 
-function showOrderBox() {
-    let box = document.getElementById("orderBox");
+function showOrderBox(btn) {
 
-    box.style.display = "block";
+    let card = btn.parentElement;
 
-    // 3 seconds baad hide
+    // 👉 card wala button show
+    let inlineBtn = card.querySelector(".order-inline");
+    inlineBtn.style.display = "block";
+
+    // 👉 floating button show
+    let floatBtn = document.getElementById("floatingBtn");
+    floatBtn.style.display = "block";
+
+    // 👉 3 sec baad card button hide
     setTimeout(() => {
-        box.style.display = "none";
+        inlineBtn.style.display = "none";
     }, 3000);
 }
 let cart = [];
@@ -544,7 +632,7 @@ function addToCart(btn, code) {
     });
 
     alert("Added: " + name);
-    showOrderBox();
+    showOrderBox(btn);
 }
 
 function sendWhatsAppOrder() {
