@@ -289,6 +289,43 @@ body {
     border-radius: 10px;
     cursor: pointer;
 }
+
+.img-box {
+  position: relative;
+}
+
+.floating-icon {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: white;
+  padding: 6px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 14px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* hidden button */
+.add-btn {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  background: black;
+  color: white;
+  border-radius: 8px;
+  margin-top: 8px;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: 0.3s;
+}
+
+/* show on hover */
+.card:hover .add-btn {
+  opacity: 1;
+  transform: translateY(0);
+}
+
     
 </style>
 
@@ -318,7 +355,7 @@ onkeyup="searchItems()">
 class="search-results"></div>
     </div>
 </div>
-</div> <!-- ✅ FIX: top-bar close
+</div> <!-- ✅ FIX: top-bar close-->
 
 <!-- HERO (RESTORED) -->
 <div class="hero-outer">
@@ -341,39 +378,66 @@ class="search-results"></div>
 <div class="products">
 
 <div class="card">
-<img src="diary1.jpg.jpeg">
+
+<div class="img-box">
+<img src="diary1.jpg.jpeg" onclick="openImage(this.src)">
+
+<!-- floating icon -->
+<div class="floating-icon" onclick="addToCart(this,'DR01')">
+🛒
+</div>
+</div>
+
 <p class="name">Cute Floral Diary</p>
 <p class="price">Rs.450</p>
+
 <div class="qty-box">
 <button onclick="decrease(this)">-</button>
 <span class="qty">1</span>
 <button onclick="increase(this)">+</button>
 </div>
-<button class="btn" onclick="addToCart(this,'DR01')">Add to Cart</button>
-</div>
+
+<!-- hidden button -->
+<button class="add-btn" onclick="addToCart(this,'DR01')">
+Add to Cart
+</button>
 
 <div class="order-inline">
-    <button class="order-btn" onclick="sendWhatsAppOrder()">
-        Place Order
-    </button>
+<button class="order-btn" onclick="sendWhatsAppOrder()">
+Place Order
+</button>
 </div>
 
 <div class="card">
-<img src="diary2.jpg.jpeg">
+
+<div class="img-box">
+<img src="diary1.jpg.jpeg" onclick="openImage(this.src)">
+
+<!-- floating icon -->
+<div class="floating-icon" onclick="addToCart(this,'DR01')">
+🛒
+</div>
+</div>
+
 <p class="name">Cute Floral Diary</p>
 <p class="price">Rs.450</p>
+</div>
+
 <div class="qty-box">
 <button onclick="decrease(this)">-</button>
 <span class="qty">1</span>
 <button onclick="increase(this)">+</button>
 </div>
-<button class="btn" onclick="addToCart(this,'DR01')">Add to Cart</button>
-</div>
+
+<!-- hidden button -->
+<button class="add-btn" onclick="addToCart(this,'DR01')">
+Add to Cart
+</button>
 
 <div class="order-inline">
-    <button class="order-btn" onclick="sendWhatsAppOrder()">
-        Place Order
-    </button>
+<button class="order-btn" onclick="sendWhatsAppOrder()">
+Place Order
+</button>
 </div>
 
 <div class="card">
@@ -539,13 +603,6 @@ class="search-results"></div>
     </button>
 </div>
 </div>
-</div>
-
-<!-- ORDER BOX -->
-<div class="order-box">
-<button class="order-btn" onclick="sendWhatsAppOrder()">
-🛒 Place Order on WhatsApp
-</button>
 </div>
 
 <!-- POPUP -->
