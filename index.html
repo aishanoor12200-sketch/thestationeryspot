@@ -174,7 +174,8 @@ body {
 .qty-box span {
   margin: 0 10px;
   font-size: 14px;
-}* ADD BUTTON FIX */
+}
+/* ADD BUTTON FIX */
 .add-btn {
   width: 100%;
   padding: 8px;
@@ -184,31 +185,42 @@ body {
   border-radius: 8px;
   margin-top: 8px;
 }
-
-/* ORDER BUTTON */
-.order-inline {
-    margin-top: 5px;
+/* hidden button */
+.add-btn {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  background: black;
+  color: white;
+  border-radius: 8px;
+  margin-top: 8px;
+  transition: 0.3s;
 }
 
-.order-btn {
-    background: white;
-    border: 2px solid #ff8fb1;
-    padding: 6px 10px;
-    border-radius: 10px;
-    cursor: pointer;
+/* show on hover */
+.card:hover .add-btn {
+  background :#333;
+  opacity: 1;
+  transform: translateY(0);
 }
+
 .floating-order {
     position: fixed;
-    right: 20px;
+    right: 15px;
     bottom: 80px;
     display: none;
     z-index: 9999;
     animation: slideIn 0.3s ease;
 }
 .floating-order .btn {
-    border-radius: 50%;
-    padding: 12px;
-    font-size: 18px;
+    background: #ff6f91;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 30px;
+    font-size: 14px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    cursor: pointer;
 }
 /* POPUP */
 .popup {
@@ -232,7 +244,22 @@ body {
     from { transform: translateX(100px); opacity: 0; }
     to { transform: translateX(0); opacity: 1; }
 }
+.img-box {
+  position: relative;
+}
 
+.floating-icon {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: white;
+  padding: 6px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 14px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+    
 /* 📱 MOBILE FIX */
 @media (max-width: 600px) {
 
@@ -267,49 +294,10 @@ body {
     width: 45%;
     margin: 8px;
 }
-
-.img-box {
-  position: relative;
-}
-
-.floating-icon {
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  background: white;
-  padding: 6px;
-  border-radius: 50%;
-  cursor: pointer;
-  font-size: 14px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-}
-
-/* hidden button */
 .add-btn {
-  width: 100%;
-  padding: 8px;
-  border: none;
-  background: black;
-  color: white;
-  border-radius: 8px;
-  margin-top: 8px;
-  opacity: 0;
-  transform: translateY(10px);
-  transition: 0.3s;
-}
-
-/* show on hover */
-.card:hover .add-btn {
   opacity: 1;
-  transform: translateY(0);
-}
-.floating-order .btn {
-    border-radius: 20px;
-    padding: 10px 15px;
-    font-size: 14px;
-    display: flex;
-    align-items: center;
-    gap: 6px;
+  transform: none;
+  display: block;
 }
 
 </style>
