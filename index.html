@@ -2289,6 +2289,22 @@ function showOrderBox(btn) {
     }, 10000);
 }
 
+ <script>
+document.addEventListener("DOMContentLoaded", function () {
+  let images = document.querySelectorAll("img");
+
+  images.forEach(img => {
+    img.setAttribute("loading", "lazy");
+
+    if (!img.getAttribute("width")) {
+      img.setAttribute("width", "150");
+    }
+
+    if (!img.getAttribute("height")) {
+      img.setAttribute("height", "200");
+    }
+  });
+});
 </script>
 
 </body> 
