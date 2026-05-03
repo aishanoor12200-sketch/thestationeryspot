@@ -272,6 +272,31 @@ body {
   font-size: 14px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
+
+/* mobile menu hidden by default */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 220px;
+    height: 100%;
+    background: white;
+    padding: 20px;
+    transition: 0.3s;
+    z-index: 9999;
+}
+
+.mobile-menu a {
+    display: block;
+    margin: 15px 0;
+    text-decoration: none;
+    color: #333;
+}
+
+/* menu icon default hidden */
+.menu-icon {
+    display: none;
+}
 /* MOBILE */
 @media (max-width: 600px) {
 
@@ -322,6 +347,15 @@ body {
     background: #ff4d88;
 } 
 
+.menu-icon {
+    display: block;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+.left-menu {
+    display: none;
+}
 </style>  
 
 </head>  
@@ -2585,7 +2619,6 @@ function showOrderBox(btn) {
     }, 10000);
 }
 
-<script>
 function toggleMenu() {
     let menu = document.getElementById("mobileMenu");
 
@@ -2595,7 +2628,6 @@ function toggleMenu() {
         menu.style.left = "0px";
     }
 }
-</script>
 
 </script>
 
