@@ -94,18 +94,20 @@ body {
  
 .hero-inner {
     width: 85%;
-    margin: 40px auto;
-    background: white;
-    border-radius: 20px;
+    margin: 50px auto;
+    background: linear-gradient(135deg, #fff0f5, #ffe4ec);
+    border-radius: 25px;
     padding: 60px 20px;
     text-align: center;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    box-shadow: 0 10px 30px rgba(255, 111, 145, 0.2);
+    border: 2px solid #ffd6e0;
 }
  
- .hero-inner h1 {
-    font-family: 'Poppins', sans-serif;
+.hero-inner h1 {
     font-size: 42px;
     font-weight: 700;
+    color: #333;
+    letter-spacing: 1px;
 }
 
 .hero-inner p {
@@ -120,13 +122,16 @@ body {
 }
 
 .btn {
-    background: #ff8fb1;
+    background: #ff6f91;
     color: white;
-    border: none;
-    padding: 6px 10px;
-    border-radius: 10px;
-    text-decoration: none;
-    display: inline-block;
+    border-radius: 25px;
+    padding: 10px 18px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #ff4d88;
+    transform: scale(1.05);
 }
 
 /* PRODUCTS */
