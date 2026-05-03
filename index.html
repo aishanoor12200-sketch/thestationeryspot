@@ -412,7 +412,7 @@ body {
     </div>
 
     <div id="mobileMenu" class="mobile-menu">
-      <div class="close-btn" onclick="toggleMenu()">✖</div>
+      <div class="close-btn">✖</div>
         <a href="#">Home</a>
         <a href="deals.html">Deals</a>
         <a href="contact.html">Contact</a>
@@ -765,9 +765,6 @@ body {
 
 </div>
 
-
-
- 
 <div class="card">
 <div class="img-box">
 <img src="images/products/1775047602569.png"loading="lazy" width="150" height="200" onclick="openImage(this.src)">
@@ -2656,13 +2653,17 @@ function showOrderBox(btn) {
 } 
 document.addEventListener("DOMContentLoaded", function () {
     let menu = document.getElementById("mobileMenu");
-    let icon = document.querySelector(".menu-icon");
 
-    icon.addEventListener("click", function () {
-        menu.classList.toggle("open");
+    // ☰ icon click
+    document.querySelector(".menu-icon").addEventListener("click", function () {
+        menu.classList.add("open");
+    });
+
+    // ✖ close button click
+    document.querySelector(".close-btn").addEventListener("click", function () {
+        menu.classList.remove("open");
     });
 });
 </script>
-    
 </body> 
 </html>
