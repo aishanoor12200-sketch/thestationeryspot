@@ -112,16 +112,19 @@ body {
 .hero-box {
     width: 100%;
     max-width: 1200px;
-    height: 400px;   /* horizontal feel */
-    margin: auto;
+    height: 250px;   /* 👈 length kam kar di */
+    margin: 20px auto 0; /* menu se gap */
     overflow: hidden;
     border-radius: 10px;
 }
+
 .hero-box img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;   /* 👈 blur/crop fix */
     object-position: center;
+    background: #fff; /* empty space clean lage */
+}
 }
 .products {
     display: grid;
