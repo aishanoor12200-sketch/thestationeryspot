@@ -112,7 +112,20 @@ body {
 .category {
     padding: 15px;
 }
- 
+
+.hero-box {
+    width: 300px;
+    height: 500px;   /* vertical box */
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;   /* image crop ho ke fit hogi */
+    object-position: center;
+}
 .products {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
