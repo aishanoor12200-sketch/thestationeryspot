@@ -323,6 +323,14 @@ body {
 .menu-icon {
     display: none;
 }
+
+.close-btn {
+    font-size: 24px;
+    cursor: pointer;
+    text-align: right;
+    margin-bottom: 15px;
+    color: #333;
+}
 /* MOBILE */
 @media (max-width: 600px) {
 
@@ -393,6 +401,7 @@ body {
 <div class="top-bar">
 
     <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    
 
     <div class="left-menu">
         <a href="#">Home</a>
@@ -403,6 +412,7 @@ body {
     </div>
 
     <div id="mobileMenu" class="mobile-menu">
+      <div class="close-btn" onclick="toggleMenu()">✖</div>
         <a href="#">Home</a>
         <a href="deals.html">Deals</a>
         <a href="contact.html">Contact</a>
