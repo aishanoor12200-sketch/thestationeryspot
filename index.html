@@ -2643,11 +2643,15 @@ function showOrderBox(btn) {
     setTimeout(() => {
         floatBtn.style.display = "none";
     }, 10000);
-}
-function toggleMenu() {
+} 
+document.addEventListener("DOMContentLoaded", function () {
     let menu = document.getElementById("mobileMenu");
-    menu.classList.toggle("open");
-}
+    let icon = document.querySelector(".menu-icon");
+
+    icon.addEventListener("click", function () {
+        menu.classList.toggle("open");
+    });
+});
 </script>
     
 </body> 
