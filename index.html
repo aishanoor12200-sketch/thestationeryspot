@@ -2618,15 +2618,16 @@ function showOrderBox(btn) {
         floatBtn.style.display = "none";
     }, 10000);
 }
-document.addEventListener("click", function(e) {
-    let menu = document.getElementById("mobileMenu");
-    let icon = document.querySelector(".menu-icon");
+    
+function toggleMenu() {
+    var menu = document.getElementById("mobileMenu");
 
-    if (!menu.contains(e.target) && !icon.contains(e.target)) {
+    if (menu.style.left === "" || menu.style.left === "-250px") {
+        menu.style.left = "0px";
+    } else {
         menu.style.left = "-250px";
-        isOpen = false;
     }
-});
+}
 </script>
     
 </body> 
