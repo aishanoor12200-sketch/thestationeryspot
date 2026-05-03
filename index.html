@@ -315,6 +315,10 @@ body {
     color: #333;
 }
 
+.mobile-menu.open {
+    left: 0px;
+}
+
 /* menu icon default hidden */
 .menu-icon {
     display: none;
@@ -2644,10 +2648,10 @@ function showOrderBox(btn) {
 function toggleMenu() {
     var menu = document.getElementById("mobileMenu");
 
-    if (menu.style.left === "" || menu.style.left === "-250px") {
-        menu.style.left = "0px";
+    if (menu.classList.contains("open")) {
+        menu.classList.remove("open");
     } else {
-        menu.style.left = "-250px";
+        menu.classList.add("open");
     }
 }
 </script>
