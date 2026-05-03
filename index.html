@@ -1,5 +1,4 @@
 <!DOCTYPE html> 
-
 <html> 
 <head>  
 
@@ -48,6 +47,34 @@ body {
     align-items: center;  
 }
 
+/* MENU ICON */
+.menu-icon {
+    display: none;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+/* MOBILE MENU */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 220px;
+    height: 100%;
+    background: white;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.2);
+    padding: 20px;
+    transition: 0.3s;
+    z-index: 9999;
+}
+
+.mobile-menu a {
+    display: block;
+    margin: 15px 0;
+    text-decoration: none;
+    color: #333;
+}
+
 /* SEARCH */
 .search {
     padding: 8px 12px;
@@ -90,239 +117,19 @@ body {
     background: #ffe4ec;
 }
 
-
-.btn {
-    background: #ff6f91;
-    color: white;
-    border-radius: 25px;
-    padding: 10px 18px;
-    transition: 0.3s;
-}
-
-.btn:hover {
-    background: #ff4d88;
-    transform: scale(1.05);
-}
-
-/* PRODUCTS */
-.category {
-    padding: 15px;
-}
-
-.hero-box {
-    width: 100%;
-    max-width: 1200px;
-    height: 250px;   /* 👈 length kam kar di */
-    margin: 20px auto 0; /* menu se gap */
-    overflow: hidden;
-    border-radius: 10px;
-}
-
-.hero-box img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;   /* 👈 blur/crop fix */
-    object-position: center;
-    background: #fff; /* empty space clean lage */
-
-}
-    
-.products {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    padding: 10px;
-}
-
-.card {
-    background: white;
-    border-radius: 15px;
-    padding: 12px;
-    text-align: center;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-    transition: 0.3s;
-}
-
- .card:hover {
-    transform: translateY(-5px);
-}
-
-.card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 10px;
-}
-
-.price {
-    color: #ff6f91;
-}
-
-.qty-box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 5px 0;
-}
-
-.qty-box button {
-  padding: 4px 10px;
-  border: none;
-  background: #ff8fb1;
-  color: white;
-  font-size: 16px;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-.qty-box span {
-  margin: 0 10px;
-  font-size: 14px;
-}
-
-.add-btn {
-  width: 100%;
-  padding: 8px;
-  border: none;
-  background: #ff4d88;
-  color: white;
-  border-radius: 20px;
-  margin-top: 8px;
-  opacity: 0;
-  transform: translateY(10px);
-  transition: 0.3s;
-  font-weight: bold;
-}
- 
- .card:hover .add-btn {
-  background:#333;
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.floating-order {
-    position: fixed;
-    right: 15px;
-    bottom: 80px;
-    display: none;
-    z-index: 9999;
-    animation: slideIn 0.3s ease;
-}
-
-.floating-order .btn {
-    background: #ff6f91;
-    color: white;
-    border: none;
-    padding: 12px 18px;
-    border-radius: 30px;
-    font-size: 14px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-    cursor: pointer;
-}
-
-.popup {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.7);
-    justify-content: center;
-    align-items: center;
-}
-
-.popup {
-    animation: slideIn 0.4s ease;
-}
-
-.popup img {
-    max-width: 80%;
-    max-height: 80vh;
-    border-radius: 15px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-}
-
-@keyframes slideIn {
-    from { transform: translateY(50px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
-}
-.img-box {
-  position: relative;
-  overflow: hidden;
-  border-radius: 12px;
-}
- .img-box img {
-  transition: 0.3s;
-}
-
-.img-box:hover img {
-  transform: scale(1.05);
-}
-
-.floating-icon {
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  background: #ffffffcc;
-  backdrop-filter: blur(5px);
-  padding: 6px;
-  border-radius: 50%;
-  cursor: pointer;
-  font-size: 14px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-}
 /* MOBILE */
 @media (max-width: 600px) {
 
-.contact .btn {
+.left-menu {
+    display: none;
+}
+
+.menu-icon {
     display: block;
-    margin: 5px auto;
-    width: 120px;
 }
- .products {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-    padding: 10px;
- }
-
-.card {
-    width: 100%;
-    background: white;
-    border-radius: 15px;
-    padding: 10px;
-    margin: 0;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    transition: 0.3s;
-}
-
-.card:hover {
-    transform: scale(1.03);
 
 }
 
-.add-btn {
-  opacity: 1;
-  transform: none;
-  display: block;
-}
-
-.top-heading {
-    letter-spacing: 1px;
-}
-
-.btn {
-    padding: 8px 16px;
-    border-radius: 20px;
-    transition: 0.3s;
-}
-
-.btn:hover {
-    background: #ff4d88;
-} 
-
- 
 </style>  
 
 </head>  
@@ -332,27 +139,39 @@ body {
 <div class="top-heading">The Stationery Spot</div>  
 
 <div class="top-bar">
+
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+
     <div class="left-menu">
         <a href="#">Home</a>
         <a href="deals.html">Deals</a>
         <a href="contact.html">Contact</a>
-        <a href="Shipping policy.html">Shipping</a>
+        <a href="Shipping policy.html">Shipping policy</a>
         <a href="Refund policy.html">Refund Policy</a>
     </div>
 
-
-<div class="right-menu">
-    <div class="search-box">
-        <input type="text" id="searchInput" class="search" placeholder="Search..." onkeyup="searchItems()">
-        <div id="searchResults" class="search-results"></div>
+    <div class="right-menu">
+        <div class="search-box">
+            <input type="text" id="searchInput" class="search" placeholder="Search..." onkeyup="searchItems()">
+            <div id="searchResults" class="search-results"></div>
+        </div>
     </div>
-</div>
-
 
 </div>
+
+<!-- MOBILE MENU -->
+<div id="mobileMenu" class="mobile-menu">
+    <a href="#">Home</a>
+    <a href="deals.html">Deals</a>
+    <a href="contact.html">Contact</a>
+    <a href="Shipping policy.html">Shipping policy</a>
+    <a href="Refund policy.html">Refund Policy</a>
+</div>
+
 <div class="hero-box">
   <img src="images/products/IMG-20260503-WA0001.jpg" class="hero-img">
 </div>
+
 <!-- DIARIES -->
 
 <div class="category">
@@ -2574,6 +2393,18 @@ function showOrderBox(btn) {
         floatBtn.style.display = "none";
     }, 10000);
 }
+
+<script>
+function toggleMenu() {
+    let menu = document.getElementById("mobileMenu");
+
+    if (menu.style.left === "0px") {
+        menu.style.left = "-250px";
+    } else {
+        menu.style.left = "0px";
+    }
+}
+</script>
 
 </script>
 
