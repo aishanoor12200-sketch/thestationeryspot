@@ -138,21 +138,31 @@ body {
 .hero-box {
     width: 100%;
     max-width: 1200px;
-    height: 250px;   /* 👈 length kam kar di */
-    margin: 20px auto 0; /* menu se gap */
+    height: 250px;
+    margin: 20px auto 0;
     overflow: hidden;
     border-radius: 10px;
+
+    display: flex;              /* 👈 ADD */
+    justify-content: center;   /* 👈 ADD */
+    align-items: center;       /* 👈 ADD */
+    gap: 15px;                 /* 👈 ADD */
 }
 
-.hero-box img {
-    width: 100%;
+/* Center image */
+.main-img {
     height: 100%;
-    object-fit: contain;   /* 👈 blur/crop fix */
-    object-position: center;
-    background: #fff; /* empty space clean lage */
-
+    width: auto;
+    object-fit: contain;
 }
-    
+
+/* Side images */
+.side-img {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+    opacity: 0.8;   /* optional stylish */
+}    
 .products {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -413,6 +423,15 @@ body {
   margin-bottom: 5px;
   word-break: break-word;
 }
+
+.side-img {
+    display: none;   /* 👈 mobile pe side images hide */
+}
+
+.main-img {
+    width: 100%;
+    height: 100%;
+}
 }
 </style>  
 
@@ -468,7 +487,13 @@ body {
 </div>
 
 <div class="hero-box">
-  <img src="images/products/IMG-20260503-WA0001.jpg" class="hero-img">
+  
+  <img src="left.jpg" class="side-img">
+  
+  <img src="images/products/IMG-20260503-WA0001.jpg" class="main-img">
+  
+  <img src="right.jpg" class="side-img">
+
 </div>
 
 <!-- DIARIES -->
