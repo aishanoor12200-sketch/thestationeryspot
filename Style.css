@@ -1,5 +1,3 @@
-<style>  
-
 * {
     box-sizing: border-box;
 }
@@ -152,11 +150,21 @@ body {
     transform: translateY(-5px);
 }
 
-.card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 10px;
+.img-box {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
 .price {
@@ -402,4 +410,3 @@ body {
     height: 100%;
 }
 }
-</style>
