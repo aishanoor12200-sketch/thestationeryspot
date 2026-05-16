@@ -239,28 +239,30 @@ body {
 
 /* ================= MOBILE SIDEBAR MENU ================= */
 
+/* ================= MOBILE MENU (PREMIUM PINK THEME) ================= */
 .mobile-menu {
     position: fixed;
     top: 0;
-    left: -280px;
+    left: -280px; /* Thoda wide kiya taaki icons comfortable aayein */
     width: 260px;
     height: 100vh;
-    background: #ffffff;
+    background: #ffffff; /* Premium look ke liye pure white background */
     padding: 24px 20px;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); /* Ultra smooth slide slide-in effect */
     z-index: 99999;
     display: flex;
     flex-direction: column;
-    box-shadow: 5px 0 25px rgba(0,0,0,0.05);
+    box-shadow: 5px 0 25px rgba(0,0,0,0.05); /* Soft side shadow */
 }
 
 .mobile-menu.open {
     left: 0;
 }
 
+/* Close button layout (Cross 'X' Icon) */
 .close-btn {
     font-size: 22px;
-    text-align: left;
+    text-align: left; /* Reference jaisa top left control */
     cursor: pointer;
     color: #555;
     margin-bottom: 30px;
@@ -268,27 +270,38 @@ body {
     width: fit-content;
 }
 
-.mobile-menu a {
-    display: block;
-    color: #2c2c2c;
-    text-decoration: none;
-    font-size: 16px;
-    padding: 14px 12px;
-    border-radius: 8px;
+.close-btn:hover {
+    color: #ff6f91; /* Soft pink toggle hover */
 }
 
-.mobile-menu a:hover, .mobile-menu a.active {
-    background: #ffe4ec;
-    color: #ff4d88;
+/* Menu Links Styling */
+.mobile-menu a {
+    display: block;
+    color: #2c2c2c; /* Deep sophisticated charcoal color */
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 14px 12px; /* Balanced standard spacing */
+    border-radius: 8px;
+    margin-bottom: 4px;
+}
+
+/* Active / Hover State with your soft pink brand touch */
+.mobile-menu a:hover, 
+.mobile-menu a.active {
+    background: #ffe4ec; /* Beautiful pastel soft pink highlight background */
+    color: #ff4d88;      /* Vibrant branding pink text */
     font-weight: 500;
 }
 
+/* Bottom Footer Area inside Menu */
 .mobile-footer {
-    margin-top: auto;
+    margin-top: auto; /* Isse pure sections automatic screen ke bilkul neeche chalay jayeinge */
     padding-top: 20px;
-    border-top: 1px solid #f5f5f5;
+    border-top: 1px solid #f5f5f5; /* Subtle separation line */
 }
 
+/* Log In Link inside footer */
 .mobile-login {
     display: flex;
     align-items: center;
@@ -296,14 +309,34 @@ body {
     color: #444;
     text-decoration: none;
     font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    padding: 6px 12px;
 }
 
+.mobile-login:hover {
+    color: #ff6f91;
+}
+
+/* Social Media Icons Box */
 .mobile-socials {
     display: flex;
     gap: 18px;
+    padding-left: 12px;
 }
 
-/* ================= MOBILE RESPONSIVENESS FIX ================= */
+.mobile-socials a {
+    display: inline;
+    padding: 0;
+    margin: 0;
+    color: #555;
+    font-size: 18px;
+}
+
+.mobile-socials a:hover {
+    background: none;
+    color: #ff4d88;
+}/* ================= MOBILE RESPONSIVENESS FIX ================= */
 
 @media (max-width: 600px) {
     .top-bar {
