@@ -169,227 +169,15 @@ body {
     box-shadow: 0 8px 20px rgba(0,0,0,0.12);
 }
 
-.img-box {
-    position: relative;
-    width: 100%;
-    aspect-ratio: 1 / 1;
-    overflow: hidden;
-    border-radius: 8px;
-    margin-bottom: 8px;
-}
-
-.img-box img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    cursor: pointer;
-}
-
-.card h3, .name {
-    margin: 4px 0 2px;
-    font-size: 14px;
-    color: #333;
-    font-weight: 500;
-}
-
-.price {
-    margin: 2px 0 6px;
-    font-size: 15px;
-    font-weight: 700;
-    color: #222;
-}
-
-/* ================= QTY & ADD BUTTON ================= */
-
-.qty-box {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 6px 0;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    padding: 2px;
-}
-
-.qty-box button {
-    padding: 4px 12px;
-    border: none;
-    background: #ff8fb1;
-    color: white;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.qty-box span {
-    font-size: 14px;
-    font-weight: 500;
-}
-
-.add-btn {
-    width: 100%;
-    padding: 8px;
-    border: none;
-    background: #ff4d88;
-    color: white;
-    border-radius: 20px;
-    font-weight: bold;
-    font-size: 13px;
-    cursor: pointer;
-}
-
-/* ================= MOBILE SIDEBAR MENU ================= */
-
-/* ================= MOBILE MENU (PREMIUM PINK THEME) ================= */
-.mobile-menu {
-    position: fixed;
-    top: 0;
-    left: -280px; /* Thoda wide kiya taaki icons comfortable aayein */
-    width: 260px;
-    height: 100vh;
-    background: #ffffff; /* Premium look ke liye pure white background */
-    padding: 24px 20px;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); /* Ultra smooth slide slide-in effect */
-    z-index: 99999;
-    display: flex;
-    flex-direction: column;
-    box-shadow: 5px 0 25px rgba(0,0,0,0.05); /* Soft side shadow */
-}
-
-.mobile-menu.open {
-    left: 0;
-}
-
-/* Close button layout (Cross 'X' Icon) */
-.close-btn {
-    font-size: 22px;
-    text-align: left; /* Reference jaisa top left control */
-    cursor: pointer;
-    color: #555;
-    margin-bottom: 30px;
-    display: inline-block;
-    width: fit-content;
-}
-
-.close-btn:hover {
-    color: #ff6f91; /* Soft pink toggle hover */
-}
-
-/* Menu Links Styling */
-.mobile-menu a {
-    display: block;
-    color: #2c2c2c; /* Deep sophisticated charcoal color */
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: 400;
-    padding: 14px 12px; /* Balanced standard spacing */
-    border-radius: 8px;
-    margin-bottom: 4px;
-}
-
-/* Active / Hover State with your soft pink brand touch */
-.mobile-menu a:hover, 
-.mobile-menu a.active {
-    background: #ffe4ec; /* Beautiful pastel soft pink highlight background */
-    color: #ff4d88;      /* Vibrant branding pink text */
-    font-weight: 500;
-}
-
-/* Bottom Footer Area inside Menu */
-.mobile-footer {
-    margin-top: auto; /* Isse pure sections automatic screen ke bilkul neeche chalay jayeinge */
-    padding-top: 20px;
-    border-top: 1px solid #f5f5f5; /* Subtle separation line */
-}
-
-/* Log In Link inside footer */
-.mobile-login {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    color: #444;
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 500;
-    margin-bottom: 20px;
-    padding: 6px 12px;
-}
-
-.mobile-login:hover {
-    color: #ff6f91;
-}
-
-/* Social Media Icons Box */
-.mobile-socials {
-    display: flex;
-    gap: 18px;
-    padding-left: 12px;
-}
-
-.mobile-socials a {
-    display: inline;
-    padding: 0;
-    margin: 0;
-    color: #555;
-    font-size: 18px;
-}
-
-.mobile-socials a:hover {
-    background: none;
-    color: #ff4d88;
-}/* ================= MOBILE RESPONSIVENESS FIX ================= */
-
-@media (max-width: 600px) {
-    .top-bar {
-        padding: 10px 15px;
-    }
-
-    .top-heading {
-        font-size: 18px; /* Mobile size adjust kiya */
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%); /* Perfect horizontal center */
-    }
-
-    .left-menu {
-        display: none; /* Desktop menu links hide */
-    }
-
-    .search {
-        width: 90px; /* Chota size taaki toot kar neeche na jaye */
-        padding: 6px 10px;
-        font-size: 12px;
-    }
-
-    .search:focus {
-        width: 120px; /* Click karne par expand hoga beautiful look ke liye */
-    }
-
-    .products {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
-        padding: 4px;
-    }
-
-    .hero-box {
-        height: 140px;
-    }
-
-    .side-img {
-        display: none;
-    }
-}
-0px rgba(0,0,0,0.12);
-}
-
 /* ================= IMAGE BOX (FIXED HEIGHT) ================= */
 
 .img-box {
     position: relative;
     width: 100%;
-    aspect-ratio: 1 / 1;       /* 👈 3/4 se badal kar perfectly Square (1/1) kiya jaisai reference image mai hai */
+    aspect-ratio: 1 / 1;       
     overflow: hidden;
     border-radius: 8px;
-    margin-bottom: 8px;        /* Image aur text ke beech ki clean space */
+    margin-bottom: 8px;        
 }
 
 .img-box img {
@@ -405,16 +193,16 @@ body {
 
 /* ================= TEXT & PRICE (GAP FIXED) ================= */
 
-.card h3 {
-    margin: 4px 0 2px;         /* 👈 Bilkul normal minimum gaps */
+.card h3, .name {
+    margin: 4px 0 2px;         
     font-size: 14px;
     color: #333;
     font-weight: 500;
-    line-height: 1.2;          /* Extra top-bottom invisible spaces khatam */
+    line-height: 1.2;          
 }
 
 .price {
-    margin: 2px 0 6px;         /* 👈 Title aur price ka gap perfectly fix ho gaya */
+    margin: 2px 0 6px;         
     font-size: 15px;
     font-weight: 700;
     color: #222;
@@ -425,10 +213,10 @@ body {
 
 .qty-box {
     display: flex;
-    justify-content: space-between; /* 👈 Border outline style bananay ke liye space balanced */
+    justify-content: space-between; 
     align-items: center;
     margin: 6px 0;
-    border: 1px solid #ddd;     /* Reference site jaisa subtle border layout */
+    border: 1px solid #ddd;     
     border-radius: 6px;
     padding: 2px;
 }
@@ -472,7 +260,7 @@ body {
     background: #333;
 }
 
-/* ================= FLOATING ORDER ================= */
+/* ================= FLOATING ORDER & POPUP ================= */
 
 .floating-order {
     position: fixed;
@@ -488,8 +276,6 @@ body {
     padding: 12px 18px;
     border-radius: 30px;
 }
-
-/* ================= POPUP ================= */
 
 .popup {
     display: none;
@@ -509,78 +295,74 @@ body {
     border-radius: 15px;
 }
 
-/* ================= ANIMATION ================= */
-
 @keyframes slideIn {
     from { transform: translateY(50px); opacity: 0; }
     to { transform: translateY(0); opacity: 1; }
 }
 
-/* ================= MOBILE MENU ================= */
+/* ================= CLEAN MOBILE MENU CODE (NO REPEATS) ================= */
 
-/* ================= MOBILE MENU (PREMIUM PINK THEME) ================= */
 .mobile-menu {
     position: fixed;
     top: 0;
-    left: -280px; /* Thoda wide kiya taaki icons comfortable aayein */
+    left: -280px; 
     width: 260px;
-    height: 100vh;
-    background: #ffffff; /* Premium look ke liye pure white background */
+    height: fit-content; /* Height tight kar di */
+    max-height: 95vh;
+    background: #ffffff; 
     padding: 24px 20px;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); /* Ultra smooth slide slide-in effect */
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); 
     z-index: 99999;
     display: flex;
     flex-direction: column;
-    box-shadow: 5px 0 25px rgba(0,0,0,0.05); /* Soft side shadow */
+    box-shadow: 5px 5px 25px rgba(0,0,0,0.1); 
+    border-radius: 0 0 15px 0;
+    overflow-y: auto;
 }
 
 .mobile-menu.open {
     left: 0;
 }
 
-/* Close button layout (Cross 'X' Icon) */
 .close-btn {
     font-size: 22px;
-    text-align: left; /* Reference jaisa top left control */
+    text-align: left; 
     cursor: pointer;
     color: #555;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     display: inline-block;
     width: fit-content;
 }
 
 .close-btn:hover {
-    color: #ff6f91; /* Soft pink toggle hover */
+    color: #ff6f91; 
 }
 
-/* Menu Links Styling */
 .mobile-menu a {
     display: block;
-    color: #2c2c2c; /* Deep sophisticated charcoal color */
+    color: #2c2c2c; 
     text-decoration: none;
     font-size: 16px;
     font-weight: 400;
-    padding: 14px 12px; /* Balanced standard spacing */
+    padding: 10px 12px; 
     border-radius: 8px;
     margin-bottom: 4px;
 }
 
-/* Active / Hover State with your soft pink brand touch */
 .mobile-menu a:hover, 
 .mobile-menu a.active {
-    background: #ffe4ec; /* Beautiful pastel soft pink highlight background */
-    color: #ff4d88;      /* Vibrant branding pink text */
+    background: #ffe4ec; 
+    color: #ff4d88;      
     font-weight: 500;
 }
 
-/* Bottom Footer Area inside Menu */
+/* Fixed Footer Area - Right under links */
 .mobile-footer {
-    margin-top: auto; /* Isse pure sections automatic screen ke bilkul neeche chalay jayeinge */
-    padding-top: 20px;
-    border-top: 1px solid #f5f5f5; /* Subtle separation line */
+    margin-top: 30px; /* Links ke foran baad aaye ga */
+    padding-top: 15px;
+    border-top: 1px solid #f5f5f5; 
 }
 
-/* Log In Link inside footer */
 .mobile-login {
     display: flex;
     align-items: center;
@@ -589,7 +371,7 @@ body {
     text-decoration: none;
     font-size: 14px;
     font-weight: 500;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     padding: 6px 12px;
 }
 
@@ -597,7 +379,6 @@ body {
     color: #ff6f91;
 }
 
-/* Social Media Icons Box */
 .mobile-socials {
     display: flex;
     gap: 18px;
@@ -615,67 +396,75 @@ body {
 .mobile-socials a:hover {
     background: none;
     color: #ff4d88;
-}.mobile-footer{
-    margin-top: auto;
-    padding-top: 20px;
 }
 
-.mobile-footer p{
-    word-break: break-word;
-}
-
-/* ================= MOBILE OPTIMIZATION ================= */
+/* ================= MOBILE RESPONSIVENESS FIX ================= */
 
 @media (max-width: 600px) {
+    .top-bar {
+        padding: 10px 15px;
+    }
 
-.products {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;                 /* Mobile par spacing clean and tight rakhi */
-    padding: 4px;
-}
+    .top-heading {
+        font-size: 18px; 
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%); 
+    }
 
-.card {
-    padding: 8px;              /* White box mobile ke screen size ke hisab se responsive padding */
-    border-radius: 10px;
-}
+    .left-menu {
+        display: none; 
+    }
 
-.img-box {
-    margin-bottom: 6px;
-}
+    .search {
+        width: 90px; 
+        padding: 6px 10px;
+        font-size: 12px;
+    }
 
-.card h3 {
-    font-size: 13px;           /* Mobile friendly text size */
-}
+    .search:focus {
+        width: 120px; 
+    }
 
-.price {
-    font-size: 14px;
-}
+    .products {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;                 
+        padding: 4px;
+    }
 
-.qty-box button {
-    padding: 3px 10px;
-}
+    .card {
+        padding: 8px;              
+        border-radius: 10px;
+    }
 
-.add-btn {
-    opacity: 1;
-    transform: none;
-    font-size: 12px;
-    padding: 7px;
-}
+    .img-box {
+        margin-bottom: 6px;
+    }
 
-.menu-icon {
-    display: block;
-    font-size: 26px;
-}
+    .card h3 {
+        font-size: 13px;           
+    }
 
-.left-menu {
-    display: none;
-}
+    .price {
+        font-size: 14px;
+    }
 
-.hero-box {
-    height: 140px;
-}
+    .qty-box button {
+        padding: 3px 10px;
+    }
 
-.side-img {
-    display: none;
-}
+    .add-btn {
+        opacity: 1;
+        transform: none;
+        font-size: 12px;
+        padding: 7px;
+    }
+
+    .hero-box {
+        height: 140px;
+    }
+
+    .side-img {
+        display: none;
+    }
 }
