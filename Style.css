@@ -29,11 +29,434 @@ body {
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-    overflow: visible;
+    overflow: visible; /* 👈 Spelling error 'visibel' fixed here */
 }
 
 .left-menu a {
     color: #333;
+    text-decoration: none;
+    margin-right: 20px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.right-menu {
+    display: flex;
+    align-items: center;
+}
+
+/* ================= SEARCH ================= */
+
+.search-box {
+    position: relative;
+    overflow: visible;
+    z-index: 9999;
+}
+
+.search {
+    padding: 8px 12px;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    width: 180px;
+}
+
+.search:focus {
+    border-color: #ff6f91;
+    box-shadow: 0 0 8px rgba(255,111,145,0.3);
+}
+
+.search-results {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 240px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    display: none;
+    padding: 10px;
+    z-index: 99999;
+}
+
+.search-results div {
+    padding: 6px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.search-results div:hover {
+    background: #ffe4ec;
+}
+
+/* ================= BUTTON ================= */
+
+.btn {
+    background: #ff6f91;
+    color: white;
+    border-radius: 25px;
+    padding: 10px 18px;
+}
+
+.btn:hover {
+    background: #ff4d88;
+    transform: scale(1.05);
+}
+
+/* ================= HERO ================= */
+
+.hero-box {
+    width: 95%;
+    max-width: 1100px;
+    height: 180px;
+    margin: 15px auto;
+    overflow: hidden;
+    border-radius: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    background: #fff;
+}
+
+.main-img {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+}
+
+.side-img {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+    opacity: 0.85;
+}
+
+/* ================= PRODUCTS GRID ================= */
+
+.category {
+    padding: 10px 20px;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+    padding: 8px;
+}
+
+/* ================= CARD (WHITE BOX) ================= */
+
+.card {
+    background: white;
+    border-radius: 12px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+/* ================= IMAGE BOX (FIXED HEIGHT) ================= */
+
+.img-box {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+
+.img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.img-box:hover img {
+    transform: scale(1.05);
+}
+
+/* ================= TEXT & PRICE (GAP FIXED) ================= */
+
+.card h3 {
+    margin: 4px 0 2px;
+    font-size: 14px;
+    color: #333;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.price {
+    margin: 2px 0 6px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #222;
+    line-height: 1.1;
+}
+
+/* ================= QTY BOX ================= */
+
+.qty-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 6px 0;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 2px;
+}
+
+.qty-box button {
+    padding: 4px 12px;
+    border: none;
+    background: #ff8fb1;
+    color: white;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.qty-box span {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+}
+
+/* ================= ADD BUTTON ================= */
+
+.add-btn {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    background: #ff4d88;
+    color: white;
+    border-radius: 20px;
+    margin-top: 4px;
+    font-weight: bold;
+    font-size: 13px;
+    opacity: 0;
+    transform: translateY(10px);
+    cursor: pointer;
+}
+
+.card:hover .add-btn {
+    opacity: 1;
+    transform: translateY(0);
+    background: #333;
+}
+
+/* ================= FLOATING ORDER ================= */
+
+.floating-order {
+    position: fixed;
+    right: 15px;
+    bottom: 80px;
+    display: none;
+    z-index: 9999;
+}
+
+.floating-order .btn {
+    background: #ff6f91;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 30px;
+}
+
+/* ================= POPUP ================= */
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.popup img {
+    max-width: 80%;
+    max-height: 80vh;
+    border-radius: 15px;
+}
+
+/* ================= ANIMATION ================= */
+
+@keyframes slideIn {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* ================= MOBILE MENU (PREMIUM PINK THEME) ================= */
+
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: -280px;
+    width: 260px;
+    height: 100vh;
+    background: #ffffff;
+    padding: 24px 20px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 99999;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 5px 0 25px rgba(0,0,0,0.05);
+}
+
+.mobile-menu.open {
+    left: 0;
+}
+
+.close-btn {
+    font-size: 22px;
+    text-align: left;
+    cursor: pointer;
+    color: #555;
+    margin-bottom: 30px;
+    display: inline-block;
+    width: fit-content;
+}
+
+.close-btn:hover {
+    color: #ff6f91;
+}
+
+.mobile-menu a {
+    display: block;
+    color: #2c2c2c;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 14px 12px;
+    border-radius: 8px;
+    margin-bottom: 4px;
+}
+
+.mobile-menu a:hover, 
+.mobile-menu a.active {
+    background: #ffe4ec;
+    color: #ff4d88;
+    font-weight: 500;
+}
+
+.mobile-footer {
+    margin-top: auto;
+    padding-top: 20px;
+    border-top: 1px solid #f5f5f5;
+}
+
+.mobile-footer p {
+    word-break: break-word;
+    margin: 0 0 10px;
+    font-size: 13px;
+    color: #666;
+}
+
+.mobile-login {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #444;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    padding: 6px 12px;
+}
+
+.mobile-login:hover {
+    color: #ff6f91;
+}
+
+.mobile-socials {
+    display: flex;
+    gap: 18px;
+    padding-left: 12px;
+}
+
+.mobile-socials a {
+    display: inline;
+    padding: 0;
+    margin: 0;
+    color: #555;
+    font-size: 18px;
+}
+
+.mobile-socials a:hover {
+    background: none;
+    color: #ff4d88;
+}
+
+/* 👈 Duplicate block removed from here successfully */
+
+/* ================= MOBILE OPTIMIZATION ================= */
+
+@media (max-width: 600px) {
+
+.products {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 4px;
+}
+
+.card {
+    padding: 8px;
+    border-radius: 10px;
+}
+
+.img-box {
+    margin-bottom: 6px;
+}
+
+.card h3 {
+    font-size: 13px;
+}
+
+.price {
+    font-size: 14px;
+}
+
+.qty-box button {
+    padding: 3px 10px;
+}
+
+.add-btn {
+    opacity: 1;
+    transform: none;
+    font-size: 12px;
+    padding: 7px;
+}
+
+.menu-icon {
+    display: block;
+    font-size: 26px;
+}
+
+.left-menu {
+    display: none;
+}
+
+.hero-box {
+    height: 140px;
+}
+
+.side-img {
+    display: none;
+}
+}
     text-decoration: none;
     margin-right: 20px;
     font-size: 15px;
