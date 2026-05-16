@@ -48,6 +48,7 @@ body {
 
 .search-box {
     position: relative;
+    overflow: visible;
     z-index: 9999;
 }
 
