@@ -30,19 +30,24 @@ body {
 }
 
 .left-menu a {
-  color: #333;
-  text-decoration: none;
-  margin-right: 20px;
-  font-size: 15px;
-  font-weight: 500;
+    color: #333;
+    text-decoration: none;
+    margin-right: 20px;
+    font-size: 15px;
+    font-weight: 500;
 }
 
 .right-menu {
     display: flex;
-    align-items: center;  
+    align-items: center;
 }
 
 /* SEARCH */
+.search-box {
+    position: relative;
+    z-index: 99999;
+}
+
 .search {
     padding: 8px 12px;
     border-radius: 20px;
@@ -57,21 +62,17 @@ body {
     box-shadow: 0 0 8px rgba(255,111,145,0.3);
 }
 
-.search-box {
-    position: relative;
-}
-
 .search-results {
     position: absolute;
-    top: 30px;
+    top: 38px;
     right: 0;
     width: 220px;
     background: white;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
     display: none;
     padding: 10px;
-    z-index: 1000;
+    z-index: 100000;
 }
 
 .search-results div {
@@ -99,7 +100,7 @@ body {
 
 /* PRODUCTS */
 .category {
-    padding: 15px;
+    padding: 25px 40px;
 }
 
 .hero-box {
@@ -109,7 +110,6 @@ body {
     margin: 20px auto 0;
     overflow: hidden;
     border-radius: 10px;
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -132,16 +132,16 @@ body {
 /* PRODUCTS GRID */
 .products {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    padding: 10px;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+    padding: 20px 30px;
 }
 
-/* CARD FIX (SIZE SMALLER) */
+/* CARD */
 .card {
     background: white;
     border-radius: 15px;
-    padding: 8px 8px 10px;   /* was too airy */
+    padding: 8px 8px 10px;
     text-align: center;
     box-shadow: 0 4px 15px rgba(0,0,0,0.08);
     transition: 0.3s;
@@ -149,7 +149,11 @@ body {
 
     display: flex;
     flex-direction: column;
-    gap: 6px;   /* 👈 THIS FIXES EVERYTHING */
+    gap: 6px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
 }
 
 .card h3 {
@@ -157,32 +161,28 @@ body {
     font-size: 14px;
     line-height: 1.2;
 }
-.card:hover {
-    transform: translateY(-5px);
-}
 
 /* IMAGE BOX */
 .img-box {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 3 / 3.4;
-  overflow: hidden;
-  border-radius: 10px;
-  margin-bottom: 4px;
-  
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1.15;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 4px;
 }
 
 .img-box img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  cursor: pointer;
-  transition: 0.3s;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
 .img-box:hover img {
-  transform: scale(1.05);
+    transform: scale(1.05);
 }
 
 /* PRICE */
@@ -192,48 +192,49 @@ body {
     font-size: 14px;
 }
 
-/* QTY FIX (SMALLER) */
+/* QTY */
 .qty-box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 2px 0;   /* was too big */
-  gap: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2px 0;
+    gap: 6px;
 }
 
 .qty-box button {
-  padding: 2px 8px;   /* reduced */
-  border: none;
-  background: #ff8fb1;
-  color: white;
-  font-size: 13px;
-  border-radius: 6px;
-  cursor: pointer;
+    padding: 2px 8px;
+    border: none;
+    background: #ff8fb1;
+    color: white;
+    font-size: 13px;
+    border-radius: 6px;
+    cursor: pointer;
 }
 
 .qty-box span {
-  margin: 0 8px;
-  font-size: 13px;
+    margin: 0 8px;
+    font-size: 13px;
 }
 
 /* ADD BUTTON */
 .add-btn {
-  width: 100%;
-  padding: 6px;
-  border: none;
-  background: #ff4d88;
-  color: white;
-  border-radius: 16px;
-  margin-top: 4px;
-  opacity: 0;
-  transform: translateY(10px);
-  transition: 0.3s; 
-  font-weight: bold;
+    width: 100%;
+    padding: 6px;
+    border: none;
+    background: #ff4d88;
+    color: white;
+    border-radius: 16px;
+    margin-top: 4px;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: 0.3s;
+    font-weight: bold;
 }
+
 .card:hover .add-btn {
-  background: #333;
-  opacity: 1;
-  transform: translateY(0);
+    background: #333;
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* FLOATING ORDER */
@@ -319,67 +320,66 @@ body {
     color: #333;
 }
 
-/* FIX: hide mobile footer on desktop (IMPORTANT) */
+/* MOBILE FOOTER */
 .mobile-footer {
-  display: none;
+    display: none;
 }
 
 /* MOBILE */
 @media (max-width: 600px) {
 
-.products {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-}
+    .products {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
 
-.card {
-    min-height: 360px;
-}
+    .card {
+        min-height: 360px;
+    }
 
-.add-btn {
-  opacity: 1;
-  transform: none;
-  display: block;
-}
+    .add-btn {
+        opacity: 1;
+        transform: none;
+        display: block;
+    }
 
-.menu-icon {
-    display: block;
-    font-size: 26px;
-    cursor: pointer;
-}
+    .menu-icon {
+        display: block;
+        font-size: 26px;
+        cursor: pointer;
+    }
 
-.left-menu {
-    display: none;
-}
+    .left-menu {
+        display: none;
+    }
 
-/* SHOW FOOTER ONLY MOBILE */
-.mobile-footer {
-  display: block;
-  margin-top: 30px;
-  padding: 15px;
-  border-top: 1px solid #ddd;
-  background: #ffe4ec;
-  border-radius: 8px;
-  text-align: left;
-}
+    .mobile-footer {
+        display: block;
+        margin-top: 30px;
+        padding: 15px;
+        border-top: 1px solid #ddd;
+        background: #ffe4ec;
+        border-radius: 8px;
+        text-align: left;
+    }
 
-.mobile-footer h3 {
-  font-size: 15px;
-  margin-bottom: 5px;
-}
+    .mobile-footer h3 {
+        font-size: 15px;
+        margin-bottom: 5px;
+    }
 
-.mobile-footer p {
-  font-size: 13px;
-  margin-bottom: 5px;
-  word-break: break-word;
-}
+    .mobile-footer p {
+        font-size: 13px;
+        margin-bottom: 5px;
+        word-break: break-word;
+    }
 
-.side-img {
-    display: none;
-}
+    .side-img {
+        display: none;
+    }
 
-.main-img {
-    width: 100%;
-    height: 100%;
-}
+    .main-img {
+        width: 100%;
+        height: 100%;
+    }
 }
