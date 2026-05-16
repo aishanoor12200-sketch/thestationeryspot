@@ -28,7 +28,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    box-shadow: 0 2px 10px
+    rgba(0,0,0,0.08);
     overflow: visibel;
 }
 
@@ -184,15 +185,19 @@ body {
 
 /* ================= TEXT ================= */
 
+/* ================= TEXT ================= */
+
 .card h3 {
-    margin: 2px 0 0;
+    margin: 4px 0 2px; /* Bottom margin ko thoda control kiya */
     font-size: 13px;
+    line-height: 1.2;  /* 👈 Yeh line text ke gird extra vertical space ko khatam karegi */
 }
 
 .price {
-    margin: 0 0 3px;
+    margin: 0 0 4px;   /* Top margin automatically 0 hai */
     font-size: 15px;
     font-weight: 700;
+    line-height: 1.1;  /* 👈 Price ke gird ki extra space bhi kam ho jayegi */
 }
 /* ================= QTY ================= */
 
