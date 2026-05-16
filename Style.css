@@ -146,20 +146,22 @@ body {
     box-shadow: 0 4px 15px rgba(0,0,0,0.08);
     transition: 0.3s;
     min-height: 420px;
+    align-items: center;
+    justify-content: flex-start;
 
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 3px;   /* ultra tight spacing */
 }
 
 .card:hover {
     transform: translateY(-5px);
 }
 
-.card h3 {
-    margin: 6px 0 2px;
-    font-size: 14px;
-    line-height: 1.2;
+.card h3,
+.price {
+    margin-top: 2px;
+    margin-bottom: 2px;
 }
 
 /* IMAGE BOX */
@@ -188,7 +190,7 @@ body {
 /* PRICE */
 .price {
     color: #ff6f91;
-    margin: 2px 0;
+    margin: 0;
     font-size: 14px;
 }
 
