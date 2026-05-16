@@ -1,15 +1,17 @@
 * {
     box-sizing: border-box;
+    transition: all 0.2s ease-in-out;
 }
 
 body {
     margin: 0;
     overflow-x: hidden;
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #ffe4ec, #ffffff);
+    background: linear-gradient(135deg, #fff0f5, #ffffff);
 }
 
-/* TOP */
+/* ================= TOP ================= */
+
 .top-heading {
     text-align: center;
     font-family: 'Pacifico', cursive;
@@ -42,10 +44,11 @@ body {
     align-items: center;
 }
 
-/* SEARCH */
+/* ================= SEARCH ================= */
+
 .search-box {
     position: relative;
-    z-index: 99999;
+    z-index: 9999;
 }
 
 .search {
@@ -54,7 +57,6 @@ body {
     border: 1px solid #ddd;
     font-size: 14px;
     width: 180px;
-    transition: 0.3s;
 }
 
 .search:focus {
@@ -64,19 +66,19 @@ body {
 
 .search-results {
     position: absolute;
-    top: 38px;
+    top: 100%;
     right: 0;
-    width: 220px;
+    width: 240px;
     background: white;
     border-radius: 10px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
     display: none;
     padding: 10px;
-    z-index: 100000;
+    z-index: 99999;
 }
 
 .search-results div {
-    padding: 5px;
+    padding: 6px;
     font-size: 12px;
     cursor: pointer;
 }
@@ -85,12 +87,13 @@ body {
     background: #ffe4ec;
 }
 
+/* ================= BUTTON ================= */
+
 .btn {
     background: #ff6f91;
     color: white;
     border-radius: 25px;
     padding: 10px 18px;
-    transition: 0.3s;
 }
 
 .btn:hover {
@@ -98,22 +101,21 @@ body {
     transform: scale(1.05);
 }
 
-/* PRODUCTS */
-.category {
-    padding: 25px 40px;
-}
+/* ================= HERO ================= */
 
 .hero-box {
-    width: 100%;
-    max-width: 1200px;
-    height: 250px;
-    margin: 20px auto 0;
+    width: 95%;
+    max-width: 1100px;
+    height: 180px;
+    margin: 15px auto;
     overflow: hidden;
-    border-radius: 10px;
+    border-radius: 14px;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 15px;
+    gap: 10px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    background: #fff;
 }
 
 .main-img {
@@ -126,141 +128,135 @@ body {
     height: 100%;
     width: auto;
     object-fit: contain;
-    opacity: 0.8;
+    opacity: 0.85;
 }
 
-/* PRODUCTS GRID */
+/* ================= PRODUCTS GRID ================= */
+
+.category {
+    padding: 10px 20px;
+}
+
 .products {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 12px;
-    padding: 20px 30px;
+    gap: 10px;
+    padding: 8px;
 }
 
-/* CARD */
+/* ================= CARD ================= */
+
 .card {
     background: white;
-    border-radius: 15px;
-    padding: 8px 8px 10px;
+    border-radius: 12px;
+    padding: 8px;
     text-align: center;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-    transition: 0.3s;
-    min-height: 420px;
-    align-items: center;
-    justify-content: flex-start;
-
-    display: flex;
-    flex-direction: column;
-    gap: 3px;   /* ultra tight spacing */
+    box-shadow: 0 3px 12px rgba(0,0,0,0.06);
 }
 
 .card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
 }
 
-.card h3,
-.price {
-    margin-top: 2px;
-    margin-bottom: 2px;
-}
+/* ================= IMAGE BOX ================= */
 
-/* IMAGE BOX */
 .img-box {
     position: relative;
     width: 100%;
-    aspect-ratio: 1 / 1.15;
+    aspect-ratio: 3 / 4;
     overflow: hidden;
     border-radius: 10px;
-    margin-bottom: 4px;
 }
 
 .img-box img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: block;
     cursor: pointer;
-    transition: 0.3s;
 }
 
 .img-box:hover img {
     transform: scale(1.05);
 }
 
-/* PRICE */
-.price {
-    color: #ff6f91;
-    margin: 0;
-    font-size: 14px;
+/* ================= TEXT ================= */
+
+.card h3 {
+    margin: 4px 0 2px;
+    font-size: 13px;
 }
 
-/* QTY */
+.price {
+    color: #ff6f91;
+    font-size: 13px;
+    margin: 2px 0;
+}
+
+/* ================= QTY ================= */
+
 .qty-box {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 2px 0;
-    gap: 6px;
+    margin: 3px 0;
 }
 
 .qty-box button {
-    padding: 2px 8px;
+    padding: 4px 10px;
     border: none;
     background: #ff8fb1;
     color: white;
-    font-size: 13px;
+    font-size: 14px;
     border-radius: 6px;
     cursor: pointer;
 }
 
 .qty-box span {
-    margin: 0 8px;
+    margin: 0 10px;
     font-size: 13px;
 }
 
-/* ADD BUTTON */
+/* ================= ADD BUTTON ================= */
+
 .add-btn {
     width: 100%;
-    padding: 6px;
+    padding: 7px;
     border: none;
     background: #ff4d88;
     color: white;
-    border-radius: 16px;
-    margin-top: 4px;
+    border-radius: 20px;
+    margin-top: 5px;
+    font-weight: bold;
     opacity: 0;
     transform: translateY(10px);
-    transition: 0.3s;
-    font-weight: bold;
 }
 
 .card:hover .add-btn {
-    background: #333;
     opacity: 1;
     transform: translateY(0);
+    background: #333;
 }
 
-/* FLOATING ORDER */
+/* ================= FLOATING ORDER ================= */
+
 .floating-order {
     position: fixed;
     right: 15px;
     bottom: 80px;
     display: none;
     z-index: 9999;
-    animation: slideIn 0.3s ease;
 }
 
 .floating-order .btn {
     background: #ff6f91;
     color: white;
-    border: none;
     padding: 12px 18px;
     border-radius: 30px;
-    font-size: 14px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-    cursor: pointer;
 }
 
-/* POPUP */
+/* ================= POPUP ================= */
+
 .popup {
     display: none;
     position: fixed;
@@ -271,7 +267,6 @@ body {
     background: rgba(0,0,0,0.7);
     justify-content: center;
     align-items: center;
-    animation: slideIn 0.4s ease;
 }
 
 .popup img {
@@ -280,13 +275,15 @@ body {
     border-radius: 15px;
 }
 
-/* ANIMATION */
+/* ================= ANIMATION ================= */
+
 @keyframes slideIn {
     from { transform: translateY(50px); opacity: 0; }
     to { transform: translateY(0); opacity: 1; }
 }
 
-/* MOBILE MENU */
+/* ================= MOBILE MENU ================= */
+
 .mobile-menu {
     position: fixed;
     top: 0;
@@ -300,14 +297,7 @@ body {
 }
 
 .mobile-menu.open {
-    left: 0px;
-}
-
-.mobile-menu a {
-    display: block;
-    margin: 15px 0;
-    text-decoration: none;
-    color: #333;
+    left: 0;
 }
 
 .menu-icon {
@@ -316,72 +306,42 @@ body {
 
 .close-btn {
     font-size: 24px;
-    cursor: pointer;
     text-align: right;
-    margin-bottom: 15px;
-    color: #333;
+    cursor: pointer;
 }
 
-/* MOBILE FOOTER */
-.mobile-footer {
+/* ================= MOBILE ================= */
+
+@media (max-width: 600px) {
+
+.products {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.card {
+    padding: 10px;
+}
+
+.add-btn {
+    opacity: 1;
+    transform: none;
+}
+
+.menu-icon {
+    display: block;
+    font-size: 26px;
+}
+
+.left-menu {
     display: none;
 }
 
-/* MOBILE */
-@media (max-width: 600px) {
+.hero-box {
+    height: 140px;
+}
 
-    .products {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
-    }
-
-    .card {
-        min-height: 360px;
-    }
-
-    .add-btn {
-        opacity: 1;
-        transform: none;
-        display: block;
-    }
-
-    .menu-icon {
-        display: block;
-        font-size: 26px;
-        cursor: pointer;
-    }
-
-    .left-menu {
-        display: none;
-    }
-
-    .mobile-footer {
-        display: block;
-        margin-top: 30px;
-        padding: 15px;
-        border-top: 1px solid #ddd;
-        background: #ffe4ec;
-        border-radius: 8px;
-        text-align: left;
-    }
-
-    .mobile-footer h3 {
-        font-size: 15px;
-        margin-bottom: 5px;
-    }
-
-    .mobile-footer p {
-        font-size: 13px;
-        margin-bottom: 5px;
-        word-break: break-word;
-    }
-
-    .side-img {
-        display: none;
-    }
-
-    .main-img {
-        width: 100%;
-        height: 100%;
-    }
+.side-img {
+    display: none;
+}
 }
