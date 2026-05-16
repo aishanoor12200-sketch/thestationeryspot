@@ -417,7 +417,7 @@ body {
 /* ================= MOBILE RESPONSIVENESS FIX (600px) ================= */
 
 @media (max-width: 600px) {
-    /* Mobile par logo chhup jaye ga aur burger menu icon aa jaye ga */
+
     .menu-icon {
         display: block;
         font-size: 26px;
@@ -425,105 +425,28 @@ body {
     }
 
     .pc-logo {
-        display: none; /* Mobile par header mein logo nahi dikhe ga */
+        display: none;
     }
 
-        padding: 10px 15px;
-    }
-
-.products {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;                 /* Mobile par spacing clean and tight rakhi */
-    padding: 4px;
-}
     .top-heading {
-        font-size: 18px; 
+        font-size: 18px;
         position: absolute;
         left: 50%;
-        transform: translateX(-50%); 
+        transform: translateX(-50%);
     }
 
-.card {
-    padding: 8px;              /* White box mobile ke screen size ke hisab se responsive padding */
-    border-radius: 10px;
-}
     .left-menu {
-        display: none; 
+        display: none;
     }
 
-.img-box {
-    margin-bottom: 6px;
-}
     .search {
-        width: 90px; 
+        width: 90px;
         padding: 6px 10px;
         font-size: 12px;
     }
 
-.card h3 {
-    font-size: 13px;           /* Mobile friendly text size */
-}
     .search:focus {
-        width: 120px; 
-    }
-
-.price {
-    font-size: 14px;
-}
-    .products {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;                 
-        padding: 4px;
-    }
-
-.qty-box button {
-    padding: 3px 10px;
-}
-    .card {
-        padding: 8px;              
-        border-radius: 10px;
-    }
-
-.add-btn {
-    opacity: 1;
-    transform: none;
-    font-size: 12px;
-    padding: 7px;
-}
-    .img-box {
-        margin-bottom: 6px;
-    }
-
-.menu-icon {
-    display: block;
-    font-size: 26px;
-}
-    .card h3 {
-        font-size: 13px;           
-    }
-
-.left-menu {
-    display: none;
-}
-    .price {
-        font-size: 14px;
-    }
-
-.hero-box {
-    height: 140px;
-}
-    .qty-box button {
-        padding: 3px 10px;
-    }
-
-.side-img {
-    display: none;
-}
-    .add-btn {
-        opacity: 1;
-        transform: none;
-        font-size: 12px;
-        padding: 7px;
+        width: 120px;
     }
 
     .hero-box {
@@ -533,5 +456,38 @@ body {
     .side-img {
         display: none;
     }
-}
+
+    .products {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        padding: 4px;
+    }
+
+    .card {
+        padding: 8px;
+        border-radius: 10px;
+    }
+
+    .img-box {
+        margin-bottom: 6px;
+    }
+
+    .card h3 {
+        font-size: 13px;
+    }
+
+    .price {
+        font-size: 14px;
+    }
+
+    .qty-box button {
+        padding: 3px 10px;
+    }
+
+    .add-btn {
+        opacity: 1;
+        transform: none;
+        font-size: 12px;
+        padding: 7px;
+    }
 }
