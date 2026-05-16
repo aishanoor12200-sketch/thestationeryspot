@@ -2196,7 +2196,7 @@
 </div>
 
 <script>
-
+// 1. Search Box Function
 function searchItems() {
     let input = document.getElementById("searchInput").value.toLowerCase();
     let cards = document.querySelectorAll(".card");
@@ -2228,19 +2228,15 @@ function searchItems() {
     });
 }
 
+// 2. Cart Functions
 let cart = [];
 
 function addToCart(btn, code) {
-
     let card = btn.closest(".card");
-
     let name = card.querySelector(".name").innerText;
-
     let priceText = card.querySelector(".price").innerText;
     let price = Number(priceText.replace(/[^0-9]/g, ""));
-
     let qty = Number(card.querySelector(".qty").innerText);
-
     let itemTotal = price * qty;
 
     cart.push({
@@ -2255,23 +2251,21 @@ function addToCart(btn, code) {
 }
 
 function sendWhatsAppOrder() {
-
     if(cart.length === 0){
         alert("Cart empty!");
         return;
     }
 
     let msg = "🛒 ORDER:\n\n";
-let total = 0;
+    let total = 0;
 
-cart.forEach(i=>{
-    msg += i.name+" ("+i.code+") x "+i.qty+" = Rs."+i.total+"\n";
-    total += i.total; // 🔥 THIS LINE FIX
-});
+    cart.forEach(i=>{
+        msg += i.name+" ("+i.code+") x "+i.qty+" = Rs."+i.total+"\n";
+        total += i.total;
+    });
 
-msg += "\nTOTAL: Rs."+total;
-
-window.open("https://wa.me/923271576380?text=" + encodeURIComponent(msg));
+    msg += "\nTOTAL: Rs."+total;
+    window.open("https://wa.me/923271576380?text=" + encodeURIComponent(msg));
 }
 
 function increase(btn){
@@ -2283,6 +2277,7 @@ function decrease(btn){
   if(q.innerText > 1) q.innerText--;
 }
 
+// 3. Popup Image Functions
 function openImage(src){
   document.getElementById("imagePopup").style.display="flex";
   document.getElementById("popupImg").src = src;
@@ -2293,28 +2288,19 @@ function closeImage(){
 }
 
 function showOrderBox(btn) {
-
     let floatBtn = document.getElementById("floatingBtn");
-
     floatBtn.style.display = "block";
-
     setTimeout(() => {
         floatBtn.style.display = "none";
     }, 10000);
 } 
-document.addEventListener("DOMContentLoaded", function () {
-    let menu = document.getElementById("mobileMenu");
 
-    // ☰ icon click
-    document.querySelector(".menu-icon").addEventListener("click", function () {
-        menu.classList.add("open");
-    });
-
-    // ✖ close button click
-    document.querySelector(".close-btn").addEventListener("click", function () {
-        menu.classList.remove("open");
-    });
-});
+// 4. Mobile Menu Toggle Function (Open & Close Dono Ke Liye)
+function toggleMenu() {
+    let menu = document.querySelector(".mobile-menu");
+    menu.classList.toggle("open");
+}
 </script>
+
 </body> 
 </html>
