@@ -11,7 +11,7 @@ body {
     background: linear-gradient(135deg, #fff0f5, #ffffff);
 }
 
-/* ================= TOP BAR LAYOUT ================= */
+/* ================= TOP BAR LAYOUT (DESKTOP PERFECT) ================= */
 
 .top-bar {
     width: 100%;
@@ -25,32 +25,55 @@ body {
     overflow: visible;
 }
 
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* PC par chota gol logo dikhane ke liye */
+.pc-logo {
+    width: 42px; 
+    height: 42px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block; /* PC par active */
+}
+
+/* PC par mobile burger icon chhupa rahega */
+.menu-icon {
+    display: none; 
+}
+
 .top-heading {
     font-family: 'Pacifico', cursive;
     font-size: 25px;
     color: #ff6f91;
     margin: 0;
-    text-align: center;
+}
+
+/* PC Desktop links code (Ab hamesha dikhenge) */
+.left-menu {
+    display: flex;
+    align-items: center;
+}
+
+.left-menu a {
+    color: #333;
+    text-decoration: none;
+    margin-right: 25px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.left-menu a:hover {
+    color: #ff6f91;
 }
 
 .right-menu {
     display: flex;
     align-items: center;
     gap: 15px;
-}
-
-.left-menu a {
-    color: #333;
-    text-decoration: none;
-    margin-right: 20px;
-    font-size: 15px;
-    font-weight: 500;
-}
-
-.menu-icon {
-    font-size: 24px;
-    cursor: pointer;
-    color: #333;
 }
 
 /* ================= SEARCH BOX ================= */
@@ -86,16 +109,6 @@ body {
     display: none;
     padding: 10px;
     z-index: 99999;
-}
-
-.search-results div {
-    padding: 6px;
-    font-size: 12px;
-    cursor: pointer;
-}
-
-.search-results div:hover {
-    background: #ffe4ec;
 }
 
 /* ================= BUTTONS & HERO ================= */
@@ -164,18 +177,13 @@ body {
     justify-content: space-between;
 }
 
-.card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
-}
-
 .img-box {
     position: relative;
     width: 100%;
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 1 / 1;       
     overflow: hidden;
     border-radius: 8px;
-    margin-bottom: 8px;
+    margin-bottom: 8px;        
 }
 
 .img-box img {
@@ -186,27 +194,27 @@ body {
 }
 
 .card h3, .name {
-    margin: 4px 0 2px;
+    margin: 4px 0 2px;         
     font-size: 14px;
     color: #333;
     font-weight: 500;
 }
 
 .price {
-    margin: 2px 0 6px;
+    margin: 2px 0 6px;         
     font-size: 15px;
     font-weight: 700;
     color: #222;
 }
 
-/* ================= QTY & ADD BUTTON ================= */
+/* ================= QTY BOX & FLOATING ================= */
 
 .qty-box {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; 
     align-items: center;
     margin: 6px 0;
-    border: 1px solid #ddd;
+    border: 1px solid #ddd;     
     border-radius: 6px;
     padding: 2px;
 }
@@ -216,13 +224,7 @@ body {
     border: none;
     background: #ff8fb1;
     color: white;
-    border-radius: 4px;
     cursor: pointer;
-}
-
-.qty-box span {
-    font-size: 14px;
-    font-weight: 500;
 }
 
 .add-btn {
@@ -233,25 +235,44 @@ body {
     color: white;
     border-radius: 20px;
     font-weight: bold;
-    font-size: 13px;
     cursor: pointer;
 }
 
-/* ================= MOBILE SIDEBAR MENU ================= */
+.floating-order {
+    position: fixed;
+    right: 15px;
+    bottom: 80px;
+    display: none;
+    z-index: 9999;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+/* ================= MOBILE SIDEBAR MENU (FULL HEIGHT FIX) ================= */
 
 .mobile-menu {
     position: fixed;
     top: 0;
-    left: -280px;
+    left: -280px; 
     width: 260px;
-    height: 100vh;
-    background: #ffffff;
+    height: 100vh; /* Mobile par full lamba sidebar */
+    background: #ffffff; 
     padding: 24px 20px;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); 
     z-index: 99999;
     display: flex;
     flex-direction: column;
-    box-shadow: 5px 0 25px rgba(0,0,0,0.05);
+    box-shadow: 5px 0 25px rgba(0,0,0,0.05); 
 }
 
 .mobile-menu.open {
@@ -260,33 +281,34 @@ body {
 
 .close-btn {
     font-size: 22px;
-    text-align: left;
+    text-align: left; 
     cursor: pointer;
     color: #555;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
     display: inline-block;
     width: fit-content;
 }
 
 .mobile-menu a {
     display: block;
-    color: #2c2c2c;
+    color: #2c2c2c; 
     text-decoration: none;
     font-size: 16px;
-    padding: 14px 12px;
+    font-weight: 400;
+    padding: 12px 12px; 
     border-radius: 8px;
+    margin-bottom: 4px;
 }
 
-.mobile-menu a:hover, .mobile-menu a.active {
-    background: #ffe4ec;
-    color: #ff4d88;
-    font-weight: 500;
+.mobile-menu a:hover {
+    background: #ffe4ec; 
+    color: #ff4d88;      
 }
 
 .mobile-footer {
-    margin-top: auto;
+    margin-top: auto; /* Footer hamesha niche end me lock rahega */
     padding-top: 20px;
-    border-top: 1px solid #f5f5f5;
+    border-top: 1px solid #f5f5f5; 
 }
 
 .mobile-login {
@@ -296,45 +318,69 @@ body {
     color: #444;
     text-decoration: none;
     font-size: 14px;
+    margin-bottom: 15px;
+    padding: 6px 12px;
 }
 
 .mobile-socials {
     display: flex;
     gap: 18px;
+    padding-left: 12px;
 }
 
-/* ================= MOBILE RESPONSIVENESS FIX ================= */
+.mobile-socials a {
+    color: #555;
+    font-size: 18px;
+}
+
+/* ================= MOBILE RESPONSIVENESS FIX (ONLY FOR MOBILE) ================= */
 
 @media (max-width: 600px) {
+    /* Mobile par logo hide hoga aur burger menu icon show hoga */
+    .menu-icon {
+        display: block;
+        font-size: 26px;
+        cursor: pointer;
+        color: #333;
+    }
+
+    .pc-logo {
+        display: none; /* Mobile header se logo gayab */
+    }
+
     .top-bar {
         padding: 10px 15px;
     }
 
     .top-heading {
-        font-size: 18px; /* Mobile size adjust kiya */
+        font-size: 18px; 
         position: absolute;
         left: 50%;
-        transform: translateX(-50%); /* Perfect horizontal center */
+        transform: translateX(-50%); 
     }
 
     .left-menu {
-        display: none; /* Desktop menu links hide */
+        display: none; /* Mobile screen par desktop wale main links hide */
     }
 
     .search {
-        width: 90px; /* Chota size taaki toot kar neeche na jaye */
+        width: 95px; 
         padding: 6px 10px;
         font-size: 12px;
     }
 
     .search:focus {
-        width: 120px; /* Click karne par expand hoga beautiful look ke liye */
+        width: 120px; 
     }
 
     .products {
         grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
-        padding: 4px;
+        gap: 10px;                 
+    }
+
+    .card {
+        padding: 8px;              
+        border-radius: 10px;
     }
 
     .hero-box {
