@@ -169,15 +169,13 @@ body {
     box-shadow: 0 8px 20px rgba(0,0,0,0.12);
 }
 
-/* ================= IMAGE BOX (FIXED HEIGHT) ================= */
-
 .img-box {
     position: relative;
     width: 100%;
-    aspect-ratio: 1 / 1;       
+    aspect-ratio: 1 / 1;
     overflow: hidden;
     border-radius: 8px;
-    margin-bottom: 8px;        
+    margin-bottom: 8px;
 }
 
 .img-box img {
@@ -187,36 +185,28 @@ body {
     cursor: pointer;
 }
 
-.img-box:hover img {
-    transform: scale(1.05);
-}
-
-/* ================= TEXT & PRICE (GAP FIXED) ================= */
-
 .card h3, .name {
-    margin: 4px 0 2px;         
+    margin: 4px 0 2px;
     font-size: 14px;
     color: #333;
     font-weight: 500;
-    line-height: 1.2;          
 }
 
 .price {
-    margin: 2px 0 6px;         
+    margin: 2px 0 6px;
     font-size: 15px;
     font-weight: 700;
     color: #222;
-    line-height: 1.1;
 }
 
-/* ================= QTY BOX ================= */
+/* ================= QTY & ADD BUTTON ================= */
 
 .qty-box {
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
     align-items: center;
     margin: 6px 0;
-    border: 1px solid #ddd;     
+    border: 1px solid #ddd;
     border-radius: 6px;
     padding: 2px;
 }
@@ -226,7 +216,6 @@ body {
     border: none;
     background: #ff8fb1;
     color: white;
-    font-size: 14px;
     border-radius: 4px;
     cursor: pointer;
 }
@@ -234,10 +223,7 @@ body {
 .qty-box span {
     font-size: 14px;
     font-weight: 500;
-    color: #333;
 }
-
-/* ================= ADD BUTTON ================= */
 
 .add-btn {
     width: 100%;
@@ -246,78 +232,26 @@ body {
     background: #ff4d88;
     color: white;
     border-radius: 20px;
-    margin-top: 4px;
     font-weight: bold;
     font-size: 13px;
-    opacity: 0;
-    transform: translateY(10px);
     cursor: pointer;
 }
 
-.card:hover .add-btn {
-    opacity: 1;
-    transform: translateY(0);
-    background: #333;
-}
-
-/* ================= FLOATING ORDER & POPUP ================= */
-
-.floating-order {
-    position: fixed;
-    right: 15px;
-    bottom: 80px;
-    display: none;
-    z-index: 9999;
-}
-
-.floating-order .btn {
-    background: #ff6f91;
-    color: white;
-    padding: 12px 18px;
-    border-radius: 30px;
-}
-
-.popup {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.7);
-    justify-content: center;
-    align-items: center;
-}
-
-.popup img {
-    max-width: 80%;
-    max-height: 80vh;
-    border-radius: 15px;
-}
-
-@keyframes slideIn {
-    from { transform: translateY(50px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
-}
-
-/* ================= CLEAN MOBILE MENU CODE (NO REPEATS) ================= */
+/* ================= MOBILE SIDEBAR MENU ================= */
 
 .mobile-menu {
     position: fixed;
     top: 0;
-    left: -280px; 
+    left: -280px;
     width: 260px;
-    height: fit-content; /* Height tight kar di */
-    max-height: 95vh;
-    background: #ffffff; 
+    height: 100vh;
+    background: #ffffff;
     padding: 24px 20px;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); 
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     z-index: 99999;
     display: flex;
     flex-direction: column;
-    box-shadow: 5px 5px 25px rgba(0,0,0,0.1); 
-    border-radius: 0 0 15px 0;
-    overflow-y: auto;
+    box-shadow: 5px 0 25px rgba(0,0,0,0.05);
 }
 
 .mobile-menu.open {
@@ -326,41 +260,33 @@ body {
 
 .close-btn {
     font-size: 22px;
-    text-align: left; 
+    text-align: left;
     cursor: pointer;
     color: #555;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     display: inline-block;
     width: fit-content;
 }
 
-.close-btn:hover {
-    color: #ff6f91; 
-}
-
 .mobile-menu a {
     display: block;
-    color: #2c2c2c; 
+    color: #2c2c2c;
     text-decoration: none;
     font-size: 16px;
-    font-weight: 400;
-    padding: 10px 12px; 
+    padding: 14px 12px;
     border-radius: 8px;
-    margin-bottom: 4px;
 }
 
-.mobile-menu a:hover, 
-.mobile-menu a.active {
-    background: #ffe4ec; 
-    color: #ff4d88;      
+.mobile-menu a:hover, .mobile-menu a.active {
+    background: #ffe4ec;
+    color: #ff4d88;
     font-weight: 500;
 }
 
-/* Fixed Footer Area - Right under links */
 .mobile-footer {
-    margin-top: 30px; /* Links ke foran baad aaye ga */
-    padding-top: 15px;
-    border-top: 1px solid #f5f5f5; 
+    margin-top: auto;
+    padding-top: 20px;
+    border-top: 1px solid #f5f5f5;
 }
 
 .mobile-login {
@@ -370,91 +296,39 @@ body {
     color: #444;
     text-decoration: none;
     font-size: 14px;
-    font-weight: 500;
-    margin-bottom: 15px;
-    padding: 6px 12px;
-}
-
-.mobile-login:hover {
-    color: #ff6f91;
 }
 
 .mobile-socials {
     display: flex;
     gap: 18px;
-    padding-left: 12px;
-}
-
-.mobile-socials a {
-    display: inline;
-    padding: 0;
-    margin: 0;
-    color: #555;
-    font-size: 18px;
-}
-
-.mobile-socials a:hover {
-    background: none;
-    color: #ff4d88;
 }
 
 /* ================= MOBILE RESPONSIVENESS FIX ================= */
 
-/* ================= PC / DESKTOP LAYOUT (ICONS & LOGO FIX) ================= */
-
-/* PC par mobile menu icon chhup jaye ga aur sirf logo nazar aaye ga */
-.menu-icon {
-    display: none; 
-}
-
-.pc-logo {
-    width: 40px; /* PC par logo ka size */
-    height: 40px;
-    object-fit: cover;
-    border-radius: 50%; /* Gol shape ke liye */
-}
-
-/* ================= MOBILE RESPONSIVENESS FIX (600px) ================= */
-
 @media (max-width: 600px) {
-
-    .menu-icon {
-        display: block;
-        font-size: 26px;
-        cursor: pointer;
-    }
-
-    .pc-logo {
-        display: none;
+    .top-bar {
+        padding: 10px 15px;
     }
 
     .top-heading {
-        font-size: 18px;
+        font-size: 18px; /* Mobile size adjust kiya */
         position: absolute;
         left: 50%;
-        transform: translateX(-50%);
+        transform: translateX(-50%); /* Perfect horizontal center */
     }
 
     .left-menu {
-        display: none;
+        display: none; /* Desktop menu links hide */
     }
 
     .search {
-        width: 90px;
+        width: 90px; /* Chota size taaki toot kar neeche na jaye */
         padding: 6px 10px;
         font-size: 12px;
     }
 
     .search:focus {
-        width: 120px;
-    }
-
-    .hero-box {
-        height: 140px;
-    }
-
-    .side-img {
-        display: none;
+        width: 120px; /* Click karne par expand hoga beautiful look ke liye */
     }
 
     .products {
@@ -463,31 +337,11 @@ body {
         padding: 4px;
     }
 
-    .card {
-        padding: 8px;
-        border-radius: 10px;
+    .hero-box {
+        height: 140px;
     }
 
-    .img-box {
-        margin-bottom: 6px;
-    }
-
-    .card h3 {
-        font-size: 13px;
-    }
-
-    .price {
-        font-size: 14px;
-    }
-
-    .qty-box button {
-        padding: 3px 10px;
-    }
-
-    .add-btn {
-        opacity: 1;
-        transform: none;
-        font-size: 12px;
-        padding: 7px;
+    .side-img {
+        display: none;
     }
 }
