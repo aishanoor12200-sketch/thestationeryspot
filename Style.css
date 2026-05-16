@@ -400,7 +400,34 @@ body {
 
 /* ================= MOBILE RESPONSIVENESS FIX ================= */
 
+/* ================= PC / DESKTOP LAYOUT (ICONS & LOGO FIX) ================= */
+
+/* PC par mobile menu icon chhup jaye ga aur sirf logo nazar aaye ga */
+.menu-icon {
+    display: none; 
+}
+
+.pc-logo {
+    width: 40px; /* PC par logo ka size */
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%; /* Gol shape ke liye */
+}
+
+/* ================= MOBILE RESPONSIVENESS FIX (600px) ================= */
+
 @media (max-width: 600px) {
+    /* Mobile par logo chhup jaye ga aur burger menu icon aa jaye ga */
+    .menu-icon {
+        display: block;
+        font-size: 26px;
+        cursor: pointer;
+    }
+
+    .pc-logo {
+        display: none; /* Mobile par header mein logo nahi dikhe ga */
+    }
+
     .top-bar {
         padding: 10px 15px;
     }
@@ -409,62 +436,60 @@ body {
         font-size: 18px; 
         position: absolute;
         left: 50%;
-        transform: translateX(-50%); 
+        transform: translateX(-50%); /* Perfect horizontal center */
     }
 
-    .left-menu {
+    .left-menu { 
         display: none; 
     }
-
-    .search {
+    
+    .search { 
         width: 90px; 
-        padding: 6px 10px;
-        font-size: 12px;
     }
-
-    .search:focus {
+    
+    .search:focus { 
         width: 120px; 
     }
-
-    .products {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;                 
-        padding: 4px;
+    
+    .products { 
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 10px; 
+        padding: 4px; 
     }
-
-    .card {
-        padding: 8px;              
-        border-radius: 10px;
+    
+    .card { 
+        padding: 8px; 
+        border-radius: 10px; 
     }
-
-    .img-box {
-        margin-bottom: 6px;
+    
+    .img-box { 
+        margin-bottom: 6px; 
     }
-
-    .card h3 {
-        font-size: 13px;           
+    
+    .card h3 { 
+        font-size: 13px; 
     }
-
-    .price {
-        font-size: 14px;
+    
+    .price { 
+        font-size: 14px; 
     }
-
-    .qty-box button {
-        padding: 3px 10px;
+    
+    .qty-box button { 
+        padding: 3px 10px; 
     }
-
-    .add-btn {
-        opacity: 1;
-        transform: none;
-        font-size: 12px;
-        padding: 7px;
+    
+    .add-btn { 
+        opacity: 1; 
+        transform: none; 
+        font-size: 12px; 
+        padding: 7px; 
     }
-
-    .hero-box {
-        height: 140px;
+    
+    .hero-box { 
+        height: 140px; 
     }
-
-    .side-img {
-        display: none;
+    
+    .side-img { 
+        display: none; 
     }
 }
