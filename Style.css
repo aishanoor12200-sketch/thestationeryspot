@@ -141,13 +141,22 @@ body {
 .card {
     background: white;
     border-radius: 15px;
-    padding: 6px;          /* reduced */
+    padding: 8px 8px 10px;   /* was too airy */
     text-align: center;
     box-shadow: 0 4px 15px rgba(0,0,0,0.08);
     transition: 0.3s;
-    min-height: 420px;     /* FIXED: was 520px */
+    min-height: 420px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 6px;   /* 👈 THIS FIXES EVERYTHING */
 }
 
+.card h3 {
+    margin: 6px 0 2px;
+    font-size: 14px;
+    line-height: 1.2;
+}
 .card:hover {
     transform: translateY(-5px);
 }
@@ -159,6 +168,8 @@ body {
   aspect-ratio: 3 / 3.4;
   overflow: hidden;
   border-radius: 10px;
+  margin-bottom: 4px;
+  
 }
 
 .img-box img {
@@ -177,6 +188,8 @@ body {
 /* PRICE */
 .price {
     color: #ff6f91;
+    margin: 2px 0;
+    font-size: 14px;
 }
 
 /* QTY FIX (SMALLER) */
@@ -184,15 +197,16 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 1px 0;   /* reduced */
+  margin: 2px 0;   /* was too big */
+  gap: 6px;
 }
 
 .qty-box button {
-  padding: 3px 8px;   /* reduced */
+  padding: 2px 8px;   /* reduced */
   border: none;
   background: #ff8fb1;
   color: white;
-  font-size: 14px;
+  font-size: 13px;
   border-radius: 6px;
   cursor: pointer;
 }
@@ -205,18 +219,17 @@ body {
 /* ADD BUTTON */
 .add-btn {
   width: 100%;
-  padding: 5px;
+  padding: 6px;
   border: none;
   background: #ff4d88;
   color: white;
-  border-radius: 20px;
-  margin-top: 3px;
+  border-radius: 16px;
+  margin-top: 4px;
   opacity: 0;
   transform: translateY(10px);
-  transition: 0.3s;
+  transition: 0.3s; 
   font-weight: bold;
 }
-
 .card:hover .add-btn {
   background: #333;
   opacity: 1;
