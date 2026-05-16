@@ -140,10 +140,11 @@ body {
 .card {
     background: white;
     border-radius: 15px;
-    padding: 12px;
+    padding: 8px;
     text-align: center;
     box-shadow: 0 4px 15px rgba(0,0,0,0.08);
     transition: 0.3s;
+    min-height: 520px;
 }
 
  .card:hover {
@@ -153,7 +154,7 @@ body {
 .img-box {
   position: relative;
   width: 100%;
-  aspect-ratio: 3 / 4;
+  aspect-ratio: 3 / 3.4;
   overflow: hidden;
   border-radius: 10px;
 }
@@ -175,7 +176,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 5px 0;
+  margin: 2px 0;
 }
 
 .qty-box button {
@@ -195,12 +196,12 @@ body {
 
 .add-btn {
   width: 100%;
-  padding: 8px;
+  padding: 6px;
   border: none;
   background: #ff4d88;
   color: white;
   border-radius: 20px;
-  margin-top: 8px;
+  margin-top: 4px;
   opacity: 0;
   transform: translateY(10px);
   transition: 0.3s;
@@ -341,10 +342,11 @@ body {
     width: 100%;
     background: white;
     border-radius: 15px;
-    padding: 10px;
+    padding: 6px;
     margin: 0;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     transition: 0.3s;
+    min-height: 360px;
 }
 
 .card:hover {
