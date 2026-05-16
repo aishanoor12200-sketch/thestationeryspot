@@ -428,68 +428,110 @@ body {
         display: none; /* Mobile par header mein logo nahi dikhe ga */
     }
 
-    .top-bar {
         padding: 10px 15px;
     }
 
+.products {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;                 /* Mobile par spacing clean and tight rakhi */
+    padding: 4px;
+}
     .top-heading {
         font-size: 18px; 
         position: absolute;
         left: 50%;
-        transform: translateX(-50%); /* Perfect horizontal center */
+        transform: translateX(-50%); 
     }
 
-    .left-menu { 
+.card {
+    padding: 8px;              /* White box mobile ke screen size ke hisab se responsive padding */
+    border-radius: 10px;
+}
+    .left-menu {
         display: none; 
     }
-    
-    .search { 
+
+.img-box {
+    margin-bottom: 6px;
+}
+    .search {
         width: 90px; 
+        padding: 6px 10px;
+        font-size: 12px;
     }
-    
-    .search:focus { 
+
+.card h3 {
+    font-size: 13px;           /* Mobile friendly text size */
+}
+    .search:focus {
         width: 120px; 
     }
-    
-    .products { 
-        grid-template-columns: repeat(2, 1fr); 
-        gap: 10px; 
-        padding: 4px; 
+
+.price {
+    font-size: 14px;
+}
+    .products {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;                 
+        padding: 4px;
     }
-    
-    .card { 
-        padding: 8px; 
-        border-radius: 10px; 
+
+.qty-box button {
+    padding: 3px 10px;
+}
+    .card {
+        padding: 8px;              
+        border-radius: 10px;
     }
-    
-    .img-box { 
-        margin-bottom: 6px; 
+
+.add-btn {
+    opacity: 1;
+    transform: none;
+    font-size: 12px;
+    padding: 7px;
+}
+    .img-box {
+        margin-bottom: 6px;
     }
-    
-    .card h3 { 
-        font-size: 13px; 
+
+.menu-icon {
+    display: block;
+    font-size: 26px;
+}
+    .card h3 {
+        font-size: 13px;           
     }
-    
-    .price { 
-        font-size: 14px; 
+
+.left-menu {
+    display: none;
+}
+    .price {
+        font-size: 14px;
     }
-    
-    .qty-box button { 
-        padding: 3px 10px; 
+
+.hero-box {
+    height: 140px;
+}
+    .qty-box button {
+        padding: 3px 10px;
     }
-    
-    .add-btn { 
-        opacity: 1; 
-        transform: none; 
-        font-size: 12px; 
-        padding: 7px; 
+
+.side-img {
+    display: none;
+}
+    .add-btn {
+        opacity: 1;
+        transform: none;
+        font-size: 12px;
+        padding: 7px;
     }
-    
-    .hero-box { 
-        height: 140px; 
+
+    .hero-box {
+        height: 140px;
     }
-    
-    .side-img { 
-        display: none; 
+
+    .side-img {
+        display: none;
     }
+}
 }
