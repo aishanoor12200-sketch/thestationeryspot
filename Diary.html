@@ -1,40 +1,199 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Diaries | The Stationery Spot</title>
+<title>Diaries | The Stationery Spot</title>
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css">
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Pacifico&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-  <!-- ================= TOP BAR ================= -->
+<!-- ================= TOP BAR ================= -->
 
-  <div class="top-bar">
+<div class="top-bar">
 
-    <div class="logo-area">
-      <img src="logo.png" class="pc-logo">
+<div class="logo-area">
 
-      <h1 class="top-heading">
-        The Stationery Spot
-      </h1>
-    </div>
+<img src="images/logo.webp" class="pc-logo">
 
-    <div class="left-menu">
-      <a href="index.html">Home</a>
-      <a href="diary.html">Diaries</a>
-      <a href="jewelry.html">Jewelry</a>
-    </div>
+<h1 class="top-heading">
+The Stationery Spot
+</h1>
 
-    <div class="right-menu">
-      <input type="text" class="search" placeholder="Search...">
+</div>
+
+<div class="left-menu">
+<a href="index.html">Home</a>
+<a href="diary.html">Diaries</a>
+<a href="jewelry.html">Jewelry</a>
+<a href="keychains.html">Keychains</a>
+</div>
+
+<div class="right-menu">
+
+<div class="search-box">
+<input type="text" class="search" placeholder="Search...">
+</div>
+
+</div>
+
+</div>
+
+<!-- ================= HERO SECTION ================= -->
+
+<div class="hero-box">
+
+<img src="images/banners/diary-banner.webp" class="main-img">
+
+</div>
+
+<!-- ================= DIARY CATEGORY ================= -->
+
+<section class="category">
+
+<h2>Diary Collection</h2>
+
+<div class="products">
+
+<!-- ================= PRODUCT 1 ================= -->
+
+<div class="card">
+
+<div class="img-box">
+
+<img src="images/products/IMG_20260409_232148_112.webp"
+loading="lazy"
+width="150"
+height="200"
+onclick="openImage(this.src)">
+
+<div class="floating-icon" onclick="addToCart(this,'DR09')">
+🛒
+</div>
+
+</div>
+
+<p class="name">
+Fluffy Diary
+</p>
+
+<p class="price">
+Rs.750
+</p>
+
+<div class="qty-box">
+
+<button onclick="decrease(this)">-</button>
+
+<span class="qty">1</span>
+
+<button onclick="increase(this)">+</button>
+
+</div>
+
+<button class="add-btn" onclick="addToCart(this,'DR09')">
+Add to Cart
+</button>
+
+</div>
+
+<!-- ================= PRODUCT 2 ================= -->
+
+<div class="card">
+
+<div class="img-box">
+
+<img src="images/products/IMG_20260409_232204_364.webp"
+loading="lazy"
+width="150"
+height="200"
+onclick="openImage(this.src)">
+
+<div class="floating-icon" onclick="addToCart(this,'DR10')">
+🛒
+</div>
+
+</div>
+
+<p class="name">
+Fluffy Diary
+</p>
+
+<p class="price">
+Rs.750
+</p>
+
+<div class="qty-box">
+
+<button onclick="decrease(this)">-</button>
+
+<span class="qty">1</span>
+
+<button onclick="increase(this)">+</button>
+
+</div>
+
+<button class="add-btn" onclick="addToCart(this,'DR10')">
+Add to Cart
+</button>
+
+</div>
+
+<!-- ================= PRODUCT 3 ================= -->
+
+<div class="card">
+
+<div class="img-box">
+
+<img src="images/products/IMG_20260409_232224_819.webp"
+loading="lazy"
+width="150"
+height="200"
+onclick="openImage(this.src)">
+
+<div class="floating-icon" onclick="addToCart(this,'DR11')">
+🛒
+</div>
+
+</div>
+
+<p class="name">
+Fluffy Diary
+</p>
+
+<p class="price">
+Rs.750
+</p>
+
+<div class="qty-box">
+
+<button onclick="decrease(this)">-</button>
+
+<span class="qty">1</span>
+
+<button onclick="increase(this)">+</button>
+
+</div>
+
+<button class="add-btn" onclick="addToCart(this,'DR11')">
+Add to Cart
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+</body>
+
+</html>      <input type="text" class="search" placeholder="Search...">
     </div>
 
   </div>
