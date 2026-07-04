@@ -88,7 +88,7 @@ body {
     padding: 8px 12px;
     border-radius: 20px;
     border: 1px solid #ddd;
-    font-size: 14px;
+    font-size: 13px;
     width: 170px;
     transition: width 0.3s ease;
 }
@@ -162,14 +162,14 @@ body {
 .products {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 12px;
+    gap: 11px;
     padding: 8px;
 }
 
 .card {
     background: white;
-    border-radius: 12px;
-    padding: 10px;
+    border-radius: 10px;
+    padding: 8px;
     text-align: center;
     box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     display: flex;
