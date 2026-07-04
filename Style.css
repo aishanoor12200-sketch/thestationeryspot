@@ -63,11 +63,12 @@ body {
     text-decoration: none;
     margin-right: 25px;
     font-size: 15px;
-    font-weight: 500;
+    font-weight: 400;
 }
 
 .left-menu a:hover {
-    color: #ff6f91;
+   background: #ffe4ec;
+   color: #ff4d88;
 }
 
 .right-menu {
@@ -262,10 +263,11 @@ body {
 
 .mobile-menu {
     position: fixed;
-    top: 0;
-    left: -280px; 
+    top: 20px;
+    left: -280px;
     width: 260px;
-    height: 100vh; /* Mobile par full lamba sidebar */
+    height: calc(100vh - 40px);
+    border-radius: 15px;
     background: #ffffff; 
     padding: 24px 20px;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); 
