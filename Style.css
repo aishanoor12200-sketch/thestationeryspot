@@ -263,10 +263,10 @@ body {
 
 .mobile-menu {
     position: fixed;
-    top: 20px;
+    top: 40px;
     left: -280px;
     width: 260px;
-    height: calc(100vh - 40px);
+    height: calc(100vh - 80px);
     border-radius: 15px;
     background: #ffffff; 
     padding: 24px 20px;
