@@ -1,1 +1,70 @@
+media:
+  - name: product_images
+    label: Product Images
+    input: images/products
+    output: /images/products
+    categories: [image]
+    extensions: [jpg, jpeg, png, webp]
 
+content:
+  - name: products
+    label: Products
+    type: file
+    path: data/products.json
+    format: json
+    list: true
+    fields:
+      - name: code
+        label: Product Code
+        type: string
+        required: true
+
+      - name: name
+        label: Product Name
+        type: string
+        required: true
+
+      - name: price
+        label: Price (Rs.)
+        type: number
+        required: true
+
+      - name: category
+        label: Category
+        type: select
+        required: true
+        options:
+          values:
+            - Diaries
+            - Organizers
+            - Glass Sippers
+            - Pens
+            - Erasers
+            - Kids Pencils
+            - Keychains
+            - Jewelry
+            - Other
+
+      - name: image
+        label: Product Image
+        type: image
+        required: true
+        options:
+          media: product_images
+          path: .
+
+      - name: description
+        label: Description
+        type: text
+
+      - name: available
+        label: Available
+        type: boolean
+        default: true
+
+settings:
+  commit:
+    templates:
+      create: "Add {path} via Product Manager"
+      update: "Update {path} via Product Manager"
+      delete: "Delete {path} via Product Manager"
