@@ -1,1 +1,11 @@
-[]
+[
+  {
+    "code": "DR01",
+    "name": "Cute Floral Diary",
+    "price": 450,
+    "category": "Diaries",
+    "image": "images/products/diary1.jpg.jpeg",
+    "description": "",
+    "available": true
+  }
+]
