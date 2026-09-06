@@ -4,6 +4,14 @@ fetch("data/products.json")
 
     if (!Array.isArray(products)) return;
 
+    const oldContainer = document.getElementById("productContainer");
+    if (!oldContainer) return;
+
+    const mainCategory = oldContainer.closest(".category");
+    if (!mainCategory) return;
+
+    mainCategory.innerHTML = "";
+
     const categories = {};
 
     products.forEach(product => {
@@ -18,17 +26,15 @@ fetch("data/products.json")
 
     Object.keys(categories).forEach(category => {
 
-      const section = document.querySelector(
-        `[data-category="${category}"]`
-      );
+      const section = document.createElement("div");
+      section.className = "category";
 
-      if (!section) return;
+      section.innerHTML = `
+        <h2>${category}</h2>
+        <div class="products"></div>
+      `;
 
       const container = section.querySelector(".products");
-
-      if (!container) return;
-
-      container.innerHTML = "";
 
       categories[category].forEach(product => {
 
@@ -36,33 +42,46 @@ fetch("data/products.json")
           <div class="card">
 
             <div class="img-box">
+
               <img
                 src="${product.image}"
-                alt="${product.name}"
+                loading="lazy"
+                width="150"
+                height="200"
                 onclick="openImage(this.src)"
               >
+
+              <div
+                class="floating-icon"
+                onclick="addToCart(this,'${product.code}')"
+              >🛒</div>
+
             </div>
 
-            <div class="name">${product.name}</div>
+            <p class="name">${product.name}</p>
 
-            <div class="price">Rs. ${product.price}</div>
+            <p class="price">Rs.${product.price}</p>
 
             <div class="qty-box">
-              <button onclick="changeQty(this, -1)">−</button>
-              <span>1</span>
-              <button onclick="changeQty(this, 1)">+</button>
+              <button onclick="decrease(this)">-</button>
+              <span class="qty">1</span>
+              <button onclick="increase(this)">+</button>
             </div>
 
             <button
               class="add-btn"
-              onclick="addToCart(this, '${product.code}')"
+              onclick="addToCart(this,'${product.code}')"
             >
               Add to Cart
             </button>
 
           </div>
         `;
+
       });
+
+      mainCategory.appendChild(section);
+
     });
 
   })
