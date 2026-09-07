@@ -331,5 +331,276 @@
     "image": "images/products/1775577686693.png",
     "description": "",
     "available": true
+  },
+  {
+    "code": "P02",
+    "name": "Kid Astronaut Pencil",
+    "price": 60,
+    "category": "Pencils",
+    "image": "images/products/1775577722124.png",
+    "description": "",
+    "available": true
+  },
+  {
+    "code": "P03",
+    "name": "Kid Pencil",
+    "price": 70,
+    "category": "Pencils",
+    "image": "images/products/1775896010130.png",
+    "description": "",
+    "available": true
+  },
+  {
+    "code": "K01",
+    "name": "Ice-cream Keychain",
+    "price": 100,
+    "category": "Keychain",
+    "image": "images/products/1775577709864.png",
+    "description": "",
+    "available": true
+  },
+  {
+    "code": "K02",
+    "name": "Tom & Jerry Keychain",
+    "price": 100,
+    "category": "Keychain",
+    "image": "images/products/1775577746449.png",
+    "description": "",
+    "available": true
+  },
+  {
+    "code": "K03",
+    "name": "Mini donut keychain",
+    "price": 50,
+    "category": "Keychain",
+    "image": "images/products/1783190120612.png",
+    "description": "",
+    "available": true
+  },
+  {
+    "code": "SP01",
+    "name": "Kids Student Pouch",
+    "price": 300,
+    "category": "Pouches",
+    "image": "images/products/1775577733709.png",
+    "description": "",
+    "available": true
+  },
+  {
+    "code": "SP02",
+    "name": "Astronaut Metal Pencil Box",
+    "price": 300,
+    "category": "Pouches",
+    "image": "images/products/1783190384109.png",
+    "description": "",
+    "available": true
+  },
+  {
+    "code": "IP01",
+    "name": "Imported Ink Pen",
+    "price": 300,
+    "category": "Ink Pens",
+    "image": "images/products/1775896158680.png",
+    "description": "",
+    "available": true
+  },
+  {
+    "code": "IP02",
+    "name": "Fountain Ink Pen",
+    "price": 150,
+    "category": "Ink Pens",
+    "image": "images/products/1776008992502.png",
+    "description": "",
+    "available": true
+  },
+  {
+    "code": "IP03",
+    "name": "Dux Ink Pen",
+    "price": 150,
+    "category": "Ink Pens",
+    "image": "images/products/1777821034662.png",
+    "description": "",
+    "available": true
+  },
+  {
+    "code": "PR01",
+    "name": "Pointer",
+    "price": 450,
+    "category": "Pointers",
+    "image": "images/products/1775851553321.png",
+    "description": "",
+    "available": true
+  },
+  {
+    "code": "CP01",
+    "name": "Colour Pencil",
+    "price": 300,
+    "category": "Colouring",
+    "image": "images/products/1775850786226.png",
+    "description": "",
+    "available": true
+  },
+  {
+    "code": "CP02",
+    "name": "Double Sided Colour",
+    "price": 300,
+    "category": "Colouring",
+    "image": "images/products/1777458925060.png",
+    "description": "",
+    "available": true
+  },
+  {
+    "code": "CP03",
+    "name": "Colour kit for kids",
+    "price": 250,
+    "category": "Colouring",
+    "image": "images/products/1783190012712.png",
+    "description": "",
+    "available": true
+  },
+  {
+    "code": "SB01",
+    "name": "Kid Sipper Bottle",
+    "price": 250,
+    "category": "Sipper Bottles",
+    "image": "images/products/1777821216392.png",
+    "description": "",
+    "available": true
+  },
+  {
+    "code": "SB02",
+    "name": "KidS Sipper Bottle",
+    "price": 400,
+    "category": "Sipper Bottles",
+    "image": "images/products/1777458857015.png",
+    "description": "",
+    "available": true
+  },
+  {
+    "code": "SN01",
+    "name": "Sticky Notes",
+    "price": 90,
+    "category": "Sticky Notes",
+    "image": "images/products/1777821295104.png",
+    "description": "",
+    "available": true
+  },
+  {
+    "code": "PH01",
+    "name": "Pencil Holder",
+    "price": 100,
+    "category": "Organizer",
+    "image": "images/products/1777459009405.png",
+    "description": "",
+    "available": true
+  },
+  {
+    "code": "PS01",
+    "name": "Plastic Scale",
+    "price": 45,
+    "category": "Scales",
+    "image": "images/products/1777459192512.png",
+    "description": "",
+    "available": true
+  },
+  {
+    "code": "PS02",
+    "name": "Plastic Scale",
+    "price": 35,
+    "category": "Scales",
+    "image": "images/products/1777458614433.png",
+    "description": "",
+    "available": true
+  },
+  {
+    "code": "EB01",
+    "name": "Exam Board",
+    "price": 350,
+    "category": "Exam Board",
+    "image": "images/products/1777459440920.png",
+    "description": "",
+    "available": true
+  },
+  {
+    "code": "WT01",
+    "name": "Fancy Washi Tape",
+    "price": 50,
+    "category": "Tapes",
+    "image": "images/products/1777375061469.png",
+    "description": "",
+    "available": true
+  },
+  {
+    "code": "CT01",
+    "name": "Carton Tape",
+    "price": 200,
+    "category": "Tapes",
+    "image": "images/products/1777458780061.png",
+    "description": "",
+    "available": true
+  },
+  {
+    "code": "PC01",
+    "name": "Paper Cutter",
+    "price": 200,
+    "category": "Cutters",
+    "image": "images/products/1777459630741.png",
+    "description": "",
+    "available": true
+  },
+  {
+    "code": "CR01",
+    "name": "Mini Calculator",
+    "price": 250,
+    "category": "Calculators",
+    "image": "images/products/1777821440563.png",
+    "description": "",
+    "available": true
+  },
+  {
+    "code": "B01",
+    "name": "Plastic Airtight Bags",
+    "price": 300,
+    "category": "Bags",
+    "image": "images/products/1777458715975.png",
+    "description": "",
+    "available": true
+  },
+  {
+    "code": "SR01",
+    "name": "Small Stapler",
+    "price": 220,
+    "category": "Staplers",
+    "image": "images/products/1783190433077.png",
+    "description": "",
+    "available": true
+  },
+  {
+    "code": "EN01",
+    "name": "Eid Mubarak Envelopes",
+    "price": 80,
+    "category": "Envelopes",
+    "image": "images/products/1783190081104.png",
+    "description": "",
+    "available": true
+  },
+  {
+    "code": "SN02",
+    "name": "Sticky Notes",
+    "price": 180,
+    "category": "Sticky Notes",
+    "image": "images/products/1783190346866.png",
+    "description": "",
+    "available": true
+  },
+  {
+    "code": "SN03",
+    "name": "Sticky Notes",
+    "price": 250,
+    "category": "Sticky Notes",
+    "image": "images/products/1783190368118.png",
+    "description": "",
+    "available": true
   }
 ]
+
