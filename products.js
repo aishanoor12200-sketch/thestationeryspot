@@ -10,8 +10,6 @@ fetch("data/products.json")
     const mainCategory = oldContainer.closest(".category");
     if (!mainCategory) return;
 
-    mainCategory.innerHTML = "";
-
     const categories = {};
 
     products.forEach(product => {
@@ -29,60 +27,31 @@ fetch("data/products.json")
       const section = document.createElement("div");
       section.className = "category";
 
-      section.innerHTML = `
-        <h2>${category}</h2>
-        <div class="products"></div>
-      `;
+      const heading = document.createElement("h2");
+      heading.textContent = category;
 
-      const container = section.querySelector(".products");
+      const container = document.createElement("div");
+      container.className = "products";
+
+      section.appendChild(heading);
+      section.appendChild(container);
 
       categories[category].forEach(product => {
 
-        container.innerHTML += `
-          <div class="card">
+        const card = document.createElement("product-card");
 
-            <div class="img-box">
+        card.setAttribute("image", product.image);
+        card.setAttribute("name", product.name);
+        card.setAttribute("price", product.price);
+        card.setAttribute("code", product.code);
 
-              <img
-                src="${product.image}"
-                loading="lazy"
-                width="150"
-                height="200"
-                onclick="openImage(this.src)"
-              >
-
-              <div
-                class="floating-icon"
-                onclick="addToCart(this,'${product.code}')"
-              >🛒</div>
-
-            </div>
-
-            <p class="name">${product.name}</p>
-
-            <p class="price">Rs.${product.price}</p>
-
-            <div class="qty-box">
-              <button onclick="decrease(this)">-</button>
-              <span class="qty">1</span>
-              <button onclick="increase(this)">+</button>
-            </div>
-
-            <button
-              class="add-btn"
-              onclick="addToCart(this,'${product.code}')"
-            >
-              Add to Cart
-            </button>
-
-          </div>
-        `;
-
+        container.appendChild(card);
       });
 
-      mainCategory.appendChild(section);
-
+      mainCategory.parentNode.appendChild(section);
     });
 
   })
-  .catch(error => console.error("Products load error:", error));
+  .catch(error => {
+    console.error("Products load error:", error);
+  });
