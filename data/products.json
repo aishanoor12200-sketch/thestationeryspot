@@ -7,5 +7,329 @@
     "image": "images/products/diary1.jpg.jpeg",
     "description": "",
     "available": true
+  },
+  {
+    "code": "DR02",
+    "name": "Cute Floral Diary",
+    "price": 450,
+    "category": "Diaries",
+    "image": "images/products/diary2.jpg.jpeg",
+    "description": "",
+    "available": true
+  },
+  {
+    "code": "DR03",
+    "name": "Mini Butterfly Diary",
+    "price": 400,
+    "category": "Diaries",
+    "image": "images/products/1776979089868.png",
+    "description": "",
+    "available": true
+  },
+  {
+    "code": "DR04",
+    "name": "Spiral Diary",
+    "price": 650,
+    "category": "Diaries",
+    "image": "images/products/1777048988675.png",
+    "description": "",
+    "available": true
+  },
+  {
+    "code": "DR05",
+    "name": "Spiral Diary",
+    "price": 650,
+    "category": "Diaries",
+    "image": "images/products/1777048988675.png",
+    "description": "",
+    "available": true
+  },
+  {
+    "code": "DR06",
+    "name": "Fluffy Diary",
+    "price": 750,
+    "category": "Diaries",
+    "image": "images/products/IMG_20260409_231905_926.webp",
+    "description": "",
+    "available": true
+  },
+  {
+    "code": "DR07",
+    "name": "Fluffy Diary",
+    "price": 750,
+    "category": "Diaries",
+    "image": "images/products/IMG_20260409_232148_112.webp",
+    "description": "",
+    "available": true
+  },
+  {
+    "code": "DR08",
+    "name": "Fluffy Diary",
+    "price": 750,
+    "category": "Diaries",
+    "image": "images/products/IMG_20260409_232004_993.webp",
+    "description": "",
+    "available": true
+  },
+  {
+    "code": "DR09",
+    "name": "Fluffy Diary",
+    "price": 750,
+    "category": "Diaries",
+    "image": "images/products/IMG_20260409_232148_112.webp",
+    "description": "",
+    "available": true
+  },
+  {
+    "code": "DR10",
+    "name": "Fluffy Diary",
+    "price": 750,
+    "category": "Diaries",
+    "image": "images/products/IMG_20260409_232204_364.webp",
+    "description": "",
+    "available": true
+  },
+  {
+    "code": "DR11",
+    "name": "Fluffy Diary",
+    "price": 750,
+    "category": "Diaries",
+    "image": "images/products/IMG_20260409_232224_819.webp",
+    "description": "",
+    "available": true
+  },
+  {
+    "code": "OR01",
+    "name": "Pencil Holder",
+    "price": 100,
+    "category": "Organizer",
+    "image": "images/products/1775047213379.png",
+    "description": "",
+    "available": true
+  },
+  {
+    "code": "OR02",
+    "name": "Desk Organizer",
+    "price": 500,
+    "category": "Organizer",
+    "image": "images/products/1775047613453.png",
+    "description": "",
+    "available": true
+  },
+  {
+    "code": "OR03",
+    "name": "Desk Organizer",
+    "price": 500,
+    "category": "Organizer",
+    "image": "images/products/1775047613453.png",
+    "description": "",
+    "available": true
+  },
+  {
+    "code": "GS01",
+    "name": "Glass Sipper",
+    "price": 550,
+    "category": "Glass Sipper",
+    "image": "images/products/1775047562837.png",
+    "description": "",
+    "available": true
+  },
+  {
+    "code": "GS02",
+    "name": "Glass Sipper",
+    "price": 650,
+    "category": "Glass Sipper",
+    "image": "images/products/IMG-20260419-WA0022.jpg",
+    "description": "",
+    "available": true
+  },
+  {
+    "code": "GS03",
+    "name": "Kids Sipper",
+    "price": 250,
+    "category": "Glass Sipper",
+    "image": "images/products/1777375020138.png",
+    "description": "",
+    "available": true
+  },
+  {
+    "code": "GS04",
+    "name": "Straw Glass Sipper",
+    "price": 150,
+    "category": "Glass Sipper",
+    "image": "images/products/1777458459267.png",
+    "description": "",
+    "available": true
+  },
+  {
+    "code": "GS05",
+    "name": "Glitter Kids Mugs",
+    "price": 150,
+    "category": "Glass Sipper",
+    "image": "images/products/1777820984326.png",
+    "description": "",
+    "available": true
+  },
+  {
+    "code": "GS06",
+    "name": "Glass Sipper",
+    "price": 650,
+    "category": "Glass Sipper",
+    "image": "images/products/1778312589934.png",
+    "description": "",
+    "available": true
+  },
+  {
+    "code": "GS08",
+    "name": "Glass Sipper",
+    "price": 550,
+    "category": "Glass Sipper",
+    "image": "images/products/1778792435299.png",
+    "description": "",
+    "available": true
+  },
+  {
+    "code": "GS09",
+    "name": "Tango Plastic Fruit Sipper",
+    "price": 250,
+    "category": "Glass Sipper",
+    "image": "images/products/1783190213759.png",
+    "description": "",
+    "available": true
+  },
+  {
+    "code": "GS10",
+    "name": "Plastic Straw Glass",
+    "price": 70,
+    "category": "Glass Sipper",
+    "image": "images/products/1783190314944.png",
+    "description": "",
+    "available": true
+  },
+  {
+    "code": "SC01",
+    "name": "Scented Candle",
+    "price": 400,
+    "category": "Scented Candle",
+    "image": "images/products/1775047602569.png",
+    "description": "",
+    "available": true
+  },
+  {
+    "code": "E01",
+    "name": "Kids Vegetable Eraser",
+    "price": 200,
+    "category": "Eraser",
+    "image": "images/products/1776512603250.png",
+    "description": "",
+    "available": true
+  },
+  {
+    "code": "E02",
+    "name": "Donut Eraser",
+    "price": 50,
+    "category": "Eraser",
+    "image": "images/products/1777459084960.png",
+    "description": "",
+    "available": true
+  },
+  {
+    "code": "E03",
+    "name": "Mobile Eraser",
+    "price": 50,
+    "category": "Eraser",
+    "image": "images/products/1776009864699.png",
+    "description": "",
+    "available": true
+  },
+  {
+    "code": "E04",
+    "name": "Mobile Eraser",
+    "price": 120,
+    "category": "Eraser",
+    "image": "images/products/1783189878692.png",
+    "description": "",
+    "available": true
+  },
+  {
+    "code": "S01",
+    "name": "Kids Sharpner",
+    "price": 10,
+    "category": "Sharpener",
+    "image": "images/products/c.png",
+    "description": "",
+    "available": true
+  },
+  {
+    "code": "S02",
+    "name": "French Fries Sharpner & Erassor",
+    "price": 200,
+    "category": "Sharpener",
+    "image": "images/products/1775577758357.png",
+    "description": "",
+    "available": true
+  },
+  {
+    "code": "S03",
+    "name": "Kids Sharpner & Erassor",
+    "price": 200,
+    "category": "Sharpener",
+    "image": "images/products/1775577766139.png",
+    "description": "",
+    "available": true
+  },
+  {
+    "code": "S04",
+    "name": "Character Kids Sharpner",
+    "price": 150,
+    "category": "Sharpener",
+    "image": "images/products/1775577775915.png",
+    "description": "",
+    "available": true
+  },
+  {
+    "code": "S05",
+    "name": "Kids Sharpner",
+    "price": 150,
+    "category": "Sharpener",
+    "image": "images/products/1775895864296.png",
+    "description": "",
+    "available": true
+  },
+  {
+    "code": "S06",
+    "name": "Pencil Sharpner",
+    "price": 8,
+    "category": "Sharpener",
+    "image": "images/products/1777375089736.png",
+    "description": "",
+    "available": true
+  },
+  {
+    "code": "S07",
+    "name": "Pencil Sharpner",
+    "price": 8,
+    "category": "Sharpener",
+    "image": "images/products/1777459057331.png",
+    "description": "",
+    "available": true
+  },
+  {
+    "code": "S08",
+    "name": "Dino Sharpner",
+    "price": 100,
+    "category": "Sharpener",
+    "image": "images/products/1777821684167.png",
+    "description": "",
+    "available": true
+  },
+  {
+    "code": "P01",
+    "name": "Kid Unicorn Pencil",
+    "price": 60,
+    "category": "Pencils",
+    "image": "images/products/1775577686693.png",
+    "description": "",
+    "available": true
   }
 ]
