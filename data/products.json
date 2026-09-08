@@ -4,8 +4,7 @@
     "name": "Cute Floral Diary",
     "price": 450,
     "category": "Diaries",
-    "image": "images/products/diary1.jpg.jpeg",
-    "description": "",
+    "image": "/images/products/diary1.jpg.jpeg",
     "available": true
   },
   {
@@ -13,8 +12,7 @@
     "name": "Cute Floral Diary",
     "price": 450,
     "category": "Diaries",
-    "image": "images/products/diary2.jpg.jpeg",
-    "description": "",
+    "image": "/images/products/diary2.jpg.jpeg",
     "available": true
   },
   {
@@ -22,8 +20,7 @@
     "name": "Mini Butterfly Diary",
     "price": 400,
     "category": "Diaries",
-    "image": "images/products/1776979089868.png",
-    "description": "",
+    "image": "/images/products/1776979089868.png",
     "available": true
   },
   {
@@ -31,8 +28,7 @@
     "name": "Spiral Diary",
     "price": 650,
     "category": "Diaries",
-    "image": "images/products/1777048988675.png",
-    "description": "",
+    "image": "/images/products/1777048988675.png",
     "available": true
   },
   {
@@ -40,8 +36,7 @@
     "name": "Spiral Diary",
     "price": 650,
     "category": "Diaries",
-    "image": "images/products/1777048988675.png",
-    "description": "",
+    "image": "/images/products/1777048988675.png",
     "available": true
   },
   {
@@ -49,8 +44,7 @@
     "name": "Fluffy Diary",
     "price": 750,
     "category": "Diaries",
-    "image": "images/products/IMG_20260409_231905_926.webp",
-    "description": "",
+    "image": "/images/products/IMG_20260409_231905_926.webp",
     "available": true
   },
   {
@@ -58,8 +52,7 @@
     "name": "Fluffy Diary",
     "price": 750,
     "category": "Diaries",
-    "image": "images/products/IMG_20260409_232148_112.webp",
-    "description": "",
+    "image": "/images/products/IMG_20260409_232148_112.webp",
     "available": true
   },
   {
@@ -67,8 +60,7 @@
     "name": "Fluffy Diary",
     "price": 750,
     "category": "Diaries",
-    "image": "images/products/IMG_20260409_232004_993.webp",
-    "description": "",
+    "image": "/images/products/IMG_20260409_232004_993.webp",
     "available": true
   },
   {
@@ -76,8 +68,7 @@
     "name": "Fluffy Diary",
     "price": 750,
     "category": "Diaries",
-    "image": "images/products/IMG_20260409_232148_112.webp",
-    "description": "",
+    "image": "/images/products/IMG_20260409_232148_112.webp",
     "available": true
   },
   {
@@ -85,8 +76,7 @@
     "name": "Fluffy Diary",
     "price": 750,
     "category": "Diaries",
-    "image": "images/products/IMG_20260409_232204_364.webp",
-    "description": "",
+    "image": "/images/products/IMG_20260409_232204_364.webp",
     "available": true
   },
   {
@@ -94,161 +84,135 @@
     "name": "Fluffy Diary",
     "price": 750,
     "category": "Diaries",
-    "image": "images/products/IMG_20260409_232224_819.webp",
-    "description": "",
+    "image": "/images/products/IMG_20260409_232224_819.webp",
     "available": true
   },
   {
     "code": "OR01",
     "name": "Pencil Holder",
     "price": 100,
-    "category": "Organizer",
-    "image": "images/products/1775047213379.png",
-    "description": "",
+    "category": "Organizers",
+    "image": "/images/products/1775047213379.png",
     "available": true
   },
   {
     "code": "OR02",
     "name": "Desk Organizer",
     "price": 500,
-    "category": "Organizer",
-    "image": "images/products/1775047613453.png",
-    "description": "",
+    "category": "Organizers",
+    "image": "/images/products/1775047613453.png",
     "available": true
   },
   {
     "code": "OR03",
     "name": "Desk Organizer",
     "price": 500,
-    "category": "Organizer",
-    "image": "images/products/1775047613453.png",
-    "description": "",
+    "category": "Organizers",
+    "image": "/images/products/1775047613453.png",
     "available": true
   },
   {
     "code": "GS01",
     "name": "Glass Sipper",
     "price": 550,
-    "category": "Glass Sipper",
-    "image": "images/products/1775047562837.png",
-    "description": "",
+    "category": "Glass Sippers",
+    "image": "/images/products/1775047562837.png",
     "available": true
   },
   {
     "code": "GS02",
     "name": "Glass Sipper",
     "price": 650,
-    "category": "Glass Sipper",
-    "image": "images/products/IMG-20260419-WA0022.jpg",
-    "description": "",
+    "category": "Glass Sippers",
+    "image": "/images/products/IMG-20260419-WA0022.jpg",
     "available": true
   },
   {
     "code": "GS03",
     "name": "Kids Sipper",
     "price": 250,
-    "category": "Glass Sipper",
-    "image": "images/products/1777375020138.png",
-    "description": "",
+    "category": "Glass Sippers",
+    "image": "/images/products/1777375020138.png",
     "available": true
   },
   {
     "code": "GS04",
     "name": "Straw Glass Sipper",
     "price": 150,
-    "category": "Glass Sipper",
-    "image": "images/products/1777458459267.png",
-    "description": "",
+    "category": "Glass Sippers",
+    "image": "/images/products/1777458459267.png",
     "available": true
   },
   {
     "code": "GS05",
     "name": "Glitter Kids Mugs",
     "price": 150,
-    "category": "Glass Sipper",
-    "image": "images/products/1777820984326.png",
-    "description": "",
+    "category": "Glass Sippers",
+    "image": "/images/products/1777820984326.png",
     "available": true
   },
   {
     "code": "GS06",
     "name": "Glass Sipper",
     "price": 650,
-    "category": "Glass Sipper",
-    "image": "images/products/1778312589934.png",
-    "description": "",
+    "category": "Glass Sippers",
+    "image": "/images/products/1778312589934.png",
     "available": true
   },
   {
     "code": "GS08",
     "name": "Glass Sipper",
     "price": 550,
-    "category": "Glass Sipper",
-    "image": "images/products/1778792435299.png",
-    "description": "",
-    "available": true
-  },
-  {
-    "code": "GS09",
-    "name": "Tango Plastic Fruit Sipper",
-    "price": 250,
-    "category": "Glass Sipper",
-    "image": "images/products/1783190213759.png",
-    "description": "",
+    "category": "Glass Sippers",
+    "image": "/images/products/1778792435299.png",
     "available": true
   },
   {
     "code": "GS10",
     "name": "Plastic Straw Glass",
     "price": 70,
-    "category": "Glass Sipper",
-    "image": "images/products/1783190314944.png",
-    "description": "",
+    "category": "Glass Sippers",
+    "image": "/images/products/1783190314944.png",
     "available": true
   },
   {
     "code": "SC01",
     "name": "Scented Candle",
     "price": 400,
-    "category": "Scented Candle",
-    "image": "images/products/1775047602569.png",
-    "description": "",
+    "category": "Other",
+    "image": "/images/products/1775047602569.png",
     "available": true
   },
   {
     "code": "E01",
     "name": "Kids Vegetable Eraser",
     "price": 200,
-    "category": "Eraser",
-    "image": "images/products/1776512603250.png",
-    "description": "",
+    "category": "Erasers",
+    "image": "/images/products/1776512603250.png",
     "available": true
   },
   {
     "code": "E02",
     "name": "Donut Eraser",
     "price": 50,
-    "category": "Eraser",
-    "image": "images/products/1777459084960.png",
-    "description": "",
+    "category": "Erasers",
+    "image": "/images/products/1777459084960.png",
     "available": true
   },
   {
     "code": "E03",
     "name": "Mobile Eraser",
     "price": 50,
-    "category": "Eraser",
-    "image": "images/products/1776009864699.png",
-    "description": "",
+    "category": "Erasers",
+    "image": "/images/products/1776009864699.png",
     "available": true
   },
   {
     "code": "E04",
     "name": "Mobile Eraser",
     "price": 120,
-    "category": "Eraser",
-    "image": "images/products/1783189878692.png",
-    "description": "",
+    "category": "Erasers",
+    "image": "/images/products/1783189878692.png",
     "available": true
   },
   {
@@ -256,8 +220,7 @@
     "name": "Kids Sharpner",
     "price": 10,
     "category": "Sharpener",
-    "image": "images/products/c.png",
-    "description": "",
+    "image": "/images/products/c.png",
     "available": true
   },
   {
@@ -265,8 +228,7 @@
     "name": "French Fries Sharpner & Erassor",
     "price": 200,
     "category": "Sharpener",
-    "image": "images/products/1775577758357.png",
-    "description": "",
+    "image": "/images/products/1775577758357.png",
     "available": true
   },
   {
@@ -274,8 +236,7 @@
     "name": "Kids Sharpner & Erassor",
     "price": 200,
     "category": "Sharpener",
-    "image": "images/products/1775577766139.png",
-    "description": "",
+    "image": "/images/products/1775577766139.png",
     "available": true
   },
   {
@@ -283,8 +244,7 @@
     "name": "Character Kids Sharpner",
     "price": 150,
     "category": "Sharpener",
-    "image": "images/products/1775577775915.png",
-    "description": "",
+    "image": "/images/products/1775577775915.png",
     "available": true
   },
   {
@@ -292,8 +252,7 @@
     "name": "Kids Sharpner",
     "price": 150,
     "category": "Sharpener",
-    "image": "images/products/1775895864296.png",
-    "description": "",
+    "image": "/images/products/1775895864296.png",
     "available": true
   },
   {
@@ -301,8 +260,7 @@
     "name": "Pencil Sharpner",
     "price": 8,
     "category": "Sharpener",
-    "image": "images/products/1777375089736.png",
-    "description": "",
+    "image": "/images/products/1777375089736.png",
     "available": true
   },
   {
@@ -310,8 +268,7 @@
     "name": "Pencil Sharpner",
     "price": 8,
     "category": "Sharpener",
-    "image": "images/products/1777459057331.png",
-    "description": "",
+    "image": "/images/products/1777459057331.png",
     "available": true
   },
   {
@@ -319,179 +276,159 @@
     "name": "Dino Sharpner",
     "price": 100,
     "category": "Sharpener",
-    "image": "images/products/1777821684167.png",
-    "description": "",
+    "image": "/images/products/1777821684167.png",
     "available": true
   },
   {
     "code": "P01",
     "name": "Kid Unicorn Pencil",
     "price": 60,
-    "category": "Pencils",
-    "image": "images/products/1775577686693.png",
-    "description": "",
+    "category": "Kids Pencils",
+    "image": "/images/products/1775577686693.png",
     "available": true
   },
   {
     "code": "P02",
     "name": "Kid Astronaut Pencil",
     "price": 60,
-    "category": "Pencils",
-    "image": "images/products/1775577722124.png",
-    "description": "",
+    "category": "Kids Pencils",
+    "image": "/images/products/1775577722124.png",
     "available": true
   },
   {
     "code": "P03",
     "name": "Kid Pencil",
     "price": 70,
-    "category": "Pencils",
-    "image": "images/products/1775896010130.png",
-    "description": "",
+    "category": "Kids Pencils",
+    "image": "/images/products/1775896010130.png",
     "available": true
   },
   {
     "code": "K01",
     "name": "Ice-cream Keychain",
     "price": 100,
-    "category": "Keychain",
-    "image": "images/products/1775577709864.png",
-    "description": "",
+    "category": "Keychains",
+    "image": "/images/products/1775577709864.png",
     "available": true
   },
   {
     "code": "K02",
     "name": "Tom & Jerry Keychain",
     "price": 100,
-    "category": "Keychain",
-    "image": "images/products/1775577746449.png",
-    "description": "",
+    "category": "Keychains",
+    "image": "/images/products/1775577746449.png",
     "available": true
   },
   {
     "code": "K03",
     "name": "Mini donut keychain",
     "price": 50,
-    "category": "Keychain",
-    "image": "images/products/1783190120612.png",
-    "description": "",
+    "category": "Keychains",
+    "image": "/images/products/1783190120612.png",
     "available": true
   },
   {
     "code": "SP01",
     "name": "Kids Student Pouch",
     "price": 300,
-    "category": "Pouches",
-    "image": "images/products/1775577733709.png",
-    "description": "",
+    "category": "Stationery Box",
+    "image": "/images/products/1775577733709.png",
     "available": true
   },
   {
     "code": "SP02",
     "name": "Astronaut Metal Pencil Box",
     "price": 300,
-    "category": "Pouches",
-    "image": "images/products/1783190384109.png",
-    "description": "",
+    "category": "Stationery Box",
+    "image": "/images/products/1783190384109.png",
     "available": true
   },
   {
     "code": "IP01",
     "name": "Imported Ink Pen",
     "price": 300,
-    "category": "Ink Pens",
-    "image": "images/products/1775896158680.png",
-    "description": "",
+    "category": "Pens",
+    "image": "/images/products/1775896158680.png",
     "available": true
   },
   {
     "code": "IP02",
     "name": "Fountain Ink Pen",
     "price": 150,
-    "category": "Ink Pens",
-    "image": "images/products/1776008992502.png",
-    "description": "",
+    "category": "Pens",
+    "image": "/images/products/1776008992502.png",
     "available": true
   },
   {
     "code": "IP03",
     "name": "Dux Ink Pen",
     "price": 150,
-    "category": "Ink Pens",
-    "image": "images/products/1777821034662.png",
-    "description": "",
+    "category": "Pens",
+    "image": "/images/products/1777821034662.png",
     "available": true
   },
   {
     "code": "PR01",
     "name": "Pointer",
     "price": 450,
-    "category": "Pointers",
-    "image": "images/products/1775851553321.png",
-    "description": "",
+    "category": "Other",
+    "image": "/images/products/1775851553321.png",
     "available": true
   },
   {
     "code": "CP01",
     "name": "Colour Pencil",
     "price": 300,
-    "category": "Colouring",
-    "image": "images/products/1775850786226.png",
-    "description": "",
+    "category": "Other",
+    "image": "/images/products/1775850786226.png",
     "available": true
   },
   {
     "code": "CP02",
     "name": "Double Sided Colour",
     "price": 300,
-    "category": "Colouring",
-    "image": "images/products/1777458925060.png",
-    "description": "",
+    "category": "Other",
+    "image": "/images/products/1777458925060.png",
     "available": true
   },
   {
     "code": "CP03",
     "name": "Colour kit for kids",
     "price": 250,
-    "category": "Colouring",
-    "image": "images/products/1783190012712.png",
-    "description": "",
+    "category": "Other",
+    "image": "/images/products/1783190012712.png",
     "available": true
   },
   {
     "code": "SB01",
     "name": "Kid Sipper Bottle",
     "price": 250,
-    "category": "Sipper Bottles",
-    "image": "images/products/1777821216392.png",
-    "description": "",
+    "category": "Water Bottles",
+    "image": "/images/products/1777821216392.png",
     "available": true
   },
   {
     "code": "SB02",
     "name": "KidS Sipper Bottle",
     "price": 400,
-    "category": "Sipper Bottles",
-    "image": "images/products/1777458857015.png",
-    "description": "",
+    "category": "Water Bottles",
+    "image": "/images/products/1777458857015.png",
     "available": true
   },
   {
     "code": "SN01",
     "name": "Sticky Notes",
     "price": 90,
-    "category": "Sticky Notes",
-    "image": "images/products/1777821295104.png",
-    "description": "",
+    "category": "Sticky notes",
+    "image": "/images/products/1777821295104.png",
     "available": true
   },
   {
     "code": "PH01",
     "name": "Pencil Holder",
     "price": 100,
-    "category": "Organizer",
-    "image": "images/products/1777459009405.png",
-    "description": "",
+    "category": "Organizers",
+    "image": "/images/products/1777459009405.png",
     "available": true
   },
   {
@@ -499,8 +436,7 @@
     "name": "Plastic Scale",
     "price": 45,
     "category": "Scales",
-    "image": "images/products/1777459192512.png",
-    "description": "",
+    "image": "/images/products/1777459192512.png",
     "available": true
   },
   {
@@ -508,17 +444,15 @@
     "name": "Plastic Scale",
     "price": 35,
     "category": "Scales",
-    "image": "images/products/1777458614433.png",
-    "description": "",
+    "image": "/images/products/1777458614433.png",
     "available": true
   },
   {
     "code": "EB01",
     "name": "Exam Board",
     "price": 350,
-    "category": "Exam Board",
-    "image": "images/products/1777459440920.png",
-    "description": "",
+    "category": "Exam Board/Files",
+    "image": "/images/products/1777459440920.png",
     "available": true
   },
   {
@@ -526,8 +460,7 @@
     "name": "Fancy Washi Tape",
     "price": 50,
     "category": "Tapes",
-    "image": "images/products/1777375061469.png",
-    "description": "",
+    "image": "/images/products/1777375061469.png",
     "available": true
   },
   {
@@ -535,17 +468,15 @@
     "name": "Carton Tape",
     "price": 200,
     "category": "Tapes",
-    "image": "images/products/1777458780061.png",
-    "description": "",
+    "image": "/images/products/1777458780061.png",
     "available": true
   },
   {
     "code": "PC01",
     "name": "Paper Cutter",
     "price": 200,
-    "category": "Cutters",
-    "image": "images/products/1777459630741.png",
-    "description": "",
+    "category": "Cutter",
+    "image": "/images/products/1777459630741.png",
     "available": true
   },
   {
@@ -553,8 +484,7 @@
     "name": "Mini Calculator",
     "price": 250,
     "category": "Calculators",
-    "image": "images/products/1777821440563.png",
-    "description": "",
+    "image": "/images/products/1777821440563.png",
     "available": true
   },
   {
@@ -562,8 +492,7 @@
     "name": "Plastic Airtight Bags",
     "price": 300,
     "category": "Bags",
-    "image": "images/products/1777458715975.png",
-    "description": "",
+    "image": "/images/products/1777458715975.png",
     "available": true
   },
   {
@@ -571,8 +500,7 @@
     "name": "Small Stapler",
     "price": 220,
     "category": "Staplers",
-    "image": "images/products/1783190433077.png",
-    "description": "",
+    "image": "/images/products/1783190433077.png",
     "available": true
   },
   {
@@ -580,27 +508,23 @@
     "name": "Eid Mubarak Envelopes",
     "price": 80,
     "category": "Envelopes",
-    "image": "images/products/1783190081104.png",
-    "description": "",
+    "image": "/images/products/1783190081104.png",
     "available": true
   },
   {
     "code": "SN02",
     "name": "Sticky Notes",
     "price": 180,
-    "category": "Sticky Notes",
-    "image": "images/products/1783190346866.png",
-    "description": "",
+    "category": "Sticky notes",
+    "image": "/images/products/1783190346866.png",
     "available": true
   },
   {
     "code": "SN03",
     "name": "Sticky Notes",
     "price": 250,
-    "category": "Sticky Notes",
-    "image": "images/products/1783190368118.png",
-    "description": "",
+    "category": "Sticky notes",
+    "image": "/images/products/1783190368118.png",
     "available": true
   }
 ]
-
