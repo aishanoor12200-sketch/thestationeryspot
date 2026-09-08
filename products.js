@@ -1,57 +1,76 @@
-fetch("data/products.json")
-  .then(response => response.json())
-  .then(products => {
+document.addEventListener("DOMContentLoaded", () => {
+  const productContainer = document.getElementById("productContainer");
 
-    if (!Array.isArray(products)) return;
+  if (!productContainer) {
+    console.error("Product container not found.");
+    return;
+  }
 
-    const oldContainer = document.getElementById("productContainer");
-    if (!oldContainer) return;
-
-    const mainCategory = oldContainer.closest(".category");
-    if (!mainCategory) return;
-
-    const categories = {};
-
-    products.forEach(product => {
-      if (product.available === false) return;
-
-      if (!categories[product.category]) {
-        categories[product.category] = [];
+  fetch("data/products.json")
+    .then(response => {
+      if (!response.ok) {
+        throw new Error("Could not load products.json");
       }
 
-      categories[product.category].push(product);
-    });
+      return response.json();
+    })
+    .then(products => {
+      if (!Array.isArray(products)) {
+        throw new Error("products.json must contain an array.");
+      }
 
-    Object.keys(categories).forEach(category => {
+      productContainer.innerHTML = "";
 
-      const section = document.createElement("div");
-      section.className = "category";
+      const categories = {};
 
-      const heading = document.createElement("h2");
-      heading.textContent = category;
+      products.forEach(product => {
+        if (product.available === false) return;
 
-      const container = document.createElement("div");
-      container.className = "products";
+        if (!product.category || !product.name || !product.image) {
+          return;
+        }
 
-      section.appendChild(heading);
-      section.appendChild(container);
+        if (!categories[product.category]) {
+          categories[product.category] = [];
+        }
 
-      categories[category].forEach(product => {
-
-        const card = document.createElement("product-card");
-
-        card.setAttribute("image", product.image);
-        card.setAttribute("name", product.name);
-        card.setAttribute("price", product.price);
-        card.setAttribute("code", product.code);
-
-        container.appendChild(card);
+        categories[product.category].push(product);
       });
 
-      mainCategory.parentNode.appendChild(section);
-    });
+      Object.entries(categories).forEach(([categoryName, items]) => {
+        const section = document.createElement("section");
+        section.className = "category";
 
-  })
-  .catch(error => {
-    console.error("Products load error:", error);
-  });
+        const heading = document.createElement("h2");
+        heading.textContent = categoryName;
+
+        const productsGrid = document.createElement("div");
+        productsGrid.className = "products";
+
+        items.forEach(product => {
+          const card = document.createElement("product-card");
+
+          card.setAttribute("image", product.image);
+          card.setAttribute("name", product.name);
+          card.setAttribute("price", product.price);
+          card.setAttribute("code", product.code || "");
+
+          productsGrid.appendChild(card);
+        });
+
+        section.appendChild(heading);
+        section.appendChild(productsGrid);
+
+        productContainer.appendChild(section);
+      });
+    })
+    .catch(error => {
+      console.error("Products load error:", error);
+
+      productContainer.innerHTML = `
+        <p class="product-error">
+          Products could not be loaded. Please try again later.
+        </p>
+      `;
+    });
+});
