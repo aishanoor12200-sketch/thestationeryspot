@@ -219,7 +219,7 @@
     "code": "S01",
     "name": "Kids Sharpner",
     "price": 10,
-    "category": "Sharpener",
+    "category": "Sharpeners",
     "image": "/images/products/c.png",
     "available": true
   },
@@ -227,7 +227,7 @@
     "code": "S02",
     "name": "French Fries Sharpner & Erassor",
     "price": 200,
-    "category": "Sharpener",
+    "category": "Sharpeners",
     "image": "/images/products/1775577758357.png",
     "available": true
   },
@@ -235,7 +235,7 @@
     "code": "S03",
     "name": "Kids Sharpner & Erassor",
     "price": 200,
-    "category": "Sharpener",
+    "category": "Sharpeners",
     "image": "/images/products/1775577766139.png",
     "available": true
   },
@@ -243,7 +243,7 @@
     "code": "S04",
     "name": "Character Kids Sharpner",
     "price": 150,
-    "category": "Sharpener",
+    "category": "Sharpeners",
     "image": "/images/products/1775577775915.png",
     "available": true
   },
@@ -251,7 +251,7 @@
     "code": "S05",
     "name": "Kids Sharpner",
     "price": 150,
-    "category": "Sharpener",
+    "category": "Sharpeners",
     "image": "/images/products/1775895864296.png",
     "available": true
   },
@@ -259,7 +259,7 @@
     "code": "S06",
     "name": "Pencil Sharpner",
     "price": 8,
-    "category": "Sharpener",
+    "category": "Sharpeners",
     "image": "/images/products/1777375089736.png",
     "available": true
   },
@@ -267,7 +267,7 @@
     "code": "S07",
     "name": "Pencil Sharpner",
     "price": 8,
-    "category": "Sharpener",
+    "category": "Sharpeners",
     "image": "/images/products/1777459057331.png",
     "available": true
   },
@@ -275,7 +275,7 @@
     "code": "S08",
     "name": "Dino Sharpner",
     "price": 100,
-    "category": "Sharpener",
+    "category": "Sharpeners",
     "image": "/images/products/1777821684167.png",
     "available": true
   },
@@ -525,6 +525,14 @@
     "price": 250,
     "category": "Sticky notes",
     "image": "/images/products/1783190368118.png",
+    "available": true
+  },
+  {
+    "code": "TY01",
+    "name": "Kids Glitter Ball ",
+    "price": 200,
+    "category": "Toys",
+    "image": "/images/products/1788715395286-3.png",
     "available": true
   }
 ]
