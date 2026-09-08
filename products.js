@@ -1,76 +1,138 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const productContainer = document.getElementById("productContainer");
 
-  if (!productContainer) {
-    console.error("Product container not found.");
-    return;
-  }
+    const productContainer =
+        document.getElementById("productContainer");
 
-  fetch("data/products.json")
-    .then(response => {
-      if (!response.ok) {
-        throw new Error("Could not load products.json");
-      }
+    if (!productContainer) {
+        console.error("Product container not found.");
+        return;
+    }
 
-      return response.json();
-    })
-    .then(products => {
-      if (!Array.isArray(products)) {
-        throw new Error("products.json must contain an array.");
-      }
+    fetch("data/products.json")
+        .then(response => {
 
-      productContainer.innerHTML = "";
+            if (!response.ok) {
+                throw new Error(
+                    `Products file could not be loaded: ${response.status}`
+                );
+            }
 
-      const categories = {};
+            return response.json();
+        })
 
-      products.forEach(product => {
-        if (product.available === false) return;
+        .then(products => {
 
-        if (!product.category || !product.name || !product.image) {
-          return;
-        }
+            if (!Array.isArray(products)) {
+                throw new Error(
+                    "products.json must contain an array."
+                );
+            }
 
-        if (!categories[product.category]) {
-          categories[product.category] = [];
-        }
+            productContainer.innerHTML = "";
 
-        categories[product.category].push(product);
-      });
+            const categories = {};
 
-      Object.entries(categories).forEach(([categoryName, items]) => {
-        const section = document.createElement("section");
-        section.className = "category";
+            products.forEach(product => {
 
-        const heading = document.createElement("h2");
-        heading.textContent = categoryName;
+                if (product.available === false) {
+                    return;
+                }
 
-        const productsGrid = document.createElement("div");
-        productsGrid.className = "products";
+                if (
+                    !product.category ||
+                    !product.name ||
+                    !product.image
+                ) {
+                    console.warn(
+                        "Skipped incomplete product:",
+                        product
+                    );
+                    return;
+                }
 
-        items.forEach(product => {
-          const card = document.createElement("product-card");
+                if (!categories[product.category]) {
+                    categories[product.category] = [];
+                }
 
-          card.setAttribute("image", product.image);
-          card.setAttribute("name", product.name);
-          card.setAttribute("price", product.price);
-          card.setAttribute("code", product.code || "");
+                categories[product.category].push(product);
+            });
 
-          productsGrid.appendChild(card);
+
+            Object.entries(categories).forEach(
+                ([categoryName, items]) => {
+
+                    const section =
+                        document.createElement("section");
+
+                    section.className = "category";
+
+
+                    const heading =
+                        document.createElement("h2");
+
+                    heading.textContent =
+                        categoryName;
+
+
+                    const productsGrid =
+                        document.createElement("div");
+
+                    productsGrid.className =
+                        "products";
+
+
+                    items.forEach(product => {
+
+                        const card =
+                            document.createElement("product-card");
+
+                        card.setAttribute(
+                            "image",
+                            product.image
+                        );
+
+                        card.setAttribute(
+                            "name",
+                            product.name
+                        );
+
+                        card.setAttribute(
+                            "price",
+                            product.price
+                        );
+
+                        card.setAttribute(
+                            "code",
+                            product.code || ""
+                        );
+
+                        productsGrid.appendChild(card);
+
+                    });
+
+
+                    section.appendChild(heading);
+                    section.appendChild(productsGrid);
+
+                    productContainer.appendChild(section);
+                }
+            );
+
+        })
+
+        .catch(error => {
+
+            console.error(
+                "Products load error:",
+                error
+            );
+
+            productContainer.innerHTML = `
+                <div class="product-error">
+                    <p>Products could not be loaded.</p>
+                    <p>Please try again later.</p>
+                </div>
+            `;
         });
 
-        section.appendChild(heading);
-        section.appendChild(productsGrid);
-
-        productContainer.appendChild(section);
-      });
-    })
-    .catch(error => {
-      console.error("Products load error:", error);
-
-      productContainer.innerHTML = `
-        <p class="product-error">
-          Products could not be loaded. Please try again later.
-        </p>
-      `;
-    });
 });
