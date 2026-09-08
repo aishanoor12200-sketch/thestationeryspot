@@ -1,6 +1,5 @@
 * {
     box-sizing: border-box;
-    transition: all 0.2s ease-in-out;
 }
 
 body {
@@ -207,7 +206,56 @@ body {
     font-weight: 700;
     color: #222;
 }
+.floating-icon {
+    position: absolute;
+    right: 8px;
+    bottom: 8px;
+    width: 36px;
+    height: 36px;
+    border: none;
+    border-radius: 50%;
+    background: #ff6f91;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+}
 
+.floating-icon:hover {
+    background: #ff4d88;
+    transform: scale(1.08);
+}
+
+.qty-box button {
+    border-radius: 4px;
+    min-width: 34px;
+}
+
+.qty {
+    min-width: 30px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.popup {
+    z-index: 100000;
+}
+
+.popup img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    border-radius: 12px;
+}
+
+.product-error {
+    text-align: center;
+    padding: 40px 20px;
+    color: #555;
+}
 /* ================= QTY BOX & FLOATING ================= */
 
 .qty-box {
@@ -393,3 +441,20 @@ body {
         display: none;
     }
 }
+    .search {
+    transition: width 0.3s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn,
+.add-btn,
+.qty-box button,
+.floating-icon,
+.left-menu a,
+.mobile-menu a {
+    transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.mobile-menu {
+    transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
