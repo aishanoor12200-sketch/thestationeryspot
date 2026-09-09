@@ -16,17 +16,24 @@
 
 <body>
 
-    <!-- HEADER -->
+    <!-- ================= HEADER ================= -->
+
     <header class="top-bar">
 
         <div class="logo-area">
 
+            <!-- MOBILE MENU BUTTON -->
+            <div class="menu-icon"
+                 onclick="toggleMenu()">
+                ☰
+            </div>
+
+            <!-- PC LOGO -->
             <a href="index.html">
                 <img
                     src="images/images/IMG-20260515-WA0016.jpg"
                     class="pc-logo"
-                    alt="The Stationery Spot"
-                >
+                    alt="The Stationery Spot">
             </a>
 
             <h1 class="top-heading">
@@ -35,17 +42,72 @@
 
         </div>
 
+
+        <!-- DESKTOP MENU -->
+
+        <nav class="left-menu">
+
+            <a href="index.html">Home</a>
+            <a href="deals.html">Deals</a>
+            <a href="contact.html">Contact</a>
+            <a href="Refund policy.html">Refund Policy</a>
+            <a href="Shipping policy.html">Shipping Policy</a>
+
+        </nav>
+
+
+        <!-- SEARCH -->
+
+        <div class="right-menu">
+
+            <div class="search-box">
+
+                <input
+                    type="text"
+                    id="categorySearch"
+                    class="search"
+                    placeholder="Search..."
+                    autocomplete="off">
+
+                <div
+                    id="categorySearchResults"
+                    class="search-results">
+                </div>
+
+            </div>
+
+        </div>
+
     </header>
 
 
-    <!-- CATEGORY PAGE -->
+    <!-- ================= MOBILE MENU ================= -->
+
+    <div
+        class="mobile-menu"
+        id="mobileMenu">
+
+        <button
+            class="close-btn"
+            type="button"
+            onclick="toggleMenu()">
+            ✕
+        </button>
+
+        <a href="index.html">Home</a>
+        <a href="deals.html">Deals</a>
+        <a href="contact.html">Contact</a>
+        <a href="Refund policy.html">Refund Policy</a>
+        <a href="Shipping policy.html">Shipping Policy</a>
+
+    </div>
+
+
+    <!-- ================= CATEGORY ================= -->
+
     <main>
 
         <section class="category-page">
-
-            <a href="index.html" class="back-home">
-                ← Back to Home
-            </a>
 
             <h2 id="categoryTitle">
                 Products
@@ -63,5 +125,24 @@
 
     <script src="product-card.js"></script>
     <script src="category.js"></script>
+
+
+    <!-- MENU -->
+
+    <script>
+
+        function toggleMenu() {
+
+            const menu =
+                document.getElementById("mobileMenu");
+
+            if (menu) {
+                menu.classList.toggle("open");
+            }
+
+        }
+
+    </script>
+
 </body>
 </html>
