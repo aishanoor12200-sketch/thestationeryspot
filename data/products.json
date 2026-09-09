@@ -558,5 +558,29 @@
     "category": "Toys",
     "image": "/images/products/1788715446509-1.png",
     "available": true
+  },
+  {
+    "code": "Ac01",
+    "name": "Kids Tuff Watch",
+    "price": 450,
+    "category": "Accessories",
+    "image": "/images/products/1787788537405-1.png",
+    "available": true
+  },
+  {
+    "code": "Sb01",
+    "name": "Primium Quality Stationery Box ",
+    "price": 700,
+    "category": "Stationery Box",
+    "image": "/images/products/1788421065887-2.png",
+    "available": true
+  },
+  {
+    "code": "Ac02",
+    "name": "Kids Light Watch",
+    "price": 450,
+    "category": "Accessories",
+    "image": "/images/products/1787788616675-1.png",
+    "available": true
   }
 ]
