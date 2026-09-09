@@ -437,6 +437,92 @@ body {
         height: 140px;
     }
 
+    /* =========================================
+   VIEW ALL PRODUCTS
+========================================= */
+
+.extra-product {
+    display: none;
+}
+
+
+/* =========================================
+   VIEW ALL BUTTON
+========================================= */
+
+.view-all-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+
+.view-all-btn {
+    border: none;
+
+    background: transparent;
+
+    color: #ff4d88;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    padding: 8px 16px;
+
+    border-radius: 20px;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.view-all-btn span {
+    display: inline-block;
+
+    margin-left: 5px;
+
+    font-size: 16px;
+
+    transition:
+        transform 0.2s ease;
+}
+
+
+.view-all-btn:hover {
+    background: #ffe4ec;
+
+    color: #ff2f73;
+
+    transform: translateY(-2px);
+}
+
+
+.view-all-btn:active {
+    transform: scale(0.96);
+}
+
+
+/* =========================================
+   EXPANDED CATEGORY
+========================================= */
+
+.category.expanded
+.view-all-btn span {
+
+    transform: translateY(-2px);
+
+}
+
     .side-img {
         display: none;
     }
