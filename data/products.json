@@ -534,5 +534,29 @@
     "category": "Toys",
     "image": "/images/products/1788715395286-3.png",
     "available": true
+  },
+  {
+    "code": "TY03",
+    "name": "Astronaut Painting Toy",
+    "price": 250,
+    "category": "Toys",
+    "image": "/images/products/1788715457538-1.png",
+    "available": true
+  },
+  {
+    "code": "TY04",
+    "name": "Kids Unicorn Yoyo ",
+    "price": 250,
+    "category": "Toys",
+    "image": "/images/products/1787788518294.png",
+    "available": true
+  },
+  {
+    "code": "TY02",
+    "name": "Kids Kuromi Yoyo",
+    "price": 200,
+    "category": "Toys",
+    "image": "/images/products/1788715446509-1.png",
+    "available": true
   }
 ]
