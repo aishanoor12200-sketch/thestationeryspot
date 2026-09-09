@@ -594,3 +594,26 @@ body {
 .category.expanded .view-all-btn span {
     transform: translateY(-2px);
 }
+
+/* =========================================
+   CATEGORY PAGE
+========================================= */
+
+.category-page-body .top-bar {
+    padding-top: 18px;
+    padding-bottom: 14px;
+}
+
+.category-page-body .category-page {
+    padding-top: 8px;
+}
+
+.category-page-body #categoryTitle {
+    margin-top: 22px;
+    margin-bottom: 20px;
+    padding-left: 0;
+}
+
+.category-page-body .category-products {
+    padding-top: 8px;
+}
