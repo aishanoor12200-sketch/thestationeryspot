@@ -196,69 +196,17 @@ document.addEventListener("DOMContentLoaded", () => {
                             `View All <span>→</span>`;
 
 
-                        viewAllButton.addEventListener(
-                            "click",
-                            () => {
+                      viewAllButton.addEventListener(
+    "click",
+    () => {
 
-                                const extraProducts =
-                                    productsGrid.querySelectorAll(
-                                        ".extra-product"
-                                    );
+        const categoryUrl =
+            `category.html?category=${encodeURIComponent(categoryName)}`;
 
+        window.location.href = categoryUrl;
 
-                                const isExpanded =
-                                    section.classList.contains(
-                                        "expanded"
-                                    );
-
-
-                                if (!isExpanded) {
-
-                                    extraProducts.forEach(
-                                        product => {
-
-                                            product.style.display =
-                                                "";
-
-                                        }
-                                    );
-
-
-                                    section.classList.add(
-                                        "expanded"
-                                    );
-
-
-                                    viewAllButton.innerHTML =
-                                        `Show Less <span>↑</span>`;
-
-
-                                } else {
-
-                                    extraProducts.forEach(
-                                        product => {
-
-                                            product.style.display =
-                                                "none";
-
-                                        }
-                                    );
-
-
-                                    section.classList.remove(
-                                        "expanded"
-                                    );
-
-
-                                    viewAllButton.innerHTML =
-                                        `View All <span>→</span>`;
-
-                                }
-
-                            }
-                        );
-
-
+    }
+);
                         viewAllWrapper.appendChild(
                             viewAllButton
                         );
