@@ -8,7 +8,9 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
     }
 
+
     fetch("data/products.json")
+
         .then(response => {
 
             if (!response.ok) {
@@ -18,7 +20,9 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
             return response.json();
+
         })
+
 
         .then(products => {
 
@@ -28,9 +32,16 @@ document.addEventListener("DOMContentLoaded", () => {
                 );
             }
 
+
             productContainer.innerHTML = "";
 
+
             const categories = {};
+
+
+            /* =========================
+               GROUP PRODUCTS
+            ========================= */
 
             products.forEach(product => {
 
@@ -38,34 +49,49 @@ document.addEventListener("DOMContentLoaded", () => {
                     return;
                 }
 
+
                 if (
                     !product.category ||
                     !product.name ||
                     !product.image
                 ) {
+
                     console.warn(
                         "Skipped incomplete product:",
                         product
                     );
+
                     return;
                 }
+
 
                 if (!categories[product.category]) {
                     categories[product.category] = [];
                 }
 
+
                 categories[product.category].push(product);
+
             });
 
 
+            /* =========================
+               CREATE CATEGORY SECTIONS
+            ========================= */
+
             Object.entries(categories).forEach(
                 ([categoryName, items]) => {
+
 
                     const section =
                         document.createElement("section");
 
                     section.className = "category";
 
+
+                    /* =========================
+                       CATEGORY HEADING
+                    ========================= */
 
                     const heading =
                         document.createElement("h2");
@@ -74,6 +100,10 @@ document.addEventListener("DOMContentLoaded", () => {
                         categoryName;
 
 
+                    /* =========================
+                       PRODUCT GRID
+                    ========================= */
+
                     const productsGrid =
                         document.createElement("div");
 
@@ -81,44 +111,207 @@ document.addEventListener("DOMContentLoaded", () => {
                         "products";
 
 
-                    items.forEach(product => {
+                    /*
+                       First 4 products are visible.
+                       Remaining products stay hidden.
+                    */
 
-                        const card =
-                            document.createElement("product-card");
+                    items.forEach(
+                        (product, index) => {
 
-                        card.setAttribute(
-                            "image",
-                            product.image
+                            const card =
+                                document.createElement(
+                                    "product-card"
+                                );
+
+
+                            card.setAttribute(
+                                "image",
+                                product.image
+                            );
+
+
+                            card.setAttribute(
+                                "name",
+                                product.name
+                            );
+
+
+                            card.setAttribute(
+                                "price",
+                                product.price
+                            );
+
+
+                            card.setAttribute(
+                                "code",
+                                product.code || ""
+                            );
+
+
+                            /*
+                               Hide products after first 4
+                            */
+
+                            if (index >= 4) {
+
+                                card.classList.add(
+                                    "extra-product"
+                                );
+
+                            }
+
+
+                            productsGrid.appendChild(card);
+
+                        }
+                    );
+
+
+                    /* =========================
+                       VIEW ALL BUTTON
+                    ========================= */
+
+                    if (items.length > 4) {
+
+                        const viewAllWrapper =
+                            document.createElement("div");
+
+                        viewAllWrapper.className =
+                            "view-all-wrapper";
+
+
+                        const viewAllButton =
+                            document.createElement("button");
+
+                        viewAllButton.className =
+                            "view-all-btn";
+
+
+                        viewAllButton.type =
+                            "button";
+
+
+                        viewAllButton.innerHTML =
+                            `View All <span>→</span>`;
+
+
+                        viewAllButton.addEventListener(
+                            "click",
+                            () => {
+
+                                const extraProducts =
+                                    productsGrid.querySelectorAll(
+                                        ".extra-product"
+                                    );
+
+
+                                const isExpanded =
+                                    section.classList.contains(
+                                        "expanded"
+                                    );
+
+
+                                if (!isExpanded) {
+
+                                    extraProducts.forEach(
+                                        product => {
+
+                                            product.style.display =
+                                                "";
+
+                                        }
+                                    );
+
+
+                                    section.classList.add(
+                                        "expanded"
+                                    );
+
+
+                                    viewAllButton.innerHTML =
+                                        `Show Less <span>↑</span>`;
+
+
+                                } else {
+
+                                    extraProducts.forEach(
+                                        product => {
+
+                                            product.style.display =
+                                                "none";
+
+                                        }
+                                    );
+
+
+                                    section.classList.remove(
+                                        "expanded"
+                                    );
+
+
+                                    viewAllButton.innerHTML =
+                                        `View All <span>→</span>`;
+
+                                }
+
+                            }
                         );
 
-                        card.setAttribute(
-                            "name",
-                            product.name
+
+                        viewAllWrapper.appendChild(
+                            viewAllButton
                         );
 
-                        card.setAttribute(
-                            "price",
-                            product.price
+
+                        section.appendChild(
+                            heading
                         );
 
-                        card.setAttribute(
-                            "code",
-                            product.code || ""
+
+                        section.appendChild(
+                            productsGrid
                         );
 
-                        productsGrid.appendChild(card);
 
-                    });
+                        section.appendChild(
+                            viewAllWrapper
+                        );
 
 
-                    section.appendChild(heading);
-                    section.appendChild(productsGrid);
+                        productContainer.appendChild(
+                            section
+                        );
 
-                    productContainer.appendChild(section);
+
+                    } else {
+
+                        /*
+                           If category has 4 or fewer
+                           products, no View All button.
+                        */
+
+                        section.appendChild(
+                            heading
+                        );
+
+
+                        section.appendChild(
+                            productsGrid
+                        );
+
+
+                        productContainer.appendChild(
+                            section
+                        );
+
+                    }
+
                 }
             );
 
         })
+
 
         .catch(error => {
 
@@ -127,12 +320,23 @@ document.addEventListener("DOMContentLoaded", () => {
                 error
             );
 
+
             productContainer.innerHTML = `
+
                 <div class="product-error">
-                    <p>Products could not be loaded.</p>
-                    <p>Please try again later.</p>
+
+                    <p>
+                        Products could not be loaded.
+                    </p>
+
+                    <p>
+                        Please try again later.
+                    </p>
+
                 </div>
+
             `;
+
         });
 
 });
