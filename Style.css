@@ -437,14 +437,7 @@ body {
         height: 140px;
     }
 
-    /* =========================================
-   VIEW ALL PRODUCTS
-========================================= */
-
-.extra-product {
-    display: none;
-}
-
+  
 
 /* =========================================
    VIEW ALL BUTTON
@@ -542,5 +535,17 @@ body {
 
 .mobile-menu {
     transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* =========================================
+   VIEW ALL PRODUCTS - FIX
+========================================= */
+
+.extra-product {
+    display: none !important;
+}
+
+.category.expanded .extra-product {
+    display: block !important;
 }
 
