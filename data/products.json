@@ -590,5 +590,13 @@
     "category": "Stationery Box",
     "image": "/images/products/1788421065887-3.png",
     "available": true
+  },
+  {
+    "code": "P01",
+    "name": "Kids Cartoon paper Scissor",
+    "price": 200,
+    "category": "Other",
+    "image": "/images/products/1787346507576.png",
+    "available": true
   }
 ]
