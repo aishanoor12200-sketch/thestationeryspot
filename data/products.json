@@ -582,5 +582,13 @@
     "category": "Accessories",
     "image": "/images/products/1787788616675-1.png",
     "available": true
+  },
+  {
+    "code": "Sb02",
+    "name": "Primum Quality Stationery Box ",
+    "price": 700,
+    "category": "Stationery Box",
+    "image": "/images/products/1788421065887-3.png",
+    "available": true
   }
 ]
