@@ -291,6 +291,346 @@ document.addEventListener("DOMContentLoaded", () => {
                 "Sidebar categories error:",
                 error
             );
+document.addEventListener("DOMContentLoaded", () => {
+
+    const sidebarHTML = `
+        <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+        <aside class="common-sidebar" id="commonSidebar">
+
+            <button class="sidebar-close" id="sidebarClose" type="button">
+                ✕
+            </button>
+
+            <div class="sidebar-tabs">
+
+                <button class="sidebar-tab active" data-tab="menuTab">
+                    MENU
+                </button>
+
+                <button class="sidebar-tab" data-tab="categoriesTab">
+                    CATEGORIES
+                </button>
+
+            </div>
+
+            <div class="sidebar-content">
+
+                <div class="sidebar-tab-content active" id="menuTab">
+
+                    <a href="index.html">Home</a>
+                    <a href="deals.html">Deals</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="Refund policy.html">Refund Policy</a>
+                    <a href="Shipping policy.html">Shipping Policy</a>
+
+                </div>
+
+
+                <div class="sidebar-tab-content" id="categoriesTab">
+
+                    <div id="sidebarCategories">
+
+                        <p class="sidebar-loading">
+                            Loading categories...
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </aside>
+    `;
+
+
+    document.body.insertAdjacentHTML(
+        "beforeend",
+        sidebarHTML
+    );
+
+
+    const sidebar =
+        document.getElementById("commonSidebar");
+
+    const overlay =
+        document.getElementById("sidebarOverlay");
+
+    const closeBtn =
+        document.getElementById("sidebarClose");
+
+
+    // =========================
+    // OPEN
+    // =========================
+
+    window.openCommonSidebar = function () {
+
+        if (!sidebar || !overlay) return;
+
+        sidebar.classList.add("open");
+        overlay.classList.add("open");
+
+        document.body.classList.add("sidebar-open");
+
+    };
+
+
+    // =========================
+    // CLOSE
+    // =========================
+
+    window.closeCommonSidebar = function () {
+
+        if (!sidebar || !overlay) return;
+
+        sidebar.classList.remove("open");
+        overlay.classList.remove("open");
+
+        document.body.classList.remove("sidebar-open");
+
+    };
+
+
+    if (closeBtn) {
+        closeBtn.addEventListener(
+            "click",
+            window.closeCommonSidebar
+        );
+    }
+
+
+    if (overlay) {
+        overlay.addEventListener(
+            "click",
+            window.closeCommonSidebar
+        );
+    }
+
+
+    // =========================
+    // TABS
+    // =========================
+
+    const tabs =
+        document.querySelectorAll(".sidebar-tab");
+
+    const tabContents =
+        document.querySelectorAll(".sidebar-tab-content");
+
+
+    tabs.forEach(tab => {
+
+        tab.addEventListener("click", () => {
+
+            const target =
+                tab.dataset.tab;
+
+            tabs.forEach(t =>
+                t.classList.remove("active")
+            );
+
+            tabContents.forEach(content =>
+                content.classList.remove("active")
+            );
+
+            tab.classList.add("active");
+
+            const targetContent =
+                document.getElementById(target);
+
+            if (targetContent) {
+                targetContent.classList.add("active");
+            }
+
+        });
+
+    });
+
+
+    // =========================
+    // LOAD CATEGORIES
+    // =========================
+
+    fetch("data/products.json")
+
+        .then(response => {
+
+            if (!response.ok) {
+                throw new Error(
+                    "Products JSON could not load"
+                );
+            }
+
+            return response.json();
+
+        })
+
+        .then(products => {
+
+            const categoryBox =
+                document.getElementById(
+                    "sidebarCategories"
+                );
+
+            if (!categoryBox) return;
+
+
+            const categories = [
+                ...new Set(
+
+                    products
+
+                        .filter(
+                            product =>
+                                product.available !== false
+                        )
+
+                        .map(
+                            product =>
+                                product.category
+                        )
+
+                        .filter(Boolean)
+
+                )
+            ];
+
+
+            categoryBox.innerHTML = "";
+
+
+            categories.forEach(category => {
+
+                const item =
+                    document.createElement("div");
+
+                item.className =
+                    "sidebar-category";
+
+
+                item.innerHTML = `
+
+                    <div class="sidebar-category-row">
+
+                        <a href="category.html?category=${encodeURIComponent(category)}">
+                            ${category}
+                        </a>
+
+                        <button
+                            class="category-plus"
+                            type="button"
+                            aria-label="Expand ${category}"
+                        >
+                            +
+                        </button>
+
+                    </div>
+
+                    <div class="sidebar-category-products">
+                    </div>
+
+                `;
+
+
+                categoryBox.appendChild(item);
+
+
+                // =========================
+                // PLUS BUTTON
+                // =========================
+
+                const plusButton =
+                    item.querySelector(
+                        ".category-plus"
+                    );
+
+                const productList =
+                    item.querySelector(
+                        ".sidebar-category-products"
+                    );
+
+
+                plusButton.addEventListener(
+                    "click",
+                    () => {
+
+                        const isOpen =
+                            item.classList.contains(
+                                "expanded"
+                            );
+
+
+                        if (isOpen) {
+
+                            item.classList.remove(
+                                "expanded"
+                            );
+
+                            plusButton.innerText = "+";
+
+                            productList.innerHTML = "";
+
+                            return;
+                        }
+
+
+                        item.classList.add(
+                            "expanded"
+                        );
+
+                        plusButton.innerText = "−";
+
+
+                        const categoryProducts =
+                            products.filter(
+                                product =>
+                                    product.available !== false &&
+                                    product.category === category
+                            );
+
+
+                        productList.innerHTML = "";
+
+
+                        categoryProducts.forEach(product => {
+
+                            const productLink =
+                                document.createElement("a");
+
+                            productLink.className =
+                                "sidebar-product-link";
+
+
+                            productLink.href =
+                                "category.html?category=" +
+                                encodeURIComponent(category);
+
+
+                            productLink.textContent =
+                                product.name || "Product";
+
+
+                            productList.appendChild(
+                                productLink
+                            );
+
+                        });
+
+                    }
+                );
+
+            });
+
+        })
+
+        .catch(error => {
+
+            console.error(
+                "Sidebar categories error:",
+                error
+            );
 
 
             const categoryBox =
@@ -312,5 +652,27 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
         });
+
+
+    // =========================
+    // ESC KEY
+    // =========================
+
+    document.addEventListener(
+        "keydown",
+        event => {
+
+            if (
+                event.key === "Escape" &&
+                sidebar &&
+                sidebar.classList.contains("open")
+            ) {
+
+                window.closeCommonSidebar();
+
+            }
+
+        }
+    );
 
 });
