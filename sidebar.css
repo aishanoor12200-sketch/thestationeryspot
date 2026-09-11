@@ -288,3 +288,40 @@
     }
 
 }
+/* =========================================
+   SIDEBAR CATEGORY PRODUCTS
+========================================= */
+
+.sidebar-category-products {
+    display: none;
+    padding: 0 8px 8px 20px;
+}
+
+.sidebar-category.expanded .sidebar-category-products {
+    display: block;
+}
+
+.sidebar-product-link {
+    display: block;
+
+    color: #777;
+
+    text-decoration: none;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 13px;
+
+    padding: 7px 8px;
+
+    border-radius: 6px;
+}
+
+.sidebar-product-link:hover {
+    background: #fff0f5;
+    color: #ff4d88;
+}
+
+.sidebar-category.expanded .category-plus {
+    background: #ffe4ec;
+}
