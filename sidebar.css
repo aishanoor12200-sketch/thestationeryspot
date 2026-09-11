@@ -1,1 +1,290 @@
+/* =========================================
+   COMMON SIDEBAR
+   Used on ALL pages
+========================================= */
 
+.common-sidebar {
+    position: fixed;
+    top: 0;
+    left: -300px;
+
+    width: 280px;
+    height: 100vh;
+
+    background: #ffffff;
+
+    padding: 20px;
+
+    box-shadow: 5px 0 25px rgba(0, 0, 0, 0.12);
+
+    z-index: 100001;
+
+    transition: left 0.3s ease;
+
+    overflow-y: auto;
+}
+
+.common-sidebar.open {
+    left: 0;
+}
+
+
+/* =========================================
+   OVERLAY
+========================================= */
+
+.sidebar-overlay {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.35);
+
+    opacity: 0;
+    visibility: hidden;
+
+    z-index: 100000;
+
+    transition:
+        opacity 0.3s ease,
+        visibility 0.3s ease;
+}
+
+.sidebar-overlay.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* =========================================
+   CLOSE BUTTON
+========================================= */
+
+.sidebar-close {
+    display: block;
+
+    border: none;
+    background: transparent;
+
+    color: #555;
+
+    font-size: 24px;
+
+    cursor: pointer;
+
+    padding: 4px 6px;
+
+    margin-bottom: 18px;
+}
+
+.sidebar-close:hover {
+    color: #ff4d88;
+}
+
+
+/* =========================================
+   TABS
+========================================= */
+
+.sidebar-tabs {
+    display: flex;
+
+    border-bottom: 1px solid #eeeeee;
+
+    margin-bottom: 15px;
+}
+
+.sidebar-tab {
+    flex: 1;
+
+    border: none;
+    background: transparent;
+
+    color: #777;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    padding: 12px 5px;
+
+    cursor: pointer;
+
+    position: relative;
+}
+
+.sidebar-tab.active {
+    color: #ff4d88;
+}
+
+.sidebar-tab.active::after {
+    content: "";
+
+    position: absolute;
+
+    left: 10%;
+    right: 10%;
+    bottom: -1px;
+
+    height: 2px;
+
+    background: #ff4d88;
+
+    border-radius: 5px;
+}
+
+
+/* =========================================
+   TAB CONTENT
+========================================= */
+
+.sidebar-tab-content {
+    display: none;
+}
+
+.sidebar-tab-content.active {
+    display: block;
+}
+
+
+/* =========================================
+   MENU LINKS
+========================================= */
+
+.sidebar-tab-content > a {
+    display: block;
+
+    color: #333;
+
+    text-decoration: none;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 15px;
+
+    padding: 12px 10px;
+
+    border-radius: 8px;
+
+    margin-bottom: 3px;
+}
+
+.sidebar-tab-content > a:hover {
+    background: #ffe4ec;
+    color: #ff4d88;
+}
+
+
+/* =========================================
+   CATEGORIES
+========================================= */
+
+.sidebar-category {
+    border-bottom: 1px solid #f3f3f3;
+}
+
+.sidebar-category-row {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sidebar-category-row a {
+    flex: 1;
+
+    color: #333;
+
+    text-decoration: none;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 15px;
+
+    padding: 12px 8px;
+}
+
+.sidebar-category-row a:hover {
+    color: #ff4d88;
+}
+
+
+/* =========================================
+   CATEGORY PLUS BUTTON
+========================================= */
+
+.category-plus {
+    width: 34px;
+    height: 34px;
+
+    border: none;
+
+    background: transparent;
+
+    color: #ff4d88;
+
+    font-size: 21px;
+
+    cursor: pointer;
+
+    border-radius: 50%;
+}
+
+.category-plus:hover {
+    background: #ffe4ec;
+}
+
+
+/* =========================================
+   LOADING TEXT
+========================================= */
+
+.sidebar-loading {
+    color: #888;
+
+    font-size: 13px;
+
+    text-align: center;
+
+    padding: 20px 5px;
+}
+
+
+/* =========================================
+   MOBILE ONLY
+========================================= */
+
+@media (max-width: 600px) {
+
+    .common-sidebar {
+        width: 280px;
+        left: -300px;
+    }
+
+    .common-sidebar.open {
+        left: 0;
+    }
+
+}
+
+
+/* =========================================
+   DESKTOP
+========================================= */
+
+@media (min-width: 601px) {
+
+    .common-sidebar {
+        display: none;
+    }
+
+    .sidebar-overlay {
+        display: none;
+    }
+
+}
