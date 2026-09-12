@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
 
     <title>Cute Stationery Store Pakistan | The Stationery Spot</title>
@@ -19,7 +20,10 @@
         content="stationery pakistan, cute stationery, diaries, pens, gifts"
     >
 
-    <meta name="author" content="The Stationery Spot">
+    <meta
+        name="author"
+        content="The Stationery Spot"
+    >
 
 
     <!-- =========================
@@ -42,10 +46,15 @@
          MAIN CSS
     ========================= -->
 
-    <link rel="stylesheet" href="Style.css">
+    <link
+        rel="stylesheet"
+        href="Style.css"
+    >
 
-    <!-- Common Sidebar CSS -->
-    <link rel="stylesheet" href="sidebar.css">
+    <link
+        rel="stylesheet"
+        href="sidebar.css"
+    >
 
 
     <!-- =========================
@@ -76,6 +85,7 @@
     ========================= -->
 
     <script>
+
         !function(f,b,e,v,n,t,s)
         {
             if(f.fbq)return;
@@ -99,6 +109,7 @@
 
             s=b.getElementsByTagName(e)[0];
             s.parentNode.insertBefore(t,s)
+
         }(
             window,
             document,
@@ -108,6 +119,7 @@
 
         fbq('init', '967979679160537');
         fbq('track', 'PageView');
+
     </script>
 
 
@@ -234,7 +246,6 @@
 </header>
 
 
-
 <!-- =========================
      HERO SECTION
 ========================= -->
@@ -248,14 +259,12 @@
         loading="eager"
     >
 
-
     <img
         src="images/file_000000000898720882cf2613b022ce8e.png"
         class="main-img"
         alt="The Stationery Spot"
         loading="eager"
     >
-
 
     <img
         src="images/products/IMG-20260503-WA0001.jpg"
@@ -267,7 +276,6 @@
 </section>
 
 
-
 <!-- =========================
      PRODUCTS
 ========================= -->
@@ -277,7 +285,6 @@
     <div id="productContainer"></div>
 
 </main>
-
 
 
 <!-- =========================
@@ -302,7 +309,6 @@
 </div>
 
 
-
 <!-- =========================
      FLOATING ORDER BUTTON
 ========================= -->
@@ -321,7 +327,6 @@
     </button>
 
 </div>
-
 
 
 <!-- =========================
@@ -343,42 +348,32 @@ function searchItems() {
         .trim()
         .toLowerCase();
 
-
     const cards =
         document.querySelectorAll(".card");
-
 
     const resultsBox =
         document.getElementById("searchResults");
 
-
     resultsBox.innerHTML = "";
-
 
     if (input === "") {
 
         resultsBox.style.display = "none";
 
         return;
-
     }
 
-
     let found = false;
-
 
     cards.forEach(card => {
 
         const nameElement =
             card.querySelector(".name");
 
-
         if (!nameElement) return;
-
 
         const productName =
             nameElement.innerText.trim();
-
 
         if (
             productName
@@ -388,14 +383,11 @@ function searchItems() {
 
             found = true;
 
-
             const item =
                 document.createElement("div");
 
-
             item.innerText =
                 productName;
-
 
             item.onclick = function () {
 
@@ -404,19 +396,14 @@ function searchItems() {
                     block: "center"
                 });
 
-
                 resultsBox.style.display =
                     "none";
-
             };
 
-
             resultsBox.appendChild(item);
-
         }
 
     });
-
 
     if (found) {
 
@@ -428,14 +415,11 @@ function searchItems() {
         resultsBox.innerHTML =
             "<div>No product found</div>";
 
-
         resultsBox.style.display =
             "block";
-
     }
 
 }
-
 
 
 /* =========================================
@@ -450,21 +434,16 @@ function addToCart(btn, code) {
     const card =
         btn.closest(".card");
 
-
     if (!card) return;
-
 
     const nameElement =
         card.querySelector(".name");
 
-
     const priceElement =
         card.querySelector(".price");
 
-
     const qtyElement =
         card.querySelector(".qty");
-
 
     if (
         !nameElement ||
@@ -474,24 +453,19 @@ function addToCart(btn, code) {
         return;
     }
 
-
     const name =
         nameElement.innerText.trim();
 
-
     const priceText =
         priceElement.innerText;
-
 
     const price =
         Number(
             priceText.replace(/[^0-9]/g, "")
         );
 
-
     const qty =
         Number(qtyElement.innerText);
-
 
     if (
         !name ||
@@ -502,10 +476,8 @@ function addToCart(btn, code) {
         return;
     }
 
-
     const itemTotal =
         price * qty;
-
 
     cart.push({
 
@@ -519,16 +491,13 @@ function addToCart(btn, code) {
 
     });
 
-
     showOrderBox(btn);
-
 
     alert(
         "Added: " + name
     );
 
 }
-
 
 
 /* =========================================
@@ -542,16 +511,12 @@ function sendWhatsAppOrder() {
         alert("Cart empty!");
 
         return;
-
     }
-
 
     let msg =
         "🛒 ORDER:\n\n";
 
-
     let total = 0;
-
 
     cart.forEach(item => {
 
@@ -565,21 +530,17 @@ function sendWhatsAppOrder() {
             item.total +
             "\n";
 
-
         total += item.total;
 
     });
-
 
     msg +=
         "\nTOTAL: Rs." +
         total;
 
-
     const whatsappURL =
         "https://wa.me/923271576380?text=" +
         encodeURIComponent(msg);
-
 
     window.open(
         whatsappURL,
@@ -588,7 +549,6 @@ function sendWhatsAppOrder() {
     );
 
 }
-
 
 
 /* =========================================
@@ -601,26 +561,20 @@ function increase(btn) {
         btn.parentElement
         .querySelector(".qty");
 
-
     if (!qty) return;
-
 
     let value =
         Number(qty.innerText);
 
-
     if (!Number.isFinite(value)) {
 
         value = 1;
-
     }
-
 
     qty.innerText =
         value + 1;
 
 }
-
 
 
 function decrease(btn) {
@@ -629,30 +583,23 @@ function decrease(btn) {
         btn.parentElement
         .querySelector(".qty");
 
-
     if (!qty) return;
-
 
     let value =
         Number(qty.innerText);
 
-
     if (!Number.isFinite(value)) {
 
         value = 1;
-
     }
-
 
     if (value > 1) {
 
         qty.innerText =
             value - 1;
-
     }
 
 }
-
 
 
 /* =========================================
@@ -666,24 +613,20 @@ function openImage(src) {
             "imagePopup"
         );
 
-
     const popupImg =
         document.getElementById(
             "popupImg"
         );
 
-
     if (!popup || !popupImg) return;
 
-
-    popupImg.src = src;
-
+    popupImg.src =
+        src;
 
     popup.style.display =
         "flex";
 
 }
-
 
 
 function closeImage() {
@@ -693,15 +636,12 @@ function closeImage() {
             "imagePopup"
         );
 
-
     if (!popup) return;
-
 
     popup.style.display =
         "none";
 
 }
-
 
 
 /* =========================================
@@ -715,18 +655,14 @@ function showOrderBox(btn) {
             "floatingBtn"
         );
 
-
     if (!floatBtn) return;
-
 
     floatBtn.style.display =
         "block";
 
-
     clearTimeout(
         window.orderBoxTimer
     );
-
 
     window.orderBoxTimer =
         setTimeout(() => {
@@ -737,7 +673,6 @@ function showOrderBox(btn) {
         }, 10000);
 
 }
-
 
 
 /* =========================================
@@ -753,12 +688,10 @@ document.addEventListener(
                 ".search-box"
             );
 
-
         const resultsBox =
             document.getElementById(
                 "searchResults"
             );
-
 
         if (
             searchBox &&
@@ -768,14 +701,12 @@ document.addEventListener(
 
             resultsBox.style.display =
                 "none";
-
         }
 
     }
 );
 
 </script>
-
 
 
 <!-- =========================
@@ -789,7 +720,6 @@ document.addEventListener(
 <script src="products.js"></script>
 
 
-
 <!-- =========================
      COMMON SIDEBAR
 ========================= -->
@@ -798,807 +728,5 @@ document.addEventListener(
 
 
 </body>
-    </html>    <link rel="stylesheet" href="Style.css">
 
-    <!-- Google Fonts -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Pacifico&display=swap"
-        rel="stylesheet"
-    >
-
-    <!-- Font Awesome -->
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-        crossorigin="anonymous"
-        referrerpolicy="no-referrer"
-    >
-
-    <!-- Facebook Pixel -->
-    <script>
-        !function(f,b,e,v,n,t,s)
-        {
-            if(f.fbq)return;
-
-            n=f.fbq=function(){
-                n.callMethod ?
-                n.callMethod.apply(n,arguments) :
-                n.queue.push(arguments)
-            };
-
-            if(!f._fbq)f._fbq=n;
-
-            n.push=n;
-            n.loaded=!0;
-            n.version='2.0';
-            n.queue=[];
-
-            t=b.createElement(e);
-            t.async=!0;
-            t.src=v;
-
-            s=b.getElementsByTagName(e)[0];
-            s.parentNode.insertBefore(t,s)
-        }(
-            window,
-            document,
-            'script',
-            'https://connect.facebook.net/en_US/fbevents.js'
-        );
-
-        fbq('init', '967979679160537');
-        fbq('track', 'PageView');
-    </script>
-
-    <noscript>
-        <img
-            height="1"
-            width="1"
-            style="display:none"
-            src="https://www.facebook.com/tr?id=967979679160537&ev=PageView&noscript=1"
-            alt=""
-        >
-    </noscript>
-
-</head>
-
-
-<body>
-
-<!-- =========================
-     TOP BAR
-========================= -->
-
-<header class="top-bar">
-
-    <div class="logo-area">
-
-        <button
-            class="menu-icon"
-            type="button"
-            onclick="toggleMenu()"
-            aria-label="Open menu"
-        >
-            ☰
-        </button>
-
-        <img
-            src="images/1778446342483.png"
-            class="pc-logo"
-            alt="The Stationery Spot Logo"
-            width="80"
-            height="80"
-        >
-
-    </div>
-
-
-    <div class="top-heading">
-        The Stationery Spot
-    </div>
-
-
-    <nav class="left-menu" aria-label="Main navigation">
-
-        <a href="index.html">Home</a>
-
-        <a href="deals.html">Deals</a>
-
-        <a href="contact.html">Contact</a>
-
-        <a href="Refund policy.html">Refund Policy</a>
-
-        <a href="Shipping policy.html">Shipping Policy</a>
-
-    </nav>
-
-
-    <div class="right-menu">
-
-        <div class="search-box">
-
-            <input
-                type="search"
-                class="search"
-                id="searchInput"
-                onkeyup="searchItems()"
-                placeholder="Search products..."
-                aria-label="Search products"
-                autocomplete="off"
-            >
-
-            <div
-                class="search-results"
-                id="searchResults"
-            ></div>
-
-        </div>
-
-    </div>
-
-</header>
-
-
-<!-- =========================
-     MOBILE MENU
-========================= -->
-
-<div class="mobile-menu" id="mobileMenu">
-
-    <button
-        class="close-btn"
-        type="button"
-        onclick="toggleMenu()"
-        aria-label="Close menu"
-    >
-        ✕
-    </button>
-
-
-    <a href="index.html" class="active">
-        Home
-    </a>
-
-    <a href="deals.html">
-        Deals
-    </a>
-
-    <a href="contact.html">
-        Contact
-    </a>
-
-    <a href="Refund policy.html">
-        Refund Policy
-    </a>
-
-    <a href="Shipping policy.html">
-        Shipping Policy
-    </a>
-
-
-    <div class="mobile-footer">
-
-        <a href="#" class="mobile-login">
-            <i class="fa-regular fa-user"></i>
-            <span>Log in</span>
-        </a>
-
-
-        <div class="mobile-socials">
-
-            <a
-                href="https://www.facebook.com/share/1BUJtuPwQL/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Facebook"
-            >
-                <i class="fa-brands fa-facebook-f"></i>
-            </a>
-
-
-            <a
-                href="https://www.instagram.com/stationeryspot.pk?igsh=MXJsemQxZnhuNjcwdQ=="
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Instagram"
-            >
-                <i class="fa-brands fa-instagram"></i>
-            </a>
-
-
-            <a
-                href="https://www.tiktok.com/@thestationeryspot.pk?_r=1&_t=ZS-96QBEYZyaEG"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="TikTok"
-            >
-                <i class="fa-brands fa-tiktok"></i>
-            </a>
-
-        </div>
-
-    </div>
-
-</div>
-
-
-<!-- =========================
-     HERO SECTION
-========================= -->
-
-<section class="hero-box">
-
-    <img
-        src="images/colorful-stationery-on-minimalist-background-free-photo.jpg"
-        class="side-img"
-        alt="Colorful stationery"
-        loading="eager"
-    >
-
-    <img
-        src="images/file_000000000898720882cf2613b022ce8e.png"
-        class="main-img"
-        alt="The Stationery Spot"
-        loading="eager"
-    >
-
-    <img
-        src="images/products/IMG-20260503-WA0001.jpg"
-        class="side-img"
-        alt="Stationery products"
-        loading="eager"
-    >
-
-</section>
-
-
-<!-- =========================
-     PRODUCTS
-========================= -->
-
-<main>
-
-    <div id="productContainer"></div>
-
-</main>
-
-
-<!-- =========================
-     IMAGE POPUP
-========================= -->
-
-<div
-    id="imagePopup"
-    class="popup"
-    onclick="closeImage()"
-    role="dialog"
-    aria-modal="true"
-    aria-label="Product image preview"
->
-
-    <img
-        id="popupImg"
-        src=""
-        alt="Product preview"
-    >
-
-</div>
-
-
-<!-- =========================
-     FLOATING ORDER BUTTON
-========================= -->
-
-<div
-    class="floating-order"
-    id="floatingBtn"
->
-
-    <button
-        class="btn"
-        type="button"
-        onclick="sendWhatsAppOrder()"
-    >
-        🛒 Done Your Order
-    </button>
-
-</div>
-
-
-<!-- =========================
-     JAVASCRIPT
-========================= -->
-
-<script>
-
-/* =========================================
-   SEARCH
-========================================= */
-
-function searchItems() {
-
-    const input =
-        document
-        .getElementById("searchInput")
-        .value
-        .trim()
-        .toLowerCase();
-
-    const cards =
-        document.querySelectorAll(".card");
-
-    const resultsBox =
-        document.getElementById("searchResults");
-
-
-    resultsBox.innerHTML = "";
-
-
-    if (input === "") {
-
-        resultsBox.style.display = "none";
-
-        return;
-    }
-
-
-    let found = false;
-
-
-    cards.forEach(card => {
-
-        const nameElement =
-            card.querySelector(".name");
-
-        if (!nameElement) return;
-
-
-        const productName =
-            nameElement.innerText.trim();
-
-
-        if (
-            productName
-            .toLowerCase()
-            .includes(input)
-        ) {
-
-            found = true;
-
-
-            const item =
-                document.createElement("div");
-
-            item.innerText =
-                productName;
-
-
-            item.onclick = function () {
-
-                card.scrollIntoView({
-                    behavior: "smooth",
-                    block: "center"
-                });
-
-                resultsBox.style.display =
-                    "none";
-
-            };
-
-
-            resultsBox.appendChild(item);
-
-        }
-
-    });
-
-
-    if (found) {
-
-        resultsBox.style.display =
-            "block";
-
-    } else {
-
-        resultsBox.innerHTML =
-            "<div>No product found</div>";
-
-        resultsBox.style.display =
-            "block";
-    }
-
-}
-
-
-/* =========================================
-   CART
-========================================= */
-
-let cart = [];
-
-
-function addToCart(btn, code) {
-
-    const card =
-        btn.closest(".card");
-
-    if (!card) return;
-
-
-    const nameElement =
-        card.querySelector(".name");
-
-    const priceElement =
-        card.querySelector(".price");
-
-    const qtyElement =
-        card.querySelector(".qty");
-
-
-    if (
-        !nameElement ||
-        !priceElement ||
-        !qtyElement
-    ) {
-        return;
-    }
-
-
-    const name =
-        nameElement.innerText.trim();
-
-
-    const priceText =
-        priceElement.innerText;
-
-
-    const price =
-        Number(
-            priceText.replace(/[^0-9]/g, "")
-        );
-
-
-    const qty =
-        Number(qtyElement.innerText);
-
-
-    if (
-        !name ||
-        !Number.isFinite(price) ||
-        !Number.isFinite(qty) ||
-        qty < 1
-    ) {
-        return;
-    }
-
-
-    const itemTotal =
-        price * qty;
-
-
-    cart.push({
-
-        name: name,
-
-        code: code || "",
-
-        qty: qty,
-
-        total: itemTotal
-
-    });
-
-
-    showOrderBox(btn);
-
-
-    alert(
-        "Added: " + name
-    );
-
-}
-
-
-/* =========================================
-   WHATSAPP ORDER
-========================================= */
-
-function sendWhatsAppOrder() {
-
-    if (cart.length === 0) {
-
-        alert("Cart empty!");
-
-        return;
-    }
-
-
-    let msg =
-        "🛒 ORDER:\n\n";
-
-
-    let total = 0;
-
-
-    cart.forEach(item => {
-
-        msg +=
-            item.name +
-            " (" +
-            item.code +
-            ") x " +
-            item.qty +
-            " = Rs." +
-            item.total +
-            "\n";
-
-
-        total += item.total;
-
-    });
-
-
-    msg +=
-        "\nTOTAL: Rs." +
-        total;
-
-
-    const whatsappURL =
-        "https://wa.me/923271576380?text=" +
-        encodeURIComponent(msg);
-
-
-    window.open(
-        whatsappURL,
-        "_blank",
-        "noopener,noreferrer"
-    );
-
-}
-
-
-/* =========================================
-   QUANTITY
-========================================= */
-
-function increase(btn) {
-
-    const qty =
-        btn.parentElement
-        .querySelector(".qty");
-
-
-    if (!qty) return;
-
-
-    let value =
-        Number(qty.innerText);
-
-
-    if (!Number.isFinite(value)) {
-
-        value = 1;
-
-    }
-
-
-    qty.innerText =
-        value + 1;
-
-}
-
-
-function decrease(btn) {
-
-    const qty =
-        btn.parentElement
-        .querySelector(".qty");
-
-
-    if (!qty) return;
-
-
-    let value =
-        Number(qty.innerText);
-
-
-    if (!Number.isFinite(value)) {
-
-        value = 1;
-
-    }
-
-
-    if (value > 1) {
-
-        qty.innerText =
-            value - 1;
-
-    }
-
-}
-
-
-/* =========================================
-   IMAGE POPUP
-========================================= */
-
-function openImage(src) {
-
-    const popup =
-        document.getElementById(
-            "imagePopup"
-        );
-
-
-    const popupImg =
-        document.getElementById(
-            "popupImg"
-        );
-
-
-    if (!popup || !popupImg) return;
-
-
-    popupImg.src = src;
-
-    popup.style.display = "flex";
-
-}
-
-
-function closeImage() {
-
-    const popup =
-        document.getElementById(
-            "imagePopup"
-        );
-
-
-    if (!popup) return;
-
-
-    popup.style.display =
-        "none";
-
-}
-
-
-/* =========================================
-   FLOATING ORDER BUTTON
-========================================= */
-
-function showOrderBox(btn) {
-
-    const floatBtn =
-        document.getElementById(
-            "floatingBtn"
-        );
-
-
-    if (!floatBtn) return;
-
-
-    floatBtn.style.display =
-        "block";
-
-
-    clearTimeout(
-        window.orderBoxTimer
-    );
-
-
-    window.orderBoxTimer =
-        setTimeout(() => {
-
-            floatBtn.style.display =
-                "none";
-
-        }, 10000);
-
-}
-
-
-/* =========================================
-   MOBILE MENU
-========================================= */
-
-function toggleMenu() {
-
-    const menu =
-        document.getElementById(
-            "mobileMenu"
-        );
-
-
-    if (!menu) return;
-
-
-    menu.classList.toggle("open");
-
-}
-
-
-/* =========================================
-   ESC KEY
-========================================= */
-
-document.addEventListener(
-    "keydown",
-    function(event) {
-
-        if (event.key === "Escape") {
-
-            closeImage();
-
-
-            const menu =
-                document.getElementById(
-                    "mobileMenu"
-                );
-
-
-            if (
-                menu &&
-                menu.classList.contains("open")
-            ) {
-
-                menu.classList.remove("open");
-
-            }
-
-        }
-
-    }
-);
-
-
-/* =========================================
-   CLOSE SEARCH WHEN CLICKING OUTSIDE
-========================================= */
-
-document.addEventListener(
-    "click",
-    function(event) {
-
-        const searchBox =
-            document.querySelector(
-                ".search-box"
-            );
-
-        const resultsBox =
-            document.getElementById(
-                "searchResults"
-            );
-
-
-        if (
-            searchBox &&
-            resultsBox &&
-            !searchBox.contains(event.target)
-        ) {
-
-            resultsBox.style.display =
-                "none";
-
-        }
-
-    }
-);
-
-</script>
-
-
-<!-- IMPORTANT:
-     product-card.js MUST load before products.js
--->
-
-<script src="product-card.js"></script>
-<script src="products.js"></script>
-    
-<script src="sidebar.js"></script>
- 
-
-</body>
-</html>
+    </html>
