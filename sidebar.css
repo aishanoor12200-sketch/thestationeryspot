@@ -324,4 +324,35 @@
 
 .sidebar-category.expanded .category-plus {
     background: #ffe4ec;
+
+   /* =========================
+   MOBILE SIDEBAR SCROLL
+========================= */
+
+@media (max-width: 768px) {
+
+    .common-sidebar {
+        height: 100vh;
+        max-height: 100vh;
+        overflow: hidden;
+    }
+
+    .sidebar-content {
+        height: calc(100vh - 70px);
+        overflow-y: auto;
+        overflow-x: hidden;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .sidebar-tab-content {
+        padding-bottom: 30px;
+    }
+
+    #categoriesTab {
+        max-height: calc(100vh - 70px);
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+}
 }
