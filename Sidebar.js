@@ -23,6 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             <div class="sidebar-content">
 
+                <!-- MENU TAB -->
                 <div class="sidebar-tab-content active" id="menuTab">
 
                     <a href="index.html">Home</a>
@@ -33,6 +34,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 </div>
 
+
+                <!-- CATEGORIES TAB -->
                 <div class="sidebar-tab-content" id="categoriesTab">
 
                     <div id="sidebarCategories">
@@ -51,6 +54,10 @@ document.addEventListener("DOMContentLoaded", () => {
     `;
 
 
+    /* =========================
+       ADD SIDEBAR TO PAGE
+    ========================= */
+
     document.body.insertAdjacentHTML(
         "beforeend",
         sidebarHTML
@@ -67,15 +74,16 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("sidebarClose");
 
 
-    // =========================
-    // OPEN SIDEBAR
-    // =========================
+    /* =========================
+       OPEN SIDEBAR
+    ========================= */
 
     window.openCommonSidebar = function () {
 
         if (!sidebar || !overlay) return;
 
         sidebar.classList.add("open");
+
         overlay.classList.add("open");
 
         document.body.classList.add("sidebar-open");
@@ -83,15 +91,16 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
 
-    // =========================
-    // CLOSE SIDEBAR
-    // =========================
+    /* =========================
+       CLOSE SIDEBAR
+    ========================= */
 
     window.closeCommonSidebar = function () {
 
         if (!sidebar || !overlay) return;
 
         sidebar.classList.remove("open");
+
         overlay.classList.remove("open");
 
         document.body.classList.remove("sidebar-open");
@@ -99,7 +108,10 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
 
-    // Close button
+    /* =========================
+       CLOSE BUTTON
+    ========================= */
+
     if (closeBtn) {
 
         closeBtn.addEventListener(
@@ -110,7 +122,10 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
-    // Outside tap
+    /* =========================
+       OUTSIDE TAP CLOSE
+    ========================= */
+
     if (overlay) {
 
         overlay.addEventListener(
@@ -121,9 +136,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
-    // =========================
-    // TABS
-    // =========================
+    /* =========================
+       TABS
+    ========================= */
 
     const tabs =
         document.querySelectorAll(".sidebar-tab");
@@ -140,14 +155,18 @@ document.addEventListener("DOMContentLoaded", () => {
                 tab.dataset.tab;
 
 
-            tabs.forEach(t =>
-                t.classList.remove("active")
-            );
+            tabs.forEach(t => {
+
+                t.classList.remove("active");
+
+            });
 
 
-            tabContents.forEach(content =>
-                content.classList.remove("active")
-            );
+            tabContents.forEach(content => {
+
+                content.classList.remove("active");
+
+            });
 
 
             tab.classList.add("active");
@@ -168,9 +187,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 
-    // =========================
-    // LOAD CATEGORIES
-    // =========================
+    /* =========================
+       LOAD CATEGORIES
+    ========================= */
 
     fetch("data/products.json")
 
@@ -200,6 +219,8 @@ document.addEventListener("DOMContentLoaded", () => {
             if (!categoryBox) return;
 
 
+            /* GET UNIQUE CATEGORIES */
+
             const categories = [
                 ...new Set(
 
@@ -224,6 +245,8 @@ document.addEventListener("DOMContentLoaded", () => {
             categoryBox.innerHTML = "";
 
 
+            /* CREATE CATEGORY ITEMS */
+
             categories.forEach(category => {
 
                 const item =
@@ -238,9 +261,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
                     <div class="sidebar-category-row">
 
-                        <a href="category.html?category=${encodeURIComponent(category)}">
+                        <a
+                            href="category.html?category=${encodeURIComponent(category)}"
+                        >
                             ${category}
                         </a>
+
 
                         <button
                             class="category-plus"
@@ -252,7 +278,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
                     </div>
 
+
                     <div class="sidebar-category-products">
+
                     </div>
 
                 `;
@@ -273,6 +301,10 @@ document.addEventListener("DOMContentLoaded", () => {
                     );
 
 
+                /* =========================
+                   PLUS BUTTON
+                ========================= */
+
                 plusButton.addEventListener(
                     "click",
                     () => {
@@ -283,63 +315,88 @@ document.addEventListener("DOMContentLoaded", () => {
                             );
 
 
+                        /* CLOSE */
+
                         if (isOpen) {
 
                             item.classList.remove(
                                 "expanded"
                             );
 
-                            plusButton.innerText = "+";
+                            plusButton.innerText =
+                                "+";
 
-                            productList.innerHTML = "";
+                            productList.innerHTML =
+                                "";
 
                             return;
 
                         }
 
 
+                        /* OPEN */
+
                         item.classList.add(
                             "expanded"
                         );
 
-                        plusButton.innerText = "−";
 
+                        plusButton.innerText =
+                            "−";
+
+
+                        /* GET PRODUCTS */
 
                         const categoryProducts =
                             products.filter(
+
                                 product =>
+
                                     product.available !== false &&
-                                    product.category === category
+
+                                    product.category ===
+                                        category
+
                             );
 
 
-                        productList.innerHTML = "";
+                        productList.innerHTML =
+                            "";
 
 
-                        categoryProducts.forEach(product => {
+                        /* ADD PRODUCTS */
 
-                            const productLink =
-                                document.createElement("a");
+                        categoryProducts.forEach(
+                            product => {
 
-
-                            productLink.className =
-                                "sidebar-product-link";
-
-
-                            productLink.href =
-                                "category.html?category=" +
-                                encodeURIComponent(category);
+                                const productLink =
+                                    document.createElement(
+                                        "a"
+                                    );
 
 
-                            productLink.textContent =
-                                product.name || "Product";
+                                productLink.className =
+                                    "sidebar-product-link";
 
 
-                            productList.appendChild(
-                                productLink
-                            );
+                                productLink.href =
+                                    "category.html?category=" +
+                                    encodeURIComponent(
+                                        category
+                                    );
 
-                        });
+
+                                productLink.textContent =
+                                    product.name ||
+                                    "Product";
+
+
+                                productList.appendChild(
+                                    productLink
+                                );
+
+                            }
+                        );
 
                     }
                 );
@@ -348,6 +405,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
         })
 
+
+        /* =========================
+           CATEGORY ERROR
+        ========================= */
 
         .catch(error => {
 
@@ -378,659 +439,22 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
 
-    // =========================
-    // ESC KEY
-    // =========================
+    /* =========================
+       ESC KEY CLOSE
+    ========================= */
 
     document.addEventListener(
         "keydown",
         event => {
 
             if (
+
                 event.key === "Escape" &&
+
                 sidebar &&
+
                 sidebar.classList.contains("open")
-            ) {
 
-                window.closeCommonSidebar();
-
-            }
-
-        }
-    );
-
-});                    </a>
-
-                    <a href="Shipping policy.html">
-                        Shipping Policy
-                    </a>
-
-                </div>
-
-
-                <!-- CATEGORIES -->
-                <div class="sidebar-tab-content" id="categoriesTab">
-
-                    <div id="sidebarCategories">
-
-                        <p class="sidebar-loading">
-                            Loading categories...
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </aside>
-    `;
-
-
-    // Add sidebar to page
-    document.body.insertAdjacentHTML(
-        "beforeend",
-        sidebarHTML
-    );
-
-
-    // =========================
-    // ELEMENTS
-    // =========================
-
-    const sidebar =
-        document.getElementById("commonSidebar");
-
-    const overlay =
-        document.getElementById("sidebarOverlay");
-
-    const closeBtn =
-        document.getElementById("sidebarClose");
-
-
-    // =========================
-    // OPEN SIDEBAR
-    // =========================
-
-    window.openCommonSidebar = function () {
-
-        sidebar.classList.add("open");
-
-        overlay.classList.add("open");
-
-        document.body.classList.add(
-            "sidebar-open"
-        );
-
-    };
-
-
-    // =========================
-    // CLOSE SIDEBAR
-    // =========================
-
-    window.closeCommonSidebar = function () {
-
-        sidebar.classList.remove("open");
-
-        overlay.classList.remove("open");
-
-        document.body.classList.remove(
-            "sidebar-open"
-        );
-
-    };
-
-
-    // Close button
-    closeBtn.addEventListener(
-        "click",
-        closeCommonSidebar
-    );
-
-
-    // Outside tap
-    overlay.addEventListener(
-        "click",
-        closeCommonSidebar
-    );
-
-
-    // =========================
-    // TABS
-    // =========================
-
-    const tabs =
-        document.querySelectorAll(
-            ".sidebar-tab"
-        );
-
-    const tabContents =
-        document.querySelectorAll(
-            ".sidebar-tab-content"
-        );
-
-
-    tabs.forEach(tab => {
-
-        tab.addEventListener(
-            "click",
-            () => {
-
-                const target =
-                    tab.dataset.tab;
-
-
-                tabs.forEach(t => {
-
-                    t.classList.remove(
-                        "active"
-                    );
-
-                });
-
-
-                tabContents.forEach(content => {
-
-                    content.classList.remove(
-                        "active"
-                    );
-
-                });
-
-
-                tab.classList.add(
-                    "active"
-                );
-
-
-                const targetContent =
-                    document.getElementById(
-                        target
-                    );
-
-
-                if (targetContent) {
-
-                    targetContent.classList.add(
-                        "active"
-                    );
-
-                }
-
-            }
-        );
-
-    });
-
-
-    // =========================
-    // LOAD CATEGORIES
-    // =========================
-
-    fetch("data/products.json")
-
-        .then(response => {
-
-            if (!response.ok) {
-                throw new Error(
-                    "Products JSON could not load"
-                );
-            }
-
-            return response.json();
-
-        })
-
-        .then(products => {
-
-            const categoryBox =
-                document.getElementById(
-                    "sidebarCategories"
-                );
-
-
-            const categories = [
-                ...new Set(
-
-                    products
-
-                        .filter(
-                            product =>
-                                product.available !== false
-                        )
-
-                        .map(
-                            product =>
-                                product.category
-                        )
-
-                        .filter(Boolean)
-
-                )
-            ];
-
-
-            categoryBox.innerHTML = "";
-
-
-            categories.forEach(category => {
-
-                const item =
-                    document.createElement("div");
-
-                item.className =
-                    "sidebar-category";
-
-
-                item.innerHTML = `
-
-                    <div class="sidebar-category-row">
-
-                        <a href="category.html?category=${encodeURIComponent(category)}">
-                            ${category}
-                        </a>
-
-                        <button
-                            class="category-plus"
-                            type="button"
-                            aria-label="Open ${category}"
-                        >
-                            +
-                        </button>
-
-                    </div>
-
-                `;
-
-
-                categoryBox.appendChild(item);
-
-            });
-
-        })
-
-        .catch(error => {
-
-            console.error(
-                "Sidebar categories error:",
-                error
-            );
-document.addEventListener("DOMContentLoaded", () => {
-
-    const sidebarHTML = `
-        <div class="sidebar-overlay" id="sidebarOverlay"></div>
-
-        <aside class="common-sidebar" id="commonSidebar">
-
-            <button class="sidebar-close" id="sidebarClose" type="button">
-                ✕
-            </button>
-
-            <div class="sidebar-tabs">
-
-                <button class="sidebar-tab active" data-tab="menuTab">
-                    MENU
-                </button>
-
-                <button class="sidebar-tab" data-tab="categoriesTab">
-                    CATEGORIES
-                </button>
-
-            </div>
-
-            <div class="sidebar-content">
-
-                <div class="sidebar-tab-content active" id="menuTab">
-
-                    <a href="index.html">Home</a>
-                    <a href="deals.html">Deals</a>
-                    <a href="contact.html">Contact</a>
-                    <a href="Refund policy.html">Refund Policy</a>
-                    <a href="Shipping policy.html">Shipping Policy</a>
-
-                </div>
-
-
-                <div class="sidebar-tab-content" id="categoriesTab">
-
-                    <div id="sidebarCategories">
-
-                        <p class="sidebar-loading">
-                            Loading categories...
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </aside>
-    `;
-
-
-    document.body.insertAdjacentHTML(
-        "beforeend",
-        sidebarHTML
-    );
-
-
-    const sidebar =
-        document.getElementById("commonSidebar");
-
-    const overlay =
-        document.getElementById("sidebarOverlay");
-
-    const closeBtn =
-        document.getElementById("sidebarClose");
-
-
-    // =========================
-    // OPEN
-    // =========================
-
-    window.openCommonSidebar = function () {
-
-        if (!sidebar || !overlay) return;
-
-        sidebar.classList.add("open");
-        overlay.classList.add("open");
-
-        document.body.classList.add("sidebar-open");
-
-    };
-
-
-    // =========================
-    // CLOSE
-    // =========================
-
-    window.closeCommonSidebar = function () {
-
-        if (!sidebar || !overlay) return;
-
-        sidebar.classList.remove("open");
-        overlay.classList.remove("open");
-
-        document.body.classList.remove("sidebar-open");
-
-    };
-
-
-    if (closeBtn) {
-        closeBtn.addEventListener(
-            "click",
-            window.closeCommonSidebar
-        );
-    }
-
-
-    if (overlay) {
-        overlay.addEventListener(
-            "click",
-            window.closeCommonSidebar
-        );
-    }
-
-
-    // =========================
-    // TABS
-    // =========================
-
-    const tabs =
-        document.querySelectorAll(".sidebar-tab");
-
-    const tabContents =
-        document.querySelectorAll(".sidebar-tab-content");
-
-
-    tabs.forEach(tab => {
-
-        tab.addEventListener("click", () => {
-
-            const target =
-                tab.dataset.tab;
-
-            tabs.forEach(t =>
-                t.classList.remove("active")
-            );
-
-            tabContents.forEach(content =>
-                content.classList.remove("active")
-            );
-
-            tab.classList.add("active");
-
-            const targetContent =
-                document.getElementById(target);
-
-            if (targetContent) {
-                targetContent.classList.add("active");
-            }
-
-        });
-
-    });
-
-
-    // =========================
-    // LOAD CATEGORIES
-    // =========================
-
-    fetch("data/products.json")
-
-        .then(response => {
-
-            if (!response.ok) {
-                throw new Error(
-                    "Products JSON could not load"
-                );
-            }
-
-            return response.json();
-
-        })
-
-        .then(products => {
-
-            const categoryBox =
-                document.getElementById(
-                    "sidebarCategories"
-                );
-
-            if (!categoryBox) return;
-
-
-            const categories = [
-                ...new Set(
-
-                    products
-
-                        .filter(
-                            product =>
-                                product.available !== false
-                        )
-
-                        .map(
-                            product =>
-                                product.category
-                        )
-
-                        .filter(Boolean)
-
-                )
-            ];
-
-
-            categoryBox.innerHTML = "";
-
-
-            categories.forEach(category => {
-
-                const item =
-                    document.createElement("div");
-
-                item.className =
-                    "sidebar-category";
-
-
-                item.innerHTML = `
-
-                    <div class="sidebar-category-row">
-
-                        <a href="category.html?category=${encodeURIComponent(category)}">
-                            ${category}
-                        </a>
-
-                        <button
-                            class="category-plus"
-                            type="button"
-                            aria-label="Expand ${category}"
-                        >
-                            +
-                        </button>
-
-                    </div>
-
-                    <div class="sidebar-category-products">
-                    </div>
-
-                `;
-
-
-                categoryBox.appendChild(item);
-
-
-                // =========================
-                // PLUS BUTTON
-                // =========================
-
-                const plusButton =
-                    item.querySelector(
-                        ".category-plus"
-                    );
-
-                const productList =
-                    item.querySelector(
-                        ".sidebar-category-products"
-                    );
-
-
-                plusButton.addEventListener(
-                    "click",
-                    () => {
-
-                        const isOpen =
-                            item.classList.contains(
-                                "expanded"
-                            );
-
-
-                        if (isOpen) {
-
-                            item.classList.remove(
-                                "expanded"
-                            );
-
-                            plusButton.innerText = "+";
-
-                            productList.innerHTML = "";
-
-                            return;
-                        }
-
-
-                        item.classList.add(
-                            "expanded"
-                        );
-
-                        plusButton.innerText = "−";
-
-
-                        const categoryProducts =
-                            products.filter(
-                                product =>
-                                    product.available !== false &&
-                                    product.category === category
-                            );
-
-
-                        productList.innerHTML = "";
-
-
-                        categoryProducts.forEach(product => {
-
-                            const productLink =
-                                document.createElement("a");
-
-                            productLink.className =
-                                "sidebar-product-link";
-
-
-                            productLink.href =
-                                "category.html?category=" +
-                                encodeURIComponent(category);
-
-
-                            productLink.textContent =
-                                product.name || "Product";
-
-
-                            productList.appendChild(
-                                productLink
-                            );
-
-                        });
-
-                    }
-                );
-
-            });
-
-        })
-
-        .catch(error => {
-
-            console.error(
-                "Sidebar categories error:",
-                error
-            );
-
-
-            const categoryBox =
-                document.getElementById(
-                    "sidebarCategories"
-                );
-
-
-            if (categoryBox) {
-
-                categoryBox.innerHTML = `
-
-                    <p class="sidebar-loading">
-                        Categories could not be loaded.
-                    </p>
-
-                `;
-
-            }
-
-        });
-
-
-    // =========================
-    // ESC KEY
-    // =========================
-
-    document.addEventListener(
-        "keydown",
-        event => {
-
-            if (
-                event.key === "Escape" &&
-                sidebar &&
-                sidebar.classList.contains("open")
             ) {
 
                 window.closeCommonSidebar();
