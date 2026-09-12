@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const sidebarHTML = `
         <div class="sidebar-overlay" id="sidebarOverlay"></div>
-
+        
         <aside class="common-sidebar" id="commonSidebar">
 
             <button class="sidebar-close" id="sidebarClose" type="button">
