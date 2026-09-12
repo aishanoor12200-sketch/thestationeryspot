@@ -6,14 +6,19 @@ document.addEventListener("DOMContentLoaded", () => {
         <aside class="common-sidebar" id="commonSidebar">
 
             <div class="sidebar-brand">
+
                 <div class="sidebar-brand-logo">
-                    <img src="logo.jpeg" alt="The Stationery Spot">
+                    <img
+                        src="images/1778446342483.png"
+                        alt="The Stationery Spot Logo"
+                    >
                 </div>
 
                 <div class="sidebar-brand-text">
                     <div class="sidebar-brand-name">
                         The Stationery Spot
                     </div>
+
                     <div class="sidebar-brand-subtitle">
                         cute things, happy moments ♡
                     </div>
@@ -27,6 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 >
                     ×
                 </button>
+
             </div>
 
 
@@ -54,6 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <div class="sidebar-content">
 
                 <!-- MENU -->
+
                 <div
                     class="sidebar-tab-content active"
                     id="menuTab"
@@ -63,15 +70,18 @@ document.addEventListener("DOMContentLoaded", () => {
                         EXPLORE
                     </div>
 
+
                     <a href="index.html">
                         <span class="sidebar-link-icon">⌂</span>
                         <span>Home</span>
                     </a>
 
+
                     <a href="deals.html">
                         <span class="sidebar-link-icon">♡</span>
                         <span>Deals</span>
                     </a>
+
 
                     <a href="contact.html">
                         <span class="sidebar-link-icon">✦</span>
@@ -83,10 +93,12 @@ document.addEventListener("DOMContentLoaded", () => {
                         INFORMATION
                     </div>
 
+
                     <a href="Refund policy.html">
                         <span class="sidebar-link-icon">↩</span>
                         <span>Refund Policy</span>
                     </a>
+
 
                     <a href="Shipping policy.html">
                         <span class="sidebar-link-icon">⌁</span>
@@ -97,6 +109,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
                 <!-- CATEGORIES -->
+
                 <div
                     class="sidebar-tab-content"
                     id="categoriesTab"
@@ -106,6 +119,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         <span>Shop by category</span>
                         <span>♡</span>
                     </div>
+
 
                     <div id="sidebarCategories">
 
@@ -121,6 +135,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
             <div class="sidebar-footer">
+
                 <div class="sidebar-footer-line"></div>
 
                 <div class="sidebar-footer-text">
@@ -130,6 +145,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 <div class="sidebar-footer-subtext">
                     for stationery lovers
                 </div>
+
             </div>
 
         </aside>
@@ -153,7 +169,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     /* =========================
-       OPEN
+       OPEN SIDEBAR
     ========================= */
 
     window.openCommonSidebar = function () {
@@ -162,13 +178,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
         sidebar.classList.add("open");
         overlay.classList.add("open");
-        document.body.classList.add("sidebar-open");
+
+        document.body.classList.add(
+            "sidebar-open"
+        );
 
     };
 
 
     /* =========================
-       CLOSE
+       CLOSE SIDEBAR
     ========================= */
 
     window.closeCommonSidebar = function () {
@@ -177,7 +196,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
         sidebar.classList.remove("open");
         overlay.classList.remove("open");
-        document.body.classList.remove("sidebar-open");
+
+        document.body.classList.remove(
+            "sidebar-open"
+        );
 
     };
 
@@ -215,7 +237,9 @@ document.addEventListener("DOMContentLoaded", () => {
     ========================= */
 
     const tabs =
-        document.querySelectorAll(".sidebar-tab");
+        document.querySelectorAll(
+            ".sidebar-tab"
+        );
 
     const tabContents =
         document.querySelectorAll(
@@ -225,29 +249,51 @@ document.addEventListener("DOMContentLoaded", () => {
 
     tabs.forEach(tab => {
 
-        tab.addEventListener("click", () => {
+        tab.addEventListener(
+            "click",
+            () => {
 
-            const target =
-                tab.dataset.tab;
+                const target =
+                    tab.dataset.tab;
 
-            tabs.forEach(t => {
-                t.classList.remove("active");
-            });
 
-            tabContents.forEach(content => {
-                content.classList.remove("active");
-            });
+                tabs.forEach(t => {
 
-            tab.classList.add("active");
+                    t.classList.remove(
+                        "active"
+                    );
 
-            const targetContent =
-                document.getElementById(target);
+                });
 
-            if (targetContent) {
-                targetContent.classList.add("active");
+
+                tabContents.forEach(content => {
+
+                    content.classList.remove(
+                        "active"
+                    );
+
+                });
+
+
+                tab.classList.add("active");
+
+
+                const targetContent =
+                    document.getElementById(
+                        target
+                    );
+
+
+                if (targetContent) {
+
+                    targetContent.classList.add(
+                        "active"
+                    );
+
+                }
+
             }
-
-        });
+        );
 
     });
 
@@ -261,9 +307,11 @@ document.addEventListener("DOMContentLoaded", () => {
         .then(response => {
 
             if (!response.ok) {
+
                 throw new Error(
                     "Products JSON could not load"
                 );
+
             }
 
             return response.json();
@@ -276,6 +324,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 document.getElementById(
                     "sidebarCategories"
                 );
+
 
             if (!categoryBox) return;
 
@@ -307,7 +356,10 @@ document.addEventListener("DOMContentLoaded", () => {
             categories.forEach(category => {
 
                 const item =
-                    document.createElement("div");
+                    document.createElement(
+                        "div"
+                    );
+
 
                 item.className =
                     "sidebar-category";
@@ -323,6 +375,7 @@ document.addEventListener("DOMContentLoaded", () => {
                             <span>${category}</span>
                         </a>
 
+
                         <button
                             class="category-plus"
                             type="button"
@@ -334,8 +387,9 @@ document.addEventListener("DOMContentLoaded", () => {
                     </div>
 
 
-                    <div class="sidebar-category-products">
-                    </div>
+                    <div
+                        class="sidebar-category-products"
+                    ></div>
 
                 `;
 
@@ -371,19 +425,24 @@ document.addEventListener("DOMContentLoaded", () => {
                                 "expanded"
                             );
 
+
                             plusButton.innerHTML =
                                 "<span>+</span>";
+
 
                             productList.innerHTML =
                                 "";
 
+
                             return;
+
                         }
 
 
                         item.classList.add(
                             "expanded"
                         );
+
 
                         plusButton.innerHTML =
                             "<span>−</span>";
@@ -409,8 +468,10 @@ document.addEventListener("DOMContentLoaded", () => {
                                         "a"
                                     );
 
+
                                 productLink.className =
                                     "sidebar-product-link";
+
 
                                 productLink.href =
                                     "category.html?category=" +
@@ -418,9 +479,11 @@ document.addEventListener("DOMContentLoaded", () => {
                                         category
                                     );
 
+
                                 productLink.textContent =
                                     product.name ||
                                     "Product";
+
 
                                 productList.appendChild(
                                     productLink
@@ -443,10 +506,12 @@ document.addEventListener("DOMContentLoaded", () => {
                 error
             );
 
+
             const categoryBox =
                 document.getElementById(
                     "sidebarCategories"
                 );
+
 
             if (categoryBox) {
 
