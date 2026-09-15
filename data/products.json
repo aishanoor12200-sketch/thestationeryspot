@@ -614,5 +614,53 @@
     "category": "Other",
     "image": "/images/products/1787788468619.png",
     "available": true
+  },
+  {
+    "code": "D05",
+    "name": "Mini spiral diary",
+    "price": 250,
+    "category": "Diaries",
+    "image": "/images/products/1789468927919.png",
+    "available": true
+  },
+  {
+    "code": "DR06",
+    "name": "Urdu copy",
+    "price": 150,
+    "category": "Diaries",
+    "image": "/images/products/1789469773222.png",
+    "available": true
+  },
+  {
+    "code": "DR07",
+    "name": "English Copy",
+    "price": 150,
+    "category": "Diaries",
+    "image": "/images/products/1789469795252.png",
+    "available": true
+  },
+  {
+    "code": "DR09",
+    "name": "Kids pen diary ",
+    "price": 220,
+    "category": "Diaries",
+    "image": "/images/products/1789478059155.png",
+    "available": true
+  },
+  {
+    "code": "DR08",
+    "name": "Spiral Note Book",
+    "price": 300,
+    "category": "Diaries",
+    "image": "/images/products/1789469839906.png",
+    "available": true
+  },
+  {
+    "code": "DR06",
+    "name": "Math's copy",
+    "price": 150,
+    "category": "Diaries",
+    "image": "/images/products/1789469720198.png",
+    "available": true
   }
 ]
