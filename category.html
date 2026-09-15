@@ -108,6 +108,31 @@
         </nav>
 
 
+        <!-- ================= CART ================= -->
+
+        <div class="cart-area">
+
+            <button
+                class="cart-button"
+                type="button"
+                onclick="sendWhatsAppOrder()"
+                aria-label="Open cart"
+            >
+
+                🛒
+
+                <span
+                    id="cartCount"
+                    class="cart-count"
+                >
+                    0
+                </span>
+
+            </button>
+
+        </div>
+
+
     </header>
 
 
@@ -135,31 +160,19 @@
 
     </main>
 
-    <!-- =========================
-     FLOATING ORDER BUTTON
-========================= -->
-<div class="floating-order" id="floatingBtn">
-    <button
-        class="btn"
-        type="button"
-        onclick="sendWhatsAppOrder()"
-    >
-        🛒 Done Your Order
-    </button>
-</div>
-
 
 
     <!-- ================= SCRIPTS ================= -->
-<script src="product-card.js"></script>
 
-<script src="cart.js"></script>
+    <script src="product-card.js"></script>
 
-<script src="category.js"></script>
+    <script src="cart.js"></script>
 
-<script src="sidebar.js"></script>
+    <script src="category.js"></script>
+
+    <script src="sidebar.js"></script>
 
 
 </body>
 
-</html>
+    </html>
