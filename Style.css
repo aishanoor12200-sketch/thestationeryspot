@@ -1,4 +1,4 @@
-* {
+r* {
     box-sizing: border-box;
 }
           
@@ -1514,3 +1514,57 @@ body.sidebar-open {
     }
 
     }
+/* =========================
+   CART ICON + COUNT BADGE
+========================= */
+
+.cart-area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+}
+
+.cart-button {
+    position: relative;
+    width: 48px;
+    height: 48px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+.cart-button:hover {
+    transform: scale(1.08);
+}
+
+.cart-count {
+    position: absolute;
+    top: -3px;
+    right: -4px;
+
+    min-width: 22px;
+    height: 22px;
+    padding: 0 5px;
+
+    background: #ff6f91;
+    color: white;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+
+    line-height: 1;
+    box-sizing: border-box;
+}
