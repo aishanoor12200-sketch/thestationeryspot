@@ -72,30 +72,6 @@
     "available": true
   },
   {
-    "code": "OR01",
-    "name": "Pencil Holder",
-    "price": 100,
-    "category": "Organizers",
-    "image": "/images/products/1775047213379.png",
-    "available": true
-  },
-  {
-    "code": "OR02",
-    "name": "Desk Organizer",
-    "price": 500,
-    "category": "Organizers",
-    "image": "/images/products/1775047613453.png",
-    "available": true
-  },
-  {
-    "code": "OR03",
-    "name": "Desk Organizer",
-    "price": 500,
-    "category": "Organizers",
-    "image": "/images/products/1775047613453.png",
-    "available": true
-  },
-  {
     "code": "GS01",
     "name": "Glass Sipper",
     "price": 550,
@@ -160,14 +136,6 @@
     "available": true
   },
   {
-    "code": "SC01",
-    "name": "Scented Candle",
-    "price": 400,
-    "category": "Other",
-    "image": "/images/products/1775047602569.png",
-    "available": true
-  },
-  {
     "code": "E01",
     "name": "Kids Vegetable Eraser",
     "price": 200,
@@ -208,30 +176,6 @@
     "available": true
   },
   {
-    "code": "S02",
-    "name": "French Fries Sharpner & Erassor",
-    "price": 200,
-    "category": "Sharpeners",
-    "image": "/images/products/1775577758357.png",
-    "available": true
-  },
-  {
-    "code": "S03",
-    "name": "Kids Sharpner & Erassor",
-    "price": 200,
-    "category": "Sharpeners",
-    "image": "/images/products/1775577766139.png",
-    "available": true
-  },
-  {
-    "code": "S04",
-    "name": "Character Kids Sharpner",
-    "price": 150,
-    "category": "Sharpeners",
-    "image": "/images/products/1775577775915.png",
-    "available": true
-  },
-  {
     "code": "S05",
     "name": "Kids Sharpner",
     "price": 150,
@@ -264,43 +208,11 @@
     "available": true
   },
   {
-    "code": "P01",
-    "name": "Kid Unicorn Pencil",
-    "price": 60,
-    "category": "Kids Pencils",
-    "image": "/images/products/1775577686693.png",
-    "available": true
-  },
-  {
-    "code": "P02",
-    "name": "Kid Astronaut Pencil",
-    "price": 60,
-    "category": "Kids Pencils",
-    "image": "/images/products/1775577722124.png",
-    "available": true
-  },
-  {
     "code": "P03",
     "name": "Kid Pencil",
     "price": 70,
     "category": "Kids Pencils",
     "image": "/images/products/1775896010130.png",
-    "available": true
-  },
-  {
-    "code": "K01",
-    "name": "Ice-cream Keychain",
-    "price": 100,
-    "category": "Keychains",
-    "image": "/images/products/1775577709864.png",
-    "available": true
-  },
-  {
-    "code": "K02",
-    "name": "Tom & Jerry Keychain",
-    "price": 100,
-    "category": "Keychains",
-    "image": "/images/products/1775577746449.png",
     "available": true
   },
   {
