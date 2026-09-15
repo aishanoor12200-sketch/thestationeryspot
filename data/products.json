@@ -32,14 +32,6 @@
     "available": true
   },
   {
-    "code": "DR05",
-    "name": "Spiral Diary",
-    "price": 650,
-    "category": "Diaries",
-    "image": "/images/products/1777048988675.png",
-    "available": true
-  },
-  {
     "code": "DR06",
     "name": "Fluffy Diary",
     "price": 750,
@@ -61,14 +53,6 @@
     "price": 750,
     "category": "Diaries",
     "image": "/images/products/IMG_20260409_232004_993.webp",
-    "available": true
-  },
-  {
-    "code": "DR09",
-    "name": "Fluffy Diary",
-    "price": 750,
-    "category": "Diaries",
-    "image": "/images/products/IMG_20260409_232148_112.webp",
     "available": true
   },
   {
@@ -616,7 +600,7 @@
     "available": true
   },
   {
-    "code": "D05",
+    "code": "DR12",
     "name": "Mini spiral diary",
     "price": 250,
     "category": "Diaries",
@@ -624,7 +608,7 @@
     "available": true
   },
   {
-    "code": "DR06",
+    "code": "DR13",
     "name": "Urdu copy",
     "price": 150,
     "category": "Diaries",
@@ -632,7 +616,7 @@
     "available": true
   },
   {
-    "code": "DR07",
+    "code": "DR14",
     "name": "English Copy",
     "price": 150,
     "category": "Diaries",
@@ -640,7 +624,7 @@
     "available": true
   },
   {
-    "code": "DR09",
+    "code": "DR15",
     "name": "Kids pen diary ",
     "price": 220,
     "category": "Diaries",
@@ -648,7 +632,7 @@
     "available": true
   },
   {
-    "code": "DR08",
+    "code": "DR16",
     "name": "Spiral Note Book",
     "price": 300,
     "category": "Diaries",
@@ -656,7 +640,7 @@
     "available": true
   },
   {
-    "code": "DR06",
+    "code": "DR17",
     "name": "Math's copy",
     "price": 150,
     "category": "Diaries",
