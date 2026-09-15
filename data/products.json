@@ -606,5 +606,13 @@
     "category": "Colours",
     "image": "/images/products/1787346655878-1.png",
     "available": true
+  },
+  {
+    "code": "B01",
+    "name": "Birthday Candles",
+    "price": 80,
+    "category": "Other",
+    "image": "/images/products/1787788468619.png",
+    "available": true
   }
 ]
