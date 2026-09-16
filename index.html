@@ -8,6 +8,7 @@
     <title>Cute Stationery Store Pakistan | The Stationery Spot</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <meta name="theme-color" content="#ffffff">
 
     <meta
@@ -108,7 +109,7 @@
             t.src=v;
 
             s=b.getElementsByTagName(e)[0];
-            s.parentNode.insertBefore(t,s)
+            s.parentNode.insertBefore(t,s);
 
         }(
             window,
@@ -147,10 +148,12 @@
 
 <header class="top-bar">
 
+
+    <!-- =========================
+         LOGO AREA
+    ========================= -->
+
     <div class="logo-area">
-
-
-        <!-- COMMON SIDEBAR BUTTON -->
 
         <button
             class="menu-icon"
@@ -161,8 +164,6 @@
             ☰
         </button>
 
-
-        <!-- PC LOGO -->
 
         <img
             src="images/1778446342483.png"
@@ -217,10 +218,13 @@
 
 
     <!-- =========================
-         SEARCH
+         SEARCH + CART
     ========================= -->
 
     <div class="right-menu">
+
+
+        <!-- SEARCH -->
 
         <div class="search-box">
 
@@ -241,6 +245,31 @@
 
         </div>
 
+
+        <!-- CART -->
+
+        <div class="cart-area">
+
+            <button
+                class="cart-button"
+                type="button"
+                onclick="sendWhatsAppOrder()"
+                aria-label="Open cart"
+            >
+
+                🛒
+
+                <span
+                    id="cartCount"
+                    class="cart-count"
+                >
+                    0
+                </span>
+
+            </button>
+
+        </div>
+
     </div>
 
 </header>
@@ -252,6 +281,7 @@
 
 <section class="hero-box">
 
+
     <img
         src="images/colorful-stationery-on-minimalist-background-free-photo.jpg"
         class="side-img"
@@ -259,12 +289,14 @@
         loading="eager"
     >
 
+
     <img
         src="images/file_000000000898720882cf2613b022ce8e.png"
         class="main-img"
         alt="The Stationery Spot"
         loading="eager"
     >
+
 
     <img
         src="images/products/IMG-20260503-WA0001.jpg"
@@ -310,51 +342,36 @@
 
 
 <!-- =========================
-     FLOATING ORDER BUTTON
-========================= -->
-
-<div
-    class="floating-order"
-    id="floatingBtn"
->
-
-    <button
-        class="btn"
-        type="button"
-        onclick="sendWhatsAppOrder()"
-    >
-        🛒 Done Your Order
-    </button>
-
-</div>
-
-
-<!-- =========================
-     JAVASCRIPT
+     SEARCH JAVASCRIPT
 ========================= -->
 
 <script>
 
-/* =========================================
-   SEARCH
-========================================= */
-
 function searchItems() {
 
-    const input =
-        document
-        .getElementById("searchInput")
-        .value
-        .trim()
-        .toLowerCase();
-
-    const cards =
-        document.querySelectorAll(".card");
+    const inputElement =
+        document.getElementById("searchInput");
 
     const resultsBox =
         document.getElementById("searchResults");
 
+    if (!inputElement || !resultsBox) {
+        return;
+    }
+
+
+    const input =
+        inputElement.value
+        .trim()
+        .toLowerCase();
+
+
+    const cards =
+        document.querySelectorAll(".card");
+
+
     resultsBox.innerHTML = "";
+
 
     if (input === "") {
 
@@ -363,17 +380,23 @@ function searchItems() {
         return;
     }
 
+
     let found = false;
+
 
     cards.forEach(card => {
 
         const nameElement =
             card.querySelector(".name");
 
-        if (!nameElement) return;
+        if (!nameElement) {
+            return;
+        }
+
 
         const productName =
             nameElement.innerText.trim();
+
 
         if (
             productName
@@ -383,27 +406,35 @@ function searchItems() {
 
             found = true;
 
+
             const item =
                 document.createElement("div");
+
 
             item.innerText =
                 productName;
 
-            item.onclick = function () {
+
+            item.onclick = function() {
 
                 card.scrollIntoView({
                     behavior: "smooth",
                     block: "center"
                 });
 
+
                 resultsBox.style.display =
                     "none";
+
             };
 
+
             resultsBox.appendChild(item);
+
         }
 
     });
+
 
     if (found) {
 
@@ -417,132 +448,125 @@ function searchItems() {
 
         resultsBox.style.display =
             "block";
+
     }
 
 }
 
-
-/* =========================================
-   CART
-========================================= */
-
-let cart = [];
+</script>
 
 
-function addToCart(btn, code) {
+<!-- =========================
+     IMAGE POPUP JAVASCRIPT
+========================= -->
 
-    const card =
-        btn.closest(".card");
+<script>
 
-    if (!card) return;
+function openImage(src) {
 
-    const nameElement =
-        card.querySelector(".name");
+    const popup =
+        document.getElementById("imagePopup");
 
-    const priceElement =
-        card.querySelector(".price");
+    const popupImg =
+        document.getElementById("popupImg");
 
-    const qtyElement =
-        card.querySelector(".qty");
 
-    if (
-        !nameElement ||
-        !priceElement ||
-        !qtyElement
-    ) {
+    if (!popup || !popupImg) {
         return;
     }
 
-    const name =
-        nameElement.innerText.trim();
 
-    const priceText =
-        priceElement.innerText;
+    popupImg.src =
+        src;
 
-    const price =
-        Number(
-            priceText.replace(/[^0-9]/g, "")
-        );
 
-    const qty =
-        Number(qtyElement.innerText);
-
-    if (
-        !name ||
-        !Number.isFinite(price) ||
-        !Number.isFinite(qty) ||
-        qty < 1
-    ) {
-        return;
-    }
-
-    const itemTotal =
-        price * qty;
-
-    cart.push({
-
-        name: name,
-
-        code: code || "",
-
-        qty: qty,
-
-        total: itemTotal
-
-    });
-
-    showOrderBox(btn);
-
-    alert(
-        "Added: " + name
-    );
+    popup.style.display =
+        "flex";
 
 }
 
 
-/* =========================================
-   WHATSAPP ORDER
-========================================= */
+function closeImage() {
 
-function sendWhatsAppOrder() {
+    const popup =
+        document.getElementById("imagePopup");
 
-    if (cart.length === 0) {
 
-        alert("Cart empty!");
-
+    if (!popup) {
         return;
     }
 
-    let msg =
-        "🛒 ORDER:\n\n";
 
-    let total = 0;
+    popup.style.display =
+        "none";
 
-    cart.forEach(item => {
+}
 
-        msg +=
-            item.name +
-            " (" +
-            item.code +
-            ") x " +
-            item.qty +
-            " = Rs." +
-            item.total +
-            "\n";
+</script>
 
-        total += item.total;
 
-    });
+<!-- =========================
+     CLOSE SEARCH
+========================= -->
 
-    msg +=
-        "\nTOTAL: Rs." +
-        total;
+<script>
 
-    const whatsappURL =
-        "https://wa.me/923271576380?text=" +
-        encodeURIComponent(msg);
+document.addEventListener(
+    "click",
+    function(event) {
 
-    window.open(
-        whatsappURL,
-        "_blank",
-        "
+        const searchBox =
+            document.querySelector(".search-box");
+
+        const resultsBox =
+            document.getElementById("searchResults");
+
+
+        if (
+            searchBox &&
+            resultsBox &&
+            !searchBox.contains(event.target)
+        ) {
+
+            resultsBox.style.display =
+                "none";
+
+        }
+
+    }
+);
+
+</script>
+
+
+<!-- =========================
+     CART SYSTEM
+========================= -->
+
+<script src="cart.js"></script>
+
+
+<!-- =========================
+     PRODUCT CARD
+========================= -->
+
+<script src="product-card.js"></script>
+
+
+<!-- =========================
+     PRODUCTS
+========================= -->
+
+<script src="products.js"></script>
+
+
+<!-- =========================
+     COMMON SIDEBAR
+========================= -->
+
+<script src="sidebar.js"></script>
+
+
+</body>
+
+    </html>
