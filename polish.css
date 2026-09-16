@@ -177,7 +177,7 @@
 /* VERY SMALL PHONES */
 @media (max-width: 380px) {
 
-  .top-bar {
+ .top-bar {
     padding-left: 7px !important;
     padding-right: 7px !important;
   }
