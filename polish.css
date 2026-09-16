@@ -1,153 +1,139 @@
 /* =========================================
    THE STATIONERY SPOT
-   POLISH CSS
+   MOBILE + VISUAL POLISH
    ========================================= */
 
 
 /* =========================================
-   HOME PAGE — HERO POLISH
+   HERO
    ========================================= */
 
 .hero-box {
     width: min(94%, 1180px);
-    height: 190px;
-    margin: 18px auto 22px;
-    padding: 6px;
-    gap: 8px;
-    border-radius: 18px;
+    height: 180px;
+    margin: 16px auto 20px;
+    padding: 5px;
+    gap: 7px;
+    border-radius: 17px;
     background: #fff;
     border: 1px solid rgba(255, 111, 145, 0.10);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 7px 22px rgba(0, 0, 0, 0.06);
+
+    box-sizing: border-box;
 }
 
 .main-img {
     max-width: 58%;
     height: 100%;
     object-fit: contain;
-    border-radius: 14px;
+    border-radius: 13px;
 }
 
 .side-img {
     max-width: 21%;
     height: 88%;
     object-fit: contain;
-    border-radius: 12px;
+    border-radius: 11px;
     opacity: 0.92;
 }
 
 
 /* =========================================
-   MOBILE HERO
+   MOBILE
    ========================================= */
 
 @media (max-width: 600px) {
 
-    .hero-box {
-        width: calc(100% - 24px);
-        height: 140px;
-        margin: 12px auto 18px;
-        padding: 4px;
-        border-radius: 16px;
-    }
-
-    .main-img {
-        width: 100%;
-        max-width: 100%;
-        height: 100%;
-    }
-}
-
-
-/* =========================================
-   MOBILE HEADER — CLEAN LAYOUT
-   OPTION C
-   ========================================= */
-
-@media (max-width: 600px) {
-
-    /* -----------------------------------------
-       HEADER CONTAINER
-       ----------------------------------------- */
+    /* =====================================
+       HEADER
+       ===================================== */
 
     .top-bar {
+        position: relative;
+
         width: 100%;
-        padding: 10px 14px 12px;
+        height: auto;
 
-        display: grid;
+        padding: 8px 12px 9px;
 
-        grid-template-columns: 52px 1fr 52px;
-        grid-template-rows: 52px auto;
-
-        grid-template-areas:
-            "menu logo cart"
-            "search search search";
-
-        align-items: center;
-
-        gap: 8px;
+        display: block;
 
         box-sizing: border-box;
+
+        background: #fff;
 
         overflow: visible;
     }
 
 
-    /* -----------------------------------------
-       HIDE DESKTOP TEXT TITLE ON MOBILE
-       ----------------------------------------- */
+    /* =====================================
+       HIDE DESKTOP TITLE
+       ===================================== */
 
     .top-heading {
-        display: none;
+        display: none !important;
     }
 
 
-    /* -----------------------------------------
-       LOGO
-       SAME ROUND LOGO AS MENU/SIDEBAR
-       ----------------------------------------- */
+    /* =====================================
+       LOGO AREA
+       ===================================== */
 
     .logo-area {
-        grid-area: logo;
+        position: static;
 
-        display: flex;
+        width: 100%;
+        height: 40px;
 
-        align-items: center;
-        justify-content: center;
-
-        width: 52px;
-        height: 52px;
-
-        margin: 0 auto;
-    }
-
-    .pc-logo {
         display: block;
 
-        width: 44px;
-        height: 44px;
+        margin: 0;
+        padding: 0;
+    }
 
-        min-width: 44px;
-        min-height: 44px;
+
+    /* =====================================
+       SAME ROUND LOGO
+       ===================================== */
+
+    .pc-logo {
+        position: absolute;
+
+        top: 8px;
+        left: 50%;
+
+        transform: translateX(-50%);
+
+        display: block !important;
+
+        width: 38px;
+        height: 38px;
+
+        min-width: 38px;
+        min-height: 38px;
 
         object-fit: cover;
 
         border-radius: 50%;
+
+        z-index: 30;
     }
 
 
-    /* -----------------------------------------
-       HAMBURGER MENU
-       ----------------------------------------- */
+    /* =====================================
+       HAMBURGER
+       ===================================== */
 
     .menu-icon {
         position: absolute;
 
-        left: 14px;
+        top: 9px;
+        left: 12px;
 
-        width: 44px;
-        height: 44px;
+        width: 34px;
+        height: 34px;
 
-        display: flex;
+        display: flex !important;
 
         align-items: center;
         justify-content: center;
@@ -156,13 +142,62 @@
 
         background: #fff;
 
-        border: 1px solid #ddd;
+        border: 1px solid #e5e5e5;
         border-radius: 8px;
 
-        font-size: 25px;
+        color: #333;
+
+        font-size: 20px;
         line-height: 1;
 
-        color: #333;
+        z-index: 40;
+
+        box-sizing: border-box;
+    }
+
+
+    /* =====================================
+       RIGHT SIDE / CART
+       ===================================== */
+
+    .right-menu {
+        display: block !important;
+
+        width: 100%;
+
+        margin: 0;
+        padding: 0;
+    }
+
+
+    .cart-area {
+        position: absolute;
+
+        top: 9px;
+        right: 12px;
+
+        width: auto;
+        height: 34px;
+
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        z-index: 40;
+    }
+
+
+    /* =====================================
+       SEARCH
+       ===================================== */
+
+    .search-box {
+        width: 100%;
+
+        margin-top: 7px;
+
+        position: relative;
 
         z-index: 20;
 
@@ -170,77 +205,334 @@
     }
 
 
-    /* -----------------------------------------
-       RIGHT MENU WRAPPER
-       LET GRID CONTROL SEARCH/CART
-       ----------------------------------------- */
-
-    .right-menu {
-        display: contents;
-    }
-
-
-    /* -----------------------------------------
-       SEARCH BOX
-       FULL WIDTH SECOND ROW
-       ----------------------------------------- */
-
-    .search-box {
-        grid-area: search;
-
-        width: 100%;
-        min-width: 0;
-
-        position: relative;
-
-        z-index: 10;
-    }
-
-
-    /* -----------------------------------------
-       SEARCH INPUT
-       ----------------------------------------- */
-
     .search {
-        width: 100%;
-        height: 42px;
+        display: block;
+
+        width: 100% !important;
+        max-width: 100%;
+
+        height: 36px;
+
+        padding: 6px 12px;
 
         box-sizing: border-box;
 
-        padding: 8px 14px;
+        border-radius: 18px;
 
-        border-radius: 22px;
+        font-size: 12px;
+    }
+
+
+    .search:focus {
+        width: 100% !important;
+    }
+
+
+    /* =====================================
+       HERO MOBILE
+       ===================================== */
+
+    .hero-box {
+        width: calc(100% - 20px);
+
+        height: 125px;
+
+        margin: 10px auto 15px;
+
+        padding: 3px;
+
+        gap: 5px;
+
+        border-radius: 14px;
+    }
+
+
+    .main-img {
+        width: 100%;
+        max-width: 100%;
+
+        height: 100%;
+    }
+
+
+    .side-img {
+        display: none;
+    }
+
+
+    /* =====================================
+       CATEGORY
+       ===================================== */
+
+    .category {
+        padding: 7px 9px;
+    }
+
+
+    .category h2 {
+        margin-top: 8px;
+        margin-bottom: 9px;
+
+        font-size: 18px;
+    }
+
+
+    /* =====================================
+       PRODUCTS GRID
+       ===================================== */
+
+    .products {
+        display: grid;
+
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        gap: 8px;
+
+        padding: 0;
+    }
+
+
+    /* =====================================
+       PRODUCT CARD
+       ===================================== */
+
+    .card {
+        width: 100%;
+
+        padding: 6px;
+
+        border-radius: 9px;
+
+        box-sizing: border-box;
+
+        box-shadow: 0 2px 7px rgba(0, 0, 0, 0.06);
+    }
+
+
+    /* =====================================
+       PRODUCT IMAGE
+       ===================================== */
+
+    .img-box {
+        width: 100%;
+
+        aspect-ratio: 1 / 1;
+
+        margin-bottom: 5px;
+
+        border-radius: 7px;
+    }
+
+
+    .img-box img {
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+    }
+
+
+    /* =====================================
+       PRODUCT NAME
+       ===================================== */
+
+    .card .name,
+    .card h3 {
+        margin: 3px 0 1px;
+
+        font-size: 12px;
+
+        line-height: 1.25;
+    }
+
+
+    /* =====================================
+       PRICE
+       ===================================== */
+
+    .card .price {
+        margin: 2px 0 4px;
 
         font-size: 13px;
     }
 
 
-    /* -----------------------------------------
-       SEARCH FOCUS
-       PREVENT WIDTH EXPANSION
-       ----------------------------------------- */
+    /* =====================================
+       QUANTITY BOX
+       ===================================== */
 
-    .search:focus {
-        width: 100%;
+    .qty-box {
+        margin: 4px 0;
+
+        min-height: 27px;
+
+        border-radius: 5px;
+
+        padding: 1px;
     }
 
 
-    /* -----------------------------------------
-       CART
-       ----------------------------------------- */
+    .qty-box button {
+        min-width: 27px;
+
+        padding: 4px 7px;
+
+        font-size: 12px;
+
+        border-radius: 4px;
+    }
+
+
+    .qty {
+        min-width: 24px;
+
+        font-size: 12px;
+    }
+
+
+    /* =====================================
+       ADD TO CART BUTTON
+       ===================================== */
+
+    .add-btn {
+        width: 100%;
+
+        padding: 6px 5px;
+
+        border-radius: 15px;
+
+        font-size: 11px;
+    }
+
+
+    /* =====================================
+       FLOATING CART ICON
+       ===================================== */
+
+    .floating-icon {
+        right: 5px;
+        bottom: 5px;
+
+        width: 29px;
+        height: 29px;
+
+        font-size: 13px;
+    }
+
+
+    /* =====================================
+       VIEW ALL
+       ===================================== */
+
+    .view-all-wrapper {
+        margin-top: 8px;
+        margin-bottom: 12px;
+    }
+
+
+    .view-all-btn {
+        font-size: 13px;
+
+        padding: 6px 13px;
+    }
+
+
+    /* =====================================
+       MOBILE SIDEBAR
+       KEEP EXISTING DESIGN
+       ===================================== */
+
+    .mobile-menu {
+        width: 250px;
+
+        padding: 20px 17px;
+
+        border-radius: 14px;
+    }
+
+
+    .mobile-menu a {
+        font-size: 15px;
+
+        padding: 10px 11px;
+    }
+
+
+    .close-btn {
+        font-size: 20px;
+
+        margin-bottom: 20px;
+    }
+
+}
+
+
+/* =========================================
+   SMALL PHONES
+   ========================================= */
+
+@media (max-width: 380px) {
+
+    .top-bar {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+
+    .menu-icon {
+        left: 10px;
+
+        width: 32px;
+        height: 32px;
+
+        font-size: 19px;
+    }
+
+
+    .pc-logo {
+        top: 8px;
+
+        width: 36px;
+        height: 36px;
+    }
+
 
     .cart-area {
-        grid-area: cart;
+        right: 10px;
+    }
 
-        display: flex;
 
-        align-items: center;
-        justify-content: flex-end;
+    .search {
+        height: 35px;
 
-        width: 52px;
-        height: 52px;
+        font-size: 11px;
+    }
 
-        z-index: 20;
+
+    .products {
+        gap: 7px;
+    }
+
+
+    .card {
+        padding: 5px;
+    }
+
+
+    .card .name,
+    .card h3 {
+        font-size: 11px;
+    }
+
+
+    .card .price {
+        font-size: 12px;
+    }
+
+
+    .add-btn {
+        font-size: 10px;
+        padding: 6px 4px;
     }
 
 }
