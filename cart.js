@@ -2,7 +2,44 @@
    SHARED CART SYSTEM
 ========================================= */
 
-let cart = [];
+let cart = JSON.parse(
+    localStorage.getItem("stationerySpotCart") || "[]"
+);
+
+
+/* =========================================
+   SAVE CART
+========================================= */
+
+function saveCart() {
+    localStorage.setItem(
+        "stationerySpotCart",
+        JSON.stringify(cart)
+    );
+
+    updateCartCount();
+}
+
+
+/* =========================================
+   CART COUNT
+========================================= */
+
+function updateCartCount() {
+
+    const countElement =
+        document.getElementById("cartCount");
+
+    if (!countElement) return;
+
+    let totalItems = 0;
+
+    cart.forEach(item => {
+        totalItems += Number(item.qty) || 0;
+    });
+
+    countElement.innerText = totalItems;
+}
 
 
 /* =========================================
@@ -40,26 +77,42 @@ function addToCart(btn, code) {
         return;
     }
 
-    cart.push({
-        name: name,
-        code: code || "",
-        qty: qty,
-        total: price * qty
-    });
+    const existingItem = cart.find(
+        item => item.code === (code || "") &&
+                item.name === name
+    );
 
-    showOrderBox();
+    if (existingItem) {
+
+        existingItem.qty += qty;
+
+        existingItem.total =
+            price * existingItem.qty;
+
+    } else {
+
+        cart.push({
+            name: name,
+            code: code || "",
+            qty: qty,
+            total: price * qty
+        });
+    }
+
+    saveCart();
 
     alert("Added: " + name);
 }
 
 
 /* =========================================
-   QUANTITY + 
+   QUANTITY +
 ========================================= */
 
 function increase(btn) {
 
-    const qty = btn.parentElement.querySelector(".qty");
+    const qty =
+        btn.parentElement.querySelector(".qty");
 
     if (!qty) return;
 
@@ -79,7 +132,8 @@ function increase(btn) {
 
 function decrease(btn) {
 
-    const qty = btn.parentElement.querySelector(".qty");
+    const qty =
+        btn.parentElement.querySelector(".qty");
 
     if (!qty) return;
 
@@ -124,7 +178,7 @@ function sendWhatsAppOrder() {
             item.total +
             "\n";
 
-        total += item.total;
+        total += Number(item.total) || 0;
     });
 
     msg += "\nTOTAL: Rs." + total;
@@ -142,23 +196,10 @@ function sendWhatsAppOrder() {
 
 
 /* =========================================
-   SHOW ORDER BUTTON
+   INITIAL CART COUNT
 ========================================= */
 
-function showOrderBox() {
-
-    const floatBtn =
-        document.getElementById("floatingBtn");
-
-    if (!floatBtn) return;
-
-    floatBtn.style.display = "block";
-
-    clearTimeout(window.orderBoxTimer);
-
-    window.orderBoxTimer = setTimeout(() => {
-
-        floatBtn.style.display = "none";
-
-    }, 10000);
-      }
+document.addEventListener(
+    "DOMContentLoaded",
+    updateCartCount
+);
