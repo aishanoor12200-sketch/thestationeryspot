@@ -1,4 +1,12 @@
-/* Home page — Step 1: Hero Polish */
+/* =========================================
+   THE STATIONERY SPOT
+   POLISH CSS
+   ========================================= */
+
+
+/* =========================================
+   HOME PAGE — HERO POLISH
+   ========================================= */
 
 .hero-box {
     width: min(94%, 1180px);
@@ -27,7 +35,13 @@
     opacity: 0.92;
 }
 
+
+/* =========================================
+   MOBILE HERO
+   ========================================= */
+
 @media (max-width: 600px) {
+
     .hero-box {
         width: calc(100% - 24px);
         height: 140px;
@@ -41,4 +55,192 @@
         max-width: 100%;
         height: 100%;
     }
+}
+
+
+/* =========================================
+   MOBILE HEADER — CLEAN LAYOUT
+   OPTION C
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    /* -----------------------------------------
+       HEADER CONTAINER
+       ----------------------------------------- */
+
+    .top-bar {
+        width: 100%;
+        padding: 10px 14px 12px;
+
+        display: grid;
+
+        grid-template-columns: 52px 1fr 52px;
+        grid-template-rows: 52px auto;
+
+        grid-template-areas:
+            "menu logo cart"
+            "search search search";
+
+        align-items: center;
+
+        gap: 8px;
+
+        box-sizing: border-box;
+
+        overflow: visible;
+    }
+
+
+    /* -----------------------------------------
+       HIDE DESKTOP TEXT TITLE ON MOBILE
+       ----------------------------------------- */
+
+    .top-heading {
+        display: none;
+    }
+
+
+    /* -----------------------------------------
+       LOGO
+       SAME ROUND LOGO AS MENU/SIDEBAR
+       ----------------------------------------- */
+
+    .logo-area {
+        grid-area: logo;
+
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        width: 52px;
+        height: 52px;
+
+        margin: 0 auto;
+    }
+
+    .pc-logo {
+        display: block;
+
+        width: 44px;
+        height: 44px;
+
+        min-width: 44px;
+        min-height: 44px;
+
+        object-fit: cover;
+
+        border-radius: 50%;
+    }
+
+
+    /* -----------------------------------------
+       HAMBURGER MENU
+       ----------------------------------------- */
+
+    .menu-icon {
+        position: absolute;
+
+        left: 14px;
+
+        width: 44px;
+        height: 44px;
+
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        padding: 0;
+
+        background: #fff;
+
+        border: 1px solid #ddd;
+        border-radius: 8px;
+
+        font-size: 25px;
+        line-height: 1;
+
+        color: #333;
+
+        z-index: 20;
+
+        box-sizing: border-box;
+    }
+
+
+    /* -----------------------------------------
+       RIGHT MENU WRAPPER
+       LET GRID CONTROL SEARCH/CART
+       ----------------------------------------- */
+
+    .right-menu {
+        display: contents;
+    }
+
+
+    /* -----------------------------------------
+       SEARCH BOX
+       FULL WIDTH SECOND ROW
+       ----------------------------------------- */
+
+    .search-box {
+        grid-area: search;
+
+        width: 100%;
+        min-width: 0;
+
+        position: relative;
+
+        z-index: 10;
+    }
+
+
+    /* -----------------------------------------
+       SEARCH INPUT
+       ----------------------------------------- */
+
+    .search {
+        width: 100%;
+        height: 42px;
+
+        box-sizing: border-box;
+
+        padding: 8px 14px;
+
+        border-radius: 22px;
+
+        font-size: 13px;
+    }
+
+
+    /* -----------------------------------------
+       SEARCH FOCUS
+       PREVENT WIDTH EXPANSION
+       ----------------------------------------- */
+
+    .search:focus {
+        width: 100%;
+    }
+
+
+    /* -----------------------------------------
+       CART
+       ----------------------------------------- */
+
+    .cart-area {
+        grid-area: cart;
+
+        display: flex;
+
+        align-items: center;
+        justify-content: flex-end;
+
+        width: 52px;
+        height: 52px;
+
+        z-index: 20;
+    }
+
 }
