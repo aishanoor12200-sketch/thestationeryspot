@@ -550,5 +550,45 @@
     "category": "Diaries",
     "image": "/images/products/1789469720198.png",
     "available": true
+  },
+  {
+    "code": "GS05",
+    "name": "Glass Sipper ",
+    "price": 550,
+    "category": "Glass Sippers",
+    "image": "/images/products/1789544350966.png",
+    "available": true
+  },
+  {
+    "code": "GS06",
+    "name": "Sip & Drink Tumbler ",
+    "price": 450,
+    "category": "Glass Sippers",
+    "image": "/images/products/1789543985842.png",
+    "available": true
+  },
+  {
+    "code": "GS07",
+    "name": "Glass Aipper ",
+    "price": 550,
+    "category": "Glass Sippers",
+    "image": "/images/products/1789544215848.png",
+    "available": true
+  },
+  {
+    "code": "GS08",
+    "name": "Wooden lid Glass Sipper ",
+    "price": 650,
+    "category": "Glass Sippers",
+    "image": "/images/products/1789544419139.png",
+    "available": true
+  },
+  {
+    "code": "GS09",
+    "name": "Glass Sipper With Wooden lid ",
+    "price": 650,
+    "category": "Glass Sippers",
+    "image": "/images/products/1789544428874.png",
+    "available": true
   }
 ]
