@@ -14,15 +14,17 @@
     display: flex !important;
     align-items: center !important;
     position: relative !important;
-    gap: 6px !important;
+    gap: 0 !important;
     overflow: visible !important;
     background: #fff !important;
   }
 
-  /* MENU — far left */
+  /* MENU — left */
   .logo-area {
-    order: 1 !important;
-    flex: 0 0 auto !important;
+    position: absolute !important;
+    left: 9px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
     width: 30px !important;
     min-width: 30px !important;
     height: 32px !important;
@@ -45,9 +47,12 @@
     margin: 0 !important;
     align-items: center !important;
     justify-content: center !important;
-    background: transparent !important;
+
+    /* CUTE PINK MENU BORDER */
     border: 1px solid #ff6f91 !important;
     border-radius: 7px !important;
+    background: transparent !important;
+
     font-size: 21px !important;
     line-height: 1 !important;
   }
@@ -57,26 +62,28 @@
     display: none !important;
   }
 
-  /* UNWRAP so search + cart can sit on opposite sides of the title
-     instead of being stuck together in one corner */
+  /* wrapper itself no longer positions anything — search and
+     cart are each pinned independently below, so it can't
+     drag them out of place */
   .right-menu {
-    display: contents !important;
+    position: static !important;
   }
 
   /* SEARCH — right after the menu icon */
   .search-box {
-    order: 2 !important;
-    flex: 0 0 auto !important;
-    width: 74px !important;
-    min-width: 74px !important;
+    position: absolute !important;
+    left: 44px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    width: 60px !important;
+    min-width: 60px !important;
     margin: 0 !important;
-    position: relative !important;
   }
 
   .search {
-    width: 74px !important;
-    min-width: 74px !important;
-    max-width: 74px !important;
+    width: 60px !important;
+    min-width: 60px !important;
+    max-width: 60px !important;
     height: 29px !important;
     padding: 4px 8px !important;
     border-radius: 15px !important;
@@ -84,44 +91,50 @@
   }
 
   .search:focus {
-    width: 74px !important;
-    min-width: 74px !important;
-    max-width: 74px !important;
+    width: 60px !important;
+    min-width: 60px !important;
+    max-width: 60px !important;
   }
 
-  /* SEARCH RESULTS DROPDOWN */
+  /* SEARCH RESULTS DROPDOWN — opens from the left edge now,
+     since the box lives on the left side of the header */
   .search-results {
     width: 180px !important;
     max-height: 200px !important;
-    right: 0 !important;
+    left: 0 !important;
+    right: auto !important;
     top: calc(100% + 3px) !important;
     z-index: 99999 !important;
   }
 
-  /* TITLE — fills the leftover middle space and truncates
-     instead of overlapping search or cart */
+  /* TITLE — centered, capped so it can never reach search or cart */
   .top-heading {
-    order: 3 !important;
-    flex: 1 1 auto !important;
-    min-width: 0 !important;
-    position: static !important;
-    margin: 0 4px !important;
+    display: block !important;
+    position: absolute !important;
+    left: 50% !important;
+    top: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    width: max-content !important;
+    max-width: 128px !important;
+    margin: 0 !important;
     padding: 0 !important;
     font-family: 'Pacifico', cursive !important;
-    font-size: 16px !important;
+    font-size: 14px !important;
     line-height: 1 !important;
     color: #ff6f91 !important;
     text-align: center !important;
     white-space: nowrap !important;
     overflow: hidden !important;
     text-overflow: ellipsis !important;
+    z-index: 5 !important;
   }
 
   /* CART — far right corner */
   .cart-area {
-    order: 4 !important;
-    flex: 0 0 auto !important;
-    position: static !important;
+    position: absolute !important;
+    right: 9px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
     width: 30px !important;
     min-width: 30px !important;
     height: 30px !important;
@@ -167,6 +180,7 @@
   }
 
   .logo-area {
+    left: 7px !important;
     width: 28px !important;
     min-width: 28px !important;
   }
@@ -176,23 +190,32 @@
     font-size: 20px !important;
   }
 
-  .top-heading {
-    font-size: 15px !important;
-  }
-
-  .search-box,
-  .search {
-    width: 64px !important;
-    min-width: 64px !important;
-    max-width: 64px !important;
+  .search-box {
+    left: 40px !important;
+    width: 52px !important;
+    min-width: 52px !important;
   }
 
   .search {
+    width: 52px !important;
+    min-width: 52px !important;
+    max-width: 52px !important;
     font-size: 8px !important;
   }
 
-  .cart-area,
-  .cart-button {
+  .search:focus {
+    width: 52px !important;
+    min-width: 52px !important;
+    max-width: 52px !important;
+  }
+
+  .top-heading {
+    font-size: 13px !important;
+    max-width: 104px !important;
+  }
+
+  .cart-area {
+    right: 7px !important;
     width: 28px !important;
     min-width: 28px !important;
   }
@@ -202,6 +225,3 @@
   }
 
 }
-
-
-
