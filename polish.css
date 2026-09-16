@@ -81,20 +81,21 @@
   }
 
   .search {
-    width: 60px !important;
-    min-width: 60px !important;
-    max-width: 60px !important;
+    width: 70px !important;
+    min-width: 70px !important;
+    max-width: 70px !important;
     height: 29px !important;
     padding: 4px 8px !important;
-    border-radius: 15px !important;
+    border-radius: 16px !important;
     font-size: 9px !important;
   }
 
-  .search:focus {
-    width: 60px !important;
-    min-width: 60px !important;
-    max-width: 60px !important;
-  }
+   .search:focus {
+  width: 70px !important;
+  min-width: 70px !important;
+  max-width: 70px !important;
+  height: 36px !important;
+}
 
   /* SEARCH RESULTS DROPDOWN — opens from the left edge now,
      since the box lives on the left side of the header */
