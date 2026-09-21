@@ -86,3 +86,108 @@ button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid #f5a5
         margin: 6px 8px 12px !important;
     }
 }
+/* =====================================================
+   FINAL MOBILE PRODUCT CARD / HOMEPAGE FIX
+   ===================================================== */
+
+@media (max-width: 768px) {
+
+    main {
+        width: 100%;
+        overflow: visible !important;
+    }
+
+    .category {
+        width: 100%;
+        height: auto !important;
+        min-height: 0 !important;
+        overflow: visible !important;
+        padding: 20px 12px 40px !important;
+    }
+
+    .products {
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        width: 100% !important;
+        height: auto !important;
+        min-height: 0 !important;
+        overflow: visible !important;
+        align-items: start !important;
+    }
+
+    /* IMPORTANT:
+       product-card itself must behave as a proper grid item */
+    product-card {
+        display: block !important;
+        width: 100% !important;
+        min-width: 0 !important;
+        height: auto !important;
+        min-height: 0 !important;
+        overflow: visible !important;
+    }
+
+    product-card .card {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        height: auto !important;
+        min-height: 0 !important;
+        overflow: visible !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Don't force a fixed image height */
+    product-card .img-box {
+        width: 100% !important;
+        height: auto !important;
+        min-height: 0 !important;
+        aspect-ratio: 1 / 1 !important;
+        overflow: hidden !important;
+        flex-shrink: 0 !important;
+    }
+
+    product-card .img-box img {
+        display: block !important;
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+    }
+
+    product-card .name {
+        display: block !important;
+        height: auto !important;
+        min-height: 40px !important;
+        overflow: visible !important;
+        margin: 10px 8px 4px !important;
+    }
+
+    product-card .price {
+        display: block !important;
+        height: auto !important;
+        overflow: visible !important;
+        margin: 4px 8px !important;
+    }
+
+    product-card .qty-box {
+        display: flex !important;
+        height: auto !important;
+        min-height: 36px !important;
+        margin: 8px 0 !important;
+    }
+
+    product-card .add-btn {
+        display: block !important;
+        width: calc(100% - 16px) !important;
+        height: auto !important;
+        min-height: 40px !important;
+        margin: 6px 8px 12px !important;
+    }
+
+    /* Prevent homepage from stopping after first row */
+    #productContainer,
+    #productContainer .category,
+    #productContainer .products {
+        position: relative !important;
+        overflow: visible !important;
+    }
+}
