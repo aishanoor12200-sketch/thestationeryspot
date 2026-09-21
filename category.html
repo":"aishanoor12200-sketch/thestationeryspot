@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Stationery Spot</title>
+    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="sidebar.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="category-page-body">
+    <header class="top-bar">
+        <div class="logo-area">
+            <button class="menu-icon" type="button" onclick="openCommonSidebar()" aria-label="Open menu">☰</button>
+            <a href="index.html" aria-label="Go to home page">
+                <img src="images/IMG-20260515-WA0016.jpg" class="pc-logo" alt="The Stationery Spot" width="80" height="80">
+            </a>
+        </div>
+        <h1 class="top-heading">The Stationery Spot</h1>
+
+        <nav class="left-menu" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="deals.html">Deals</a>
+            <a href="contact.html">Contact</a>
+            <a href="Refund policy.html">Refund Policy</a>
+            <a href="Shipping policy.html">Shipping Policy</a>
+        </nav>
+
+        <div class="right-menu">
+            <div class="search-box">
+                <input type="search" class="search" id="searchInput" oninput="searchItems()" placeholder="Search products..." aria-label="Search products" autocomplete="off">
+                <div class="search-results" id="searchResults"></div>
+            </div>
+            <div class="cart-area">
+                <button class="cart-button" type="button" onclick="openCart()" aria-label="Open shopping cart">
+                    🛒
+                    <span id="cartCount" class="cart-count">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div id="cartOverlay" class="cart-overlay" onclick="closeCart()"></div>
+    <aside id="cartDrawer" class="cart-drawer" aria-label="Shopping cart">
+        <div class="cart-header">
+            <div>
+                <h2>🛒 My Cart</h2>
+                <span id="cartItemCount" class="cart-item-count">0 items</span>
+            </div>
+            <button type="button" class="cart-close" onclick="closeCart()" aria-label="Close cart">×</button>
+        </div>
+        <div id="cartEmpty" class="cart-empty">
+            <div class="cart-empty-icon">🛒</div>
+            <h3>Your cart is empty</h3>
+            <p>Add some cute stationery to your cart! 💕</p>
+            <button type="button" class="cart-continue" onclick="closeCart()">Continue Shopping</button>
+        </div>
+        <div id="cartItems" class="cart-items"></div>
+        <div id="cartFooter" class="cart-footer">
+            <div class="cart-total-row">
+                <span>Total</span>
+                <strong id="cartTotal">Rs.0</strong>
+            </div>
+            <button type="button" class="cart-whatsapp-btn" onclick="sendWhatsAppOrder()">💬 Order on WhatsApp</button>
+            <button type="button" class="cart-clear-btn" onclick="clearCart()">Clear Cart</button>
+        </div>
+    </aside>
+
+    <main>
+        <section class="category-page">
+            <h2 id="categoryTitle">Products</h2>
+            <div id="categoryProducts" class="products category-products"></div>
+        </section>
+    </main>
+
+    <script src="cart.js"></script>
+    <script src="product-card.js"></script>
+    <script src="category.js"></script>
+    <script src="sidebar.js"></script>
+    <script src="whatsapp.js"></script>
+
+    <script>
+        let categorySearchProducts = [];
+        function searchItems() {
+            const inputElement = document.getElementById("searchInput");
+            const resultsBox = document.getElementById("searchResults");
+            if (!inputElement || !resultsBox) return;
+
+            const input = inputElement.value.trim().toLowerCase();
+            resultsBox.innerHTML = "";
+            if (input === "") {
+                resultsBox.style.display = "none";
+                return;
+            }
+
+            if (!categorySearchProducts.length) {
+                fetch("data/products.json")
+                    .then(response => response.ok ? response.json() : [])
+                    .then(products => {
+                        categorySearchProducts = Array.isArray(products) ? products : [];
+                        searchItems();
+                    })
+                    .catch(() => {
+                        resultsBox.innerHTML = "<div>Unable to load products.</div>";
+                        resultsBox.style.display = "block";
+                    });
+                resultsBox.innerHTML = "<div>Loading products...</div>";
+                resultsBox.style.display = "block";
+                return;
+            }
+
+            const matches = categorySearchProducts.filter(product => {
+                if (product.available === false) return false;
+                const name = String(product.name || "").toLowerCase();
+                const category = String(product.category || "").toLowerCase();
+                const code = String(product.code || "").toLowerCase();
+                return name.includes(input) || category.includes(input) || code.includes(input);
+            }).slice(0, 12);
+
+            if (!matches.length) {
+                resultsBox.innerHTML = "<div>No product found</div>";
+                resultsBox.style.display = "block";
+                return;
+            }
+
+            matches.forEach(product => {
+                const item = document.createElement("div");
+                item.className = "search-result-item";
+                item.style.padding = "9px 10px";
+                item.style.cursor = "pointer";
+                item.style.borderRadius = "8px";
+                item.innerHTML = `<strong style="display:block;">${product.name}</strong><small style="display:block;color:#888;margin-top:2px;">${product.category} · Rs.${product.price}</small>`;
+
+                item.addEventListener("click", () => {
+                    const cards = document.querySelectorAll("product-card");
+                    let targetCard = null;
+                    cards.forEach(card => {
+                        if (!targetCard && card.getAttribute("code") === String(product.code || "") && card.getAttribute("image") === String(product.image || "")) {
+                            targetCard = card;
+                        }
+                    });
+
+                    if (targetCard) {
+                        resultsBox.style.display = "none";
+                        inputElement.value = "";
+                        targetCard.scrollIntoView({ behavior: "smooth", block: "center" });
+                    } else {
+                        resultsBox.style.display = "none";
+                    }
+                });
+                resultsBox.appendChild(item);
+            });
+
+            resultsBox.style.display = "block";
+        }
+
+        document.addEventListener("click", function (event) {
+            const searchBox = document.querySelector(".search-box");
+            const resultsBox = document.getElementById("searchResults");
+            if (searchBox && resultsBox && !searchBox.contains(event.target)) {
+                resultsBox.style.display = "none";
+            }
+        });
+    </script>
+</body>
+</html>

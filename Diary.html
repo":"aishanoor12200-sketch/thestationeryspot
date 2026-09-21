@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Stationery Spot</title>
+    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="sidebar.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: #fffafd;
+            color: #2c2430;
+            font-family: 'Poppins', sans-serif;
+        }
+        .page-shell {
+            width: min(1200px, calc(100% - 24px));
+            margin: 0 auto;
+            padding: 32px 0 48px;
+        }
+        .hero-banner {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 180px;
+            margin-bottom: 18px;
+            padding: 28px 20px;
+            border-radius: 24px;
+            background: linear-gradient(135deg, #fff0f5, #ffffff);
+            border: 1px solid #f1dde5;
+            box-shadow: 0 10px 30px rgba(76, 28, 50, 0.06);
+            text-align: center;
+        }
+        .hero-banner h1 {
+            margin: 0;
+            font-family: 'Pacifico', cursive;
+            color: #ff6f91;
+            font-size: clamp(2rem, 4vw, 3.2rem);
+            line-height: 1.1;
+        }
+        .hero-banner p {
+            margin: 10px 0 0;
+            color: #756b73;
+            font-size: 0.96rem;
+        }
+        .category-page .products {
+            margin-top: 16px;
+        }
+        @media (max-width: 768px) {
+            .page-shell {
+                width: min(100%, calc(100% - 18px));
+                padding-top: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="top-bar">
+        <div class="logo-area">
+            <button class="menu-icon" type="button" onclick="openCommonSidebar()" aria-label="Open menu">☰</button>
+            <a href="index.html" aria-label="Return to home page">
+                <img src="images/1778446342483.png" class="pc-logo" alt="The Stationery Spot" width="80" height="80">
+            </a>
+        </div>
+        <div class="top-heading">The Stationery Spot</div>
+        <nav class="left-menu" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="deals.html">Deals</a>
+            <a href="contact.html">Contact</a>
+            <a href="Refund policy.html">Refund Policy</a>
+            <a href="Shipping policy.html">Shipping Policy</a>
+        </nav>
+        <div class="right-menu">
+            <div class="cart-area">
+                <button class="cart-button" type="button" onclick="openCart()" aria-label="Open shopping cart">
+                    🛒
+                    <span id="cartCount" class="cart-count">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div id="cartOverlay" class="cart-overlay" onclick="closeCart()"></div>
+    <aside id="cartDrawer" class="cart-drawer" aria-label="Shopping cart">
+        <div class="cart-header">
+            <div>
+                <h2>🛒 My Cart</h2>
+                <span id="cartItemCount" class="cart-item-count">0 items</span>
+            </div>
+            <button type="button" class="cart-close" onclick="closeCart()" aria-label="Close cart">×</button>
+        </div>
+        <div id="cartEmpty" class="cart-empty">
+            <div class="cart-empty-icon">🛒</div>
+            <h3>Your cart is empty</h3>
+            <p>Add some cute stationery to your cart! 💕</p>
+            <button type="button" class="cart-continue" onclick="closeCart()">Continue Shopping</button>
+        </div>
+        <div id="cartItems" class="cart-items"></div>
+        <div id="cartFooter" class="cart-footer">
+            <div class="cart-total-row">
+                <span>Total</span>
+                <strong id="cartTotal">Rs.0</strong>
+            </div>
+            <button type="button" class="cart-whatsapp-btn" onclick="sendWhatsAppOrder()">💬 Order on WhatsApp</button>
+            <button type="button" class="cart-clear-btn" onclick="clearCart()">Clear Cart</button>
+        </div>
+    </aside>
+
+    <main class="page-shell">
+        <section class="category category-page">
+            <div class="hero-banner">
+                <div>
+                    <h1>Diary Collection</h1>
+                    <p>Thoughtful notebooks, cute planners, and charming daily companions for every moment.</p>
+                </div>
+            </div>
+            <h2>Diaries</h2>
+            <div id="diaryProducts" class="products"></div>
+        </section>
+    </main>
+
+    <script src="cart.js"></script>
+    <script src="product-card.js"></script>
+    <script src="sidebar.js"></script>
+    <script src="whatsapp.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const container = document.getElementById("diaryProducts");
+            if (!container) return;
+
+            fetch("data/products.json")
+                .then(response => {
+                    if (!response.ok) throw new Error("Products file could not be loaded.");
+                    return response.json();
+                })
+                .then(products => {
+                    if (!Array.isArray(products)) throw new Error("products.json must contain an array.");
+
+                    const entries = products.filter(product =>
+                        product &&
+                        product.available !== false &&
+                        String(product.category || "").toLowerCase() === "diaries" &&
+                        product.name &&
+                        product.image
+                    );
+
+                    if (!entries.length) {
+                        container.innerHTML = '<div class="product-error"><p>No diaries are currently available.</p></div>';
+                        return;
+                    }
+
+                    entries.forEach(product => {
+                        const card = document.createElement("product-card");
+                        card.setAttribute("image", product.image);
+                        card.setAttribute("name", product.name);
+                        card.setAttribute("price", product.price);
+                        card.setAttribute("code", product.code || "");
+                        container.appendChild(card);
+                    });
+                })
+                .catch(error => {
+                    console.error("Diary products error:", error);
+                    container.innerHTML = '<div class="product-error"><p>Diaries could not be loaded right now.</p></div>';
+                });
+        });
+    </script>
+</body>
+</html>

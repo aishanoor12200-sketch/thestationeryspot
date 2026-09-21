@@ -1,0 +1,674 @@
+[
+  {
+    "code": "DR01",
+    "name": "Cute Floral Diary",
+    "price": 450,
+    "category": "Diaries",
+    "image": "/images/products/diary1.jpg.jpeg",
+    "available": true
+  },
+  {
+    "code": "DR02",
+    "name": "Cute Floral Diary",
+    "price": 450,
+    "category": "Diaries",
+    "image": "/images/products/diary2.jpg.jpeg",
+    "available": true
+  },
+  {
+    "code": "DR03",
+    "name": "Mini Butterfly Diary",
+    "price": 400,
+    "category": "Diaries",
+    "image": "/images/products/1776979089868.png",
+    "available": true
+  },
+  {
+    "code": "DR04",
+    "name": "Spiral Diary",
+    "price": 650,
+    "category": "Diaries",
+    "image": "/images/products/1777048988675.png",
+    "available": true
+  },
+  {
+    "code": "DR06",
+    "name": "Fluffy Diary",
+    "price": 750,
+    "category": "Diaries",
+    "image": "/images/products/IMG_20260409_231905_926.webp",
+    "available": true
+  },
+  {
+    "code": "DR07",
+    "name": "Fluffy Diary",
+    "price": 750,
+    "category": "Diaries",
+    "image": "/images/products/IMG_20260409_232148_112.webp",
+    "available": true
+  },
+  {
+    "code": "DR08",
+    "name": "Fluffy Diary",
+    "price": 750,
+    "category": "Diaries",
+    "image": "/images/products/IMG_20260409_232004_993.webp",
+    "available": true
+  },
+  {
+    "code": "DR10",
+    "name": "Fluffy Diary",
+    "price": 750,
+    "category": "Diaries",
+    "image": "/images/products/IMG_20260409_232204_364.webp",
+    "available": true
+  },
+  {
+    "code": "DR11",
+    "name": "Fluffy Diary",
+    "price": 750,
+    "category": "Diaries",
+    "image": "/images/products/IMG_20260409_232224_819.webp",
+    "available": true
+  },
+  {
+    "code": "GS01",
+    "name": "Glass Sipper",
+    "price": 550,
+    "category": "Glass Sippers",
+    "image": "/images/products/1775047562837.png",
+    "available": true
+  },
+  {
+    "code": "GS02",
+    "name": "Glass Sipper",
+    "price": 650,
+    "category": "Glass Sippers",
+    "image": "/images/products/IMG-20260419-WA0022.jpg",
+    "available": true
+  },
+  {
+    "code": "GS03",
+    "name": "Kids Sipper",
+    "price": 250,
+    "category": "Glass Sippers",
+    "image": "/images/products/1777375020138.png",
+    "available": true
+  },
+  {
+    "code": "GS04",
+    "name": "Straw Glass Sipper",
+    "price": 150,
+    "category": "Glass Sippers",
+    "image": "/images/products/1777458459267.png",
+    "available": true
+  },
+  {
+    "code": "GS05A",
+    "name": "Glitter Kids Mugs",
+    "price": 150,
+    "category": "Glass Sippers",
+    "image": "/images/products/1777820984326.png",
+    "available": true
+  },
+  {
+    "code": "GS06A",
+    "name": "Glass Sipper",
+    "price": 650,
+    "category": "Glass Sippers",
+    "image": "/images/products/1778312589934.png",
+    "available": true
+  },
+  {
+    "code": "GS08A",
+    "name": "Glass Sipper",
+    "price": 550,
+    "category": "Glass Sippers",
+    "image": "/images/products/1778792435299.png",
+    "available": true
+  },
+  {
+    "code": "GS10",
+    "name": "Plastic Straw Glass",
+    "price": 70,
+    "category": "Glass Sippers",
+    "image": "/images/products/1783190314944.png",
+    "available": true
+  },
+  {
+    "code": "E01",
+    "name": "Kids Vegetable Eraser",
+    "price": 200,
+    "category": "Erasers",
+    "image": "/images/products/1776512603250.png",
+    "available": true
+  },
+  {
+    "code": "E02",
+    "name": "Donut Eraser",
+    "price": 50,
+    "category": "Erasers",
+    "image": "/images/products/1777459084960.png",
+    "available": true
+  },
+  {
+    "code": "E03",
+    "name": "Mobile Eraser",
+    "price": 50,
+    "category": "Erasers",
+    "image": "/images/products/1776009864699.png",
+    "available": true
+  },
+  {
+    "code": "E04",
+    "name": "Mobile Eraser",
+    "price": 120,
+    "category": "Erasers",
+    "image": "/images/products/1783189878692.png",
+    "available": true
+  },
+  {
+    "code": "S01",
+    "name": "Kids Sharpner",
+    "price": 10,
+    "category": "Sharpeners",
+    "image": "/images/products/c.png",
+    "available": true
+  },
+  {
+    "code": "S05",
+    "name": "Kids Sharpner",
+    "price": 150,
+    "category": "Sharpeners",
+    "image": "/images/products/1775895864296.png",
+    "available": true
+  },
+  {
+    "code": "S06",
+    "name": "Pencil Sharpner",
+    "price": 8,
+    "category": "Sharpeners",
+    "image": "/images/products/1777375089736.png",
+    "available": true
+  },
+  {
+    "code": "S07",
+    "name": "Pencil Sharpner",
+    "price": 8,
+    "category": "Sharpeners",
+    "image": "/images/products/1777459057331.png",
+    "available": true
+  },
+  {
+    "code": "S08",
+    "name": "Dino Sharpner",
+    "price": 100,
+    "category": "Sharpeners",
+    "image": "/images/products/1777821684167.png",
+    "available": true
+  },
+  {
+    "code": "P03",
+    "name": "Kid Pencil",
+    "price": 70,
+    "category": "Kids Pencils",
+    "image": "/images/products/1775896010130.png",
+    "available": true
+  },
+  {
+    "code": "K03",
+    "name": "Mini donut keychain",
+    "price": 50,
+    "category": "Keychains",
+    "image": "/images/products/1783190120612.png",
+    "available": true
+  },
+  {
+    "code": "SP02",
+    "name": "Astronaut Metal Pencil Box",
+    "price": 300,
+    "category": "Stationery Box",
+    "image": "/images/products/1783190384109.png",
+    "available": true
+  },
+  {
+    "code": "IP01",
+    "name": "Imported Ink Pen",
+    "price": 300,
+    "category": "Pens",
+    "image": "/images/products/1775896158680.png",
+    "available": true
+  },
+  {
+    "code": "IP02",
+    "name": "Fountain Ink Pen",
+    "price": 150,
+    "category": "Pens",
+    "image": "/images/products/1776008992502.png",
+    "available": true
+  },
+  {
+    "code": "IP03",
+    "name": "Dux Ink Pen",
+    "price": 150,
+    "category": "Pens",
+    "image": "/images/products/1777821034662.png",
+    "available": true
+  },
+  {
+    "code": "PR01",
+    "name": "Pointer",
+    "price": 450,
+    "category": "Other",
+    "image": "/images/products/1775851553321.png",
+    "available": true
+  },
+  {
+    "code": "CP01",
+    "name": "Colour Pencil",
+    "price": 300,
+    "category": "Other",
+    "image": "/images/products/1775850786226.png",
+    "available": true
+  },
+  {
+    "code": "CP02",
+    "name": "Double Sided Colour",
+    "price": 300,
+    "category": "Other",
+    "image": "/images/products/1777458925060.png",
+    "available": true
+  },
+  {
+    "code": "CP03",
+    "name": "Colour kit for kids",
+    "price": 250,
+    "category": "Other",
+    "image": "/images/products/1783190012712.png",
+    "available": true
+  },
+  {
+    "code": "SB01",
+    "name": "Kid Sipper Bottle",
+    "price": 250,
+    "category": "Water Bottles",
+    "image": "/images/products/1777821216392.png",
+    "available": true
+  },
+  {
+    "code": "SB02",
+    "name": "KidS Sipper Bottle",
+    "price": 400,
+    "category": "Water Bottles",
+    "image": "/images/products/1777458857015.png",
+    "available": true
+  },
+  {
+    "code": "SN01",
+    "name": "Sticky Notes",
+    "price": 90,
+    "category": "Sticky notes",
+    "image": "/images/products/1777821295104.png",
+    "available": true
+  },
+  {
+    "code": "PH01",
+    "name": "Pencil Holder",
+    "price": 100,
+    "category": "Organizers",
+    "image": "/images/products/1777459009405.png",
+    "available": true
+  },
+  {
+    "code": "PS01",
+    "name": "Plastic Scale",
+    "price": 45,
+    "category": "Scales",
+    "image": "/images/products/1777459192512.png",
+    "available": true
+  },
+  {
+    "code": "PS02",
+    "name": "Plastic Scale",
+    "price": 35,
+    "category": "Scales",
+    "image": "/images/products/1777458614433.png",
+    "available": true
+  },
+  {
+    "code": "EB01",
+    "name": "Exam Board",
+    "price": 350,
+    "category": "Exam Board/Files",
+    "image": "/images/products/1777459440920.png",
+    "available": true
+  },
+  {
+    "code": "WT01",
+    "name": "Fancy Washi Tape",
+    "price": 50,
+    "category": "Tapes",
+    "image": "/images/products/1777375061469.png",
+    "available": true
+  },
+  {
+    "code": "CT01",
+    "name": "Carton Tape",
+    "price": 200,
+    "category": "Tapes",
+    "image": "/images/products/1777458780061.png",
+    "available": true
+  },
+  {
+    "code": "PC01",
+    "name": "Paper Cutter",
+    "price": 200,
+    "category": "Cutter",
+    "image": "/images/products/1777459630741.png",
+    "available": true
+  },
+  {
+    "code": "CR01",
+    "name": "Mini Calculator",
+    "price": 250,
+    "category": "Calculators",
+    "image": "/images/products/1777821440563.png",
+    "available": true
+  },
+  {
+    "code": "B01A",
+    "name": "Plastic Airtight Bags",
+    "price": 300,
+    "category": "Bags",
+    "image": "/images/products/1777458715975.png",
+    "available": true
+  },
+  {
+    "code": "SR01",
+    "name": "Small Stapler",
+    "price": 220,
+    "category": "Staplers",
+    "image": "/images/products/1783190433077.png",
+    "available": true
+  },
+  {
+    "code": "EN01",
+    "name": "Eid Mubarak Envelopes",
+    "price": 80,
+    "category": "Envelopes",
+    "image": "/images/products/1783190081104.png",
+    "available": true
+  },
+  {
+    "code": "SN02",
+    "name": "Sticky Notes",
+    "price": 180,
+    "category": "Sticky notes",
+    "image": "/images/products/1783190346866.png",
+    "available": true
+  },
+  {
+    "code": "SN03",
+    "name": "Sticky Notes",
+    "price": 250,
+    "category": "Sticky notes",
+    "image": "/images/products/1783190368118.png",
+    "available": true
+  },
+  {
+    "code": "TY01",
+    "name": "Kids Glitter Ball ",
+    "price": 200,
+    "category": "Toys",
+    "image": "/images/products/1788715395286-3.png",
+    "available": true
+  },
+  {
+    "code": "TY03",
+    "name": "Astronaut Painting Toy",
+    "price": 250,
+    "category": "Toys",
+    "image": "/images/products/1788715457538-1.png",
+    "available": true
+  },
+  {
+    "code": "TY04",
+    "name": "Kids Unicorn Yoyo ",
+    "price": 250,
+    "category": "Toys",
+    "image": "/images/products/1787788518294.png",
+    "available": true
+  },
+  {
+    "code": "TY02",
+    "name": "Kids Kuromi Yoyo",
+    "price": 200,
+    "category": "Toys",
+    "image": "/images/products/1788715446509-1.png",
+    "available": true
+  },
+  {
+    "code": "Ac01",
+    "name": "Kids Tuff Watch",
+    "price": 450,
+    "category": "Accessories",
+    "image": "/images/products/1787788537405-1.png",
+    "available": true
+  },
+  {
+    "code": "Sb01A",
+    "name": "Primium Quality Stationery Box ",
+    "price": 700,
+    "category": "Stationery Box",
+    "image": "/images/products/1788421065887-2.png",
+    "available": true
+  },
+  {
+    "code": "Ac02",
+    "name": "Kids Light Watch",
+    "price": 450,
+    "category": "Accessories",
+    "image": "/images/products/1787788616675-1.png",
+    "available": true
+  },
+  {
+    "code": "Sb02A",
+    "name": "Primum Quality Stationery Box ",
+    "price": 700,
+    "category": "Stationery Box",
+    "image": "/images/products/1788421065887-3.png",
+    "available": true
+  },
+  {
+    "code": "P01",
+    "name": "Kids Cartoon paper Scissor",
+    "price": 200,
+    "category": "Other",
+    "image": "/images/products/1787346507576.png",
+    "available": true
+  },
+  {
+    "code": "Cl02",
+    "name": "Pastel color pencil",
+    "price": 350,
+    "category": "Colours",
+    "image": "/images/products/1787346655878-1.png",
+    "available": true
+  },
+  {
+    "code": "B01B",
+    "name": "Birthday Candles",
+    "price": 80,
+    "category": "Other",
+    "image": "/images/products/1787788468619.png",
+    "available": true
+  },
+  {
+    "code": "DR12",
+    "name": "Mini spiral diary",
+    "price": 250,
+    "category": "Diaries",
+    "image": "/images/products/1789468927919.png",
+    "available": true
+  },
+  {
+    "code": "DR13",
+    "name": "Urdu copy",
+    "price": 150,
+    "category": "Diaries",
+    "image": "/images/products/1789469773222.png",
+    "available": true
+  },
+  {
+    "code": "DR14",
+    "name": "English Copy",
+    "price": 150,
+    "category": "Diaries",
+    "image": "/images/products/1789469795252.png",
+    "available": true
+  },
+  {
+    "code": "DR15",
+    "name": "Kids pen diary ",
+    "price": 220,
+    "category": "Diaries",
+    "image": "/images/products/1789478059155.png",
+    "available": true
+  },
+  {
+    "code": "DR16",
+    "name": "Spiral Note Book",
+    "price": 300,
+    "category": "Diaries",
+    "image": "/images/products/1789469839906.png",
+    "available": true
+  },
+  {
+    "code": "DR17",
+    "name": "Math's copy",
+    "price": 150,
+    "category": "Diaries",
+    "image": "/images/products/1789469720198.png",
+    "available": true
+  },
+  {
+    "code": "GS05B",
+    "name": "Glass Sipper ",
+    "price": 550,
+    "category": "Glass Sippers",
+    "image": "/images/products/1789544350966.png",
+    "available": true
+  },
+  {
+    "code": "GS06B",
+    "name": "Sip & Drink Tumbler ",
+    "price": 450,
+    "category": "Glass Sippers",
+    "image": "/images/products/1789543985842.png",
+    "available": true
+  },
+  {
+    "code": "GS07",
+    "name": "Glass Aipper ",
+    "price": 550,
+    "category": "Glass Sippers",
+    "image": "/images/products/1789544215848.png",
+    "available": true
+  },
+  {
+    "code": "GS08B",
+    "name": "Wooden lid Glass Sipper ",
+    "price": 650,
+    "category": "Glass Sippers",
+    "image": "/images/products/1789544419139.png",
+    "available": true
+  },
+  {
+    "code": "GS09",
+    "name": "Glass Sipper With Wooden lid ",
+    "price": 650,
+    "category": "Glass Sippers",
+    "image": "/images/products/1789544428874.png",
+    "available": true
+  },
+  {
+    "code": "E05",
+    "name": "Kids Colourful Eraser",
+    "price": 150,
+    "category": "Erasers",
+    "image": "/images/products/1789674266027.png",
+    "available": true
+  },
+  {
+    "code": "E06A",
+    "name": "Donut Eraser",
+    "price": 250,
+    "category": "Erasers",
+    "image": "/images/products/1789674444241.png",
+    "available": true
+  },
+  {
+    "code": "E06B",
+    "name": "Cartoon Erasers",
+    "price": 40,
+    "category": "Erasers",
+    "image": "/images/products/1789674822166.png",
+    "available": true
+  },
+  {
+    "code": "E07A",
+    "name": "Dux Erasers",
+    "price": 15,
+    "category": "Erasers",
+    "image": "/images/products/1789674405102.png",
+    "available": true
+  },
+  {
+    "code": "E07B",
+    "name": "Kids Character Eraser",
+    "price": 350,
+    "category": "Erasers",
+    "image": "/images/products/1789674722558.png",
+    "available": true
+  },
+  {
+    "code": "E07C",
+    "name": "Home Eraser",
+    "price": 50,
+    "category": "Erasers",
+    "image": "/images/products/1789674453033.png",
+    "available": true
+  },
+  {
+    "code": "E08",
+    "name": "Diy Eraser",
+    "price": 250,
+    "category": "Erasers",
+    "image": "/images/products/1789674478640.png",
+    "available": true
+  },
+  {
+    "code": "E09",
+    "name": "Kidco pencil Eraser ",
+    "price": 15,
+    "category": "Erasers",
+    "image": "/images/products/1789674665268.png",
+    "available": true
+  },
+  {
+    "code": "E10",
+    "name": "Kids mini Dinosaur Ero",
+    "price": 250,
+    "category": "Erasers",
+    "image": "/images/products/1789674467036.png",
+    "available": true
+  },
+  {
+    "code": "C01",
+    "name": "Cartoon Coin box",
+    "price": 250,
+    "category": "Other",
+    "image": "/images/products/1789839241948.png",
+    "available": true
+  }
+]
