@@ -1,166 +1,1051 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Stationery Spot</title>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: white;
-        }
+    <title>Contact Us | The Stationery Spot</title>
 
-        /* NAVBAR */
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 30px;
-            background: white;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-        }
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-        .nav-logo img {
-            width: 80px;
-        }
+    <meta
+        name="theme-color"
+        content="#ffffff"
+    >
 
-        .nav-links a {
-            text-decoration: none;
-            margin: 0 10px;
-            color: black;
-            font-weight: 500;
-        }
+    <meta
+        name="description"
+        content="Contact The Stationery Spot for orders, questions and updates. Shop cute stationery in Pakistan."
+    >
 
-        .nav-links a:hover {
-            color: #ff7aa2;
-        }
+    <meta
+        name="author"
+        content="The Stationery Spot"
+    >
 
-        /* TITLE */
-        .main-title {
-            text-align: center;
-            font-family: 'Pacifico', cursive;
-            font-size: 40px;
-            color: #ff7aa2;
-            margin-top: 20px;
-        }
 
-        .btn {
-            background: #ff7aa2;
-            color: white;
-            border: none;
-            padding: 8px 15px;
-            border-radius: 20px;
-            cursor: pointer;
-            font-weight: bold;
-            transition: background 0.3s ease;
-        }
+    <!-- =========================
+         FAVICON
+    ========================= -->
 
-        .btn:hover {
-            background: #ff5285;
-        }
+    <link
+        rel="icon"
+        type="image/png"
+        href="images/1778446342483.png"
+    >
 
-        /* POPUP FOR IMAGES */
-        .popup {
-             display: none;
-             position: fixed;
-             top: 0;
-             left: 0;
-             width: 100%;
-             height: 100%;
-             background: rgba(0,0,0,0.8);
-             justify-content: center;
-             align-items: center;
-             z-index: 1000;
-        }
+    <link
+        rel="apple-touch-icon"
+        href="images/1778446342483.png"
+    >
 
-        .popup img {
-            max-width: 90%;
-            max-height: 85%;
-            border-radius: 10px;
-        }
 
-        /* MOBILE STYLING */
-        @media (max-width: 768px) {
-            .navbar {
-                flex-direction: column;
-                gap: 15px;
-                padding: 15px;
-            }
+    <!-- =========================
+         MAIN CSS
+    ========================= -->
 
-            .main-title {
-                font-size: 32px;
-            }
+    <link
+        rel="stylesheet"
+        href="Style.css"
+    >
 
-            #contact {
-                padding: 20px 15px !important;
-                text-align: center;
-            }
+    <link
+        rel="stylesheet"
+        href="sidebar.css"
+    >
 
-            #contact div {
-                display: flex;
-                flex-direction: column;
-                gap: 10px;
-            }
+    <link
+        rel="stylesheet"
+        href="polish.css?v=2"
+    >
 
-            #contact .btn {
-                width: 100%;
-                padding: 12px;
-            }
-        }
-    </style>
+
+    <!-- =========================
+         GOOGLE FONTS
+    ========================= -->
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&family=Pacifico&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- =========================
+         FONT AWESOME
+    ========================= -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWAeaB1IZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    >
+
 </head>
+
 
 <body>
 
-    <div id="imagePopup" class="popup" onclick="closeImage()">
-        <img id="popupImg" alt="Enlarged view">
+
+<!-- =========================
+     TOP BAR
+========================= -->
+
+<header class="top-bar">
+
+
+    <!-- LOGO + MENU -->
+
+    <div class="logo-area">
+
+        <button
+            class="menu-icon"
+            type="button"
+            onclick="openCommonSidebar()"
+            aria-label="Open menu"
+        >
+            ☰
+        </button>
+
+
+        <img
+            src="images/1778446342483.png"
+            class="pc-logo"
+            alt="The Stationery Spot Logo"
+            width="80"
+            height="80"
+        >
+
     </div>
 
-    <div class="navbar">
-        <div class="nav-logo">
-            <img src="logo.png" alt="Logo">
-        </div>
-        <div class="nav-links">
-            <a href="#">Home</a>
-            <a href="#contact">Contact</a>
-        </div>
+
+    <!-- WEBSITE TITLE -->
+
+    <div class="top-heading">
+        The Stationery Spot
     </div>
 
-    <div class="main-title">The Stationery Spot</div>
 
-    <div id="contact" style="margin-top:60px; padding:30px; background:#fff0f5;">
-        <h2 style="color:#ff7aa2; margin-top: 0;">Contact Us 💖</h2>
-        <p style="font-size:18px;">📞 03271576380</p>
-        
-        <div style="margin-top:20px;">
-            <a href="https://wa.me/923271576380" target="_blank" style="text-decoration:none;">
-                <button class="btn">WhatsApp</button>
-            </a>
+    <!-- DESKTOP MENU -->
 
-            <a href="https://instagram.com/stationeryspot.pk" target="_blank" style="text-decoration:none;">
-                <button class="btn">Instagram</button>
-            </a>
+    <nav
+        class="left-menu"
+        aria-label="Main navigation"
+    >
 
-            <a href="https://facebook.com/The Stationery Spot" target="_blank" style="text-decoration:none;">
-                <button class="btn">Facebook</button>
-            </a>
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="deals.html">
+            Deals
+        </a>
+
+        <a href="contact.html">
+            Contact
+        </a>
+
+        <a href="Refund policy.html">
+            Refund Policy
+        </a>
+
+        <a href="Shipping policy.html">
+            Shipping Policy
+        </a>
+
+    </nav>
+
+
+    <!-- SEARCH + CART -->
+
+    <div class="right-menu">
+
+
+        <!-- SEARCH -->
+
+        <div class="search-box">
+
+            <input
+                type="search"
+                class="search"
+                id="searchInput"
+                placeholder="Search products..."
+                aria-label="Search products"
+                autocomplete="off"
+            >
+
+            <div
+                class="search-results"
+                id="searchResults"
+            ></div>
+
         </div>
+
+
+        <!-- CART -->
+
+        <div class="cart-area">
+
+            <button
+                class="cart-button"
+                type="button"
+                onclick="sendWhatsAppOrder()"
+                aria-label="Open cart"
+            >
+
+                🛒
+
+                <span
+                    id="cartCount"
+                    class="cart-count"
+                >
+                    0
+                </span>
+
+            </button>
+
+        </div>
+
     </div>
 
-    <script>
-    function openImage(src) {
-        document.getElementById("imagePopup").style.display = "flex";
-        document.getElementById("popupImg").src = src;
+</header>
+
+
+
+<!-- =========================
+     CONTACT PAGE
+========================= -->
+
+<main class="contact-page">
+
+
+    <!-- INTRO -->
+
+    <section class="contact-hero">
+
+        <div class="contact-icon">
+            💌
+        </div>
+
+        <h1>
+            Contact Us 💖
+        </h1>
+
+        <p>
+            We would love to hear from you!
+        </p>
+
+        <p class="contact-subtext">
+            For orders, questions or anything else,
+            feel free to reach out to us.
+        </p>
+
+    </section>
+
+
+
+    <!-- =========================
+         CONTACT OPTIONS
+    ========================= -->
+
+    <section class="contact-options">
+
+
+        <!-- WHATSAPP -->
+
+        <a
+            href="https://wa.me/923271576380"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="contact-card whatsapp-card"
+        >
+
+            <div class="contact-card-icon">
+                <i class="fa-brands fa-whatsapp"></i>
+            </div>
+
+            <div class="contact-card-text">
+
+                <h2>
+                    WhatsApp
+                </h2>
+
+                <p>
+                    Message us for orders & questions
+                </p>
+
+                <span>
+                    Chat with us →
+                </span>
+
+            </div>
+
+        </a>
+
+
+
+        <!-- WHATSAPP CHANNEL -->
+
+        <a
+            href="https://whatsapp.com/channel/0029VbC1Q7kGk1G22S6faY46"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="contact-card channel-card"
+        >
+
+            <div class="contact-card-icon">
+                📢
+            </div>
+
+            <div class="contact-card-text">
+
+                <h2>
+                    WhatsApp Channel
+                </h2>
+
+                <p>
+                    Follow our channel for updates & new arrivals
+                </p>
+
+                <span>
+                    Follow Channel →
+                </span>
+
+            </div>
+
+        </a>
+
+
+
+        <!-- INSTAGRAM -->
+
+        <a
+            href="https://www.instagram.com/stationeryspot.pk?utm_source=qr&igsh=MXJsemQxZnhuNjcwdQ=="
+            target="_blank"
+            rel="noopener noreferrer"
+            class="contact-card instagram-card"
+        >
+
+            <div class="contact-card-icon">
+                <i class="fa-brands fa-instagram"></i>
+            </div>
+
+            <div class="contact-card-text">
+
+                <h2>
+                    Instagram
+                </h2>
+
+                <p>
+                    Follow us for cute stationery & updates
+                </p>
+
+                <span>
+                    Visit Instagram →
+                </span>
+
+            </div>
+
+        </a>
+
+
+
+        <!-- FACEBOOK -->
+
+        <a
+            href="https://www.facebook.com/share/1DGVUAexCq/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="contact-card facebook-card"
+        >
+
+            <div class="contact-card-icon">
+                <i class="fa-brands fa-facebook-f"></i>
+            </div>
+
+            <div class="contact-card-text">
+
+                <h2>
+                    Facebook
+                </h2>
+
+                <p>
+                    Follow The Stationery Spot on Facebook
+                </p>
+
+                <span>
+                    Visit Facebook →
+                </span>
+
+            </div>
+
+        </a>
+
+
+
+        <!-- EMAIL — FUTURE -->
+
+        <div
+            class="contact-card email-card email-coming-soon"
+            aria-disabled="true"
+        >
+
+            <div class="contact-card-icon">
+                <i class="fa-regular fa-envelope"></i>
+            </div>
+
+            <div class="contact-card-text">
+
+                <h2>
+                    Email
+                </h2>
+
+                <p>
+                    Email support will be available soon
+                </p>
+
+                <span>
+                    Coming Soon ♡
+                </span>
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================
+         ORDER NOTE
+    ========================= -->
+
+    <section class="contact-note">
+
+        <div class="note-icon">
+            🦋
+        </div>
+
+        <h2>
+            For Orders
+        </h2>
+
+        <p>
+            The easiest way to place an order is through WhatsApp.
+        </p>
+
+        <a
+            href="https://wa.me/923271576380"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="contact-order-button"
+        >
+            <i class="fa-brands fa-whatsapp"></i>
+            Message Us on WhatsApp
+        </a>
+
+    </section>
+
+
+
+    <!-- =========================
+         LITTLE MESSAGE
+    ========================= -->
+
+    <section class="contact-message">
+
+        <p>
+            Thank you for contacting
+            <strong>The Stationery Spot</strong>! ☺️ 🌸
+        </p>
+
+        <span>
+            cute things, happy moments ♡
+        </span>
+
+    </section>
+
+
+</main>
+
+
+
+<!-- =========================
+     CONTACT PAGE STYLE
+========================= -->
+
+<style>
+
+    /* =========================================
+       CONTACT PAGE
+    ========================================= */
+
+    .contact-page {
+        width: 100%;
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 45px 20px 70px;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
     }
 
-    function closeImage() {
-        document.getElementById("imagePopup").style.display = "none";
+
+    /* =========================================
+       HERO
+    ========================================= */
+
+    .contact-hero {
+        text-align: center;
+        margin-bottom: 35px;
     }
-    </script>
+
+
+    .contact-icon {
+        width: 68px;
+        height: 68px;
+
+        margin: 0 auto 15px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        background: #fff0f5;
+
+        border-radius: 50%;
+
+        font-size: 30px;
+
+        box-shadow:
+            0 6px 20px rgba(255, 105, 145, 0.12);
+    }
+
+
+    .contact-hero h1 {
+        margin: 0;
+
+        font-family: 'Pacifico', cursive;
+
+        font-size: 36px;
+
+        font-weight: normal;
+
+        color: #ff6f91;
+    }
+
+
+    .contact-hero p {
+        margin: 10px 0 0;
+
+        color: #555;
+
+        font-size: 15px;
+    }
+
+
+    .contact-hero .contact-subtext {
+        margin-top: 5px;
+
+        color: #999;
+
+        font-size: 12px;
+    }
+
+
+
+    /* =========================================
+       CONTACT CARDS
+    ========================================= */
+
+    .contact-options {
+        display: grid;
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 16px;
+    }
+
+
+    .contact-card {
+        display: flex;
+
+        align-items: center;
+
+        gap: 16px;
+
+        min-height: 105px;
+
+        padding: 18px;
+
+        box-sizing: border-box;
+
+        border-radius: 20px;
+
+        text-decoration: none;
+
+        background: #ffffff;
+
+        border: 1px solid #f5e5eb;
+
+        box-shadow:
+            0 6px 20px rgba(80, 20, 45, 0.07);
+
+        transition:
+            transform 0.2s ease,
+            box-shadow 0.2s ease,
+            border-color 0.2s ease;
+    }
+
+
+    .contact-card:hover {
+        transform: translateY(-3px);
+
+        box-shadow:
+            0 10px 25px rgba(80, 20, 45, 0.11);
+
+        border-color: #ffd0dd;
+    }
+
+
+    /* =========================================
+       CARD ICON
+    ========================================= */
+
+    .contact-card-icon {
+        width: 52px;
+        height: 52px;
+
+        min-width: 52px;
+
+        border-radius: 16px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        background: #fff0f5;
+
+        color: #ff6f91;
+
+        font-size: 24px;
+    }
+
+
+    .contact-card-text {
+        min-width: 0;
+    }
+
+
+    .contact-card-text h2 {
+        margin: 0 0 5px;
+
+        color: #333;
+
+        font-size: 16px;
+
+        font-weight: 600;
+    }
+
+
+    .contact-card-text p {
+        margin: 0 0 7px;
+
+        color: #888;
+
+        font-size: 11px;
+
+        line-height: 1.5;
+    }
+
+
+    .contact-card-text span {
+        color: #ff5f88;
+
+        font-size: 11px;
+
+        font-weight: 600;
+    }
+
+
+    /* =========================================
+       EMAIL COMING SOON
+    ========================================= */
+
+    .email-coming-soon {
+        cursor: default;
+
+        opacity: 0.82;
+    }
+
+
+    .email-coming-soon:hover {
+        transform: none;
+
+        box-shadow:
+            0 6px 20px rgba(80, 20, 45, 0.07);
+
+        border-color: #f5e5eb;
+    }
+
+
+    .email-coming-soon .contact-card-icon {
+        background: #f8f8f8;
+
+        color: #aaa;
+    }
+
+
+    .email-coming-soon .contact-card-text span {
+        color: #aaa;
+    }
+
+
+
+    /* =========================================
+       ORDER NOTE
+    ========================================= */
+
+    .contact-note {
+        margin-top: 30px;
+
+        padding: 28px 20px;
+
+        text-align: center;
+
+        background:
+            linear-gradient(
+                135deg,
+                #fff4f7,
+                #fff9fb
+            );
+
+        border: 1px solid #ffe0e9;
+
+        border-radius: 24px;
+    }
+
+
+    .note-icon {
+        font-size: 27px;
+
+        margin-bottom: 5px;
+    }
+
+
+    .contact-note h2 {
+        margin: 0;
+
+        color: #ff6f91;
+
+        font-family: 'Pacifico', cursive;
+
+        font-size: 24px;
+
+        font-weight: normal;
+    }
+
+
+    .contact-note p {
+        margin: 8px 0 18px;
+
+        color: #777;
+
+        font-size: 12px;
+    }
+
+
+    .contact-order-button {
+        display: inline-flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        gap: 8px;
+
+        padding: 11px 18px;
+
+        border-radius: 30px;
+
+        background: #ff6f91;
+
+        color: white;
+
+        text-decoration: none;
+
+        font-family: 'Poppins', sans-serif;
+
+        font-size: 12px;
+
+        font-weight: 600;
+
+        box-shadow:
+            0 5px 15px rgba(255, 111, 145, 0.22);
+
+        transition:
+            transform 0.2s ease,
+            background 0.2s ease;
+    }
+
+
+    .contact-order-button:hover {
+        background: #ff4f7b;
+
+        transform: translateY(-2px);
+    }
+
+
+
+    /* =========================================
+       BOTTOM MESSAGE
+    ========================================= */
+
+    .contact-message {
+        text-align: center;
+
+        margin-top: 35px;
+
+        padding: 10px;
+    }
+
+
+    .contact-message p {
+        margin: 0;
+
+        color: #777;
+
+        font-size: 12px;
+    }
+
+
+    .contact-message strong {
+        color: #ff6f91;
+    }
+
+
+    .contact-message span {
+        display: block;
+
+        margin-top: 5px;
+
+        color: #bbb;
+
+        font-size: 10px;
+    }
+
+
+
+    /* =========================================
+       MOBILE
+    ========================================= */
+
+    @media (max-width: 700px) {
+
+        .contact-page {
+            padding:
+                35px
+                15px
+                55px;
+        }
+
+
+        .contact-hero h1 {
+            font-size: 30px;
+        }
+
+
+        .contact-options {
+            grid-template-columns: 1fr;
+
+            gap: 12px;
+        }
+
+
+        .contact-card {
+            min-height: 92px;
+
+            padding: 15px;
+
+            border-radius: 18px;
+        }
+
+
+        .contact-card-icon {
+            width: 48px;
+            height: 48px;
+
+            min-width: 48px;
+
+            border-radius: 14px;
+
+            font-size: 22px;
+        }
+
+
+        .contact-card-text h2 {
+            font-size: 15px;
+        }
+
+
+        .contact-card-text p {
+            font-size: 10px;
+        }
+
+
+        .contact-card-text span {
+            font-size: 10px;
+        }
+
+    }
+
+
+    /* =========================================
+       VERY SMALL PHONES
+    ========================================= */
+
+    @media (max-width: 380px) {
+
+        .contact-page {
+            padding-left: 12px;
+            padding-right: 12px;
+        }
+
+
+        .contact-hero h1 {
+            font-size: 27px;
+        }
+
+
+        .contact-card {
+            gap: 12px;
+
+            padding: 13px;
+        }
+
+
+        .contact-card-icon {
+            width: 44px;
+            height: 44px;
+
+            min-width: 44px;
+        }
+
+    }
+
+</style>
+
+
+
+<!-- =========================
+     SEARCH JAVASCRIPT
+========================= -->
+
+<script>
+
+function searchItems() {
+
+    const inputElement =
+        document.getElementById("searchInput");
+
+    const resultsBox =
+        document.getElementById("searchResults");
+
+
+    if (!inputElement || !resultsBox) {
+        return;
+    }
+
+
+    const input =
+        inputElement.value
+        .trim()
+        .toLowerCase();
+
+
+    resultsBox.innerHTML = "";
+
+
+    if (input === "") {
+
+        resultsBox.style.display = "none";
+
+        return;
+    }
+
+
+    /*
+       Contact page does not render product cards,
+       so search is intentionally kept empty here.
+       The main product page handles full product search.
+    */
+
+    resultsBox.innerHTML =
+        "<div>Search products from the home page ♡</div>";
+
+    resultsBox.style.display = "block";
+
+}
+
+</script>
+
+
+
+<!-- =========================
+     CLOSE SEARCH
+========================= -->
+
+<script>
+
+document.addEventListener(
+    "click",
+    function(event) {
+
+        const searchBox =
+            document.querySelector(".search-box");
+
+        const resultsBox =
+            document.getElementById("searchResults");
+
+
+        if (
+            searchBox &&
+            resultsBox &&
+            !searchBox.contains(event.target)
+        ) {
+
+            resultsBox.style.display = "none";
+
+        }
+
+    }
+);
+
+</script>
+
+
+
+<!-- =========================
+     CART SYSTEM
+========================= -->
+
+<script src="cart.js"></script>
+
+
+
+<!-- =========================
+     COMMON SIDEBAR
+========================= -->
+
+<script src="sidebar.js"></script>
+
 
 </body>
+
 </html>
