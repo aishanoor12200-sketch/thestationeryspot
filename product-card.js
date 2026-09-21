@@ -22,3 +22,47 @@ class ProductCard extends HTMLElement {
   }
 }
 if (!customElements.get('product-card')) customElements.define('product-card', ProductCard);
+
+function ensureImagePopup() {
+  if (document.getElementById('imagePopup')) return;
+
+  const popup = document.createElement('div');
+  popup.id = 'imagePopup';
+  popup.className = 'popup';
+  popup.setAttribute('role', 'dialog');
+  popup.setAttribute('aria-modal', 'true');
+  popup.setAttribute('aria-label', 'Product image preview');
+  popup.addEventListener('click', () => {
+    popup.style.display = 'none';
+    document.body.classList.remove('locked');
+  });
+
+  const image = document.createElement('img');
+  image.id = 'popupImg';
+  image.alt = 'Product preview';
+  popup.appendChild(image);
+  document.body.appendChild(popup);
+}
+
+window.openImage = function openImage(src) {
+  ensureImagePopup();
+  const popup = document.getElementById('imagePopup');
+  const image = document.getElementById('popupImg');
+  if (!popup || !image) return;
+  image.src = src;
+  popup.style.display = 'grid';
+  document.body.classList.add('locked');
+};
+
+window.closeImage = function closeImage() {
+  const popup = document.getElementById('imagePopup');
+  if (!popup) return;
+  popup.style.display = 'none';
+  document.body.classList.remove('locked');
+};
+
+window.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape') {
+    window.closeImage();
+  }
+});
