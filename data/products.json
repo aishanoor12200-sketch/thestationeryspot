@@ -590,5 +590,85 @@
     "category": "Glass Sippers",
     "image": "/images/products/1789544428874.png",
     "available": true
+  },
+  {
+    "code": "E05",
+    "name": "Kids Colourful Eraser",
+    "price": 150,
+    "category": "Erasers",
+    "image": "/images/products/1789674266027.png",
+    "available": true
+  },
+  {
+    "code": "E06",
+    "name": "Donut Eraser",
+    "price": 250,
+    "category": "Erasers",
+    "image": "/images/products/1789674444241.png",
+    "available": true
+  },
+  {
+    "code": "E06",
+    "name": "Cartoon Erasers",
+    "price": 40,
+    "category": "Erasers",
+    "image": "/images/products/1789674822166.png",
+    "available": true
+  },
+  {
+    "code": "E07",
+    "name": "Dux Erasers",
+    "price": 15,
+    "category": "Erasers",
+    "image": "/images/products/1789674405102.png",
+    "available": true
+  },
+  {
+    "code": "E07",
+    "name": "Kids Character Eraser",
+    "price": 350,
+    "category": "Erasers",
+    "image": "/images/products/1789674722558.png",
+    "available": true
+  },
+  {
+    "code": "E07",
+    "name": "Home Eraser",
+    "price": 50,
+    "category": "Erasers",
+    "image": "/images/products/1789674453033.png",
+    "available": true
+  },
+  {
+    "code": "E08",
+    "name": "Diy Eraser",
+    "price": 250,
+    "category": "Erasers",
+    "image": "/images/products/1789674478640.png",
+    "available": true
+  },
+  {
+    "code": "E09",
+    "name": "Kidco pencil Eraser ",
+    "price": 15,
+    "category": "Erasers",
+    "image": "/images/products/1789674665268.png",
+    "available": true
+  },
+  {
+    "code": "E10",
+    "name": "Kids mini Dinosaur Ero",
+    "price": 250,
+    "category": "Erasers",
+    "image": "/images/products/1789674467036.png",
+    "available": true
+  },
+  {
+    "code": "C01",
+    "name": "Cartoon Coin box",
+    "price": 250,
+    "category": "Other",
+    "image": "/images/products/1789839241948.png",
+    "available": true
   }
 ]
