@@ -1,4 +1,3 @@
-/* Shared visual enhancements. The main design system lives in Style.css. */
-:root { color-scheme: light; }
-::selection { background: #ffd7e3; color: #6c2941; }
-img { max-width: 100%; }
+/* Keep the shared stylesheet authoritative. This file only provides small global enhancements. */
+*,*::before,*::after{box-sizing:border-box}
+::selection{background:#ffd7e3;color:#6c2941}

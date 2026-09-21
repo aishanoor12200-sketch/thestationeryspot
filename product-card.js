@@ -1,8 +1,6 @@
 class ProductCard extends HTMLElement {
-
     connectedCallback() {
-
-        const image = this.getAttribute("image") || "";
+        const image = String(this.getAttribute("image") || "").replace(/^\/+/, "");
         const name = this.getAttribute("name") || "Product";
         const price = this.getAttribute("price") || "0";
         const code = this.getAttribute("code") || "";
@@ -12,83 +10,46 @@ class ProductCard extends HTMLElement {
 
         const imgBox = document.createElement("div");
         imgBox.className = "img-box";
-
         const img = document.createElement("img");
-        img.src = image;
+        img.src = new URL(image, document.baseURI).href;
         img.alt = name;
         img.loading = "lazy";
-        img.width = 150;
-        img.height = 200;
-
-        img.addEventListener("click", () => {
-            openImage(img.src);
-        });
+        img.addEventListener("error", () => { img.closest(".img-box").classList.add("image-missing"); });
+        img.addEventListener("click", () => window.openImage && window.openImage(img.src));
 
         const cartIcon = document.createElement("button");
         cartIcon.className = "floating-icon";
         cartIcon.type = "button";
         cartIcon.textContent = "🛒";
         cartIcon.setAttribute("aria-label", `Add ${name} to cart`);
-
-        cartIcon.addEventListener("click", () => {
-            addToCart(cartIcon, code);
-        });
-
-        imgBox.appendChild(img);
-        imgBox.appendChild(cartIcon);
+        cartIcon.addEventListener("click", () => window.addToCart(cartIcon, code));
+        imgBox.append(img, cartIcon);
 
         const nameElement = document.createElement("p");
         nameElement.className = "name";
         nameElement.textContent = name;
-
         const priceElement = document.createElement("p");
         priceElement.className = "price";
         priceElement.textContent = `Rs.${price}`;
 
         const qtyBox = document.createElement("div");
         qtyBox.className = "qty-box";
-
         const decreaseBtn = document.createElement("button");
-        decreaseBtn.type = "button";
-        decreaseBtn.textContent = "−";
-
-        decreaseBtn.addEventListener("click", () => {
-            decrease(decreaseBtn);
-        });
-
+        decreaseBtn.type = "button"; decreaseBtn.textContent = "−"; decreaseBtn.setAttribute("aria-label", "Decrease quantity");
+        decreaseBtn.addEventListener("click", () => window.decrease(decreaseBtn));
         const qty = document.createElement("span");
-        qty.className = "qty";
-        qty.textContent = "1";
-
+        qty.className = "qty"; qty.textContent = "1";
         const increaseBtn = document.createElement("button");
-        increaseBtn.type = "button";
-        increaseBtn.textContent = "+";
-
-        increaseBtn.addEventListener("click", () => {
-            increase(increaseBtn);
-        });
-
-        qtyBox.appendChild(decreaseBtn);
-        qtyBox.appendChild(qty);
-        qtyBox.appendChild(increaseBtn);
+        increaseBtn.type = "button"; increaseBtn.textContent = "+"; increaseBtn.setAttribute("aria-label", "Increase quantity");
+        increaseBtn.addEventListener("click", () => window.increase(increaseBtn));
+        qtyBox.append(decreaseBtn, qty, increaseBtn);
 
         const addButton = document.createElement("button");
-        addButton.className = "add-btn";
-        addButton.type = "button";
-        addButton.textContent = "Add to Cart";
-
-        addButton.addEventListener("click", () => {
-            addToCart(addButton, code);
-        });
-
-        card.appendChild(imgBox);
-        card.appendChild(nameElement);
-        card.appendChild(priceElement);
-        card.appendChild(qtyBox);
-        card.appendChild(addButton);
-
+        addButton.className = "add-btn"; addButton.type = "button"; addButton.textContent = "Add to Cart";
+        addButton.addEventListener("click", () => window.addToCart(addButton, code));
+        card.append(imgBox, nameElement, priceElement, qtyBox, addButton);
         this.replaceChildren(card);
     }
 }
 
-customElements.define("product-card", ProductCard);
+if (!customElements.get("product-card")) customElements.define("product-card", ProductCard);
