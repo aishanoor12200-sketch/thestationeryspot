@@ -1,178 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-    <meta charset="UTF-8">
-
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
-
-    <title>The Stationery Spot</title>
-
-
-    <!-- MAIN CSS -->
-    <link rel="stylesheet" href="Style.css">
-
-    <!-- SIDEBAR CSS -->
-    <link rel="stylesheet" href="sidebar.css">
-
-
-    <!-- GOOGLE FONTS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-
-    <link
-        rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossorigin
-    >
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;500;600;700&display=swap"
-        rel="stylesheet"
-    >
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Category | The Stationery Spot</title>
+  <link rel="stylesheet" href="Style.css">
+  <link rel="stylesheet" href="sidebar.css">
+  <link rel="stylesheet" href="polish.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
-
-
 <body class="category-page-body">
-
-
-    <!-- ================= HEADER ================= -->
-
-    <header class="top-bar">
-
-
-        <div class="logo-area">
-
-
-            <!-- MOBILE MENU -->
-
-            <button
-                class="menu-icon"
-                type="button"
-                onclick="openCommonSidebar()"
-                aria-label="Open menu"
-            >
-                ☰
-            </button>
-
-
-            <!-- PC LOGO -->
-
-            <a href="index.html">
-
-                <img
-                    src="images/images/IMG-20260515-WA0016.jpg"
-                    class="pc-logo"
-                    alt="The Stationery Spot"
-                >
-
-            </a>
-
-
-            <h1 class="top-heading">
-                The Stationery Spot
-            </h1>
-
-
-        </div>
-
-
-        <!-- ================= DESKTOP MENU ================= -->
-
-        <nav class="left-menu">
-
-            <a href="index.html">
-                Home
-            </a>
-
-            <a href="deals.html">
-                Deals
-            </a>
-
-            <a href="contact.html">
-                Contact
-            </a>
-
-            <a href="Refund policy.html">
-                Refund Policy
-            </a>
-
-            <a href="Shipping policy.html">
-                Shipping Policy
-            </a>
-
-        </nav>
-
-
-        <!-- ================= CART ================= -->
-
-        <div class="cart-area">
-
-            <button
-                class="cart-button"
-                type="button"
-                onclick="sendWhatsAppOrder()"
-                aria-label="Open cart"
-            >
-
-                🛒
-
-                <span
-                    id="cartCount"
-                    class="cart-count"
-                >
-                    0
-                </span>
-
-            </button>
-
-        </div>
-
-
-    </header>
-
-
-
-    <!-- ================= CATEGORY ================= -->
-
-    <main>
-
-        <section class="category-page">
-
-
-            <h2 id="categoryTitle">
-                Products
-            </h2>
-
-
-            <div
-                id="categoryProducts"
-                class="products category-products"
-            >
-            </div>
-
-
-        </section>
-
-    </main>
-
-
-
-    <!-- ================= SCRIPTS ================= -->
-
-    <script src="product-card.js"></script>
-
-    <script src="cart.js"></script>
-
-    <script src="category.js"></script>
-
-    <script src="sidebar.js"></script>
-
-
+  <header class="top-bar">
+    <div class="logo-area">
+      <button class="menu-icon" type="button" onclick="openCommonSidebar()" aria-label="Open menu">☰</button>
+      <a href="index.html" aria-label="Go to home page"><img src="images/1778446342483.png" class="pc-logo" alt="The Stationery Spot" width="80" height="80"></a>
+    </div>
+    <h1 class="top-heading">The Stationery Spot</h1>
+    <nav class="left-menu" aria-label="Main navigation">
+      <a href="index.html">Home</a><a href="deals.html">Deals</a><a href="contact.html">Contact</a><a href="Refund policy.html">Refund Policy</a><a href="Shipping policy.html">Shipping Policy</a>
+    </nav>
+    <div class="right-menu"><div class="cart-area"><button class="cart-button" type="button" onclick="openCart()" aria-label="Open shopping cart">🛒<span id="cartCount" class="cart-count">0</span></button></div></div>
+  </header>
+  <main>
+    <section class="category category-page" aria-labelledby="categoryTitle">
+      <h2 id="categoryTitle">Products</h2>
+      <div id="categoryProducts" class="products category-products"></div>
+    </section>
+  </main>
+  <script src="product-card.js"></script>
+  <script src="cart.js"></script>
+  <script src="category.js"></script>
+  <script src="sidebar.js"></script>
 </body>
-
-    </html>
+</html>
