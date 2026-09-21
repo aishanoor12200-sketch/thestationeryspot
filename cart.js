@@ -1,65 +1,16 @@
-let cart = [];
-try {
-    const saved = localStorage.getItem("stationerySpotCart");
-    const parsed = saved ? JSON.parse(saved) : [];
-    cart = Array.isArray(parsed) ? parsed.filter(item => item && item.name) : [];
-} catch (error) {
-    console.warn("Cart could not be restored:", error);
-}
-
-function saveCart() {
-    try { localStorage.setItem("stationerySpotCart", JSON.stringify(cart)); } catch (error) { console.warn("Cart could not be saved:", error); }
-    updateCartCount();
-}
-function updateCartCount() {
-    const element = document.getElementById("cartCount");
-    if (element) element.textContent = String(getCartItemCount());
-}
-function addToCart(button, code = "") {
-    const card = button && button.closest ? button.closest(".card") : null;
-    if (!card) return;
-    const name = card.querySelector(".name")?.textContent.trim();
-    const price = Number((card.querySelector(".price")?.textContent || "").replace(/[^0-9.]/g, ""));
-    const qtyElement = card.querySelector(".qty");
-    const qty = Number(qtyElement?.textContent) || 1;
-    if (!name || !Number.isFinite(price) || price < 0 || qty < 1) return;
-
-    const productCode = String(code || card.closest("product-card")?.getAttribute("code") || "");
-    const image = card.closest("product-card")?.getAttribute("image") || "";
-    const existing = cart.find(item => item.code === productCode && item.name === name && item.image === image);
-    if (existing) existing.qty = (Number(existing.qty) || 0) + qty;
-    else cart.push({ name, code: productCode, image, price, qty });
-
-    if (qtyElement) qtyElement.textContent = "1";
-    saveCart();
-    if (typeof window.openCart === "function") window.openCart();
-}
-function increase(button) { const el = button?.parentElement?.querySelector(".qty"); if (el) el.textContent = String(Math.max(1, Number(el.textContent) || 1) + 1); }
-function decrease(button) { const el = button?.parentElement?.querySelector(".qty"); if (el) el.textContent = String(Math.max(1, (Number(el.textContent) || 1) - 1)); }
-function getItemPrice(item) { const price = Number(item.price); return Number.isFinite(price) && price >= 0 ? price : 0; }
-function getCartItemCount() { return cart.reduce((sum, item) => sum + Math.max(0, Number(item.qty) || 0), 0); }
-function getCartTotal() { return cart.reduce((sum, item) => sum + getItemPrice(item) * (Number(item.qty) || 0), 0); }
-function openCart() { const drawer = document.getElementById("cartDrawer"); if (!drawer) return; renderCart(); drawer.classList.add("open"); document.getElementById("cartOverlay")?.classList.add("open"); document.body.classList.add("cart-open"); }
-function closeCart() { document.getElementById("cartDrawer")?.classList.remove("open"); document.getElementById("cartOverlay")?.classList.remove("open"); document.body.classList.remove("cart-open"); }
-function removeFromCart(index) { if (Number.isInteger(index) && index >= 0 && index < cart.length) { cart.splice(index, 1); saveCart(); renderCart(); } }
-function changeCartQuantity(index, change) { const item = cart[index]; if (!item) return; item.qty = (Number(item.qty) || 1) + (Number(change) || 0); if (item.qty <= 0) return removeFromCart(index); saveCart(); renderCart(); }
-function escapeCartText(value) { return String(value ?? "").replace(/[&<>"']/g, char => ({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#039;"}[char])); }
-function renderCart() {
-    const items = document.getElementById("cartItems"), empty = document.getElementById("cartEmpty"), footer = document.getElementById("cartFooter"), total = document.getElementById("cartTotal"), count = document.getElementById("cartItemCount");
-    if (!items || !empty || !footer || !total) return;
-    items.replaceChildren();
-    const isEmpty = cart.length === 0;
-    empty.style.display = isEmpty ? "flex" : "none"; footer.style.display = isEmpty ? "none" : "block";
-    if (count) count.textContent = `${getCartItemCount()} ${getCartItemCount() === 1 ? "item" : "items"}`;
-    cart.forEach((item, index) => {
-        const row = document.createElement("div"); row.className = "cart-item";
-        row.innerHTML = `<div class="cart-item-info"><div class="cart-item-name">${escapeCartText(item.name)}</div><div class="cart-item-code">${item.code ? `Code: ${escapeCartText(item.code)}` : ""}</div><div class="cart-item-price">Rs.${getItemPrice(item)}</div></div><div class="cart-item-actions"><div class="cart-quantity"><button type="button" aria-label="Decrease quantity">−</button><span>${Number(item.qty) || 1}</span><button type="button" aria-label="Increase quantity">+</button></div><strong class="cart-item-total">Rs.${getItemPrice(item) * (Number(item.qty) || 0)}</strong><button type="button" class="cart-remove" aria-label="Remove item">×</button></div>`;
-        const buttons = row.querySelectorAll("button"); buttons[0].addEventListener("click", () => changeCartQuantity(index, -1)); buttons[1].addEventListener("click", () => changeCartQuantity(index, 1)); buttons[2].addEventListener("click", () => removeFromCart(index)); items.appendChild(row);
-    });
-    total.textContent = `Rs.${getCartTotal()}`;
-}
-function clearCart() { if (cart.length && confirm("Are you sure you want to clear your cart?")) { cart = []; saveCart(); renderCart(); } }
-function sendWhatsAppOrder() { if (!cart.length) return alert("Your cart is empty!"); const lines = cart.map((item, index) => `${index + 1}. ${item.name}${item.code ? ` (${item.code})` : ""} x ${item.qty} = Rs.${getItemPrice(item) * item.qty}`); const message = ["🛒 THE STATIONERY SPOT ORDER", "", ...lines, "", `💰 TOTAL: Rs.${getCartTotal()}`].join("\n"); window.open(`https://wa.me/923271576380?text=${encodeURIComponent(message)}`, "_blank", "noopener,noreferrer"); }
-Object.assign(window, { addToCart, increase, decrease, openCart, closeCart, removeFromCart, changeCartQuantity, clearCart, sendWhatsAppOrder });
-document.addEventListener("DOMContentLoaded", () => { updateCartCount(); renderCart(); });
-document.addEventListener("keydown", event => { if (event.key === "Escape") closeCart(); });
+(() => {
+  let cart=[]; try { const value=JSON.parse(localStorage.getItem('stationerySpotCart')||'[]'); cart=Array.isArray(value)?value.filter(i=>i&&i.name):[]; } catch(e) {}
+  const save=()=>{try{localStorage.setItem('stationerySpotCart',JSON.stringify(cart));}catch(e){} updateCount();};
+  const count=()=>cart.reduce((s,i)=>s+Math.max(0,Number(i.qty)||0),0);
+  const total=()=>cart.reduce((s,i)=>s+(Number(i.price)||0)*(Number(i.qty)||0),0);
+  const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]));
+  function ensureDrawer(){if(document.getElementById('cartDrawer'))return; document.body.insertAdjacentHTML('beforeend',`<div id="cartOverlay" class="cart-overlay"></div><aside id="cartDrawer" class="cart-drawer" aria-label="Shopping cart"><div class="cart-header"><div><h2>🛒 Your cart</h2><span id="cartItemCount" class="cart-item-count"></span></div><button class="cart-close" type="button" aria-label="Close cart">×</button></div><div id="cartEmpty" class="cart-empty"><div class="cart-empty-icon">🛒</div><h3>Your cart is empty</h3><p>Add something lovely to get started.</p><button class="cart-continue" type="button">Continue shopping</button></div><div id="cartItems" class="cart-items"></div><div id="cartFooter" class="cart-footer"><div class="cart-total-row"><span>Total</span><strong id="cartTotal">Rs.0</strong></div><button class="cart-whatsapp-btn" type="button">💬 Order on WhatsApp</button><button class="cart-clear-btn" type="button">Clear cart</button></div></aside>`); document.getElementById('cartOverlay').onclick=closeCart; document.querySelector('.cart-close').onclick=closeCart; document.querySelector('.cart-continue').onclick=closeCart; document.querySelector('.cart-whatsapp-btn').onclick=sendWhatsAppOrder; document.querySelector('.cart-clear-btn').onclick=clearCart; }
+  function updateCount(){document.querySelectorAll('#cartCount').forEach(e=>e.textContent=count()); const e=document.getElementById('cartItemCount'); if(e)e.textContent=`${count()} ${count()===1?'item':'items'}`;}
+  function render(){ensureDrawer(); const items=document.getElementById('cartItems'),empty=document.getElementById('cartEmpty'),footer=document.getElementById('cartFooter'); items.replaceChildren(); const isEmpty=!cart.length; empty.style.display=isEmpty?'flex':'none'; footer.style.display=isEmpty?'none':'block'; cart.forEach((item,index)=>{const row=document.createElement('div');row.className='cart-item';row.innerHTML=`<img class="cart-item-image" src="${esc(item.image||'')}" alt=""><div class="cart-item-info"><div class="cart-item-name">${esc(item.name)}</div><div class="cart-item-code">${item.code?`Code: ${esc(item.code)}`:''}</div><div class="cart-item-price">Rs.${Number(item.price)||0}</div><div class="cart-item-actions"><button type="button" aria-label="Decrease">−</button><strong>${Number(item.qty)||1}</strong><button type="button" aria-label="Increase">+</button><button class="cart-item-remove" type="button">Remove</button></div></div>`; const b=row.querySelectorAll('button');b[0].onclick=()=>changeQty(index,-1);b[1].onclick=()=>changeQty(index,1);b[2].onclick=()=>{cart.splice(index,1);save();render();};items.append(row);}); document.getElementById('cartTotal').textContent=`Rs.${total()}`;updateCount();}
+  function addToCart(button,code=''){const card=button?.closest('.card');if(!card)return;const name=card.querySelector('.name')?.textContent.trim();const price=Number((card.querySelector('.price')?.textContent||'').replace(/[^0-9.]/g,''));const qty=Number(card.querySelector('.qty')?.textContent)||1;const host=card.closest('product-card');const image=host?.getAttribute('image')||'';if(!name||!Number.isFinite(price))return;const old=cart.find(i=>i.code===String(code)&&i.name===name&&i.image===image);if(old)old.qty=(Number(old.qty)||0)+qty;else cart.push({name,code:String(code),image,price,qty});const q=card.querySelector('.qty');if(q)q.textContent='1';save();openCart();}
+  function changeQty(i,delta){if(!cart[i])return;cart[i].qty=(Number(cart[i].qty)||1)+delta;if(cart[i].qty<=0)cart.splice(i,1);save();render();}
+  function increase(b){const e=b?.parentElement?.querySelector('.qty');if(e)e.textContent=String((Number(e.textContent)||1)+1)} function decrease(b){const e=b?.parentElement?.querySelector('.qty');if(e)e.textContent=String(Math.max(1,(Number(e.textContent)||1)-1))}
+  function openCart(){ensureDrawer();render();document.getElementById('cartDrawer').classList.add('open');document.getElementById('cartOverlay').classList.add('open');document.body.classList.add('locked')};function closeCart(){document.getElementById('cartDrawer')?.classList.remove('open');document.getElementById('cartOverlay')?.classList.remove('open');document.body.classList.remove('locked')};function clearCart(){if(!cart.length)return;if(confirm('Clear all items from your cart?')){cart=[];save();render()}};
+  function sendWhatsAppOrder(){if(!cart.length){alert('Your cart is empty.');return}const lines=cart.map((i,n)=>`${n+1}. ${i.name}${i.code?` (${i.code})`:''} x ${i.qty} — Rs.${(Number(i.price)||0)*(Number(i.qty)||0)}`).join('\n');window.open(`https://wa.me/923271576380?text=${encodeURIComponent(`Hello! I would like to place this order:\n\n${lines}\n\nTotal: Rs.${total()}\nPlease confirm availability and delivery charges.`)}`,'_blank','noopener,noreferrer')}
+  Object.assign(window,{addToCart,increase,decrease,openCart,closeCart,sendWhatsAppOrder});document.addEventListener('DOMContentLoaded',()=>{ensureDrawer();updateCount();render()});document.addEventListener('keydown',e=>{if(e.key==='Escape')closeCart()});
+})();

@@ -1,3 +1,2 @@
-/* Keep the shared stylesheet authoritative. This file only provides small global enhancements. */
-*,*::before,*::after{box-sizing:border-box}
-::selection{background:#ffd7e3;color:#6c2941}
+/* small shared enhancements */
+::selection{background:#ffd7e3;color:#6c2941}.card,.btn,.add-btn,.cart-button,.whatsapp-float{will-change:transform}.category-hero h1{margin:5px 0 10px;font-size:clamp(28px,5vw,48px);line-height:1.15}.category-hero .btn{margin:12px 0 0}
