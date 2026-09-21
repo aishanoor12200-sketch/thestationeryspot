@@ -148,4 +148,1113 @@ input:focus-visible {
     text-decoration: none;
 
     transition:
-        background 0.
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+.left-menu a:hover {
+    color: var(--pink-dark);
+    background: var(--pink-soft);
+}
+
+.right-menu {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-left: auto;
+}
+
+/* =========================================================
+   4. SEARCH
+   ========================================================= */
+
+.search-box {
+    position: relative;
+    z-index: 20;
+}
+
+.search {
+    width: 190px;
+
+    padding: 10px 14px;
+
+    border: 1px solid var(--line);
+    border-radius: 999px;
+
+    background: #fff;
+
+    font-size: 12px;
+
+    transition:
+        width 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.search:focus {
+    width: 230px;
+
+    border-color: #e996ad;
+
+    box-shadow: 0 0 0 4px var(--pink-soft);
+
+    outline: 0;
+}
+
+.search-results {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+
+    display: none;
+
+    width: min(300px, 90vw);
+    max-height: 360px;
+
+    overflow: auto;
+
+    padding: 8px;
+
+    border: 1px solid var(--line);
+    border-radius: 14px;
+
+    background: #fff;
+
+    box-shadow: var(--shadow);
+}
+
+
+/* =========================================================
+   5. CART BUTTON
+   ========================================================= */
+
+.cart-button {
+    position: relative;
+
+    display: grid;
+    place-items: center;
+
+    width: 42px;
+    height: 42px;
+
+    border: 1px solid var(--line);
+    border-radius: 50%;
+
+    background: var(--pink-soft);
+
+    cursor: pointer;
+
+    font-size: 19px;
+}
+
+.cart-count {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+
+    display: grid;
+    place-items: center;
+
+    min-width: 19px;
+    height: 19px;
+
+    padding: 0 4px;
+
+    border-radius: 99px;
+
+    background: var(--pink);
+    color: #fff;
+
+    font-size: 10px;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   6. HERO SECTION
+   ========================================================= */
+
+.hero-box {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+
+    gap: 10px;
+
+    width: min(1200px, calc(100% - 32px));
+
+    height: clamp(170px, 28vw, 300px);
+
+    margin: 24px auto 36px;
+
+    overflow: hidden;
+
+    border-radius: 24px;
+
+    background: linear-gradient(
+        135deg,
+        #fff0f5,
+        #fff
+    );
+
+    box-shadow: var(--shadow);
+}
+
+.hero-box img {
+    min-width: 0;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.main-img {
+    flex: 1.5;
+}
+
+.side-img {
+    flex: 1;
+    opacity: 0.88;
+}
+
+
+/* =========================================================
+   7. MAIN CONTENT
+   ========================================================= */
+
+main {
+    width: min(1240px, 100%);
+    margin: 0 auto;
+
+    overflow: visible;
+}
+
+#productContainer {
+    width: 100%;
+    overflow: visible;
+}
+
+
+/* =========================================================
+   8. CATEGORY SECTIONS
+   ========================================================= */
+
+.category {
+    width: 100%;
+
+    padding: 0 clamp(12px, 4vw, 44px) 34px;
+
+    margin: 0;
+
+    overflow: visible;
+}
+
+.category h2,
+#categoryTitle {
+    margin: 0 0 16px;
+
+    font-size: clamp(20px, 3vw, 28px);
+    line-height: 1.2;
+}
+
+
+/* =========================================================
+   9. PRODUCT GRID
+   ========================================================= */
+
+.products {
+    display: grid;
+
+    width: 100%;
+
+    grid-template-columns:
+        repeat(auto-fill, minmax(170px, 1fr));
+
+    align-items: start;
+
+    gap: 18px;
+
+    height: auto;
+    min-height: 0;
+
+    overflow: visible;
+}
+
+
+/* =========================================================
+   10. CUSTOM PRODUCT-CARD ELEMENT
+   ========================================================= */
+
+product-card {
+    display: block;
+
+    width: 100%;
+    min-width: 0;
+
+    height: auto;
+    min-height: 0;
+
+    overflow: visible;
+}
+/* =========================================================
+   11. PRODUCT CARD
+   ========================================================= */
+
+.card {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    min-width: 0;
+
+    height: 100%;
+    min-height: 0;
+
+    padding: 11px;
+
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+
+    background: #fff;
+
+    box-shadow: var(--card-shadow);
+
+    overflow: visible;
+}
+
+
+/* =========================================================
+   12. PRODUCT IMAGE
+   ========================================================= */
+
+.img-box {
+    position: relative;
+
+    width: 100%;
+
+    aspect-ratio: 1 / 1;
+
+    overflow: hidden;
+
+    border-radius: 13px;
+
+    background: #fff7fa;
+
+    flex-shrink: 0;
+}
+
+.img-box img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    max-width: 100%;
+
+    object-fit: cover;
+
+    cursor: zoom-in;
+}
+
+
+/* =========================================================
+   13. PRODUCT TEXT
+   ========================================================= */
+
+.name {
+    min-height: 42px;
+
+    margin: 12px 3px 3px;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    line-height: 1.4;
+
+    overflow: visible;
+}
+
+.price {
+    margin: 0 3px 8px;
+
+    color: var(--pink-dark);
+
+    font-size: 15px;
+    font-weight: 700;
+
+    line-height: 1.4;
+
+    overflow: visible;
+}
+
+
+/* =========================================================
+   14. FLOATING CART ICON
+   ========================================================= */
+
+.floating-icon {
+    position: absolute;
+
+    right: 9px;
+    bottom: 9px;
+
+    display: grid;
+    place-items: center;
+
+    width: 38px;
+    height: 38px;
+
+    border: 0;
+    border-radius: 50%;
+
+    background: var(--pink);
+    color: #fff;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   15. QUANTITY BOX
+   ========================================================= */
+
+.qty-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 8px;
+
+    margin: auto 0 9px;
+
+    padding: 3px;
+
+    border: 1px solid var(--line);
+    border-radius: 10px;
+
+    min-height: 36px;
+
+    overflow: visible;
+}
+
+.qty-box button {
+    width: 30px;
+    height: 30px;
+
+    flex-shrink: 0;
+
+    border: 0;
+    border-radius: 8px;
+
+    background: var(--pink-soft);
+    color: var(--pink-dark);
+
+    cursor: pointer;
+}
+
+.qty {
+    min-width: 24px;
+
+    text-align: center;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   16. ADD TO CART BUTTON
+   ========================================================= */
+
+.add-btn {
+    width: 100%;
+
+    min-height: 40px;
+
+    padding: 11px 15px;
+
+    border: 0;
+    border-radius: 999px;
+
+    background: var(--pink);
+    color: #fff;
+
+    cursor: pointer;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    transition:
+        background 0.2s ease,
+        transform 0.15s ease;
+}
+
+.add-btn:hover {
+    background: var(--pink-dark);
+}
+
+.add-btn:active {
+    transform: scale(0.98);
+}
+
+
+/* =========================================================
+   17. EXTRA PRODUCTS
+   ========================================================= */
+
+.extra-product {
+    display: none !important;
+}
+
+.category.expanded .extra-product {
+    display: block !important;
+}
+
+
+/* =========================================================
+   18. VIEW ALL BUTTON
+   ========================================================= */
+
+.view-all-wrapper {
+    display: flex;
+
+    grid-column: 1 / -1;
+
+    justify-content: center;
+
+    width: 100%;
+
+    margin-top: 4px;
+}
+
+.view-all-btn {
+    padding: 10px 18px;
+
+    border: 1px solid var(--line);
+    border-radius: 999px;
+
+    background: #fff;
+    color: var(--pink-dark);
+
+    cursor: pointer;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   19. PRODUCT ERROR
+   ========================================================= */
+
+.product-error {
+    margin: 25px 0;
+
+    padding: 28px;
+
+    border: 1px dashed #e7b6c5;
+    border-radius: var(--radius);
+
+    background: #fff;
+    color: var(--muted);
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   20. IMAGE POPUP
+   ========================================================= */
+
+.popup {
+    position: fixed;
+    inset: 0;
+
+    z-index: 2000;
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 24px;
+
+    background: rgba(35, 16, 25, 0.76);
+}
+
+.popup img {
+    max-width: 94vw;
+    max-height: 90vh;
+
+    border-radius: 16px;
+}
+/* =========================================================
+   21. CART OVERLAY
+   ========================================================= */
+
+.cart-overlay {
+    position: fixed;
+    inset: 0;
+
+    z-index: 1100;
+
+    display: none;
+
+    background: rgba(35, 16, 25, 0.38);
+}
+
+.cart-overlay.open {
+    display: block;
+}
+
+
+/* =========================================================
+   22. CART DRAWER
+   ========================================================= */
+
+.cart-drawer {
+    position: fixed;
+
+    top: 0;
+    right: 0;
+
+    z-index: 1200;
+
+    display: flex;
+    flex-direction: column;
+
+    width: min(420px, 100%);
+    height: 100dvh;
+
+    padding: 22px;
+
+    background: #fff;
+
+    box-shadow: -12px 0 35px rgba(50, 20, 35, 0.15);
+
+    transform: translateX(105%);
+
+    transition: transform 0.28s ease;
+}
+
+.cart-drawer.open {
+    transform: translateX(0);
+}
+
+.cart-items {
+    flex: 1;
+
+    overflow: auto;
+
+    padding: 12px 0;
+}
+
+.cart-empty {
+    display: none;
+
+    flex: 1;
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    color: var(--muted);
+}
+
+.cart-footer {
+    border-top: 1px solid var(--line);
+
+    padding-top: 16px;
+}
+
+.cart-whatsapp-btn,
+.cart-clear-btn {
+    width: 100%;
+
+    padding: 12px;
+
+    border: 0;
+    border-radius: 999px;
+
+    cursor: pointer;
+
+    font-weight: 700;
+}
+
+.cart-whatsapp-btn {
+    background: #25d366;
+    color: #fff;
+}
+
+.cart-clear-btn {
+    margin-top: 9px;
+
+    background: var(--pink-soft);
+    color: var(--pink-dark);
+}
+
+.cart-open {
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   23. DESKTOP / TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .left-menu {
+        display: none;
+    }
+
+    .menu-icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .top-heading {
+        font-size: 19px;
+    }
+
+    .right-menu {
+        margin-left: auto;
+    }
+}
+
+
+/* =========================================================
+   24. MOBILE — MAIN FIX
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    /* ---------- Page containers ---------- */
+
+    main {
+        width: 100% !important;
+
+        margin: 0 !important;
+
+        overflow: visible !important;
+    }
+
+    #productContainer {
+        width: 100% !important;
+
+        height: auto !important;
+        min-height: 0 !important;
+
+        overflow: visible !important;
+    }
+
+
+    /* ---------- Category ---------- */
+
+    .category {
+        display: block !important;
+
+        width: 100% !important;
+
+        height: auto !important;
+        min-height: 0 !important;
+
+        margin: 0 !important;
+
+        padding: 20px 12px 40px !important;
+
+        overflow: visible !important;
+    }
+
+    .category h2 {
+        margin: 0 0 20px 8px !important;
+
+        font-size: 30px !important;
+
+        line-height: 1.2;
+    }
+
+
+    /* ---------- Product grid ---------- */
+
+    .products {
+        display: grid !important;
+
+        width: 100% !important;
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr)) !important;
+
+        gap: 14px !important;
+
+        align-items: start !important;
+
+        height: auto !important;
+        min-height: 0 !important;
+
+        overflow: visible !important;
+    }
+
+
+    /* ---------- Custom product-card ---------- */
+
+    product-card {
+        display: block !important;
+
+        width: 100% !important;
+        min-width: 0 !important;
+
+        height: auto !important;
+        min-height: 0 !important;
+
+        margin: 0 !important;
+
+        overflow: visible !important;
+    }
+
+
+    /* ---------- Actual card ---------- */
+
+    product-card .card {
+        display: flex !important;
+
+        flex-direction: column !important;
+
+        width: 100% !important;
+
+        height: auto !important;
+        min-height: 0 !important;
+
+        margin: 0 !important;
+
+        padding: 8px !important;
+
+        overflow: visible !important;
+
+        border-radius: 14px;
+
+        box-sizing: border-box !important;
+    }
+
+
+    /* ---------- Image ---------- */
+
+    product-card .img-box {
+        position: relative !important;
+
+        display: block !important;
+
+        width: 100% !important;
+
+        height: auto !important;
+        min-height: 0 !important;
+
+        aspect-ratio: 1 / 1 !important;
+
+        overflow: hidden !important;
+
+        flex-shrink: 0 !important;
+
+        border-radius: 12px;
+    }
+
+    product-card .img-box img {
+        display: block !important;
+
+        width: 100% !important;
+        height: 100% !important;
+
+        max-width: 100% !important;
+
+        object-fit: cover !important;
+    }
+
+
+    /* ---------- Product name ---------- */
+
+    product-card .name {
+        display: block !important;
+
+        width: auto !important;
+
+        height: auto !important;
+
+        min-height: 40px !important;
+
+        margin: 10px 8px 4px !important;
+
+        overflow: visible !important;
+
+        font-size: 12px !important;
+
+        line-height: 1.3 !important;
+    }
+
+
+    /* ---------- Product price ---------- */
+
+    product-card .price {
+        display: block !important;
+
+        width: auto !important;
+
+        height: auto !important;
+
+        min-height: 0 !important;
+
+        margin: 4px 8px !important;
+
+        overflow: visible !important;
+
+        font-size: 14px !important;
+
+        line-height: 1.4 !important;
+    }
+
+
+    /* ---------- Quantity ---------- */
+
+    product-card .qty-box {
+        display: flex !important;
+
+        width: calc(100% - 16px) !important;
+
+        height: auto !important;
+
+        min-height: 36px !important;
+
+        margin: 8px 8px !important;
+
+        overflow: visible !important;
+    }
+
+
+    /* ---------- Add to cart ---------- */
+
+    product-card .add-btn {
+        display: block !important;
+
+        width: calc(100% - 16px) !important;
+
+        height: auto !important;
+
+        min-height: 40px !important;
+
+        margin: 6px 8px 12px !important;
+
+        overflow: visible !important;
+    }
+
+
+    /* ---------- Floating cart icon ---------- */
+
+    product-card .floating-icon {
+        right: 8px !important;
+        bottom: 8px !important;
+    }
+
+
+    /* ---------- View all ---------- */
+
+    .view-all-wrapper {
+        display: flex !important;
+
+        width: 100% !important;
+
+        grid-column: 1 / -1 !important;
+
+        justify-content: center !important;
+
+        margin-top: 4px;
+    }
+
+
+    /* ---------- Extra products ---------- */
+
+    .extra-product {
+        display: none !important;
+    }
+
+    .category.expanded .extra-product {
+        display: block !important;
+    }
+}
+
+
+/* =========================================================
+   25. MOBILE HEADER
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .top-bar {
+        min-height: 64px;
+
+        padding: 8px 12px;
+
+        gap: 8px;
+    }
+
+    .logo-area {
+        width: 38px;
+    }
+
+    .pc-logo {
+        display: none;
+    }
+
+    .top-heading {
+        position: absolute;
+
+        left: 50%;
+
+        transform: translateX(-50%);
+
+        max-width: 42vw;
+
+        overflow: hidden;
+
+        text-overflow: ellipsis;
+
+        font-size: 16px;
+    }
+
+    .right-menu {
+        gap: 7px;
+    }
+
+    .search {
+        width: clamp(100px, 28vw, 145px);
+
+        padding: 8px 10px;
+    }
+
+    .search:focus {
+        width: clamp(120px, 38vw, 180px);
+    }
+
+
+    /* Hero */
+
+    .hero-box {
+        width: calc(100% - 24px);
+
+        height: 155px;
+
+        margin: 14px auto 26px;
+
+        border-radius: 18px;
+    }
+
+    .side-img {
+        display: none;
+    }
+
+
+    /* Cart */
+
+    .cart-drawer {
+        padding: 16px;
+    }
+
+    .whatsapp-float {
+        right: 14px;
+        bottom: 14px;
+    }
+}
+
+
+/* =========================================================
+   26. VERY SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 360px) {
+
+    .top-heading {
+        font-size: 14px;
+    }
+
+    .search {
+        width: 88px;
+    }
+
+    .search:focus {
+        width: 120px;
+    }
+
+    .products {
+        gap: 8px !important;
+    }
+
+    product-card .card {
+        padding: 6px !important;
+    }
+
+    product-card .name {
+        margin-left: 6px !important;
+        margin-right: 6px !important;
+    }
+
+    product-card .price {
+        margin-left: 6px !important;
+        margin-right: 6px !important;
+    }
+
+    product-card .qty-box {
+        width: calc(100% - 12px) !important;
+        margin-left: 6px !important;
+        margin-right: 6px !important;
+    }
+
+    product-card .add-btn {
+        width: calc(100% - 12px) !important;
+        margin-left: 6px !important;
+        margin-right: 6px !important;
+    }
+}
+
+
+/* =========================================================
+   27. REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+
+        transition-duration: 0.01ms !important;
+    }
+}
+
+
+/* =========================================================
+   28. GLOBAL SAFETY OVERRIDES
+   ========================================================= */
+
+/*
+   These rules make sure dynamically generated product
+   sections cannot accidentally create a fixed-height
+   clipping area on the homepage.
+*/
+
+#productContainer,
+#productContainer > .category,
+#productContainer .products,
+#productContainer product-card {
+    max-height: none;
+}
+
+#productContainer .category,
+#productContainer .products {
+    position: relative;
+}
+
+
+/* =========================================================
+   END OF STYLESHEET
+   ========================================================= */
+
