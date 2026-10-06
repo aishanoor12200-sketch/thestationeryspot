@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Refund Policy</title>
 
-  <!-- Playball Font -->
   <link href="https://fonts.googleapis.com/css2?family=Playball&display=swap" rel="stylesheet">
 
   <style>
     body {
-      font-family: Arial;
+      font-family: Arial, sans-serif;
       background: #fff;
       margin: 0;
       padding: 0;
@@ -39,10 +39,16 @@
     p {
       line-height: 1.6;
       margin-bottom: 10px;
+      font-size: 15px;
     }
 
     ol {
       margin-left: 20px;
+      font-size: 15px;
+    }
+
+    ol li {
+      margin-bottom: 5px;
     }
 
     /* FOOTER CSS */
@@ -69,6 +75,7 @@
     .footer h3 {
       color: #000;
       margin-bottom: 10px;
+      font-size: 16px;
     }
 
     .footer p {
@@ -83,8 +90,42 @@
       border-top: 1px solid #ddd;
       padding-top: 10px;
     }
-  </style>
-</head>
+
+    /* MOBILE STYLING */
+    @media (max-width: 768px) {
+      .container {
+        margin: 20px auto;
+        padding: 15px;
+      }
+
+      h1 {
+        font-size: 32px;
+      }
+
+      .box p, .box ol {
+        font-size: 16px; 
+        line-height: 1.5;
+      }
+
+      .footer-left, .footer-right {
+        width: 100%;
+        margin-bottom: 25px;
+      }
+
+      .footer h3 {
+        font-size: 18px;
+      }
+
+      .footer p {
+        font-size: 15px;
+        margin: 5px 0;
+      }
+      
+      .footer-right {
+        margin-bottom: 10px;
+      }
+    }
+  </style> </head>
 
 <body>
 
@@ -92,13 +133,10 @@
     <h1>Refund Policy</h1>
 
     <div class="box">
-
       <p><b>Return Policy</b></p>
-
       <p>If your product is damaged, defective, incorrect, or incomplete at the time of delivery, please contact us via Facebook, email, or WhatsApp within 14 days to request a return or exchange.</p>
 
       <p><b>Valid reasons to return an item:</b></p>
-
       <ol>
         <li>Product is damaged or defective.</li>
         <li>Product is incorrect or incomplete.</li>
@@ -106,14 +144,11 @@
       </ol>
 
       <p>We aim to make your shopping experience smooth and hassle-free 💖</p>
-
     </div>
   </div>
 
-  <!-- FOOTER -->
   <div class="footer">
     <div class="footer-container">
-
       <div class="footer-left">
         <h3>Contact Information</h3>
         <p>Phone number: +923271576380</p>
@@ -122,10 +157,9 @@
 
       <div class="footer-right">
         <h3>Follow Us</h3>
-        <p>Instagram: thestationeryspot.pk</p>
+        <p>Instagram: stationeryspot.pk</p>
         <p>Facebook: The Stationery Spot</p>
       </div>
-
     </div>
 
     <div class="footer-bottom">
@@ -135,3 +169,4 @@
 
 </body>
 </html>
+

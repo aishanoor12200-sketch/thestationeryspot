@@ -1,13 +1,32 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-<title>Deals - The Stationery Spot</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Shop cute stationery, diaries, gifts and everyday essentials from The Stationery Spot in Pakistan.">
+  <title>Deals | The Stationery Spot</title>
+  <link rel="stylesheet" href="Style.css">
+  <link rel="stylesheet" href="sidebar.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
-
-<body style="text-align:center; font-family:Arial;">
-
-<h1>🔥 Deals</h1>
-<p>Coming Soon...</p>
-
+<body>
+<header class="top-bar">
+  <div class="logo-area"><button class="menu-icon" type="button" onclick="openCommonSidebar()" aria-label="Open menu">☰</button><a href="index.html"><img class="pc-logo" src="images/1778446342483.png" alt="The Stationery Spot logo"></a><div class="top-heading">The Stationery Spot</div></div>
+  <nav class="left-menu" aria-label="Main navigation"><a href="index.html">Home</a><a href="deals.html" aria-current="page">Deals</a><a href="contact.html">Contact</a><a href="Refund policy.html">Refund Policy</a><a href="Shipping policy.html">Shipping Policy</a></nav>
+  <div class="right-menu"><div class="cart-area"><button class="cart-button" type="button" onclick="openCart()" aria-label="Open shopping cart">🛒<span id="cartCount" class="cart-count">0</span></button></div></div>
+</header>
+<main>
+  <section class="category" style="padding-top:clamp(35px,7vw,80px);text-align:center">
+    <p style="color:var(--pink);font-weight:700;margin:0">SPECIAL OFFERS</p>
+    <h1 style="font-size:clamp(28px,5vw,48px);margin:6px 0 10px">Cute finds, better prices ✨</h1>
+    <p style="max-width:600px;margin:0 auto 28px;color:var(--muted)">Browse our current collection and message us on WhatsApp to confirm availability, delivery and your order.</p>
+    <a class="btn" style="display:inline-block;width:auto;text-decoration:none" href="index.html#productContainer">Shop all products →</a>
+  </section>
+  <section class="category" aria-labelledby="deals-heading"><h2 id="deals-heading">Popular stationery picks</h2><div id="productContainer" class="products"><div class="product-error">Loading products…</div></div></section>
+</main>
+<a class="whatsapp-float" href="https://wa.me/923271576380" target="_blank" rel="noopener noreferrer" aria-label="Chat with The Stationery Spot on WhatsApp">💬 <span>Chat with us</span></a>
+<script src="cart.js"></script><script src="product-card.js"></script><script src="products.js"></script><script src="sidebar.js"></script>
 </body>
 </html>

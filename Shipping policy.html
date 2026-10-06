@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shipping Policy</title>
 
-  <!-- Playball Font -->
   <link href="https://fonts.googleapis.com/css2?family=Playball&display=swap" rel="stylesheet">
 
   <style>
     body {
-      font-family: Arial;
+      font-family: Arial, sans-serif;
       background: #fff;
       margin: 0;
       padding: 0;
@@ -39,6 +39,7 @@
     p {
       line-height: 1.6;
       margin-bottom: 10px;
+      font-size: 15px; /* Desktop readable size */
     }
 
     .charge {
@@ -47,7 +48,7 @@
       margin-bottom: 5px;
     }
 
-    /* FOOTER */
+    /* FOOTER CSS */
     .footer {
       background: #fff;
       color: #000;
@@ -71,6 +72,7 @@
     .footer h3 {
       color: #000;
       margin-bottom: 10px;
+      font-size: 16px;
     }
 
     .footer p {
@@ -84,6 +86,44 @@
       font-size: 13px;
       border-top: 1px solid #ddd;
       padding-top: 10px;
+    }
+
+    /* FIX 2: MOBILE STYLING (Responsive features) */
+    @media (max-width: 768px) {
+      .container {
+        margin: 20px auto;
+        padding: 15px;
+      }
+
+      h1 {
+        font-size: 32px;
+      }
+
+      /* Policy Box ka text aur charges mobile par bare aur clear dikhenge */
+      .box p, .charge {
+        font-size: 16px; 
+        line-height: 1.5;
+      }
+
+      /* Footer sections ko vertical stack krdiya */
+      .footer-left, .footer-right {
+        width: 100%;
+        margin-bottom: 25px;
+      }
+
+      .footer h3 {
+        font-size: 18px;
+        margin-bottom: 8px;
+      }
+
+      .footer p {
+        font-size: 15px;
+        margin: 5px 0;
+      }
+      
+      .footer-right {
+        margin-bottom: 10px;
+      }
     }
   </style>
 </head>
@@ -100,7 +140,7 @@
       <p>We aim to deliver your order as quickly and safely as possible.</p>
 
       <p><b>Delivery Time:</b><br>
-      Orders are delivered within 3–5 working days.</p>
+      Orders are delivered within 2–3 working days.</p>
 
       <p><b>Shipping Charges:</b><br>
       <span class="charge">KARACHI = 200</span>
@@ -120,7 +160,6 @@
     </div>
   </div>
 
-  <!-- FOOTER -->
   <div class="footer">
     <div class="footer-container">
 
@@ -132,7 +171,7 @@
 
       <div class="footer-right">
         <h3>Follow Us</h3>
-        <p>Instagram: thestationeryspot.pk</p>
+        <p>Instagram: stationeryspot.pk</p>
         <p>Facebook: The Stationery Spot</p>
       </div>
 

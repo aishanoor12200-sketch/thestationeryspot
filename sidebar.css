@@ -1,0 +1,638 @@
+/* =========================================
+   COMMON SIDEBAR
+========================================= */
+
+.sidebar-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(40, 20, 30, 0.35);
+
+    opacity: 0;
+    visibility: hidden;
+
+    z-index: 100000;
+
+    transition:
+        opacity 0.3s ease,
+        visibility 0.3s ease;
+}
+
+.sidebar-overlay.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* =========================================
+   SIDEBAR BOX
+========================================= */
+
+.common-sidebar {
+    position: fixed;
+
+    top: 0;
+    left: -330px;
+
+    width: 310px;
+    max-width: 88vw;
+    height: 100vh;
+
+    background: linear-gradient(
+        180deg,
+        #ffffff 0%,
+        #fff7fa 100%
+    );
+
+    border-radius: 0 24px 24px 0;
+
+    box-shadow:
+        8px 0 35px rgba(80, 20, 45, 0.16);
+
+    z-index: 100001;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow: hidden;
+
+    transition:
+        left 0.32s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.common-sidebar.open {
+    left: 0;
+}
+
+
+/* =========================================
+   BRAND / LOGO AREA
+========================================= */
+
+.sidebar-brand {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 18px 16px 14px;
+
+    flex-shrink: 0;
+}
+
+
+/* LOGO CIRCLE */
+
+.sidebar-brand-logo {
+    width: 52px;
+    height: 52px;
+
+    min-width: 52px;
+    min-height: 52px;
+
+    border-radius: 50%;
+
+    background: #fff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 4px 14px rgba(255, 105, 145, 0.18);
+
+    border: 1px solid #ffe0e9;
+}
+
+
+/* ACTUAL LOGO IMAGE */
+
+.sidebar-brand-logo img {
+    width: 100%;
+    height: 100%;
+
+    max-width: 100%;
+    max-height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* BRAND TEXT */
+
+.sidebar-brand-text {
+    min-width: 0;
+    flex: 1;
+}
+
+.sidebar-brand-name {
+    font-family: 'Pacifico', cursive;
+
+    color: #ff6f91;
+
+    font-size: 18px;
+
+    line-height: 1.2;
+
+    white-space: nowrap;
+}
+
+.sidebar-brand-subtitle {
+    margin-top: 4px;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 10px;
+
+    color: #999;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================
+   CLOSE BUTTON
+========================================= */
+
+.sidebar-close {
+    width: 36px;
+    height: 36px;
+
+    min-width: 36px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #fff0f5;
+
+    color: #ff4d88;
+
+    font-size: 24px;
+    line-height: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.sidebar-close:hover {
+    background: #ffe0e9;
+    transform: rotate(90deg);
+}
+
+
+/* =========================================
+   TABS
+========================================= */
+
+.sidebar-tabs {
+    display: flex;
+
+    margin: 0 16px 12px;
+
+    padding: 4px;
+
+    background: #fff0f5;
+
+    border-radius: 14px;
+
+    flex-shrink: 0;
+}
+
+.sidebar-tab {
+    flex: 1;
+
+    border: none;
+
+    background: transparent;
+
+    color: #999;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    letter-spacing: 0.5px;
+
+    padding: 9px 5px;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.sidebar-tab.active {
+    background: #ffffff;
+
+    color: #ff4d88;
+
+    box-shadow:
+        0 2px 8px rgba(255, 105, 145, 0.12);
+}
+
+
+/* =========================================
+   SCROLL AREA
+========================================= */
+
+.sidebar-content {
+    flex: 1;
+
+    min-height: 0;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    padding: 0 16px 20px;
+
+    -webkit-overflow-scrolling: touch;
+
+    scrollbar-width: thin;
+    scrollbar-color: #ffc4d5 transparent;
+}
+
+.sidebar-content::-webkit-scrollbar {
+    width: 5px;
+}
+
+.sidebar-content::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.sidebar-content::-webkit-scrollbar-thumb {
+    background: #ffc4d5;
+    border-radius: 10px;
+}
+
+
+/* =========================================
+   TAB CONTENT
+========================================= */
+
+.sidebar-tab-content {
+    display: none;
+}
+
+.sidebar-tab-content.active {
+    display: block;
+}
+
+
+/* =========================================
+   SECTION LABEL
+========================================= */
+
+.sidebar-section-label {
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 10px;
+    font-weight: 600;
+
+    letter-spacing: 1.2px;
+
+    color: #b5b5b5;
+
+    padding: 8px 8px 6px;
+
+    margin-top: 2px;
+}
+
+.policy-label {
+    margin-top: 12px;
+}
+
+
+/* =========================================
+   MENU LINKS
+========================================= */
+
+.sidebar-tab-content > a {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    width: 100%;
+
+    padding: 11px 10px;
+
+    margin-bottom: 3px;
+
+    border-radius: 12px;
+
+    color: #333;
+
+    text-decoration: none;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 14px;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.sidebar-tab-content > a:hover {
+    background: #fff0f5;
+
+    color: #ff4d88;
+
+    transform: translateX(3px);
+}
+
+
+/* =========================================
+   MENU ICONS
+========================================= */
+
+.sidebar-link-icon {
+    width: 28px;
+    height: 28px;
+
+    min-width: 28px;
+
+    border-radius: 9px;
+
+    background: #fff0f5;
+
+    color: #ff6f91;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 15px;
+}
+
+
+/* =========================================
+   CATEGORY HEADING
+========================================= */
+
+.sidebar-category-heading {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 8px 8px 12px;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    color: #555;
+}
+
+
+/* =========================================
+   CATEGORY
+========================================= */
+
+.sidebar-category {
+    border-bottom: 1px solid #f6e8ed;
+}
+
+.sidebar-category-row {
+    display: flex;
+
+    align-items: center;
+}
+
+.sidebar-category-row a {
+    flex: 1;
+
+    min-width: 0;
+
+    padding: 12px 8px;
+
+    color: #333;
+
+    text-decoration: none;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 14px;
+
+    transition: color 0.2s ease;
+}
+
+.sidebar-category-row a:hover {
+    color: #ff4d88;
+}
+
+
+/* =========================================
+   PLUS BUTTON
+========================================= */
+
+.category-plus {
+    width: 34px;
+    height: 34px;
+
+    min-width: 34px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: transparent;
+
+    color: #ff4d88;
+
+    font-size: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.category-plus:hover {
+    background: #fff0f5;
+}
+
+.sidebar-category.expanded .category-plus {
+    background: #ffe4ec;
+}
+
+
+/* =========================================
+   CATEGORY PRODUCTS
+========================================= */
+
+.sidebar-category-products {
+    display: none;
+
+    padding: 0 8px 10px 28px;
+}
+
+.sidebar-category.expanded .sidebar-category-products {
+    display: block;
+}
+
+.sidebar-product-link {
+    display: block;
+
+    padding: 7px 8px;
+
+    border-radius: 7px;
+
+    color: #888;
+
+    text-decoration: none;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 12px;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+.sidebar-product-link:hover {
+    background: #fff0f5;
+    color: #ff4d88;
+}
+
+
+/* =========================================
+   LOADING
+========================================= */
+
+.sidebar-loading {
+    color: #aaa;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 12px;
+
+    text-align: center;
+
+    padding: 20px 5px;
+}
+
+
+/* =========================================
+   FOOTER INSIDE SIDEBAR
+========================================= */
+
+.sidebar-footer {
+    flex-shrink: 0;
+
+    text-align: center;
+
+    padding: 10px 16px 18px;
+
+    background: linear-gradient(
+        180deg,
+        rgba(255,255,255,0),
+        #fff7fa
+    );
+}
+
+.sidebar-footer-line {
+    width: 45px;
+    height: 2px;
+
+    margin: 0 auto 8px;
+
+    background: #ffd5e1;
+
+    border-radius: 10px;
+}
+
+.sidebar-footer-text {
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 11px;
+
+    color: #999;
+}
+
+.sidebar-footer-text span {
+    color: #ff6f91;
+}
+
+.sidebar-footer-subtext {
+    margin-top: 2px;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 9px;
+
+    color: #bbb;
+}
+
+
+/* =========================================
+   BODY LOCK
+========================================= */
+
+body.sidebar-open {
+    overflow: hidden;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .common-sidebar {
+        width: 310px;
+        max-width: 88vw;
+    }
+
+    .sidebar-brand-logo {
+        width: 48px;
+        height: 48px;
+
+        min-width: 48px;
+        min-height: 48px;
+    }
+
+    .sidebar-brand-name {
+        font-size: 17px;
+    }
+}
+
+
+/* =========================================
+   DESKTOP
+========================================= */
+
+@media (min-width: 601px) {
+
+    .common-sidebar,
+    .sidebar-overlay {
+        display: none;
+    }
+
+}
