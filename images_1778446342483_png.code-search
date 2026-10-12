@@ -1,0 +1,40 @@
+# Query: images/1778446342483.png
+# ContextLines: 1
+
+8 results - 4 files
+
+category.html:
+  17        <button class="menu-icon" type="button" onclick="openCommonSidebar()" aria-label="Open menu">☰</button>
+  18:       <a href="index.html" aria-label="Go to home page"><img src="images/1778446342483.png" class="pc-logo" alt="The Stationery Spot" width="80" height="80"></a>
+  19      </div>
+
+contact.html:
+   37          type="image/png"
+   38:         href="images/1778446342483.png"
+   39      >
+
+   42          rel="apple-touch-icon"
+   43:         href="images/1778446342483.png"
+   44      >
+
+  116          <img
+  117:             src="images/1778446342483.png" 
+  118              class="pc-logo"
+
+deals.html:
+  15  <header class="top-bar">
+  16:   <div class="logo-area"><button class="menu-icon" type="button" onclick="openCommonSidebar()" aria-label="Open menu">☰</button><a href="index.html"><img class="pc-logo" src="images/1778446342483.png" alt="The Stationery Spot logo"></a><div class="top-heading">The Stationery Spot</div></div>
+  17    <nav class="left-menu" aria-label="Main navigation"><a href="index.html">Home</a><a href="deals.html" aria-current="page">Deals</a><a href="contact.html">Contact</a><a href="Refund policy.html">Refund Policy</a><a href="Shipping policy.html">Shipping Policy</a></nav>
+
+index.html:
+   42          type="image/png"
+   43:         href="images/1778446342483.png"
+   44      >
+
+   47          rel="apple-touch-icon"
+   48:         href="images/1778446342483.png"
+   49      >
+
+  177              <img
+  178:                 src="images/1778446342483.png"
+  179                  class="pc-logo"

@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 <div class="sidebar-brand-logo">
                     <img
-                        src="images/1778446342483.png"
+                        src="images/file_000000000898720882cf2613b022ce8e.png"
                         alt="The Stationery Spot Logo"
                     >
                 </div>
