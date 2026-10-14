@@ -18,7 +18,15 @@
   }
   function addToCart(button) {
     const card = button?.closest?.(".card"); if (!card) return;
-    const host = card.closest("product-card"); const name = text(card.querySelector(".name")?.textContent); const price = Math.max(0, Number((card.querySelector(".price")?.textContent || "").replace(/[^0-9.]/g, "")) || 0); const quantityElement = card.querySelector(".qty"); const qty = Math.max(1, Number(quantityElement?.textContent) || 1); if (!name) return;
+    const host = card.closest("product-card");
+const name = text(card.querySelector(".name")?.textContent);
+const price = Math.max(
+  0,
+  Number(
+    String(host?.getAttribute("price") || card.querySelector(".price")?.textContent || "")
+      .replace(/[^0-9.]/g, "")
+  ) || 0
+); const quantityElement = card.querySelector(".qty"); const qty = Math.max(1, Number(quantityElement?.textContent) || 1); if (!name) return;
     const code = text(host?.getAttribute("code")); const image = text(host?.getAttribute("image")); const identity = text(host?.getAttribute("identity") || host?.dataset.identity || [code, name, price, image].join("|")); const existing = cart.find(item => itemIdentity(item) === identity);
     if (existing) existing.qty = Math.max(1, Number(existing.qty) || 0) + qty; else cart.push({ identity, name, code, image, price, qty });
     if (quantityElement) quantityElement.textContent = "1"; saveCart(); openCart();
