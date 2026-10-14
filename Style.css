@@ -1258,3 +1258,9 @@ product-card {
    END OF STYLESHEET
    ========================================================= */
 
+@media (max-width: 768px) {
+    .top-heading {
+        display: none !important;
+    }
+}
+
