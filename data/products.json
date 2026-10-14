@@ -670,5 +670,13 @@
     "category": "Other",
     "image": "/images/products/1789839241948.png",
     "available": true
+  },
+  {
+    "code": "Or02",
+    "name": "Desk Organizer ",
+    "price": 250,
+    "category": "Organizers",
+    "image": "/images/products/1791531326109-1.png",
+    "available": true
   }
 ]
