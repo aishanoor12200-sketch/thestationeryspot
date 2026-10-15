@@ -686,5 +686,13 @@
     "category": "Sticky notes",
     "image": "/images/products/1791531214068.png",
     "available": true
+  },
+  {
+    "code": "SB04",
+    "name": "Happy Stationery Box ",
+    "price": 250,
+    "category": "Stationery Box",
+    "image": "/images/products/1791531346991.png",
+    "available": true
   }
 ]
