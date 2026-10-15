@@ -669,6 +669,22 @@
     "price": 250,
     "category": "Organizers",
     "image": "/images/products/1791531326109-1.png",
+    "available": false
+  },
+  {
+    "code": "SB03",
+    "name": "Kids Stationery Box",
+    "price": 230,
+    "category": "Stationery Box",
+    "image": "/images/products/1791531282277.png",
+    "available": true
+  },
+  {
+    "code": "SN04",
+    "name": "Sticky notes ",
+    "price": 180,
+    "category": "Sticky notes",
+    "image": "/images/products/1791531214068.png",
     "available": true
   }
 ]
