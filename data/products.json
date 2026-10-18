@@ -782,5 +782,13 @@
     "category": "Jewelry",
     "image": "/images/products/file_00000000529082119bf1a02b48d2be4e.png",
     "available": true
+  },
+  {
+    "code": "JL12",
+    "name": "Butterfly Pearl Earrings ",
+    "price": 358,
+    "category": "Jewelry",
+    "image": "/images/products/file_00000000c5ec8211bff082c31b2b660b.png",
+    "available": true
   }
 ]
