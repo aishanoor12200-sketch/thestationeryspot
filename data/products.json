@@ -694,5 +694,21 @@
     "category": "Stationery Box",
     "image": "/images/products/1791531346991.png",
     "available": true
+  },
+  {
+    "code": "JL01",
+    "name": "Antique Silver Jhumkay ",
+    "price": 400,
+    "category": "Jewelry",
+    "image": "/images/products/file_000000007e188211b6b486dae89d0927-1.png",
+    "available": true
+  },
+  {
+    "code": "JL02",
+    "name": "Antique Silver Jhumkay ",
+    "price": 400,
+    "category": "Jewelry",
+    "image": "/images/products/file_000000007dc08211809323f6b1f62680.png",
+    "available": true
   }
 ]
