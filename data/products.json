@@ -774,5 +774,13 @@
     "category": "Jewelry",
     "image": "/images/products/file_000000003ac48211ba3ef2abc44a314d.png",
     "available": true
+  },
+  {
+    "code": "JL11",
+    "name": "Golden Jhumkay ",
+    "price": 400,
+    "category": "Jewelry",
+    "image": "/images/products/file_00000000529082119bf1a02b48d2be4e.png",
+    "available": true
   }
 ]
