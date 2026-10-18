@@ -758,5 +758,13 @@
     "category": "Jewelry",
     "image": "/images/products/file_00000000cdb88211b88eaca983e64cf1.png",
     "available": true
+  },
+  {
+    "code": "JL09",
+    "name": "Hoop Earrings ",
+    "price": 350,
+    "category": "Jewelry",
+    "image": "/images/products/file_00000000d9b88211b34f52daa79f7b04.png",
+    "available": true
   }
 ]
