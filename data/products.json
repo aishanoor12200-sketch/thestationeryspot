@@ -726,5 +726,29 @@
     "category": "Jewelry",
     "image": "/images/products/file_000000002cd48211bee4dea1979e250a.png",
     "available": true
+  },
+  {
+    "code": "JL05",
+    "name": "Butterfly Hair Catcher ",
+    "price": 400,
+    "category": "Jewelry",
+    "image": "/images/products/file_00000000ecb08211b040e26bd48d8fbc.png",
+    "available": true
+  },
+  {
+    "code": "JL06",
+    "name": "Pearl Hair Clip ",
+    "price": 400,
+    "category": "Jewelry",
+    "image": "/images/products/file_00000000dcd08211a7a6f6b3ada2d636.png",
+    "available": true
+  },
+  {
+    "code": "JL07",
+    "name": "Earring Set",
+    "price": 100,
+    "category": "Jewelry",
+    "image": "/images/products/file_0000000049c08211b6df04acf793c54e.png",
+    "available": true
   }
 ]
