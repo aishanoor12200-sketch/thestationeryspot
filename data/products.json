@@ -710,5 +710,21 @@
     "category": "Jewelry",
     "image": "/images/products/file_000000007dc08211809323f6b1f62680.png",
     "available": true
+  },
+  {
+    "code": "JL03",
+    "name": "Jhumka Bangles ",
+    "price": 600,
+    "category": "Jewelry",
+    "image": "/images/products/file_000000003970821191a7f15263c8f700.png",
+    "available": true
+  },
+  {
+    "code": "JL04",
+    "name": "Antique Silver Jhumkay ",
+    "price": 400,
+    "category": "Jewelry",
+    "image": "/images/products/file_000000002cd48211bee4dea1979e250a.png",
+    "available": true
   }
 ]
