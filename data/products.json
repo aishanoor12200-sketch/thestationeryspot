@@ -766,5 +766,13 @@
     "category": "Jewelry",
     "image": "/images/products/file_00000000d9b88211b34f52daa79f7b04.png",
     "available": true
+  },
+  {
+    "code": "JL10",
+    "name": "Pearl Hair Catcher ",
+    "price": 350,
+    "category": "Jewelry",
+    "image": "/images/products/file_000000003ac48211ba3ef2abc44a314d.png",
+    "available": true
   }
 ]
