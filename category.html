@@ -1,37 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Category | The Stationery Spot</title>
+
+  <link rel="icon" type="image/png" href="images/1778446342483.png">
+  <link rel="apple-touch-icon" href="images/1778446342483.png">
+
   <link rel="stylesheet" href="Style.css">
   <link rel="stylesheet" href="sidebar.css">
   <link rel="stylesheet" href="polish.css">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
 </head>
+
 <body class="category-page-body">
+
+  <!-- HEADER -->
   <header class="top-bar">
+
     <div class="logo-area">
-      <button class="menu-icon" type="button" onclick="openCommonSidebar()" aria-label="Open menu">☰</button>
-      <a href="index.html" aria-label="Go to home page"><img src="images/file_000000000898720882cf2613b022ce8e.png" class="pc-logo" alt="The Stationery Spot" width="80" height="80"></a>
+
+      <button
+        class="menu-icon"
+        type="button"
+        onclick="openCommonSidebar()"
+        aria-label="Open menu">
+        ☰
+      </button>
+
+      <a href="index.html" aria-label="Go to home page">
+        <img
+          src="images/1778446342483.png"
+          class="pc-logo"
+          alt="The Stationery Spot Logo"
+          width="80"
+          height="80">
+      </a>
+
     </div>
+
     <h1 class="top-heading">The Stationery Spot</h1>
+
     <nav class="left-menu" aria-label="Main navigation">
-      <a href="index.html">Home</a><a href="deals.html">Deals</a><a href="contact.html">Contact</a><a href="Refund policy.html">Refund Policy</a><a href="Shipping policy.html">Shipping Policy</a>
+      <a href="index.html">Home</a>
+      <a href="deals.html">Deals</a>
+      <a href="contact.html">Contact</a>
+      <a href="Refund policy.html">Refund Policy</a>
+      <a href="Shipping policy.html">Shipping Policy</a>
     </nav>
-    <div class="right-menu"><div class="cart-area"><button class="cart-button" type="button" onclick="openCart()" aria-label="Open shopping cart">🛒<span id="cartCount" class="cart-count">0</span></button></div></div>
+
+    <div class="right-menu">
+      <div class="cart-area">
+        <button
+          class="cart-button"
+          type="button"
+          onclick="openCart()"
+          aria-label="Open shopping cart">
+
+          🛒
+
+          <span id="cartCount" class="cart-count">0</span>
+        </button>
+      </div>
+    </div>
+
   </header>
+
+  <!-- CATEGORY PRODUCTS -->
   <main>
-    <section class="category category-page" aria-labelledby="categoryTitle">
+    <section
+      class="category category-page"
+      aria-labelledby="categoryTitle">
+
       <h2 id="categoryTitle">Products</h2>
-      <div id="categoryProducts" class="products category-products"></div>
+
+      <div
+        id="categoryProducts"
+        class="products category-products">
+      </div>
+
     </section>
   </main>
+
+  <!-- JAVASCRIPT -->
   <script src="product-card.js"></script>
   <script src="cart.js"></script>
   <script src="category.js"></script>
   <script src="sidebar.js"></script>
+
 </body>
 </html>
