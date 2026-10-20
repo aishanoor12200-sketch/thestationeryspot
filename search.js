@@ -195,24 +195,16 @@
                 );
 
 
-            const category =
-                String(
-                    product.category ||
-                    ""
-                );
+           const nameElement = document.createElement("span");
+nameElement.className = "search-result-name";
+nameElement.textContent = name;
 
+const arrow = document.createElement("span");
+arrow.className = "search-result-arrow";
+arrow.setAttribute("aria-hidden", "true");
+arrow.textContent = "›";
 
-            const price =
-                Number(product.price) || 0;
-
-
-            item.innerHTML = `
-                <strong>${name}</strong>
-                <small>
-                    ${category} · Rs.${price}
-                </small>
-            `;
-
+item.replaceChildren(nameElement, arrow);
 
             item.addEventListener(
                 "click",
