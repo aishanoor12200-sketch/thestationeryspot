@@ -1,219 +1,101 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Explore special stationery deals and cute gift bundles from The Stationery Spot.">
-  <title>Deals | The Stationery Spot</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Category | The Stationery Spot</title>
+
+  <link rel="icon" type="image/png" href="images/1778446342483.png">
+  <link rel="apple-touch-icon" href="images/1778446342483.png">
 
   <link rel="stylesheet" href="Style.css">
   <link rel="stylesheet" href="sidebar.css">
+  <link rel="stylesheet" href="polish.css">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <style>
-    /* Deals page only */
-    .deals-page {
-      padding: 35px 18px 70px;
-      background: #fff9fc;
-      min-height: 75vh;
-    }
-
-    .deals-hero {
-      max-width: 760px;
-      margin: 0 auto 38px;
-      padding: 32px 18px;
-      text-align: center;
-      background: #fff0f6;
-      border: 1px solid #f8dce8;
-      border-radius: 24px;
-    }
-
-    .deals-label {
-      color: #e94f83;
-      font-size: 13px;
-      font-weight: 700;
-      letter-spacing: 2px;
-      margin: 0 0 10px;
-    }
-
-    .deals-hero h1 {
-      color: #302532;
-      font-size: clamp(27px, 5vw, 42px);
-      line-height: 1.25;
-      margin: 0 0 12px;
-    }
-
-    .deals-hero p:not(.deals-label) {
-      color: #776b76;
-      font-size: 14px;
-      line-height: 1.8;
-      max-width: 540px;
-      margin: 0 auto 20px;
-    }
-
-    .deals-contact {
-      display: inline-block;
-      padding: 12px 23px;
-      border-radius: 30px;
-      background: #ed5688;
-      color: white;
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    .deals-contact:hover {
-      background: #d94376;
-    }
-
-    .deals-section {
-      max-width: 1050px;
-      margin: 0 auto;
-    }
-
-    .deals-section h2 {
-      text-align: center;
-      color: #302532;
-      font-size: clamp(23px, 4vw, 32px);
-      margin: 0 0 24px;
-    }
-
-    .deals-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 16px;
-    }
-
-    .deal-card {
-      min-width: 0;
-      overflow: hidden;
-      background: white;
-      border: 1px solid #f1dce6;
-      border-radius: 18px;
-      padding: 12px;
-      text-align: center;
-      box-shadow: 0 5px 18px rgba(130, 65, 95, 0.06);
-    }
-
-    .deal-card img {
-      display: block;
-      width: 100%;
-      aspect-ratio: 1 / 1;
-      object-fit: contain;
-      border-radius: 12px;
-      background: #fff8fb;
-    }
-
-    .deal-card h3 {
-      color: #302532;
-      font-size: 15px;
-      margin: 12px 0 5px;
-    }
-
-    .deal-price {
-      color: #d94376;
-      font-size: 19px;
-      font-weight: 700;
-      margin: 5px 0 12px;
-    }
-
-    .deal-order {
-      display: block;
-      padding: 10px 8px;
-      border-radius: 25px;
-      background: #ed5688;
-      color: white;
-      font-size: 13px;
-      font-weight: 600;
-      text-decoration: none;
-    }
-
-    .deals-empty {
-      grid-column: 1 / -1;
-      padding: 25px 16px;
-      border: 1px dashed #e9bfd1;
-      border-radius: 16px;
-      color: #776b76;
-      text-align: center;
-      line-height: 1.8;
-      background: white;
-    }
-
-    @media (min-width: 650px) {
-      .deals-page {
-        padding: 55px 24px 80px;
-      }
-
-      .deals-grid {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 22px;
-      }
-
-      .deal-card {
-        padding: 16px;
-      }
-
-      .deal-card h3 {
-        font-size: 17px;
-      }
-    }
-  </style>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
 </head>
 
-<body>
-<header class="top-bar">
-  <div class="logo-area">
-    <button class="menu-icon" type="button" onclick="openCommonSidebar()" aria-label="Open menu">☰</button>
-    <a href="index.html">
-      <img class="pc-logo" src="images/file_000000000898720882cf2613b022ce8e.png" alt="The Stationery Spot logo">
-    </a>
-    <div class="top-heading">The Stationery Spot</div>
-  </div>
+<body class="category-page-body">
 
-  <nav class="left-menu" aria-label="Main navigation">
-    <a href="index.html">Home</a>
-    <a href="deals.html" aria-current="page">Deals</a>
-    <a href="contact.html">Contact</a>
-    <a href="Refund policy.html">Refund Policy</a>
-    <a href="Shipping policy.html">Shipping Policy</a>
-  </nav>
+  <!-- HEADER -->
+  <header class="top-bar">
 
-  <div class="right-menu">
-    <div class="cart-area">
-      <button class="cart-button" type="button" onclick="openCart()" aria-label="Open shopping cart">
-        🛒<span id="cartCount" class="cart-count">0</span>
+    <div class="logo-area">
+
+      <button
+        class="menu-icon"
+        type="button"
+        onclick="openCommonSidebar()"
+        aria-label="Open menu">
+        ☰
       </button>
+
+      <a href="index.html" aria-label="Go to home page">
+        <img
+          src="images/1778446342483.png"
+          class="pc-logo"
+          alt="The Stationery Spot Logo"
+          width="80"
+          height="80">
+      </a>
+
     </div>
-  </div>
-</header>
 
-<main class="deals-page">
-  <section class="deals-hero">
-    <p class="deals-label">SPECIAL OFFERS</p>
-    <h1>Cute deals, lovely prices ✨</h1>
-    <p>Explore our handpicked deals and message us on WhatsApp to confirm availability and delivery.</p>
-    <a class="deals-contact" href="https://wa.me/923271576380" target="_blank" rel="noopener noreferrer">
-      Ask About a Deal
-    </a>
-  </section>
+    <h1 class="top-heading">The Stationery Spot</h1>
 
-  <section class="deals-section" aria-labelledby="deals-heading">
-    <h2 id="deals-heading">Our Special Deals 💗</h2>
+    <nav class="left-menu" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="deals.html">Deals</a>
+      <a href="contact.html">Contact</a>
+      <a href="Refund policy.html">Refund Policy</a>
+      <a href="Shipping policy.html">Shipping Policy</a>
+    </nav>
 
-    <div class="deals-grid">
-      <div class="deals-empty">
-        Your selected deals will appear here. 💕<br>
-        Add your deal photos and details to display them on this page.
+    <div class="right-menu">
+      <div class="cart-area">
+        <button
+          class="cart-button"
+          type="button"
+          onclick="openCart()"
+          aria-label="Open shopping cart">
+
+          🛒
+
+          <span id="cartCount" class="cart-count">0</span>
+        </button>
       </div>
     </div>
-  </section>
-</main>
 
-<a class="whatsapp-float" href="https://wa.me/923271576380" target="_blank" rel="noopener noreferrer" aria-label="Chat with The Stationery Spot on WhatsApp">💬 <span>Chat with us</span></a>
+  </header>
 
-<script src="cart.js"></script>
-<script src="sidebar.js"></script>
+  <!-- CATEGORY PRODUCTS -->
+  <main>
+    <section
+      class="category category-page"
+      aria-labelledby="categoryTitle">
+
+      <h2 id="categoryTitle">Products</h2>
+
+      <div
+        id="categoryProducts"
+        class="products category-products">
+      </div>
+
+    </section>
+  </main>
+
+  <!-- JAVASCRIPT -->
+  <script src="product-card.js"></script>
+  <script src="cart.js"></script>
+  <script src="category.js"></script>
+  <script src="sidebar.js"></script>
+
 </body>
 </html>
