@@ -790,5 +790,37 @@
     "category": "Jewelry",
     "image": "/images/products/file_00000000c5ec8211bff082c31b2b660b.png",
     "available": true
+  },
+  {
+    "code": "Ac03",
+    "name": "4 In 1  Lip Balm ",
+    "price": 180,
+    "category": "Accessories",
+    "image": "/images/products/1792479607543.png",
+    "available": true
+  },
+  {
+    "code": "Ac04",
+    "name": "Ice Cream Lip Balm",
+    "price": 200,
+    "category": "Accessories",
+    "image": "/images/products/1792479683183.png",
+    "available": true
+  },
+  {
+    "code": "Ac05",
+    "name": "Cute Teddy lip Balm ",
+    "price": 150,
+    "category": "Accessories",
+    "image": "/images/products/1792479700756.png",
+    "available": true
+  },
+  {
+    "code": "Ac06",
+    "name": "Lip Balm",
+    "price": 100,
+    "category": "Accessories",
+    "image": "/images/products/1792479724321.png",
+    "available": true
   }
 ]
