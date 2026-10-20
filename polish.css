@@ -97,3 +97,33 @@
         padding: 12px;
     }
 }
+/* Show vertical scrollbar on every page */
+html {
+    min-height: 100%;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: #e8a2bd #fff5f8;
+}
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Chrome, Edge and other WebKit browsers */
+html::-webkit-scrollbar {
+    width: 8px;
+}
+
+html::-webkit-scrollbar-track {
+    background: #fff5f8;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: #e8a2bd;
+    border-radius: 10px;
+}
+
+html::-webkit-scrollbar-thumb:hover {
+    background: #d77fa2;
+}
