@@ -822,5 +822,29 @@
     "category": "Accessories",
     "image": "/images/products/1792479724321.png",
     "available": true
+  },
+  {
+    "code": "Or02",
+    "name": "Acrylic Holder",
+    "price": 350,
+    "category": "Organizers",
+    "image": "/images/products/1786212217641-1.png",
+    "available": true
+  },
+  {
+    "code": "Or03",
+    "name": "Jewelry Organizer ",
+    "price": 850,
+    "category": "Organizers",
+    "image": "/images/products/1787346401406.png",
+    "available": true
+  },
+  {
+    "code": "Or04",
+    "name": "Brush & Pen Organizer ",
+    "price": 250,
+    "category": "Organizers",
+    "image": "/images/products/1787346353879.png",
+    "available": true
   }
 ]
