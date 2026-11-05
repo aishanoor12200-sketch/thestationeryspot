@@ -846,5 +846,13 @@
     "category": "Organizers",
     "image": "/images/products/1787346353879.png",
     "available": true
+  },
+  {
+    "code": "P01",
+    "name": "Women Sanitary Pouch ",
+    "price": 250,
+    "category": "Other",
+    "image": "/images/products/1787346283747.png",
+    "available": true
   }
 ]
