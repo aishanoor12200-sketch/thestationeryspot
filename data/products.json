@@ -854,5 +854,13 @@
     "category": "Other",
     "image": "/images/products/1787346283747.png",
     "available": true
+  },
+  {
+    "code": "JL13",
+    "name": "STAINLESS STEEL BRACELET ",
+    "price": 400,
+    "category": "Jewelry",
+    "image": "/images/products/1785772183515-1.png",
+    "available": true
   }
 ]
