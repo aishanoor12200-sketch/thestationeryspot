@@ -870,5 +870,13 @@
     "category": "Jewelry",
     "image": "/images/products/1785777436564-1.png",
     "available": true
+  },
+  {
+    "code": "E11",
+    "name": "Chocolate Shape Eraser",
+    "price": 150,
+    "category": "Erasers",
+    "image": "/images/products/1791531382759.png",
+    "available": true
   }
 ]
