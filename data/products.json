@@ -862,5 +862,13 @@
     "category": "Jewelry",
     "image": "/images/products/1785772183515-1.png",
     "available": true
+  },
+  {
+    "code": "JL13",
+    "name": "Stone Bracelet ",
+    "price": 250,
+    "category": "Jewelry",
+    "image": "/images/products/1785777436564-1.png",
+    "available": true
   }
 ]
