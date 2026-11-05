@@ -902,5 +902,125 @@
     "category": "Bags",
     "image": "/images/products/IMG-20261018-WA0023.jpg",
     "available": true
+  },
+  {
+    "code": "K01",
+    "name": "Ball Keychain ",
+    "price": 100,
+    "category": "Keychains",
+    "image": "/images/products/file_0000000099c071f88f40a4715990e404.png",
+    "available": true
+  },
+  {
+    "code": "IP04",
+    "name": "Imported Ink pen",
+    "price": 500,
+    "category": "Pens",
+    "image": "/images/products/file_000000001a1472089ce7d1cfc1667439.png",
+    "available": true
+  },
+  {
+    "code": "IP05",
+    "name": "Imported Ink pen ",
+    "price": 500,
+    "category": "Pens",
+    "image": "/images/products/file_000000002a107208bb608f3928546cec.png",
+    "available": true
+  },
+  {
+    "code": "SN05",
+    "name": "Sticky notes ",
+    "price": 180,
+    "category": "Sticky notes",
+    "image": "/images/products/file_00000000c6007209ad45bee0b2dce982.png",
+    "available": true
+  },
+  {
+    "code": "H01",
+    "name": "Double sided Highlighter ",
+    "price": 80,
+    "category": "Other",
+    "image": "/images/products/file_000000000ae8720b9492129d819cea68.png",
+    "available": true
+  },
+  {
+    "code": "Sc01",
+    "name": "Scented Candles",
+    "price": 400,
+    "category": "Other",
+    "image": "/images/products/file_00000000f7e872079b4d1555f87ad372.png",
+    "available": true
+  },
+  {
+    "code": "CR02",
+    "name": "Fish Calculator ",
+    "price": 200,
+    "category": "Calculators",
+    "image": "/images/products/file_00000000edd47207af135d484168f05b.png",
+    "available": true
+  },
+  {
+    "code": "IP06",
+    "name": "Lipstick Ball pen",
+    "price": 150,
+    "category": "Pens",
+    "image": "/images/products/file_0000000020b07208ba4bcdc77eed1fb4.png",
+    "available": true
+  },
+  {
+    "code": "Ty05",
+    "name": "Fluffy Teddy Bear",
+    "price": 1550,
+    "category": "Toys",
+    "image": "/images/products/file_000000002e34720781f81fac7510dadb.png",
+    "available": true
+  },
+  {
+    "code": "P01",
+    "name": "Pencil ",
+    "price": 20,
+    "category": "Kids Pencils",
+    "image": "/images/products/file_0000000048e08211aae3a43161e8a211.png",
+    "available": true
+  },
+  {
+    "code": "Pp01",
+    "name": "Color Printer paper ",
+    "price": 100,
+    "category": "Other",
+    "image": "/images/products/file_00000000defc7206b8182ed014ebf3a8.png",
+    "available": true
+  },
+  {
+    "code": "Or05",
+    "name": "Drawer Organizer ",
+    "price": 1100,
+    "category": "Organizers",
+    "image": "/images/products/file_000000000fa071fa881d59d9957243c6.png",
+    "available": true
+  },
+  {
+    "code": "P02",
+    "name": "Cute Pencil ",
+    "price": 50,
+    "category": "Kids Pencils",
+    "image": "/images/products/file_000000007fd872098e7667946c5badf6.png",
+    "available": true
+  },
+  {
+    "code": "G01",
+    "name": "Stationery Gift Set",
+    "price": 800,
+    "category": "Other",
+    "image": "/images/products/file_00000000e23071fa8bb2f0d64f8f3440.png",
+    "available": true
+  },
+  {
+    "code": "Or06",
+    "name": "Mirror Organizer ",
+    "price": 270,
+    "category": "Organizers",
+    "image": "/images/products/file_0000000036ec7208974d1a9029325580.png",
+    "available": true
   }
 ]
