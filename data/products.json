@@ -878,5 +878,29 @@
     "category": "Erasers",
     "image": "/images/products/1791531382759.png",
     "available": true
+  },
+  {
+    "code": "Bg01",
+    "name": "Imported Bag ",
+    "price": 1500,
+    "category": "Bags",
+    "image": "/images/products/IMG-20261018-WA0018.jpg",
+    "available": true
+  },
+  {
+    "code": "Bg02",
+    "name": "Kids bag",
+    "price": 1800,
+    "category": "Bags",
+    "image": "/images/products/IMG-20261018-WA0035.jpg",
+    "available": true
+  },
+  {
+    "code": "Bg03",
+    "name": "Imported Bag",
+    "price": 1500,
+    "category": "Bags",
+    "image": "/images/products/IMG-20261018-WA0023.jpg",
+    "available": true
   }
 ]
