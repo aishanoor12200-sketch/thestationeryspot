@@ -1046,5 +1046,13 @@
     "category": "Pens",
     "image": "/images/products/1794262913339.png",
     "available": true
+  },
+  {
+    "code": "K04",
+    "name": "Avengers Keychain ",
+    "price": 70,
+    "category": "Keychains",
+    "image": "/images/products/1794262952702.png",
+    "available": true
   }
 ]
