@@ -1022,5 +1022,13 @@
     "category": "Organizers",
     "image": "/images/products/file_0000000036ec7208974d1a9029325580.png",
     "available": true
+  },
+  {
+    "code": "SB03",
+    "name": "Active Star Sipper Bottle",
+    "price": 300,
+    "category": "Water Bottles",
+    "image": "/images/products/1794262882926.png",
+    "available": true
   }
 ]
