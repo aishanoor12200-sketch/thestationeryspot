@@ -1030,5 +1030,13 @@
     "category": "Water Bottles",
     "image": "/images/products/1794262882926.png",
     "available": true
+  },
+  {
+    "code": "K02",
+    "name": "Barbie Keychain ",
+    "price": 100,
+    "category": "Keychains",
+    "image": "/images/products/1794262984434.png",
+    "available": true
   }
 ]
