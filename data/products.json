@@ -1038,5 +1038,13 @@
     "category": "Keychains",
     "image": "/images/products/1794262984434.png",
     "available": true
+  },
+  {
+    "code": "IP07",
+    "name": "Astronaut Ball pen ",
+    "price": 100,
+    "category": "Pens",
+    "image": "/images/products/1794262913339.png",
+    "available": true
   }
 ]
