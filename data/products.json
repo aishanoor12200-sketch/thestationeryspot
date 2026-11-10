@@ -1054,5 +1054,21 @@
     "category": "Keychains",
     "image": "/images/products/1794262952702.png",
     "available": true
+  },
+  {
+    "code": "Or07",
+    "name": "Jewelry Organizer 80 pockets ",
+    "price": 250,
+    "category": "Organizers",
+    "image": "/images/products/IMG-20261110-WA0006.jpg",
+    "available": true
+  },
+  {
+    "code": "Ar01",
+    "name": "Artist Painting Brush",
+    "price": 350,
+    "category": "Other",
+    "image": "/images/products/1794262924254.png",
+    "available": true
   }
 ]
