@@ -1070,5 +1070,21 @@
     "category": "Other",
     "image": "/images/products/1794262924254.png",
     "available": true
+  },
+  {
+    "code": "K04",
+    "name": "Badminton Keychain",
+    "price": 150,
+    "category": "Keychains",
+    "image": "/images/products/1794262962090.png",
+    "available": true
+  },
+  {
+    "code": "E12",
+    "name": "Barbie Eraser Set",
+    "price": 250,
+    "category": "Erasers",
+    "image": "/images/products/1794262972566.png",
+    "available": true
   }
 ]
