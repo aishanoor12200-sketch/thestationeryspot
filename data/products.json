@@ -1158,5 +1158,13 @@
     "category": "Other",
     "image": "/images/products/1794338819594.png",
     "available": true
+  },
+  {
+    "code": "CL04",
+    "name": "Crayon pencil color",
+    "price": 180,
+    "category": "Colours",
+    "image": "/images/products/1794338385450.png",
+    "available": true
   }
 ]
