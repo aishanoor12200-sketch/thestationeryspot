@@ -1134,5 +1134,13 @@
     "category": "Keychains",
     "image": "/images/products/1794262984434-2.png",
     "available": true
+  },
+  {
+    "code": "K06",
+    "name": "Heart keychain ",
+    "price": 120,
+    "category": "Keychains",
+    "image": "/images/products/1794338920118.png",
+    "available": true
   }
 ]
