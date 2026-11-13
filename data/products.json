@@ -1102,5 +1102,13 @@
     "category": "Calculators",
     "image": "/images/products/1794338591418-1.png",
     "available": true
+  },
+  {
+    "code": "E12",
+    "name": "Barbie Eraser Set ",
+    "price": 250,
+    "category": "Erasers",
+    "image": "/images/products/1794262972566-1.png",
+    "available": true
   }
 ]
