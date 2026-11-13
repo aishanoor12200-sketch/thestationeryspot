@@ -1085,6 +1085,14 @@
     "price": 250,
     "category": "Erasers",
     "image": "/images/products/1794262972566.png",
+    "available": false
+  },
+  {
+    "code": "H01",
+    "name": "Highlighter ",
+    "price": 100,
+    "category": "Other",
+    "image": "/images/products/1794338941939-2.png",
     "available": true
   }
 ]
