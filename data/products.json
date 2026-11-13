@@ -1150,5 +1150,13 @@
     "category": "Organizers",
     "image": "/images/products/1794338703019.png",
     "available": true
+  },
+  {
+    "code": "H02",
+    "name": "Imported highlighter ",
+    "price": 100,
+    "category": "Other",
+    "image": "/images/products/1794338819594.png",
+    "available": true
   }
 ]
