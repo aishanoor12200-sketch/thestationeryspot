@@ -1126,5 +1126,13 @@
     "category": "Other",
     "image": "/images/products/1794338493001-1.png",
     "available": true
+  },
+  {
+    "code": "K05",
+    "name": "Barbie keychain ",
+    "price": 100,
+    "category": "Keychains",
+    "image": "/images/products/1794262984434-2.png",
+    "available": true
   }
 ]
