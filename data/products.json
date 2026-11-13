@@ -1110,5 +1110,13 @@
     "category": "Erasers",
     "image": "/images/products/1794262972566-1.png",
     "available": true
+  },
+  {
+    "code": "CL03",
+    "name": "Colorun color marker ",
+    "price": 350,
+    "category": "Colours",
+    "image": "/images/products/1794338798367.png",
+    "available": true
   }
 ]
