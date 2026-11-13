@@ -1118,5 +1118,13 @@
     "category": "Colours",
     "image": "/images/products/1794338798367.png",
     "available": true
+  },
+  {
+    "code": "PC01",
+    "name": "Craft pipe cleaner ",
+    "price": 120,
+    "category": "Other",
+    "image": "/images/products/1794338493001-1.png",
+    "available": true
   }
 ]
