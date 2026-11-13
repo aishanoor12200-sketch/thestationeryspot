@@ -1092,7 +1092,15 @@
     "name": "Highlighter ",
     "price": 100,
     "category": "Other",
-    "image": "/images/products/1794338941939-2.png",
+    "image": "/images/products/1794338941939-3.png",
+    "available": true
+  },
+  {
+    "code": "CR03",
+    "name": "Counts calculator ",
+    "price": 950,
+    "category": "Calculators",
+    "image": "/images/products/1794338591418-1.png",
     "available": true
   }
 ]
