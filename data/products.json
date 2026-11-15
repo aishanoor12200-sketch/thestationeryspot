@@ -1166,5 +1166,21 @@
     "category": "Colours",
     "image": "/images/products/1794338385450.png",
     "available": true
+  },
+  {
+    "code": "Or09",
+    "name": "Bear holder ",
+    "price": 120,
+    "category": "Organizers",
+    "image": "/images/products/1794750439909.png",
+    "available": true
+  },
+  {
+    "code": "Bi01",
+    "name": "Black ink cartridge ",
+    "price": 70,
+    "category": "Other",
+    "image": "/images/products/1794750497281.png",
+    "available": true
   }
 ]
