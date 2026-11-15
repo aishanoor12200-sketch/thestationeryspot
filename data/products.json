@@ -1231,5 +1231,13 @@
     "category": "Keychains",
     "image": "/images/products/1794750477203.png",
     "available": true
+  },
+  {
+    "code": "Br01",
+    "name": "Crystal beads bracelet ",
+    "price": 200,
+    "category": "Other",
+    "image": "/images/products/1794750418589.png",
+    "available": true
   }
 ]
