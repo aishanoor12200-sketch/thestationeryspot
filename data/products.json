@@ -1223,5 +1223,13 @@
     "image": "/images/products/1794750507754.png",
     "description": "\n",
     "available": true
+  },
+  {
+    "code": "K08",
+    "name": "Bike keychain ",
+    "price": 90,
+    "category": "Keychains",
+    "image": "/images/products/1794750477203.png",
+    "available": true
   }
 ]
