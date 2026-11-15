@@ -1182,5 +1182,13 @@
     "category": "Other",
     "image": "/images/products/1794750497281.png",
     "available": true
+  },
+  {
+    "code": "K07",
+    "name": "Bike keychain ",
+    "price": 75,
+    "category": "Keychains",
+    "image": "/images/products/1794750461082.png",
+    "available": true
   }
 ]
