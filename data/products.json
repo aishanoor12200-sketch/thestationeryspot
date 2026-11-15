@@ -1206,5 +1206,13 @@
     "category": "Accessories",
     "image": "/images/products/1794750515730.png",
     "available": true
+  },
+  {
+    "code": "Bl02",
+    "name": "Blue ink cartridge ",
+    "price": 70,
+    "category": "Other",
+    "image": "/images/products/1794750485875.png",
+    "available": true
   }
 ]
