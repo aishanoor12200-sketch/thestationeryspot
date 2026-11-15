@@ -1214,5 +1214,14 @@
     "category": "Other",
     "image": "/images/products/1794750485875.png",
     "available": true
+  },
+  {
+    "code": "M01",
+    "name": "Blue permanent marker ",
+    "price": 75,
+    "category": "Other",
+    "image": "/images/products/1794750507754.png",
+    "description": "\n",
+    "available": true
   }
 ]
