@@ -1190,5 +1190,13 @@
     "category": "Keychains",
     "image": "/images/products/1794750461082.png",
     "available": true
+  },
+  {
+    "code": "S09",
+    "name": "Bear eraser & sharpener ",
+    "price": 350,
+    "category": "Sharpeners",
+    "image": "/images/products/1794750450106.png",
+    "available": true
   }
 ]
