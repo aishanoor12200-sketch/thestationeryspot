@@ -1198,5 +1198,13 @@
     "category": "Sharpeners",
     "image": "/images/products/1794750450106.png",
     "available": true
+  },
+  {
+    "code": "Ps01",
+    "name": "Bottle paper soap ",
+    "price": 80,
+    "category": "Accessories",
+    "image": "/images/products/1794750515730.png",
+    "available": true
   }
 ]
